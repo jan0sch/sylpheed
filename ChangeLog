@@ -1,3 +1,56 @@
+2005-07-21
+
+	* src/headerview.c: headerview_create(): added spacing for vbox.
+
+2005-07-21
+
+	* src/mh.c: mh_get_msg_list(): force strict cache checking on Queue
+	  or Draft folders (fixes cache discrepancy).
+
+2005-07-21
+
+	* src/imap.c:
+	  imap_modified_utf7_to_utf8(): fixed modified-UTF7 to UTF-8
+	  conversion when the string includes '+'.
+	  imap_utf8_to_modified_utf7(): use g_ascii_isprint() instead of
+	  locale-dependent isprint().
+	  Fixed warnings on conversion error.
+
+2005-07-21
+
+	* src/prefs_folder_item.c: display path with GtkLabel.
+
+2005-07-20
+
+	* src/rfc2015.c: unified indent. Use g_getenv() instead of getenv().
+	  Use locale-independent g_ascii_toupper() instead of toupper().
+
+2005-07-20
+
+	* src/main.c: remove temporary files on startup. Code cleanups.
+
+2005-07-19
+
+	* src/compose.c: compose_insert_drag_received_cb(): added a hack to
+	  prevent duplicated insertion.
+
+2005-07-19
+
+	* src/compose.c: compose_get_line_break_pos(): don't break line after
+	  '/' (to protect file path etc.).
+
+2005-07-19
+
+	* src/compose.c: don't remove drag source on GDK_ACTION_MOVE.
+	  Explicitly call gtk_drag_finish().
+	* src/summaryview.c
+	  src/folderview.c: made GtkTargetEntry static.
+
+2005-07-15
+
+	* src/summaryview.c: summary_modify_threads(): select correct row
+	  when sorting is enabled.
+
 2005-07-14
 
 	* version 2.0.0beta6
