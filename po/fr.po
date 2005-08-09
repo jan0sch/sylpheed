@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-25 19:06+0900\n"
-"PO-Revision-Date: 2005-07-11 19:18+0100\n"
+"PO-Revision-Date: 2005-08-08 23:57+0100\n"
 "Last-Translator: Nicolas Boos <nicolas.boos@wanadoo.fr>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -126,9 +126,8 @@ msgid "Edit"
 msgstr "Éditer"
 
 #: src/account.c:759
-#, fuzzy
 msgid " _Set as default account "
-msgstr " Définir comme compte par défaut "
+msgstr "_Définir comme compte par défaut"
 
 #: src/account.c:812
 #, c-format
@@ -432,13 +431,12 @@ msgid "Really delete the address(es)?"
 msgstr "Voulez-vous supprimer la(les) adresse(s) sélectionnée(s) ?"
 
 #: src/addressbook.c:1664
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Do you want to delete the folder AND all addresses in `%s' ?\n"
 "If deleting the folder only, addresses will be moved into parent folder."
 msgstr ""
-"Voulez-vous supprimer le dossier « %s » ET toutes les adresses qu'il "
-"contient ?\n"
+"Voulez-vous supprimer le dossier ET toutes les adresses de « %s » ?\n"
 "Si vous supprimez uniquement le dossier, les adresses seront déplacées dans "
 "le dossier parent."
 
@@ -447,14 +445,12 @@ msgid "Delete folder"
 msgstr "Suppression de dossier"
 
 #: src/addressbook.c:1667
-#, fuzzy
 msgid "_Folder only"
-msgstr "Dossier uniquement"
+msgstr "_Dossier uniquement"
 
 #: src/addressbook.c:1667
-#, fuzzy
 msgid "Folder and _addresses"
-msgstr "Dossier et adresses"
+msgstr "Dossier et _adresses"
 
 #: src/addressbook.c:1672
 #, c-format
@@ -1274,14 +1270,12 @@ msgid "Apply template"
 msgstr "Appliquer un modèle"
 
 #: src/compose.c:5802
-#, fuzzy
 msgid "_Replace"
-msgstr "Remplacer"
+msgstr "_Remplacer"
 
 #: src/compose.c:5802
-#, fuzzy
 msgid "_Insert"
-msgstr "Insertion"
+msgstr "_Insérer"
 
 #. gtk_container_set_border_width(GTK_CONTAINER(window), 8);
 #: src/editaddress.c:182
@@ -5994,9 +5988,8 @@ msgid "Scanning folder (%s)..."
 msgstr "Analyse du dossier (%s)..."
 
 #: src/summaryview.c:1147
-#, fuzzy
 msgid "_Search again"
-msgstr "Chercher encore"
+msgstr "_Chercher encore"
 
 #: src/summaryview.c:1168 src/summaryview.c:1177
 msgid "No more unread messages"
@@ -6244,20 +6237,20 @@ msgid "Copy this _link"
 msgstr "Copier ce _lien"
 
 #: src/textview.c:2069
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The real URL (%s) is different from\n"
 "the apparent URL (%s).\n"
 "\n"
 "Open it anyway?"
 msgstr ""
-"Le véritable URL (%s) est différent de\n"
-"l'URL affiché (%s).\n"
+"Le véritable URL (%s) est différent de celui affiché (%s).\n"
+"\n"
 "Voulez-vous néanmoins l'ouvrir ?"
 
 #: src/textview.c:2074
 msgid "Fake URL warning"
-msgstr ""
+msgstr "Localisateur (URL) suspect"
 
 #: src/utils.c:181
 #, c-format
