@@ -1,5 +1,10 @@
 2005-08-24
 
+	* src/recv.c
+	  src/imap.c: エラーチェックをより正確にした。
+
+2005-08-24
+
 	* configure.in: $localedir, $manualdir, $faqdir をユーザ指定可能に
 	  した。
 

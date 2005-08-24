@@ -1,5 +1,10 @@
 2005-08-24
 
+	* src/recv.c
+	  src/imap.c: made error check more strict.
+
+2005-08-24
+
 	* configure.in: made $localedir, $manualdir, and $faqdir
 	  user-configurable.
 
