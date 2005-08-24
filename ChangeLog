@@ -1,3 +1,8 @@
+2005-08-24
+
+	* configure.in: made $localedir, $manualdir, and $faqdir
+	  user-configurable.
+
 2005-07-29
 
 	* version 2.0.0

@@ -1,3 +1,8 @@
+2005-08-24
+
+	* configure.in: $localedir, $manualdir, $faqdir をユーザ指定可能に
+	  した。
+
 2005-07-29
 
 	* version 2.0.0
