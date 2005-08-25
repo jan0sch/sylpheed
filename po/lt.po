@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-25 19:06+0900\n"
+"POT-Creation-Date: 2005-08-25 18:13+0900\n"
 "PO-Revision-Date: 2005-06-09 13:51+0300\n"
 "Last-Translator: Vitalijus Valantiejus <vitalijus@users.sf.net>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -95,7 +95,7 @@ msgstr ""
 "Naujos žinutės bus tikrinamos šia tvarka. Pažymėkite laukelį\n"
 "skulpelyje „G“ jei norite gauti žinutes pasirinkę „Gauti visus“."
 
-#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:490
+#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
 #: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
@@ -237,7 +237,7 @@ msgstr "Įdėti adresą į knygą"
 msgid "Address"
 msgstr "Adresas"
 
-#: src/addressadd.c:212 src/addressbook.c:492 src/editaddress.c:202
+#: src/addressadd.c:212 src/addressbook.c:493 src/editaddress.c:202
 #: src/editaddress.c:795 src/editaddress.c:860 src/editgroup.c:267
 msgid "Remarks"
 msgstr "Pastabos"
@@ -368,60 +368,60 @@ msgstr "/_Taisyti"
 msgid "/_Delete"
 msgstr "/_Ištrinti"
 
-#: src/addressbook.c:491
+#: src/addressbook.c:492
 msgid "E-Mail address"
 msgstr "El. pašto adresas"
 
-#: src/addressbook.c:495 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Adresų knyga"
 
-#: src/addressbook.c:595 src/prefs_filter_edit.c:362
+#: src/addressbook.c:596 src/prefs_filter_edit.c:362
 msgid "Name:"
 msgstr "Vardas:"
 
 #. Buttons
-#: src/addressbook.c:627 src/addressbook.c:1673 src/editaddress.c:884
+#: src/addressbook.c:628 src/addressbook.c:1680 src/editaddress.c:884
 #: src/editaddress.c:1017 src/mainwindow.c:2292 src/prefs_actions.c:266
 #: src/prefs_display_header.c:278 src/prefs_display_header.c:333
 #: src/prefs_template.c:231
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: src/addressbook.c:630 src/editaddress.c:890 src/editaddress.c:1023
+#: src/addressbook.c:631 src/editaddress.c:890 src/editaddress.c:1023
 #: src/prefs_actions.c:254 src/prefs_customheader.c:235
 #: src/prefs_display_header.c:272 src/prefs_display_header.c:327
 #: src/prefs_filter_edit.c:1572
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/addressbook.c:633
+#: src/addressbook.c:634
 msgid "Lookup"
 msgstr "Ieškoti"
 
-#: src/addressbook.c:645 src/headerview.c:55 src/prefs_folder_item.c:311
+#: src/addressbook.c:646 src/headerview.c:55 src/prefs_folder_item.c:311
 #: src/prefs_template.c:174 src/summary_search.c:221
 msgid "To:"
 msgstr "Kam:"
 
-#: src/addressbook.c:649 src/prefs_folder_item.c:328 src/prefs_template.c:176
+#: src/addressbook.c:650 src/prefs_folder_item.c:328 src/prefs_template.c:176
 msgid "Cc:"
 msgstr "Kopija:"
 
-#: src/addressbook.c:653 src/prefs_folder_item.c:339
+#: src/addressbook.c:654 src/prefs_folder_item.c:339
 msgid "Bcc:"
 msgstr "Slapta kopija:"
 
 #. Confirm deletion
-#: src/addressbook.c:840
+#: src/addressbook.c:841
 msgid "Delete address(es)"
 msgstr "Pašalinti adresą(-us)"
 
-#: src/addressbook.c:841
+#: src/addressbook.c:842
 msgid "Really delete the address(es)?"
 msgstr "Ar tikrai pašalinti adresą(-us)?"
 
-#: src/addressbook.c:1664
+#: src/addressbook.c:1671
 #, c-format
 msgid ""
 "Do you want to delete the folder AND all addresses in `%s' ?\n"
@@ -430,36 +430,36 @@ msgstr ""
 "Ar tikrai norite pašalinti katalogą „%s“ ir visus adresus jame? \n"
 "Jei pašalinsite tik katalogą, adresai bus perkelti į aukštesnįjį katalogą."
 
-#: src/addressbook.c:1667 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2139
 msgid "Delete folder"
 msgstr "Ištrinti katalogą"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 msgid "_Folder only"
 msgstr "Tik _katalogą"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 msgid "Folder and _addresses"
 msgstr "Katalogą ir _adresus jame"
 
-#: src/addressbook.c:1672
+#: src/addressbook.c:1679
 #, c-format
 msgid "Really delete `%s' ?"
 msgstr "Tikrai pašalinti „%s“?"
 
-#: src/addressbook.c:2352 src/addressbook.c:2485
+#: src/addressbook.c:2365 src/addressbook.c:2498
 msgid "New user, could not save index file."
 msgstr "Naujas vartotojas, negaliu išsaugoti „index“ bylos."
 
-#: src/addressbook.c:2356 src/addressbook.c:2489
+#: src/addressbook.c:2369 src/addressbook.c:2502
 msgid "New user, could not save address book files."
 msgstr "Naujas vartotojas, negaliu išsaugoti adresų knygos bylų."
 
-#: src/addressbook.c:2366 src/addressbook.c:2499
+#: src/addressbook.c:2379 src/addressbook.c:2512
 msgid "Old address book converted successfully."
 msgstr "Adresų knyga sėkmingai konvertuota"
 
-#: src/addressbook.c:2371
+#: src/addressbook.c:2384
 msgid ""
 "Old address book converted,\n"
 "could not save new address index file"
@@ -467,7 +467,7 @@ msgstr ""
 "Sena adresų knyga konvertuota,\n"
 "negaliu išsaugoti naujo adresų indekso bylos"
 
-#: src/addressbook.c:2384
+#: src/addressbook.c:2397
 msgid ""
 "Could not convert address book,\n"
 "but created empty new address book files."
@@ -475,7 +475,7 @@ msgstr ""
 "Negaliu konvertuoti adresų knygos,\n"
 "bet sukūriau tuščias naujos knygos bylas."
 
-#: src/addressbook.c:2390
+#: src/addressbook.c:2403
 msgid ""
 "Could not convert address book,\n"
 "could not create new address book files."
@@ -483,7 +483,7 @@ msgstr ""
 "Negaliu konvertuoti adresų knygos,\n"
 "negaliu sukurti naujos knygos bylų."
 
-#: src/addressbook.c:2395
+#: src/addressbook.c:2408
 msgid ""
 "Could not convert address book\n"
 "and could not create new address book files."
@@ -491,86 +491,86 @@ msgstr ""
 "Negaliu konvertuoti adresų knygos,\n"
 "ir negaliu sukurti naujos knygos bylų."
 
-#: src/addressbook.c:2402
+#: src/addressbook.c:2415
 msgid "Addressbook conversion error"
 msgstr "Adresų knygos konvertavimo klaida"
 
-#: src/addressbook.c:2406
+#: src/addressbook.c:2419
 msgid "Addressbook conversion"
 msgstr "Adresų knygos konvertavimas"
 
-#: src/addressbook.c:2441
+#: src/addressbook.c:2454
 msgid "Addressbook Error"
 msgstr "Adresų knygos klaida"
 
-#: src/addressbook.c:2442 src/addressbook.c:2542
+#: src/addressbook.c:2455 src/addressbook.c:2555
 msgid "Could not read address index"
 msgstr "Negaliu perskaityti adresų indekso"
 
-#: src/addressbook.c:2504
+#: src/addressbook.c:2517
 msgid "Old address book converted, could not save new address index file"
 msgstr "Sena knyga konvertuota, negaliu išsaugoti naujos adresų indekso bylos"
 
-#: src/addressbook.c:2518
+#: src/addressbook.c:2531
 msgid ""
 "Could not convert address book, but created empty new address book files."
 msgstr ""
 "Negaliu konvertuoti adresų knygos, bet sukūriau naujas tuščias adresų knygos "
 "bylas."
 
-#: src/addressbook.c:2524
+#: src/addressbook.c:2537
 msgid ""
 "Could not convert address book, could not create new address book files."
 msgstr ""
 "Negaliu konvertuoti adresų knygos, negaliu sukurti naujų adresų knygos bylų."
 
-#: src/addressbook.c:2530
+#: src/addressbook.c:2543
 msgid ""
 "Could not convert address book and could not create new address book files."
 msgstr "Negaliu konvertuoti adresų knygos ir sukurti naujų adresų knygos bylų."
 
-#: src/addressbook.c:2548
+#: src/addressbook.c:2561
 msgid "Addressbook Conversion Error"
 msgstr "Adresų knygos konvertavimo klaida"
 
-#: src/addressbook.c:2554
+#: src/addressbook.c:2567
 msgid "Addressbook Conversion"
 msgstr "Adresų knygos konvertavimas"
 
-#: src/addressbook.c:3055 src/prefs_common.c:959
+#: src/addressbook.c:3072 src/prefs_common.c:959
 msgid "Interface"
 msgstr "Sąsaja"
 
-#: src/addressbook.c:3071 src/importldif.c:514
+#: src/addressbook.c:3088 src/importldif.c:514
 msgid "Address Book"
 msgstr "Adresų knyga"
 
-#: src/addressbook.c:3087
+#: src/addressbook.c:3104
 msgid "Person"
 msgstr "Asmuo"
 
-#: src/addressbook.c:3103
+#: src/addressbook.c:3120
 msgid "EMail Address"
 msgstr "El. pašto adresas"
 
-#: src/addressbook.c:3119
+#: src/addressbook.c:3136
 msgid "Group"
 msgstr "Grupė"
 
 #. special folder setting (maybe these options are redundant)
-#: src/addressbook.c:3135 src/folderview.c:346 src/prefs_account.c:1865
+#: src/addressbook.c:3152 src/folderview.c:346 src/prefs_account.c:1865
 msgid "Folder"
 msgstr "Katalogas"
 
-#: src/addressbook.c:3151
+#: src/addressbook.c:3168
 msgid "vCard"
 msgstr "vCard"
 
-#: src/addressbook.c:3167 src/addressbook.c:3183
+#: src/addressbook.c:3184 src/addressbook.c:3200
 msgid "JPilot"
 msgstr "JPilot"
 
-#: src/addressbook.c:3199
+#: src/addressbook.c:3216
 msgid "LDAP Server"
 msgstr "LDAP serveris"
 
@@ -2023,44 +2023,44 @@ msgstr "IMAP4 autentiškumo tikrinimas nepavyko.\n"
 msgid "IMAP4 login failed.\n"
 msgstr "nepavyko prisijungti prie IMAP4\n"
 
-#: src/imap.c:3522
+#: src/imap.c:3528
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "negaliu prirašyti %s į %s\n"
 
-#: src/imap.c:3529
+#: src/imap.c:3535
 msgid "(sending file...)"
 msgstr "(siunčiama byla...)"
 
-#: src/imap.c:3557
+#: src/imap.c:3563
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "negaliu prirašyti žinutės į %s\n"
 
-#: src/imap.c:3589
+#: src/imap.c:3595
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "negaliu nukopijuoti %s į %s\n"
 
-#: src/imap.c:3613
+#: src/imap.c:3619
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "klaida vykdant imap komandą: STORE %s %s\n"
 
-#: src/imap.c:3627
+#: src/imap.c:3633
 msgid "error while imap command: EXPUNGE\n"
 msgstr "klaida vykdant imap komandą: EXPUNGE\n"
 
-#: src/imap.c:3640
+#: src/imap.c:3646
 msgid "error while imap command: CLOSE\n"
 msgstr "klaida vykdant imap komandą: CLOSE\n"
 
-#: src/imap.c:3873
+#: src/imap.c:3879
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv negali konvertuoti UTF-7 į %s\n"
 
-#: src/imap.c:3903
+#: src/imap.c:3909
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv negali konvertuoti %s į UTF-7\n"
@@ -5486,11 +5486,11 @@ msgstr "Sukuriamas progreso dialogas...\n"
 msgid "Status"
 msgstr "Būsena"
 
-#: src/recv.c:114
+#: src/recv.c:113
 msgid "error occurred while retrieving data.\n"
 msgstr "kalaida gaunant duomenis.\n"
 
-#: src/recv.c:156 src/recv.c:198 src/recv.c:214
+#: src/recv.c:155 src/recv.c:197 src/recv.c:212
 msgid "Can't write to file.\n"
 msgstr "Negaliu rašyti į bylą.\n"
 

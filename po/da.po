@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed    \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-25 19:06+0900\n"
+"POT-Creation-Date: 2005-08-25 18:13+0900\n"
 "PO-Revision-Date: 2003-07-29 09:05+0200\n"
 "Last-Translator: Andreas Hinz <news3@acci.dk>\n"
 "Language-Team: \n"
@@ -94,7 +94,7 @@ msgstr ""
 "Nye meddelelser bliver testet i denne rækkefølge. Afmærk\n"
 "`G'-kolonnen, for at aktivere hentning via `hent alle'."
 
-#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:490
+#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
 #: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
@@ -238,7 +238,7 @@ msgstr "Tilføj adresse i adressebog"
 msgid "Address"
 msgstr "Adresse"
 
-#: src/addressadd.c:212 src/addressbook.c:492 src/editaddress.c:202
+#: src/addressadd.c:212 src/addressbook.c:493 src/editaddress.c:202
 #: src/editaddress.c:795 src/editaddress.c:860 src/editgroup.c:267
 msgid "Remarks"
 msgstr "Kommentar"
@@ -369,60 +369,60 @@ msgstr "/_Redigér"
 msgid "/_Delete"
 msgstr "/_Slet"
 
-#: src/addressbook.c:491
+#: src/addressbook.c:492
 msgid "E-Mail address"
 msgstr "E-post adresse"
 
-#: src/addressbook.c:495 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Adressebog"
 
-#: src/addressbook.c:595 src/prefs_filter_edit.c:362
+#: src/addressbook.c:596 src/prefs_filter_edit.c:362
 msgid "Name:"
 msgstr "Navn:"
 
 #. Buttons
-#: src/addressbook.c:627 src/addressbook.c:1673 src/editaddress.c:884
+#: src/addressbook.c:628 src/addressbook.c:1680 src/editaddress.c:884
 #: src/editaddress.c:1017 src/mainwindow.c:2292 src/prefs_actions.c:266
 #: src/prefs_display_header.c:278 src/prefs_display_header.c:333
 #: src/prefs_template.c:231
 msgid "Delete"
 msgstr "Slet"
 
-#: src/addressbook.c:630 src/editaddress.c:890 src/editaddress.c:1023
+#: src/addressbook.c:631 src/editaddress.c:890 src/editaddress.c:1023
 #: src/prefs_actions.c:254 src/prefs_customheader.c:235
 #: src/prefs_display_header.c:272 src/prefs_display_header.c:327
 #: src/prefs_filter_edit.c:1572
 msgid "Add"
 msgstr "Tilføj"
 
-#: src/addressbook.c:633
+#: src/addressbook.c:634
 msgid "Lookup"
 msgstr "Overblik"
 
-#: src/addressbook.c:645 src/headerview.c:55 src/prefs_folder_item.c:311
+#: src/addressbook.c:646 src/headerview.c:55 src/prefs_folder_item.c:311
 #: src/prefs_template.c:174 src/summary_search.c:221
 msgid "To:"
 msgstr "Til:"
 
-#: src/addressbook.c:649 src/prefs_folder_item.c:328 src/prefs_template.c:176
+#: src/addressbook.c:650 src/prefs_folder_item.c:328 src/prefs_template.c:176
 msgid "Cc:"
 msgstr "Cc:"
 
-#: src/addressbook.c:653 src/prefs_folder_item.c:339
+#: src/addressbook.c:654 src/prefs_folder_item.c:339
 msgid "Bcc:"
 msgstr "Bcc:"
 
 #. Confirm deletion
-#: src/addressbook.c:840
+#: src/addressbook.c:841
 msgid "Delete address(es)"
 msgstr "Slet adresse(r)"
 
-#: src/addressbook.c:841
+#: src/addressbook.c:842
 msgid "Really delete the address(es)?"
 msgstr "Virklig slette adresse(r)?"
 
-#: src/addressbook.c:1664
+#: src/addressbook.c:1671
 #, fuzzy, c-format
 msgid ""
 "Do you want to delete the folder AND all addresses in `%s' ?\n"
@@ -431,38 +431,38 @@ msgstr ""
 "Vil du virkeligt slette mappen OG alla adresser i `%s' ? \n"
 "Hvis kun mappen slettes, vil adresserne blive flyttet til hoved mappen."
 
-#: src/addressbook.c:1667 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2139
 msgid "Delete folder"
 msgstr "Slet mappe"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 #, fuzzy
 msgid "_Folder only"
 msgstr "Ny mappe"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 #, fuzzy
 msgid "Folder and _addresses"
 msgstr "Mappe og adresser"
 
-#: src/addressbook.c:1672
+#: src/addressbook.c:1679
 #, c-format
 msgid "Really delete `%s' ?"
 msgstr "Virklig slette `%s' ?"
 
-#: src/addressbook.c:2352 src/addressbook.c:2485
+#: src/addressbook.c:2365 src/addressbook.c:2498
 msgid "New user, could not save index file."
 msgstr "Ny bruger, kunne ikke gemme index fil."
 
-#: src/addressbook.c:2356 src/addressbook.c:2489
+#: src/addressbook.c:2369 src/addressbook.c:2502
 msgid "New user, could not save address book files."
 msgstr "Ny bruger, kunne ikke gemme adressebogs fil."
 
-#: src/addressbook.c:2366 src/addressbook.c:2499
+#: src/addressbook.c:2379 src/addressbook.c:2512
 msgid "Old address book converted successfully."
 msgstr "Gammel adressebog konverteret."
 
-#: src/addressbook.c:2371
+#: src/addressbook.c:2384
 msgid ""
 "Old address book converted,\n"
 "could not save new address index file"
@@ -470,7 +470,7 @@ msgstr ""
 "Gammel adressebog konverteret,\n"
 "men kunne ikke gemme index filen"
 
-#: src/addressbook.c:2384
+#: src/addressbook.c:2397
 msgid ""
 "Could not convert address book,\n"
 "but created empty new address book files."
@@ -478,7 +478,7 @@ msgstr ""
 "Kunne ikke konvertere adressebog,\n"
 "men nye og tomme filer blev oprettet."
 
-#: src/addressbook.c:2390
+#: src/addressbook.c:2403
 msgid ""
 "Could not convert address book,\n"
 "could not create new address book files."
@@ -486,7 +486,7 @@ msgstr ""
 "Kunne ikke konvertere adressebog,\n"
 "kunne ikke oprette nye filer."
 
-#: src/addressbook.c:2395
+#: src/addressbook.c:2408
 msgid ""
 "Could not convert address book\n"
 "and could not create new address book files."
@@ -494,85 +494,85 @@ msgstr ""
 "Kunne ikke konvertere adressebog,\n"
 "kunne ikke oprette nye filer."
 
-#: src/addressbook.c:2402
+#: src/addressbook.c:2415
 msgid "Addressbook conversion error"
 msgstr "Adressebog konverterings fejl"
 
-#: src/addressbook.c:2406
+#: src/addressbook.c:2419
 msgid "Addressbook conversion"
 msgstr "Adressebog konvertering"
 
-#: src/addressbook.c:2441
+#: src/addressbook.c:2454
 msgid "Addressbook Error"
 msgstr "Adressebog fejl"
 
-#: src/addressbook.c:2442 src/addressbook.c:2542
+#: src/addressbook.c:2455 src/addressbook.c:2555
 msgid "Could not read address index"
 msgstr "Kunne ikke læse adressebog"
 
-#: src/addressbook.c:2504
+#: src/addressbook.c:2517
 msgid "Old address book converted, could not save new address index file"
 msgstr "Gammel adressebog konverteret men kunne ikke gemme ny index fil "
 
-#: src/addressbook.c:2518
+#: src/addressbook.c:2531
 msgid ""
 "Could not convert address book, but created empty new address book files."
 msgstr "Kunne ikke konvertere adressebog, men har oprettet nye tomme filer "
 
-#: src/addressbook.c:2524
+#: src/addressbook.c:2537
 msgid ""
 "Could not convert address book, could not create new address book files."
 msgstr ""
 "Kunne ikke konvertere adressebog, og heller ikke oprette nye tomme filer "
 
-#: src/addressbook.c:2530
+#: src/addressbook.c:2543
 msgid ""
 "Could not convert address book and could not create new address book files."
 msgstr ""
 "Kunne ikke konvertere adressebog, og heller ikke oprette nye tomme filer "
 
-#: src/addressbook.c:2548
+#: src/addressbook.c:2561
 msgid "Addressbook Conversion Error"
 msgstr "Adressebog konverterings fejl"
 
-#: src/addressbook.c:2554
+#: src/addressbook.c:2567
 msgid "Addressbook Conversion"
 msgstr "Adressebog konvertering"
 
-#: src/addressbook.c:3055 src/prefs_common.c:959
+#: src/addressbook.c:3072 src/prefs_common.c:959
 msgid "Interface"
 msgstr "Brugerflade"
 
-#: src/addressbook.c:3071 src/importldif.c:514
+#: src/addressbook.c:3088 src/importldif.c:514
 msgid "Address Book"
 msgstr "Adressebog"
 
-#: src/addressbook.c:3087
+#: src/addressbook.c:3104
 msgid "Person"
 msgstr "Person"
 
-#: src/addressbook.c:3103
+#: src/addressbook.c:3120
 msgid "EMail Address"
 msgstr "E-post adresse"
 
-#: src/addressbook.c:3119
+#: src/addressbook.c:3136
 msgid "Group"
 msgstr "Gruppe"
 
 #. special folder setting (maybe these options are redundant)
-#: src/addressbook.c:3135 src/folderview.c:346 src/prefs_account.c:1865
+#: src/addressbook.c:3152 src/folderview.c:346 src/prefs_account.c:1865
 msgid "Folder"
 msgstr "Mappe"
 
-#: src/addressbook.c:3151
+#: src/addressbook.c:3168
 msgid "vCard"
 msgstr "vCard"
 
-#: src/addressbook.c:3167 src/addressbook.c:3183
+#: src/addressbook.c:3184 src/addressbook.c:3200
 msgid "JPilot"
 msgstr "J-Pilot"
 
-#: src/addressbook.c:3199
+#: src/addressbook.c:3216
 msgid "LDAP Server"
 msgstr "LDAP server"
 
@@ -2068,44 +2068,44 @@ msgstr "IMAP4 godkendelse fejlede.\n"
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4-Login fejlet.\n"
 
-#: src/imap.c:3522
+#: src/imap.c:3528
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kan ikke tilføje %s til %s\n"
 
-#: src/imap.c:3529
+#: src/imap.c:3535
 msgid "(sending file...)"
 msgstr "(sender fil...)"
 
-#: src/imap.c:3557
+#: src/imap.c:3563
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "kan ikke tilføje meddelelse %s\n"
 
-#: src/imap.c:3589
+#: src/imap.c:3595
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kan ikke kopiere %s til %s\n"
 
-#: src/imap.c:3613
+#: src/imap.c:3619
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "fejl ved IMAP kommando: STORE %s %s\n"
 
-#: src/imap.c:3627
+#: src/imap.c:3633
 msgid "error while imap command: EXPUNGE\n"
 msgstr "fejl ved IMAP kommand: EXPUNGE\n"
 
-#: src/imap.c:3640
+#: src/imap.c:3646
 msgid "error while imap command: CLOSE\n"
 msgstr "fejl ved IMAP kommand: CLOSE\n"
 
-#: src/imap.c:3873
+#: src/imap.c:3879
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kan ikke konvertere UTF-7 til %s\n"
 
-#: src/imap.c:3903
+#: src/imap.c:3909
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv can ikke konvertere %s til UTF-7\n"
@@ -5611,11 +5611,11 @@ msgstr "Opretter dialog...\n"
 msgid "Status"
 msgstr "Status"
 
-#: src/recv.c:114
+#: src/recv.c:113
 msgid "error occurred while retrieving data.\n"
 msgstr "fejl ved modtagelse af data.\n"
 
-#: src/recv.c:156 src/recv.c:198 src/recv.c:214
+#: src/recv.c:155 src/recv.c:197 src/recv.c:212
 msgid "Can't write to file.\n"
 msgstr "Kan ikke skrive til fil.\n"
 

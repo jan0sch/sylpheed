@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 1.0.0beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-25 19:06+0900\n"
+"POT-Creation-Date: 2005-08-25 18:13+0900\n"
 "PO-Revision-Date: 2004-12-05 17:16+0300\n"
 "Last-Translator: Sergey Vlasov <vsu@altlinux.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -98,7 +98,7 @@ msgstr ""
 "Пометьте в колонке 'G' учетные записи, которые нужно проверять\n"
 "по команде 'Получить все'."
 
-#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:490
+#: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
 #: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
@@ -242,7 +242,7 @@ msgstr "Добавление адреса в книгу"
 msgid "Address"
 msgstr "Адрес"
 
-#: src/addressadd.c:212 src/addressbook.c:492 src/editaddress.c:202
+#: src/addressadd.c:212 src/addressbook.c:493 src/editaddress.c:202
 #: src/editaddress.c:795 src/editaddress.c:860 src/editgroup.c:267
 msgid "Remarks"
 msgstr "Примечание"
@@ -373,60 +373,60 @@ msgstr "/Правка"
 msgid "/_Delete"
 msgstr "/Удалить"
 
-#: src/addressbook.c:491
+#: src/addressbook.c:492
 msgid "E-Mail address"
 msgstr "Адрес E-Mail"
 
-#: src/addressbook.c:495 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Адресная книга"
 
-#: src/addressbook.c:595 src/prefs_filter_edit.c:362
+#: src/addressbook.c:596 src/prefs_filter_edit.c:362
 msgid "Name:"
 msgstr "Имя:"
 
 #. Buttons
-#: src/addressbook.c:627 src/addressbook.c:1673 src/editaddress.c:884
+#: src/addressbook.c:628 src/addressbook.c:1680 src/editaddress.c:884
 #: src/editaddress.c:1017 src/mainwindow.c:2292 src/prefs_actions.c:266
 #: src/prefs_display_header.c:278 src/prefs_display_header.c:333
 #: src/prefs_template.c:231
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/addressbook.c:630 src/editaddress.c:890 src/editaddress.c:1023
+#: src/addressbook.c:631 src/editaddress.c:890 src/editaddress.c:1023
 #: src/prefs_actions.c:254 src/prefs_customheader.c:235
 #: src/prefs_display_header.c:272 src/prefs_display_header.c:327
 #: src/prefs_filter_edit.c:1572
 msgid "Add"
 msgstr "Добавить"
 
-#: src/addressbook.c:633
+#: src/addressbook.c:634
 msgid "Lookup"
 msgstr "Найти"
 
-#: src/addressbook.c:645 src/headerview.c:55 src/prefs_folder_item.c:311
+#: src/addressbook.c:646 src/headerview.c:55 src/prefs_folder_item.c:311
 #: src/prefs_template.c:174 src/summary_search.c:221
 msgid "To:"
 msgstr "Кому:"
 
-#: src/addressbook.c:649 src/prefs_folder_item.c:328 src/prefs_template.c:176
+#: src/addressbook.c:650 src/prefs_folder_item.c:328 src/prefs_template.c:176
 msgid "Cc:"
 msgstr "Копия:"
 
-#: src/addressbook.c:653 src/prefs_folder_item.c:339
+#: src/addressbook.c:654 src/prefs_folder_item.c:339
 msgid "Bcc:"
 msgstr "Скрытно:"
 
 #. Confirm deletion
-#: src/addressbook.c:840
+#: src/addressbook.c:841
 msgid "Delete address(es)"
 msgstr "Удалить адрес(а)"
 
-#: src/addressbook.c:841
+#: src/addressbook.c:842
 msgid "Really delete the address(es)?"
 msgstr "Действительно удалить адрес(а)?"
 
-#: src/addressbook.c:1664
+#: src/addressbook.c:1671
 #, fuzzy, c-format
 msgid ""
 "Do you want to delete the folder AND all addresses in `%s' ?\n"
@@ -435,38 +435,38 @@ msgstr ""
 "Вы хотите удалить папку \"%s\" и все адреса в ней?\n"
 "Если удалить только папку, адреса будут перемещены в родительскую папку."
 
-#: src/addressbook.c:1667 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2139
 msgid "Delete folder"
 msgstr "Удалить папку"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 #, fuzzy
 msgid "_Folder only"
 msgstr "Только папку"
 
-#: src/addressbook.c:1667
+#: src/addressbook.c:1674
 #, fuzzy
 msgid "Folder and _addresses"
 msgstr "Папку и адреса"
 
-#: src/addressbook.c:1672
+#: src/addressbook.c:1679
 #, c-format
 msgid "Really delete `%s' ?"
 msgstr "Действительно удалить '%s' ?"
 
-#: src/addressbook.c:2352 src/addressbook.c:2485
+#: src/addressbook.c:2365 src/addressbook.c:2498
 msgid "New user, could not save index file."
 msgstr "Новый пользователь; не удалось сохранить индексный файл."
 
-#: src/addressbook.c:2356 src/addressbook.c:2489
+#: src/addressbook.c:2369 src/addressbook.c:2502
 msgid "New user, could not save address book files."
 msgstr "Новый пользователь; не удалось сохранить файлы адресной книги."
 
-#: src/addressbook.c:2366 src/addressbook.c:2499
+#: src/addressbook.c:2379 src/addressbook.c:2512
 msgid "Old address book converted successfully."
 msgstr "Старая адресная книга успешно преобразована."
 
-#: src/addressbook.c:2371
+#: src/addressbook.c:2384
 msgid ""
 "Old address book converted,\n"
 "could not save new address index file"
@@ -474,7 +474,7 @@ msgstr ""
 "Старая адресная книга преобразована,\n"
 "не удалось сохранить новый индексный файл."
 
-#: src/addressbook.c:2384
+#: src/addressbook.c:2397
 msgid ""
 "Could not convert address book,\n"
 "but created empty new address book files."
@@ -482,7 +482,7 @@ msgstr ""
 "Не удалось преобразовать адресную книгу,\n"
 "создана пустая адресная книга."
 
-#: src/addressbook.c:2390
+#: src/addressbook.c:2403
 msgid ""
 "Could not convert address book,\n"
 "could not create new address book files."
@@ -490,7 +490,7 @@ msgstr ""
 "Не удалось преобразовать адресную книгу,\n"
 "ошибка при создании файлов адресной книги."
 
-#: src/addressbook.c:2395
+#: src/addressbook.c:2408
 msgid ""
 "Could not convert address book\n"
 "and could not create new address book files."
@@ -498,90 +498,90 @@ msgstr ""
 "Не удалось преобразовать адресную книгу,\n"
 "кроме того, произошла ошибка при создании файлов новой адресной книги."
 
-#: src/addressbook.c:2402
+#: src/addressbook.c:2415
 msgid "Addressbook conversion error"
 msgstr "Ошибка преобразования адресной книги"
 
-#: src/addressbook.c:2406
+#: src/addressbook.c:2419
 msgid "Addressbook conversion"
 msgstr "Преобразование адресной книги"
 
-#: src/addressbook.c:2441
+#: src/addressbook.c:2454
 msgid "Addressbook Error"
 msgstr "Ошибка при работе с адресной книгой"
 
-#: src/addressbook.c:2442 src/addressbook.c:2542
+#: src/addressbook.c:2455 src/addressbook.c:2555
 msgid "Could not read address index"
 msgstr "Не удалось прочитать индекс адресов"
 
-#: src/addressbook.c:2504
+#: src/addressbook.c:2517
 msgid "Old address book converted, could not save new address index file"
 msgstr ""
 "Старая адресная книга преобразована, не удалось сохранить новый индексный "
 "файл"
 
-#: src/addressbook.c:2518
+#: src/addressbook.c:2531
 msgid ""
 "Could not convert address book, but created empty new address book files."
 msgstr ""
 "Не удалось преобразовать адресную книгу, создана пустая адресная книга."
 
-#: src/addressbook.c:2524
+#: src/addressbook.c:2537
 msgid ""
 "Could not convert address book, could not create new address book files."
 msgstr ""
 "Не удалось преобразовать адресную книгу, ошибка при создании новых файлов "
 "адресной книги"
 
-#: src/addressbook.c:2530
+#: src/addressbook.c:2543
 msgid ""
 "Could not convert address book and could not create new address book files."
 msgstr ""
 "Не удалось преобразовать адресную книгу, кроме того, произошла ошибка при "
 "создании новых файлов адресной книги."
 
-#: src/addressbook.c:2548
+#: src/addressbook.c:2561
 msgid "Addressbook Conversion Error"
 msgstr "Ошибка преобразования адресной книги"
 
-#: src/addressbook.c:2554
+#: src/addressbook.c:2567
 msgid "Addressbook Conversion"
 msgstr "Преобразование адресной книги"
 
-#: src/addressbook.c:3055 src/prefs_common.c:959
+#: src/addressbook.c:3072 src/prefs_common.c:959
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: src/addressbook.c:3071 src/importldif.c:514
+#: src/addressbook.c:3088 src/importldif.c:514
 msgid "Address Book"
 msgstr "Адресная книга"
 
-#: src/addressbook.c:3087
+#: src/addressbook.c:3104
 msgid "Person"
 msgstr "Контакт"
 
-#: src/addressbook.c:3103
+#: src/addressbook.c:3120
 msgid "EMail Address"
 msgstr "Адрес E-Mail"
 
-#: src/addressbook.c:3119
+#: src/addressbook.c:3136
 msgid "Group"
 msgstr "Группа"
 
 #. special folder setting (maybe these options are redundant)
-#: src/addressbook.c:3135 src/folderview.c:346 src/prefs_account.c:1865
+#: src/addressbook.c:3152 src/folderview.c:346 src/prefs_account.c:1865
 msgid "Folder"
 msgstr "Папка"
 
-#: src/addressbook.c:3151
+#: src/addressbook.c:3168
 msgid "vCard"
 msgstr "vCard"
 
-#: src/addressbook.c:3167 src/addressbook.c:3183
+#: src/addressbook.c:3184 src/addressbook.c:3200
 msgid "JPilot"
 msgstr "JPilot"
 
-#: src/addressbook.c:3199
+#: src/addressbook.c:3216
 msgid "LDAP Server"
 msgstr "Сервер LDAP"
 
@@ -2065,44 +2065,44 @@ msgstr "Ошибка аутентификации IMAP4.\n"
 msgid "IMAP4 login failed.\n"
 msgstr "Ошибка авторизации IMAP4.\n"
 
-#: src/imap.c:3522
+#: src/imap.c:3528
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "не удалось добавить %s к %s\n"
 
-#: src/imap.c:3529
+#: src/imap.c:3535
 msgid "(sending file...)"
 msgstr "(передача файла...)"
 
-#: src/imap.c:3557
+#: src/imap.c:3563
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "не удалось добавить сообщение к %s\n"
 
-#: src/imap.c:3589
+#: src/imap.c:3595
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "не удалось скопировать %s в %s\n"
 
-#: src/imap.c:3613
+#: src/imap.c:3619
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "ошибка при выполнении команды IMAP: STORE %s %s\n"
 
-#: src/imap.c:3627
+#: src/imap.c:3633
 msgid "error while imap command: EXPUNGE\n"
 msgstr "ошибка при выполнении команды IMAP: EXPUNGE\n"
 
-#: src/imap.c:3640
+#: src/imap.c:3646
 msgid "error while imap command: CLOSE\n"
 msgstr "ошибка при выполнении команды IMAP: CLOSE\n"
 
-#: src/imap.c:3873
+#: src/imap.c:3879
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "ошибка преобразования iconv из UTF-7 в %s\n"
 
-#: src/imap.c:3903
+#: src/imap.c:3909
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "ошибка преобразования iconv из %s в UTF-7\n"
@@ -5559,11 +5559,11 @@ msgstr "Создание диалогового окна прогресса...\n
 msgid "Status"
 msgstr "Состояние"
 
-#: src/recv.c:114
+#: src/recv.c:113
 msgid "error occurred while retrieving data.\n"
 msgstr "произошла ошибка при получении данных.\n"
 
-#: src/recv.c:156 src/recv.c:198 src/recv.c:214
+#: src/recv.c:155 src/recv.c:197 src/recv.c:212
 msgid "Can't write to file.\n"
 msgstr "Ошибка записи в файл.\n"
 
