@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2004-12-05 14:40+0100\n"
 "Last-Translator: Mattias Ostergren <spikboll@gmx.net>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -436,7 +436,7 @@ msgstr ""
 "Tar du bara bort mappen, kommer adresserna att flyttas\n"
 "en mapp uppåt i hierarkin."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "Ta bort mapp"
 
@@ -1452,12 +1452,12 @@ msgstr "Redigera mapp"
 msgid "Input the new name of folder:"
 msgstr "Skriv in det nya namnet på mappen:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "Ny mapp"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "Skriv in namnet på den nya mappen:"
 
@@ -1646,21 +1646,21 @@ msgstr "Papperskorg"
 msgid "Drafts"
 msgstr "Utkast"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "NyMapp"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "\"%c\" får inte finnas i mappnamn."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "Mappen \"%s\" finns redan."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Kan inte skapa mappen \"%s\"."
@@ -1765,22 +1765,22 @@ msgstr "Uppdatering av mappträdet misslyckades."
 msgid "Checking for new messages in all folders..."
 msgstr "Letar efter nya meddelanden i alla mappar..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Mappen %s är vald\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Laddar ner meddelanden i %s ..."
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Ett fel uppstod vid nedladdning av meddelanden i \"%s\"."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1790,21 +1790,21 @@ msgstr ""
 "(om du vill skapa en mapp som skall innehålla undermappar,\n"
 " lägg till \"/\" vid slutet av namnet)"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Skriv in nytt namn på \"%s\":"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "Byt namn på mapp"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Kan inte ta bort mappen \"%s\"."
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1815,20 +1815,20 @@ msgstr ""
 "Alla mappar och meddelanden under \"%s\" kommer att tas bort.\n"
 "Vill du verkligen ta bort dem?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Kan inte ta bort mappen \"%s\"."
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "Töm papperskorgen"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "Töm alla meddelanden i papperskorgen?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1837,34 +1837,34 @@ msgstr ""
 "Vill du verkligen ta bort brevlådan \"%s\" ?\n"
 "(Meddelandena tas INTE bort från disken)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "Ta bort brevlåda"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Vill du verkligen ta bort IMAP4-kontot \"%s\"?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "Ta bort IMAP4-konto"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Vill du verkligen ta bort diskussionsgrupp \"%s\"?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "Ta bort diskussionsgrupp"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Vill du verkligen ta bort diskussionsgruppskonto \"%s\"?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "Ta bort diskussionsgruppskonto"
 

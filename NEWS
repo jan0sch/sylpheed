@@ -1,5 +1,13 @@
 Changes of Sylpheed
 
+* 2.0.1
+
+    * The sorting of summary now fall backs to comparison by date.
+    * The folder tree is now expanded/collapsed by double click.
+    * localedir, manualdir, and faqdir became user-configurable on configure.
+    * A bug that multiple selection of the addressbook with Control key
+      didn't work with GTK+ 2.6.9 was fixed.
+
 * 2.0.0
 
     * This is the first release of GTK2-based stable version.

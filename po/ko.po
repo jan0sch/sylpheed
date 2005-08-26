@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed  0.8.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2002-12-02 11:09+0900\n"
 "Last-Translator: Nam SungHyun <namsh@kldp.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
@@ -418,7 +418,7 @@ msgstr ""
 "`%s'의 모든 주소와 폴더를 삭제할까요 ? \n"
 "폴더만 지울 경우 주소는 그 상위 폴더로 옮겨집니다."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "폴더 삭제"
 
@@ -1441,12 +1441,12 @@ msgstr "폴더 편집"
 msgid "Input the new name of folder:"
 msgstr "새 폴더의 이름을 넣으세요:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "새 폴더"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "새 폴더의 이름을 넣으세요:"
 
@@ -1635,21 +1635,21 @@ msgstr "지운 편지함"
 msgid "Drafts"
 msgstr "임시 보관함"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "새 폴더"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "`%c'는 폴더 이름에 포함될 수 없습니다."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "`%s' 폴더가 이미 존재합니다."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "`%s' 폴더를 생성할 수가 없습니다."
@@ -1757,22 +1757,22 @@ msgstr "폴더 트리를 갱신합니다..."
 msgid "Checking for new messages in all folders..."
 msgstr "모든 폴더의 새로운 메시지를 확인합니다..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "%s 폴더가 선택되었습니다\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, fuzzy, c-format
 msgid "Downloading messages in %s ..."
 msgstr "메시지을 보내는 중"
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, fuzzy, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "%s로 메시지를 보내는 중 에러가 발생했습니다."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1782,21 +1782,21 @@ msgstr ""
 "(만일 하위폴더를 저장하기 위한 폴더를 생성하려면,\n"
 "이름의 마지막에 `/'를 추가하세요)"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "`%s'에대한 새 이름을 넣으세요:"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "폴더 이름 변경"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "`%s' 폴더를 제거할 수가 없습니다."
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1807,20 +1807,20 @@ msgstr ""
 "`%s'아래에 있는 모든 폴더와 메시지가 삭제될 것입니다.\n"
 "정말로 삭제하시겠습니까?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "`%s' 폴더를 제거할 수가 없습니다."
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "지운 편지함 비우기"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "지운 편지함에있는 모든 메시지를 비울까요?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1829,34 +1829,34 @@ msgstr ""
 "`%s' 메일박스를 정말로 삭제하시겠습니까?\n"
 "(메시지가 디스크로부터 삭제되는것은 아닙니다)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "메일박스를 제거합니다"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "정말로 `%s' IMAP4 계정을 삭제하시겠습니까?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "IMAP4 계정 삭제"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "정말로 `%s' 뉴스그룹을 삭제하시겠습니까?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "뉴스그룹 삭제"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "정말로 `%s' 뉴스그룹 계정을 삭제하시겠습니까?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "뉴스그룹 계정 삭제"
 

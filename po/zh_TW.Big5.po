@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2004-12-04 08:24+0800\n"
 "Last-Translator: Frank J. J. Weng <franklin@goodhorse.idv.tw>\n"
 "Language-Team: zh-l10n <zh-l10n@linux.org.tw>\n"
@@ -418,7 +418,7 @@ msgstr ""
 "您確定要刪除「%s」資料夾以及裡面所有的位址嗎？\n"
 "如果您選擇只刪除資料夾，裡面的位址紀錄將移到上一層資料夾中。"
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "刪除資料夾"
 
@@ -1432,12 +1432,12 @@ msgstr "編輯資料夾"
 msgid "Input the new name of folder:"
 msgstr "請輸入新的資料夾名稱："
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "新資料夾"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "請輸入新資料夾的名稱："
 
@@ -1626,21 +1626,21 @@ msgstr "刪除的郵件"
 msgid "Drafts"
 msgstr "草稿"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "新資料夾"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "資料夾名稱中不應含有 `%c' 這個字元。"
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "資料夾 `%s' 已存在。"
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "無法刪除資料夾 `%s'。"
@@ -1745,22 +1745,22 @@ msgstr "重建資料夾結構失敗。"
 msgid "Checking for new messages in all folders..."
 msgstr "檢查每個資料夾中的新郵件..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "已選取 %s 資料夾\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "從 %s 下載信件中..."
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "從 %s 下載信件時出現錯誤。"
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1770,21 +1770,21 @@ msgstr ""
 "（若是資料夾下要有子資料夾，\n"
 "　請在資料夾名稱的後面加上 `/'）"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "請輸入 `%s' 的新名稱："
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "重新命名資料夾"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "無法刪除資料夾 `%s'。"
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1795,20 +1795,20 @@ msgstr ""
 "所有在 `%s' 資料夾下面的信件與子資料夾都將會被刪除。\n"
 "您確定要刪除它嗎？"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "無法刪除資料夾 `%s'。"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "清空刪除的郵件"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "您確定要清除所有被刪除的郵件？"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1817,34 +1817,34 @@ msgstr ""
 "確定要刪除信箱 %s？\n"
 "注意：信箱中的郵件將不會從硬碟中被刪除。"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "/刪除信箱"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "您確定要刪除 %s 這個 IMAP4 帳號？"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "刪除 IMAP4 帳號"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "您確定要刪除新聞群組 `%s' 嗎？"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "刪除新聞群組"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "您確定要刪除新聞群組帳號 `%s' 嗎？"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "刪除帳號"
 

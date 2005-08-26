@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2005-07-08 21:08+0100\n"
 "Last-Translator: Ricardo Mones <mones@aic.uniovi.es>\n"
 "Language-Team: Ricardo Mones <mones@aic.uniovi.es>\n"
@@ -431,7 +431,7 @@ msgstr ""
 "¿Quiere borrar la carpeta Y todas las direcciones en «%s»? \n"
 "Si sólo borra la carpeta las direcciones se moverán a la carpeta padre."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "Borrar carpeta"
 
@@ -1422,12 +1422,12 @@ msgstr "Editar carpeta"
 msgid "Input the new name of folder:"
 msgstr "Nombre de la nueva carpeta:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "Nueva carpeta"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "Nombre de la nueva carpeta:"
 
@@ -1617,21 +1617,21 @@ msgstr "Papelera"
 msgid "Drafts"
 msgstr "Borradores"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "NuevaCarpeta"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "`%c' no puede estar en el nombre de la carpeta."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "La carpeta «%s» ya existe."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "No se puede crear la carpeta «%s»."
@@ -1735,22 +1735,22 @@ msgstr "La reconstrucción del árbol de carpetas falló."
 msgid "Checking for new messages in all folders..."
 msgstr "Comprobar si hay mensajes nuevos en todas las carpetas..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Carpeta %s seleccionada\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Descargando mensajes en %s ..."
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Hubo un error descargando los mensajes en «%s»."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1760,21 +1760,21 @@ msgstr ""
 "(si quiere crear una carpeta para almacenar subcarpetas,\n"
 " añada `/' al final del nombre)"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Nuevo nombre para «%s»:"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "Renombrar carpeta"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, c-format
 msgid "Can't move the folder `%s'."
 msgstr "No se puede mover la carpeta «%s»."
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1787,20 +1787,20 @@ msgstr ""
 "\n"
 "¿Está seguro de que quiere borrarla?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "No se puede eliminar la carpeta «%s»."
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "Vaciar papelera"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "¿Vaciar todos los mensajes de la papelera?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1809,34 +1809,34 @@ msgstr ""
 "¿Realmente desea eliminar el buzón «%s» ?\n"
 "(Los mensajes NO se borrarán del disco)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "Eliminar mailbox"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "¿Eliminar realmente la cuenta IMAP4 «%s»?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "Borrar cuenta IMAP4"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "¿Borrar el grupo de noticias «%s»?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "Borrar grupo de noticias"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "¿Borrar la cuenta de noticias «%s»?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "Borrar cuenta de noticias"
 

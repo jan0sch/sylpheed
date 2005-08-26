@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 0.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2003-02-18 13:03--100\n"
 "Last-Translator: Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>\n"
 "Language-Team: Dutch <vertaling@nl.linux.rg>\n"
@@ -434,7 +434,7 @@ msgstr ""
 "Als u alleen de map verwijdert, dan zullen de adressen naar de \n"
 "hoger gelegen map verplaatst worden."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "Verwijder map"
 
@@ -1462,12 +1462,12 @@ msgstr "Map hernoemen"
 msgid "Input the new name of folder:"
 msgstr "Geef de nieuwe naam van de map:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "Nieuwe map"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "Geef de naam van de nieuwe map:"
 
@@ -1657,21 +1657,21 @@ msgstr "Prullenbak"
 msgid "Drafts"
 msgstr "Klad"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "NieuweMap"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "'%c' mag niet in de naam van een map."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "De map '%s' bestaat al."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Kan map '%s' niet aanmaken."
@@ -1779,22 +1779,22 @@ msgstr "Accountlijst wordt ververst..."
 msgid "Checking for new messages in all folders..."
 msgstr "Bezig met controleren op nieuwe berichten in alle mappen..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Map %s is geselecteerd\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, fuzzy, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Bezig met verzenden van bericht"
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, fuzzy, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Er is een fout opgetreden bij het versturen van het bericht naar %s."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1804,21 +1804,21 @@ msgstr ""
 "(Als je een map wilt maken om daarin submappen te plaatsen,\n"
 "sluit de naam dan af met een '/')"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Geef een nieuwe naam voor '%s':"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "Hernoem map"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Kan map '%s' niet verwijderen."
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1829,20 +1829,20 @@ msgstr ""
 "Alle mappen en berichten in '%s' zullen worden verwijderd.\n"
 "Wilt u werkelijk verwijderen?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Kan map '%s' niet verwijderen."
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "Prullenbak leegmaken"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "Alle berichten uit de prullenbak weggooien?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1851,34 +1851,34 @@ msgstr ""
 "Wilt u de '%s' mailbox werkelijk verwijderen?\n"
 "(De berichten zelf zullen NIET van de schijf worden verwijderd)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "mailbox verwijderen"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "IMAP4 account '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "Verwijder IMAP4 account"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Nieuwsgroep '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "Verwijder nieuwsgroep"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Nieuwsaccount '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "Verwijder nieuwsaccount"
 

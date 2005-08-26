@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2003-01-24 20:39CET\n"
 "Last-Translator: Jernej Kovacic <jkovacic@email.si>\n"
 "Language-Team: Slovenian <translator-team-sl@lists.sourceforge.net>\n"
@@ -431,7 +431,7 @@ msgstr ""
 "Ali res želite izbrisati mapo IN vse naslove v '%s' ? \n"
 "Če izbrišete samo mapo, se bodo vsi naslovi prestavili v starševsko mapo."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "Izbriši mapo"
 
@@ -1460,12 +1460,12 @@ msgstr "Urejanje mape"
 msgid "Input the new name of folder:"
 msgstr "Vnesite novo ime mape:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "Nova mapa"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "Vnesite ime nove mape:"
 
@@ -1654,21 +1654,21 @@ msgstr "Smeti"
 msgid "Drafts"
 msgstr "Osnutki"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "Nova mapa"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "Znaka '%c' ne more biti v imenu mape."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "Mapa '%s' že obstaja."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Ne morem narediti mape '%s'."
@@ -1776,22 +1776,22 @@ msgstr "Ponovno gradim drevo map..."
 msgid "Checking for new messages in all folders..."
 msgstr "Preverjam nova sporočila v vseh mapah..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Mapa %s je izbrana\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, fuzzy, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Pošiljam sporočilo"
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, fuzzy, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Med pošiljanjem sporočila %s je prišlo do napake."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1801,21 +1801,21 @@ msgstr ""
 "(če želite narediti mapo za shranjevanje podmap,\n"
 "dodajte '/' na koncu imena datoteke)"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Vnesite novo ime za '%s':"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "Preimenuj mapo"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Ne morem odstraniti mape '%s'"
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1826,20 +1826,20 @@ msgstr ""
 "Vse mape in sporočila pod '%s' bodo izbrisana.\n"
 "Ali jih res želite izbrisati?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Ne morem odstraniti mape '%s'"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "Izprazni smetnjak"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "Izbrišem vsa sporočila v smetnjaku?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1848,34 +1848,34 @@ msgstr ""
 "Ali naj res odstranim poštni predal '%s' ?\n"
 "(Sporočila se NE bodo izbrisala z diska)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "Odstrani poštni predal"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Ali naj res izbrišem račun IMAP4 '%s'?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "Izbriši račun IMAP4"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Ali naj res izbrišem novičarsko skupino '%s'?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "Izbriši novičarsko skupino"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Ali naj res izbrišem novičarski račun '%s'?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "Izbriši novičarski račun"
 

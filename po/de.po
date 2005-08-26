@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-25 18:13+0900\n"
+"POT-Creation-Date: 2005-08-26 14:31+0900\n"
 "PO-Revision-Date: 2005-07-22 18:18+0100\n"
 "Last-Translator: Joo Martin <debian@joomart.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -435,7 +435,7 @@ msgstr ""
 "Wenn Sie nur die Ablage löschen, werden die Adressen in das übergeordnete "
 "Verzeichnis verschoben."
 
-#: src/addressbook.c:1674 src/folderview.c:2139
+#: src/addressbook.c:1674 src/folderview.c:2145
 msgid "Delete folder"
 msgstr "Ablage löschen"
 
@@ -1424,12 +1424,12 @@ msgstr "Ablage bearbeiten"
 msgid "Input the new name of folder:"
 msgstr "Geben Sie den neuen Namen der Ablage ein:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1918
-#: src/folderview.c:1924
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
+#: src/folderview.c:1930
 msgid "New folder"
 msgstr "Neue Ablage"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1925
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
 msgid "Input the name of new folder:"
 msgstr "Geben Sie den Namen der neuen Ablage ein:"
 
@@ -1618,21 +1618,21 @@ msgstr "Papierkorb"
 msgid "Drafts"
 msgstr "Entwürfe"
 
-#: src/foldersel.c:542 src/folderview.c:1922 src/folderview.c:1926
+#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
 msgid "NewFolder"
 msgstr "NeueAblage"
 
-#: src/foldersel.c:550 src/folderview.c:1934 src/folderview.c:1990
+#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "'%c' kann nicht in den Ablagenamen integriert werden."
 
-#: src/foldersel.c:560 src/folderview.c:1944 src/folderview.c:1997
+#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "Die Ablage '%s' existiert bereits."
 
-#: src/foldersel.c:568 src/folderview.c:1951
+#: src/foldersel.c:568 src/folderview.c:1957
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Kann Ablage '%s' nicht erstellen."
@@ -1736,22 +1736,22 @@ msgstr "Ablagenbaum erneuern fehlgeschlagen..."
 msgid "Checking for new messages in all folders..."
 msgstr "Alle Ablagen auf neue Nachrichten prüfen..."
 
-#: src/folderview.c:1679
+#: src/folderview.c:1685
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Ablage %s ist gewählt\n"
 
-#: src/folderview.c:1834
+#: src/folderview.c:1840
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Lade Nachrichten nach %s ..."
 
-#: src/folderview.c:1869
+#: src/folderview.c:1875
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Fehler beim Herunterladen der Nachrichten in '%s' ."
 
-#: src/folderview.c:1919
+#: src/folderview.c:1925
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1761,21 +1761,21 @@ msgstr ""
 "(wenn Sie eine Ablage zum Speichern von Unterablagen erstellen wollen,\n"
 "dann hängen Sie ein `/' an das Ende des Namens)"
 
-#: src/folderview.c:1981
+#: src/folderview.c:1987
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Neuer Name für '%s':"
 
-#: src/folderview.c:1982
+#: src/folderview.c:1988
 msgid "Rename folder"
 msgstr "Ablage umbenennen"
 
-#: src/folderview.c:2073
+#: src/folderview.c:2079
 #, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Kann Ablage '%s' nicht verschieben."
 
-#: src/folderview.c:2136
+#: src/folderview.c:2142
 #, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1788,20 +1788,20 @@ msgstr ""
 "\n"
 "Wollen Sie das wirklich?"
 
-#: src/folderview.c:2165
+#: src/folderview.c:2171
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Kann Ablage '%s' nicht entfernen."
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty trash"
 msgstr "Leere Papierkorb"
 
-#: src/folderview.c:2199
+#: src/folderview.c:2205
 msgid "Empty all messages in trash?"
 msgstr "Lösche alle Nachrichten im Papierkorb?"
 
-#: src/folderview.c:2235
+#: src/folderview.c:2241
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1810,34 +1810,34 @@ msgstr ""
 "Mailbox '%s' entfernen?\n"
 "(Die Nachrichten werden NICHT von der Platte gelöscht)"
 
-#: src/folderview.c:2237
+#: src/folderview.c:2243
 msgid "Remove mailbox"
 msgstr "Entferne Mailbox"
 
-#: src/folderview.c:2283
+#: src/folderview.c:2289
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "IMAP4-Account '%s' wirklich löschen?"
 
-#: src/folderview.c:2284
+#: src/folderview.c:2290
 msgid "Delete IMAP4 account"
 msgstr "IMAP4-Account löschen"
 
-#: src/folderview.c:2426
+#: src/folderview.c:2432
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Newsgroup '%s' wirklich löschen?"
 
-#: src/folderview.c:2427
+#: src/folderview.c:2433
 msgid "Delete newsgroup"
 msgstr "Newsgroup löschen"
 
-#: src/folderview.c:2474
+#: src/folderview.c:2480
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "News-Account '%s' wirklich löschen?"
 
-#: src/folderview.c:2475
+#: src/folderview.c:2481
 msgid "Delete news account"
 msgstr "News-Account löschen"
 

@@ -1,3 +1,12 @@
+2005-08-26
+
+	* version 2.0.1
+
+2005-08-26
+
+	* src/folderview.c: folderview_button_pressed(): expand/collapse
+	  folder tree on double click.
+
 2005-08-25
 
 	* src/addressbook.c: fixed refresh of folder contents.
