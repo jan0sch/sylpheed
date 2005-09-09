@@ -1,5 +1,9 @@
 2005-09-09
 
+	* configure.in: use ${datadir} instead of ${prefix}/${DATADIRNAME}.
+
+2005-09-09
+
 	* src/imap.c: limit number of messages to be copied at a time with
 	  COPY command to prevent network timeout.
 
