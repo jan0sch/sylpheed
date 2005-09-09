@@ -1,5 +1,10 @@
 2005-09-09
 
+	* src/addressbook.c: addressbook_tree_button_pressed(): fixed a bug
+	  that the expander of the folder tree didn't work.
+
+2005-09-09
+
 	* configure.in: use ${datadir} instead of ${prefix}/${DATADIRNAME}.
 
 2005-09-09
