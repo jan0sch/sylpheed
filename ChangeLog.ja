@@ -1,3 +1,8 @@
+2005-09-09
+
+	* src/codeconv.c: conv_guess_ja_encoding(): UTF-8 エンコーディング
+	  にも対応。
+
 2005-08-29
 
 	* src/compose.c: compose_write_attach(): message/* のパートを
