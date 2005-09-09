@@ -260,6 +260,8 @@ int main(int argc, char *argv[])
 	}
 	set_log_file(RC_DIR G_DIR_SEPARATOR_S "sylpheed.log");
 
+	set_ui_update_func(gtkut_events_flush);
+
 	prefs_common_read_config();
 
 #if USE_GPGME

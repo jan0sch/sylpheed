@@ -196,6 +196,7 @@ static GSList *imap_get_uncached_messages	(IMAPSession	*session,
 						 FolderItem	*item,
 						 guint32	 first_uid,
 						 guint32	 last_uid,
+						 gint		 exists,
 						 gboolean	 update_count);
 static void imap_delete_cached_message		(FolderItem	*item,
 						 guint32	 uid);
@@ -1027,16 +1028,17 @@ static GSList *imap_get_msg_list(Folder *folder, FolderItem *item,
 
 		if (begin > 0 && begin <= last_uid) {
 			GSList *newlist;
-			newlist = imap_get_uncached_messages(session, item,
-							     begin, last_uid,
-							     TRUE);
+			newlist = imap_get_uncached_messages
+				(session, item, begin, last_uid,
+				 exists - item->total, TRUE);
 			if (newlist)
 				item->cache_dirty = TRUE;
 			mlist = g_slist_concat(mlist, newlist);
 		}
 	} else {
 		imap_delete_all_cached_messages(item);
-		mlist = imap_get_uncached_messages(session, item, 0, 0, TRUE);
+		mlist = imap_get_uncached_messages(session, item, 0, 0, exists,
+						   TRUE);
 		last_uid = procmsg_get_last_num_in_msg_list(mlist);
 		item->cache_dirty = TRUE;
 	}
@@ -1090,6 +1092,7 @@ static gchar *imap_fetch_msg(Folder *folder, FolderItem *item, gint uid)
 		return NULL;
 	}
 
+	status_print(_("Getting message %d"), uid);
 	debug_print("getting message %d...\n", uid);
 	ok = imap_cmd_fetch(session, (guint32)uid, filename);
 
@@ -1114,7 +1117,7 @@ static MsgInfo *imap_get_msginfo(Folder *folder, FolderItem *item, gint uid)
 	session = imap_session_get(folder);
 	g_return_val_if_fail(session != NULL, NULL);
 
-	list = imap_get_uncached_messages(session, item, uid, uid, FALSE);
+	list = imap_get_uncached_messages(session, item, uid, uid, 0, FALSE);
 	if (list) {
 		msginfo = (MsgInfo *)list->data;
 		list->data = NULL;
@@ -1150,7 +1153,10 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 	guint32 last_uid = 0;
 	GSList *cur;
 	MsgFileInfo *fileinfo;
+	gint count = 1;
+	gint total;
 	gint ok;
+	GTimeVal tv_prev, tv_cur;
 
 	g_return_val_if_fail(folder != NULL, -1);
 	g_return_val_if_fail(dest != NULL, -1);
@@ -1158,6 +1164,9 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 
 	session = imap_session_get(folder);
 	if (!session) return -1;
+
+	g_get_current_time(&tv_prev);
+	ui_update();
 
 	ok = imap_status(session, IMAP_FOLDER(folder), dest->path,
 			 &messages, &recent, &uid_next, &uid_validity, &unseen);
@@ -1172,6 +1181,8 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 		last_uid = uid_next - 1;
 	if (first)
 		*first = uid_next;
+
+	total = g_slist_length(file_list);
 
 	for (cur = file_list; cur != NULL; cur = cur->next) {
 		IMAPFlags iflags = 0;
@@ -1193,6 +1204,17 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 		    dest->stype == F_DRAFT  ||
 		    dest->stype == F_TRASH)
 			iflags |= IMAP_FLAG_SEEN;
+
+		g_get_current_time(&tv_cur);
+		if (tv_cur.tv_sec > tv_prev.tv_sec ||
+		    tv_cur.tv_usec - tv_prev.tv_usec >
+		    PROGRESS_UPDATE_INTERVAL * 1000) {
+			status_print(_("Appending messages to %s (%d / %d)"),
+				     dest->path, count, total);
+			ui_update();
+			tv_prev = tv_cur;
+		}
+		++count;
 
 		ok = imap_cmd_append(session, destdir, fileinfo->file, iflags,
 				     &new_uid);
@@ -1269,14 +1291,20 @@ static gint imap_do_copy_msgs(Folder *folder, FolderItem *dest, GSList *msglist,
 	for (cur = seq_list; cur != NULL; cur = cur->next) {
 		gchar *seq_set = (gchar *)cur->data;
 
-		if (remove_source)
+		if (remove_source) {
+			status_print(_("Moving messages %s to %s ..."),
+				     seq_set, dest->path);
 			debug_print("Moving message %s%c[%s] to %s ...\n",
 				    src->path, G_DIR_SEPARATOR,
 				    seq_set, destdir);
-		else
+		} else {
+			status_print(_("Copying messages %s to %s ..."),
+				     seq_set, dest->path);
 			debug_print("Copying message %s%c[%s] to %s ...\n",
 				    src->path, G_DIR_SEPARATOR,
 				    seq_set, destdir);
+		}
+		ui_update();
 
 		ok = imap_cmd_copy(session, seq_set, destdir);
 		if (ok != IMAP_SUCCESS) {
@@ -1417,6 +1445,9 @@ static gint imap_remove_msgs_by_seq_set(Folder *folder, FolderItem *item,
 	for (cur = seq_list; cur != NULL; cur = cur->next) {
 		gchar *seq_set = (gchar *)cur->data;
 
+		status_print(_("Removing messages %s"), seq_set);
+		ui_update();
+
 		ok = imap_set_message_flags(session, seq_set, IMAP_FLAG_DELETED,
 					    TRUE);
 		if (ok != IMAP_SUCCESS) {
@@ -1510,6 +1541,9 @@ static gint imap_remove_all_msg(Folder *folder, FolderItem *item)
 			 NULL, NULL, NULL, NULL);
 	if (ok != IMAP_SUCCESS)
 		return ok;
+
+	status_print(_("Removing all messages in %s"), item->path);
+	ui_update();
 
 	imap_cmd_gen_send(session, "STORE 1:* +FLAGS.SILENT (\\Deleted)");
 	ok = imap_cmd_ok(session, NULL);
@@ -2223,7 +2257,7 @@ static gint imap_remove_folder(Folder *folder, FolderItem *item)
 static GSList *imap_get_uncached_messages(IMAPSession *session,
 					  FolderItem *item,
 					  guint32 first_uid, guint32 last_uid,
-					  gboolean update_count)
+					  gint exists, gboolean update_count)
 {
 	gchar *tmp;
 	GSList *newlist = NULL;
@@ -2231,12 +2265,17 @@ static GSList *imap_get_uncached_messages(IMAPSession *session,
 	GString *str;
 	MsgInfo *msginfo;
 	gchar seq_set[22];
+	gint count = 1;
+	GTimeVal tv_prev, tv_cur;
 
 	g_return_val_if_fail(session != NULL, NULL);
 	g_return_val_if_fail(item != NULL, NULL);
 	g_return_val_if_fail(item->folder != NULL, NULL);
 	g_return_val_if_fail(FOLDER_TYPE(item->folder) == F_IMAP, NULL);
 	g_return_val_if_fail(first_uid <= last_uid, NULL);
+
+	g_get_current_time(&tv_prev);
+	ui_update();
 
 	if (first_uid == 0 && last_uid == 0)
 		strcpy(seq_set, "1:*");
@@ -2251,6 +2290,20 @@ static GSList *imap_get_uncached_messages(IMAPSession *session,
 	str = g_string_new(NULL);
 
 	for (;;) {
+		if (exists > 0) {
+			g_get_current_time(&tv_cur);
+			if (tv_cur.tv_sec > tv_prev.tv_sec ||
+			    tv_cur.tv_usec - tv_prev.tv_usec >
+			    PROGRESS_UPDATE_INTERVAL * 1000) {
+				status_print
+					(_("Getting message headers (%d / %d)"),
+					 count, exists);
+				ui_update();
+				tv_prev = tv_cur;
+			}
+		}
+		++count;
+
 		if (sock_getline(SESSION(session)->sock, &tmp) < 0) {
 			log_warning(_("error occurred while getting envelope.\n"));
 			g_string_free(str, TRUE);

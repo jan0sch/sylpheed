@@ -1,5 +1,14 @@
 2005-09-09
 
+	* src/gtkutils.[ch]
+	  src/main.c
+	  src/imap.c
+	  src/utils.[ch]
+	  src/folderview.c: 長時間かかる操作を実行しているときに進捗を表示
+	  するようにした。
+
+2005-09-09
+
 	* src/addressbook.c: addressbook_tree_button_pressed(): フォルダ
 	  ツリーのエキスパンダが動作していなかったバグを修正。
 

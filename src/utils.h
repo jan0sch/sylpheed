@@ -144,6 +144,8 @@
 	perror(func); \
 }
 
+typedef void (*UIUpdateFunc)	(void);
+ 
 /* for macro expansion */
 #define Str(x)	#x
 #define Xstr(x)	Str(x)
@@ -433,11 +435,16 @@ size_t my_strftime		(gchar			*s,
 				 const gchar		*format,
 				 const struct tm	*tm);
 
+/* UI hints */
+void set_ui_update_func	(UIUpdateFunc	 func);
+void ui_update		(void);
+
 /* logging */
 void set_log_file	(const gchar *filename);
 void close_log_file	(void);
 void log_verbosity_set	(gboolean verbose);
 void debug_print	(const gchar *format, ...) G_GNUC_PRINTF(1, 2);
+void status_print	(const gchar *format, ...) G_GNUC_PRINTF(1, 2);
 void log_print		(const gchar *format, ...) G_GNUC_PRINTF(1, 2);
 void log_message	(const gchar *format, ...) G_GNUC_PRINTF(1, 2);
 void log_warning	(const gchar *format, ...) G_GNUC_PRINTF(1, 2);

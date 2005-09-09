@@ -1,5 +1,14 @@
 2005-09-09
 
+	* src/gtkutils.[ch]
+	  src/main.c
+	  src/imap.c
+	  src/utils.[ch]
+	  src/folderview.c: show progress when executing operations which
+	  takes long time.
+
+2005-09-09
+
 	* src/addressbook.c: addressbook_tree_button_pressed(): fixed a bug
 	  that the expander of the folder tree didn't work.
 

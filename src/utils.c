@@ -3168,6 +3168,21 @@ size_t my_strftime(gchar *s, size_t max, const gchar *format,
 	return strftime(s, max, format, tm);
 }
 
+/* UI hints */
+
+static UIUpdateFunc ui_update_func = NULL;
+
+void set_ui_update_func(UIUpdateFunc func)
+{
+	ui_update_func = func;
+}
+
+void ui_update(void)
+{
+	if (ui_update_func)
+		ui_update_func();
+}
+
 static FILE *log_fp = NULL;
 
 void set_log_file(const gchar *filename)
@@ -3208,6 +3223,18 @@ void debug_print(const gchar *format, ...)
 	va_end(args);
 
 	g_print("%s", buf);
+}
+
+void status_print(const gchar *format, ...)
+{
+	va_list args;
+	gchar buf[BUFFSIZE];
+
+	va_start(args, format);
+	g_vsnprintf(buf, sizeof(buf), format, args);
+	va_end(args);
+
+	statusbar_puts_all(buf);
 }
 
 #define TIME_LEN	11
