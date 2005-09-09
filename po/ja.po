@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 1999-10-12\n"
 "Last-Translator: Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -97,7 +97,7 @@ msgstr ""
 "の取得を有効にするには、「G」カラムのボックスをチェックしてください。"
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -233,7 +233,7 @@ msgstr "アクションのユーザ引数"
 msgid "Add Address to Book"
 msgstr "アドレスをアドレス帳に追加"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "アドレス"
@@ -373,7 +373,7 @@ msgstr "/削除(_D)"
 msgid "E-Mail address"
 msgstr "電子メール アドレス"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "アドレス帳"
 
@@ -431,7 +431,7 @@ msgstr ""
 "`%s' 内のすべてのフォルダとアドレスを削除してもいいですか?\n"
 "フォルダのみを削除する場合、アドレスは親フォルダに移動します。"
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "フォルダの削除"
 
@@ -586,11 +586,11 @@ msgstr "共有アドレス"
 msgid "Personal address"
 msgstr "個人用アドレス"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "注意"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "警告"
 
@@ -1056,133 +1056,133 @@ msgstr "送信待ちフォルダが見つかりません\n"
 msgid "can't queue the message\n"
 msgstr "メッセージを送信待機できません\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "生成されたメッセージID: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "メッセージ作成ウィンドウを作成中...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "差出人:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 msgid "PGP Sign"
 msgstr "PGP署名"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 msgid "PGP Encrypt"
 msgstr "PGP暗号化"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "MIME タイプ"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "サイズ"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "送信"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "メッセージを送信"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "後で送信"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "送信待ちフォルダに入れて後で送信"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "草稿"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "草稿フォルダに保存"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "挿入"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "ファイルを挿入"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "添付"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "ファイルを添付"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "署名"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "署名を挿入"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "エディタ"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "外部エディタで編集"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "整形"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "すべての長い行を折り返す"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "無効な MIME タイプです。"
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "ファイルが存在しないかまたは空です。"
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "プロパティ"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "エンコーディング"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "パス"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "ファイル名"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "外部エディタのコマンドラインが無効です: `%s'\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1193,71 +1193,71 @@ msgstr ""
 "プロセスを強制終了しますか?\n"
 "プロセスグループID: %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "終了したプロセスグループID: %d"
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "一時ファイル: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Compose: 監視プロセスからの入力\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "外部エディタを実行できません\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "ファイルに書き込めません\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "パイプの読み込みに失敗\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "メッセージを送信待機できません。"
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 msgid "Select files"
 msgstr "ファイルの選択"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "ファイルの選択"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 msgid "Save message"
 msgstr "メッセージの保存"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "このメッセージは変更されています。草稿に保存しますか?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr "保存せずに閉じる(_W)"
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "テンプレート `%s' を適用しますか?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "テンプレートの適用"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 msgid "_Replace"
 msgstr "置換(_R)"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 msgid "_Insert"
 msgstr "挿入(_I)"
 
@@ -1418,12 +1418,12 @@ msgstr "フォルダの編集"
 msgid "Input the new name of folder:"
 msgstr "フォルダの新しい名前を入力してください:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "新規フォルダ"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "新規フォルダの名前を入力してください:"
 
@@ -1612,21 +1612,21 @@ msgstr "ごみ箱"
 msgid "Drafts"
 msgstr "草稿"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "NewFolder"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "フォルダ名に `%c' を含むことはできません。"
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "フォルダ `%s' はすでに存在します。"
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "フォルダ `%s' を作成できません。"
@@ -1730,22 +1730,22 @@ msgstr "フォルダツリーの再構築に失敗しました。"
 msgid "Checking for new messages in all folders..."
 msgstr "全フォルダの新着メッセージをチェック中..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "フォルダ %s が選択されました\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "%s 中のメッセージをダウンロード中..."
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "`%s' 中のメッセージのダウンロード中にエラーが発生しました。"
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1755,21 +1755,21 @@ msgstr ""
 "(サブフォルダを格納するフォルダを作成したい場合は、\n"
 " 名前の最後に `/' を追加してください)"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "`%s' の新しい名前を入力してください:"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "フォルダ名の変更"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, c-format
 msgid "Can't move the folder `%s'."
 msgstr "フォルダ `%s' を移動できません。"
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1782,20 +1782,20 @@ msgstr ""
 "\n"
 "本当に削除してもいいですか?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "フォルダ `%s' を削除できません。"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "ごみ箱を空にする"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "ごみ箱の中のメッセージをすべて削除しますか?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1804,34 +1804,34 @@ msgstr ""
 "本当にメールボックス `%s' を削除しますか?\n"
 "(メッセージはディスクからは削除されません)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "メールボックスの削除"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "本当にIMAP4アカウント `%s' を削除しますか?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "IMAP4アカウントの削除"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "本当にニュースグループ `%s' を削除しますか?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "ニュースグループの削除"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "本当にニュースアカウント `%s' を削除しますか?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "ニュースアカウントの削除"
 
@@ -1916,155 +1916,190 @@ msgstr "イメージビューを作成中...\n"
 msgid "Can't load the image."
 msgstr "画像を読み込めません。"
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "%s へのIMAP4の接続が切れています。再接続します...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAPサーバは LOGIN を無効にしています。\n"
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "%s:%d へのIMAP4の接続を確立中...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "TLS セッションを開始できません。\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, c-format
+msgid "Getting message %d"
+msgstr "メッセージ %d を取得中"
+
+#: src/imap.c:1212
+#, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "メッセージを %s に追加しています (%d / %d)"
+
+#: src/imap.c:1295
+#, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "メッセージ %s を %s に移動しています..."
+
+#: src/imap.c:1301
+#, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "メッセージ %s を %s にコピーしています..."
+
+#: src/imap.c:1448
+#, c-format
+msgid "Removing messages %s"
+msgstr "メッセージ %s を削除しています"
+
+#: src/imap.c:1454
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "deleted フラグをセットできません: %s\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "expunge できません\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, c-format
+msgid "Removing all messages in %s"
+msgstr "%s のすべてのメッセージを削除しています"
+
+#: src/imap.c:1551
 msgid "can't set deleted flags: 1:*\n"
 msgstr "deleted フラグをセットできません: 1:*\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 msgid "can't close folder\n"
 msgstr "フォルダをクローズできません\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "ルートフォルダ %s が存在しません\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 msgid "error occurred while getting LIST.\n"
 msgstr "LIST の取得中にエラーが発生しました。\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "'%s' を作成できません。\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "INBOX の下に '%s' を作成できません。\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "メールボックスを作成できません: LIST に失敗\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "メールボックスを作成できません\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "メールボックスを名称変更できません: %s -> %s\n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "メールボックスを削除できません\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "エンベロープを取得できません\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "メッセージのヘッダを取得中 (%d / %d)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "エンベロープを取得中にエラーが発生しました。\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "エンベロープを解析できません: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "IMAP4 サーバ: %s:%d に接続できません\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "%s:%d との IMAP4 セッションを確立できません\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "namespace を取得できません\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "フォルダ %s を選択できません\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 の認証に失敗しました。\n"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4のログインに失敗しました。\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s を %s に追加できません\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(ファイルを送信中...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "メッセージを %s に追加できません\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%s を %s にコピーできません\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap コマンド中のエラー: STORE %s %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "imap コマンド中のエラー: EXPUNGE\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 msgid "error while imap command: CLOSE\n"
 msgstr "imap コマンド中のエラー: CLOSE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv が UTF-7 を %s に変換できません\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv が %s を UTF-7 に変換できません\n"
@@ -2426,7 +2461,7 @@ msgstr ""
 "\n"
 "続行しますか?"
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2434,16 +2469,16 @@ msgstr ""
 "GnuPG が正しくインストールされていないか、バージョンが古すぎます。\n"
 "OpenPGP サポートは無効です。"
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "使用法: %s [オプション]...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [address]    メッセージ作成ウィンドウを開く"
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2453,23 +2488,23 @@ msgstr ""
 "                         指定したファイルを添付してメッセージ作成\n"
 "                         ウィンドウを開く"
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive              新着メッセージを受信する"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          全アカウントの新着メッセージを受信する"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 送信待機中のメッセージをすべて送信する"
 
-#: src/main.c:461
+#: src/main.c:463
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [folder]...   メッセージの総数を表示する"
 
-#: src/main.c:462
+#: src/main.c:464
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2477,40 +2512,40 @@ msgstr ""
 "  --status-full [folder]...\n"
 "                         各フォルダの状態を表示する"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                デバッグモード"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 このヘルプを表示して終了する"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr "  --version              バージョン情報を出力して終了する"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr "作成中のメッセージが存在します。本当に終了しますか?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "送信待機中のメッセージ"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "送信待機中の未送信メッセージがあります。終了しますか?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "別の Sylpheed がすでに起動しています。\n"
 
-#: src/main.c:749
+#: src/main.c:751
 msgid "Migration of configuration"
 msgstr "設定の移行"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"

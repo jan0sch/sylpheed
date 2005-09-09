@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 2004-12-03 11:44+0200\n"
 "Last-Translator: Arman Aksoy <armish@linux-sevenler.org>\n"
 "Language-Team:  <gnome-turk@gnome.org>\n"
@@ -100,7 +100,7 @@ msgstr ""
 "etkin duruma getirilebilir."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -238,7 +238,7 @@ msgstr "Eylemin kullanıcı argümanı"
 msgid "Add Address to Book"
 msgstr "Adres Defterine Ekle"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Adres"
@@ -378,7 +378,7 @@ msgstr "/_Sil"
 msgid "E-Mail address"
 msgstr "İleti adresi"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Adres defteri"
 
@@ -437,7 +437,7 @@ msgstr ""
 "misiniz?\n"
 "Eğer sadece dizini silerseniz, içindeki adresler ana dizine taşınacaktır."
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "Dizini sil"
 
@@ -593,11 +593,11 @@ msgstr "Ortak adres"
 msgid "Personal address"
 msgstr "Kişisel adres"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "Not"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "Uyarı"
 
@@ -1086,135 +1086,135 @@ msgstr "kuyruk dizini bulunamadı\n"
 msgid "can't queue the message\n"
 msgstr "ileti kuyruğa gönderilemedi\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "İleti numarası oluşturuldu: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "Düzenleme penceresi oluşturuluyor...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "Kimden:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/A_raçlar/PGP İ_mza"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/A_raçlar/PGP ile Ş_ifrele"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "MIME türü"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "Boyut"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Gönder"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "İletiyi gönder"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "Sonra gönder"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "İletiyi kuyruğa aktar ve sonra gönder"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "Taslak"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "Taslak dizinine kaydet"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "İçer"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "Dosya içer"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "Ekle"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "Dosya ekle"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "İmza"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "İmza ekle"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Düzenleyici"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "Harici bir düzenleyici kullan"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "Satır kaydır"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "Tüm uzun satırları kaydır"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "Geçersiz MIME türü."
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "Dosya yok, ya da boş."
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "Özellikler"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "Kodlama"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Yol"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "Dosya adı"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "Harici düzenleyici komut satırı geçersiz: `%s'\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1225,75 +1225,75 @@ msgstr ""
 "Bu süreci sonlandırayım mı?\n"
 "Programın grup numarası (GID): %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Grup numarası %d olan süreç sonlandırıldı"
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Geçici dosya: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Düzenle: süreç görüntüsünü içer\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "Harici düzenleyici çalıştırılamadı\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "Dosyaya yazılamadı\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "Boru okumada hata\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "İleti kuyruğa gönderilemedi."
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 #, fuzzy
 msgid "Select files"
 msgstr "Dosya seç"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "Dosya seç"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 #, fuzzy
 msgid "Save message"
 msgstr "İletiyi gönder"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Bu ileti değiştirildi. Silinsin mi?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "%s şablonunu uygulamak istiyor musunuz?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "Şablonu uygula"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Replace"
 msgstr "Değiştir"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Insert"
 msgstr "İçer"
@@ -1456,12 +1456,12 @@ msgstr "Dizini düzenle"
 msgid "Input the new name of folder:"
 msgstr "Dizinin yeni adıni girin:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "Yeni dizin"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "Yeni dizinin adını verin:"
 
@@ -1650,21 +1650,21 @@ msgstr "Çöp"
 msgid "Drafts"
 msgstr "Taslaklar"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "YeniDizin"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "`%c' bir dizin adı içinde olamaz."
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "`%s' dizini zaten var."
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "`%s' dizini oluşturulamıyor."
@@ -1769,22 +1769,22 @@ msgstr "Dizin ağacı yeniden oluşturulamadı."
 msgid "Checking for new messages in all folders..."
 msgstr "Dizinlerde yeni mesajlar kontrol ediliyor..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "%s dizini seçildi\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "İletiler %s içine indiriliyor..."
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "İletiler `%s' içine indirilirken hata oluştu."
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1794,21 +1794,21 @@ msgstr ""
 "(Eğer alt dizin içerecek bir dizin oluşturmak \n"
 "istiyorsanız, adının sonuna `/' karakteri getirin)"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "`%s' için yeni bir isim verin:"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "Dizini yeniden adlandır"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "`%s' dizini silinemiyor."
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1819,20 +1819,20 @@ msgstr ""
 "`%s' altındaki tüm dizinler ve mesajlar silinecek.\n"
 "Devam etmek istediğinizden emin misiniz?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "`%s' dizini silinemiyor."
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "Çöpü boşalt"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "Çöpteki tüm iletiler silinsin mi?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1841,34 +1841,34 @@ msgstr ""
 "`%s' posta kutusu kaldırılsın mı?\n"
 "(İletiler diskten silinmeyecektir)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "Posta kutusunu sil"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "`%s' IMAP4 hesabı silinsin mi?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "IMAP4 hesabını sil"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "`%s' haber grubu silinsin mi?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "Haber grubunu sil"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "`%s' haber grubu hesabı silinsin mi?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "Haber grubu hesabını sil"
 
@@ -1953,156 +1953,191 @@ msgstr "Resim görüntüsü oluşturuluyor...\n"
 msgid "Can't load the image."
 msgstr "Resim yüklenemedi."
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "%s adresine yapılmış IMAP4 bağlantısı koptu. Yeniden bağlanılıyor...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP sunucu dizini"
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "%s:%d adresine IMAP4 bağlantısı yapılıyor ...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "TLS oturumuna bağlantı kurulamadı.\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "%d. ileti siliniyor"
+
+#: src/imap.c:1212
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "İleti gönderiliyor (%d / %d bayt)"
+
+#: src/imap.c:1295
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "%s%c%d mesajı %s  içine kopyalanıyor...\n"
+
+#: src/imap.c:1301
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "%s%c%d mesajı %s  içine kopyalanıyor...\n"
+
+#: src/imap.c:1448
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "%s konumundan iletiler alınıyor..."
+
+#: src/imap.c:1454
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "silinen işaretler atanamıyor: %s\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "silinemiyor\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Çöpteki tüm iletiler silinsin mi?"
+
+#: src/imap.c:1551
 msgid "can't set deleted flags: 1:*\n"
 msgstr "silinen işaretler atanamıyor: 1:*\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 msgid "can't close folder\n"
 msgstr "dizin kapatılamadı\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "%s kök dizini bulunamadı\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 msgid "error occurred while getting LIST.\n"
 msgstr "LIST alınırken hata oluştu.\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "%s oluşturulamadı\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "%s Gelen altında oluşturulamadı\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "posta kutusu yaratılamıyor: Liste hatası\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "posta kutusu oluşturulamadı\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "%s posta kutusunun adı %s olarak değiştirilemedi \n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "posta kutusu silinemedi\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "zarf alınamadı\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "İleti gönderiliyor (%d / %d bayt)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "zarf alınırken bir hata oluştu.\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "zarf ayrıştırılamadı: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "IMAP4 sunucuya bağlantı kurulamadı: %s:%d\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "IMAP4 oturumuna %s:%d ile bağlantı kurulamadı\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "alanadına erişilemedi\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "dizin seçilemedi: %s\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 yetkilendirmesi başarısız.\n"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 girişinde hata.\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s, %s üzerine eklenemedi\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(dosya gönderiliyor...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "ileti %s'ye eklenemiyor\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%s, %s konumuna kopyalanamadı\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap komutu sırasında hata oluştu: STORE %s %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "EXPUNGE komutu sırasında hata oluştu\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 msgid "error while imap command: CLOSE\n"
 msgstr "imap komutu sırasında hata oluştu: CLOSE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv, UTF-7 yi %s'e çeviremedi\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv %s yi UTF-7'ye çeviremedi\n"
@@ -2456,7 +2491,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2464,16 +2499,16 @@ msgstr ""
 "GnuPG düzgün kurulmamış veya versiyonu çok eski\n"
 "OpenPGP desteği kapatıldı."
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Kullanım: %s [SEÇENEKLER] ...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [adres]    düzenleme penceresini açar"
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2483,23 +2518,23 @@ msgstr ""
 "                         düzenleme penceresini belirtilen dosyalar\n"
 "                         postaya eklenmiş halde açar"
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive               yeni mesajları alır"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          tüm hesaplardaki yeni mesajları alır"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 kuyruktaki postaları gönderir"
 
-#: src/main.c:461
+#: src/main.c:463
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [dizin]...   toplam mesaj sayısını göster"
 
-#: src/main.c:462
+#: src/main.c:464
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2507,41 +2542,41 @@ msgstr ""
 "  --status-full [dizin]...\n"
 "                         her dizinin durumunu göster"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                hata ayıklama modu"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 bu yardımı gösterir ve çıkar"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr "  --version              sürüm bilgisini gösterir ve çıkar"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr "Mesajı göndermeden çıkmak istediğinizden emin misiniz?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "Kuyruktaki iletiler"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Hala gönderilmemiş bazı iletiler kuyrukta bekliyor. Şimdi çıkılsın mı?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "Başka bir Sylpheed sistemde çalışıyor.\n"
 
-#: src/main.c:749
+#: src/main.c:751
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Eylem ayarları"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"

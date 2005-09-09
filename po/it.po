@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 2.0.0beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 2005-06-25 16:55+0200\n"
 "Last-Translator: Danilo Bodei <dbodei@lombardiacom.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -100,7 +100,7 @@ msgstr ""
 "tutti»."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -237,7 +237,7 @@ msgstr "Argomento dell'azione utente"
 msgid "Add Address to Book"
 msgstr "Aggiunta dell'indirizzo alla rubrica"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Indirizzo"
@@ -377,7 +377,7 @@ msgstr "/Eli_mina"
 msgid "E-Mail address"
 msgstr "Indirizzo e-mail"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Rubrica"
 
@@ -436,7 +436,7 @@ msgstr ""
 "Eliminando solo la cartella, gli indirizzi saranno spostati nella cartella "
 "di origine."
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "Elimina la cartella"
 
@@ -595,11 +595,11 @@ msgstr "Indirizzo comune"
 msgid "Personal address"
 msgstr "Indirizzo personale"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "Avviso"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "Avvertimento"
 
@@ -1064,133 +1064,133 @@ msgstr "impossibile trovare la cartella «Coda»\n"
 msgid "can't queue the message\n"
 msgstr "impossibile accodare il messaggio\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "generato l'ID-messaggio: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "Creazione della finestra di composizione...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "Da:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 msgid "PGP Sign"
 msgstr "Firma PGP"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 msgid "PGP Encrypt"
 msgstr "Cifratura PGP"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "Tipo MIME"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "Dimensione"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Invia"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "Invia il messaggio"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "Invia più tardi"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "Mette nella cartella «Coda» e invia più tardi"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "Bozze"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "Salva nella cartella «Bozze»"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "Inserisci"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "Inserisce il file"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "Allega"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "Allega il file"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Firma"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "Inserisce la firma"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Editor"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "Modifica con l'editor esterno"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "A capo riga"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "Manda a capo tutte le righe lunghe"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "Tipo MIME non valido."
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "Il file non esiste o è vuoto."
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "Proprietà"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "Codifica"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Percorso"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "Nome del file"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "La riga di comando per l'editor esterno non è valida: «%s»\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1201,74 +1201,74 @@ msgstr ""
 "Forzare la conclusione del processo?\n"
 "group id del processo: %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Group id del processo terminato: %d"
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "File temporaneo: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Composizione: input da un processo di controllo\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "Impossibile eseguire l'editor esterno\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "Impossibile scrivere sul file\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "Lettura dalla pipe fallita\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "Impossibile accodare il messaggio."
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 msgid "Select files"
 msgstr "Seleziona i file"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "Selezione del file"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 #, fuzzy
 msgid "Save message"
 msgstr "Invia il messaggio"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Questo messaggio è stato modificato. Scartarlo?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Applicare il modello «%s» ?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "Applica il modello"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Replace"
 msgstr "Sostituisci"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Insert"
 msgstr "Inserisci"
@@ -1431,12 +1431,12 @@ msgstr "Modifica la cartella"
 msgid "Input the new name of folder:"
 msgstr "Inserire il nuovo nome della cartella:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "Nuova cartella"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "Inserire il nome della nuova cartella:"
 
@@ -1626,21 +1626,21 @@ msgstr "Cestino"
 msgid "Drafts"
 msgstr "Bozze"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "Nuova cartella"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "«%c» non può essere incluso nel nome della cartella."
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "La cartella «%s» esiste già."
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Impossibile creare la cartella «%s»."
@@ -1745,22 +1745,22 @@ msgstr "La ricostruzione delll'albero della cartella è fallita."
 msgid "Checking for new messages in all folders..."
 msgstr "Controllo per nuovi messaggi in tutte le cartelle..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "La cartella %s è selezionata\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Sto scaricando i messaggi in %s ..."
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Si è verificato un errore scaricando i messaggi in «%s»."
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1770,21 +1770,21 @@ msgstr ""
 "(se si vuole creare una catella per memorizzare sottocartelle,\n"
 " aggiungere «/» alla fine del nome)"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Inserire il nuovo nome per «%s»:"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "Rinomina la cartella"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Impossibile rimuovere la cartella «%s»."
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1798,20 +1798,20 @@ msgstr ""
 "\n"
 "Eliminare?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Impossibile rimuovere la cartella «%s»."
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "Svuota cestino"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "Svuotare tutti i messaggi nel cestino?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1820,34 +1820,34 @@ msgstr ""
 "Rimuovere la casella postale «%s» ?\n"
 "(I messaggi NON saranno eliminati dal disco)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "Rimuovi la casella postale"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Eliminare l'account IMAP4 «%s»?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "Elimino l'account IMAP4"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Eliminare il newsgroup «%s» ?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "Elimino il newsgroup"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Eliminare l'account delle news «%s» ?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "Elimino l'account delle news"
 
@@ -1932,155 +1932,190 @@ msgstr "Creazione della vista dell'immagine...\n"
 msgid "Can't load the image."
 msgstr "Impossibile caricare l'immagine."
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "La connessione IMAP4 a %s è stata interrotta. Riconnessione...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Il server IMAP4 disabilita il LOGIN.\n"
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "creazione della connessione IMAP4 a %s:%d ...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "Impossibile avviare la sessione TLS.\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Eliminazione del messaggio %d"
+
+#: src/imap.c:1212
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Invio del messaggio (%d di %d byte)"
+
+#: src/imap.c:1295
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Copia del messaggio %s%c%d in %s ...\n"
+
+#: src/imap.c:1301
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Copia del messaggio %s%c%d in %s ...\n"
+
+#: src/imap.c:1448
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Ricezione dei messaggi da %s..."
+
+#: src/imap.c:1454
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "impossibile impostare i flag eliminati: %s\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "impossibile cancellare\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Svuotare tutti i messaggi nel cestino?"
+
+#: src/imap.c:1551
 msgid "can't set deleted flags: 1:*\n"
 msgstr "impossibile impostare i flag eliminati: 1:*\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 msgid "can't close folder\n"
 msgstr "impossibile chiudere la cartella\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "la cartella radice %s non esiste\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 msgid "error occurred while getting LIST.\n"
 msgstr "si è verificato un errore durante la ricezione di LIST.\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Impossibile creare «%s»\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Impossibile creare «%s» sotto IN ENTRATA\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "impossibile creare la casella postale: LIST fallito\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "impossibile creare la casella postale\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "impossibile rinominare la casella postale: %s in %s\n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "impossibile eliminare la casella postale\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "impossibile ricevere la busta\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Invio del messaggio (%d di %d byte)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "si è verificato un errore durante la ricezione della busta.\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "impossibile analizzare la busta: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Impossibile connettersi al server IMAP4: %s:%d\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Impossibile stabilire la sessione IMAP4 con: %s:%d\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "impossibile ricevere il namespace\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "impossibile selezionare la cartella: %s\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 msgid "IMAP4 authentication failed.\n"
 msgstr "Autenticazione IMAP4 fallita.\n"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "Login IMAP4 fallito.\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "impossibile aggiungere %s a %s\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(spedizione del file...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "impossibile aggiungere a %s\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "impossibile copiare %s in %s\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "errore durante il comando imap: STORE %s %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "errore durante il comando imap: EXPUNGE\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 msgid "error while imap command: CLOSE\n"
 msgstr "errore durante il comando imap: CLOSE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv non può convertire UTF-7 in %s\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv non può convertire %s in UTF-7\n"
@@ -2434,7 +2469,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2442,16 +2477,16 @@ msgstr ""
 "GnuPG non è installato correttamente, o questa versione è troppo vecchia.\n"
 "Il supporto per OpenPGP è disabilitato."
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Uso: %s [OPZIONE]...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [indirizzo]  apre una finestra di composizione"
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2461,23 +2496,23 @@ msgstr ""
 "                         apre la finestra di composizione con allegati\n"
 "                         i file specificati"
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive              riceve i nuovi messaggi"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          riceve i nuovi messaggi di tutti gli account"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 invia tutti i messaggi accodati"
 
-#: src/main.c:461
+#: src/main.c:463
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [cartella]... mostra il numero totale dei messaggi"
 
-#: src/main.c:462
+#: src/main.c:464
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2485,40 +2520,40 @@ msgstr ""
 "  --status-full [cartella]...\n"
 "                         mostra lo stato di ogni cartella"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                modalità di debug"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 mostra questo aiuto ed esce"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr "  --version              mostra informazioni sulla versione ed esce"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr "C'è un messaggio in composizione. Uscire?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "Messaggi accodati"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Ci sono messaggi non spediti in «Coda». Uscire ora ?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "un altro Sylpheed è già in esecuzione.\n"
 
-#: src/main.c:749
+#: src/main.c:751
 msgid "Migration of configuration"
 msgstr "Migrazione della configurazione"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"

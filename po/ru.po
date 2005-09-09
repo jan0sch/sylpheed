@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 1.0.0beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 2004-12-05 17:16+0300\n"
 "Last-Translator: Sergey Vlasov <vsu@altlinux.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -99,7 +99,7 @@ msgstr ""
 "по команде 'Получить все'."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -237,7 +237,7 @@ msgstr "Пользовательский параметр действия"
 msgid "Add Address to Book"
 msgstr "Добавление адреса в книгу"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Адрес"
@@ -377,7 +377,7 @@ msgstr "/Удалить"
 msgid "E-Mail address"
 msgstr "Адрес E-Mail"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Адресная книга"
 
@@ -435,7 +435,7 @@ msgstr ""
 "Вы хотите удалить папку \"%s\" и все адреса в ней?\n"
 "Если удалить только папку, адреса будут перемещены в родительскую папку."
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "Удалить папку"
 
@@ -593,11 +593,11 @@ msgstr "Адреса организаций"
 msgid "Personal address"
 msgstr "Личные адреса"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "Уведомление"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "Предупреждение"
 
@@ -1086,135 +1086,135 @@ msgstr "невозможно найти папку очереди\n"
 msgid "can't queue the message\n"
 msgstr "ошибка размещения в очереди\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "создан Message-ID: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "Создание окна подготовки сообщения...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "От:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/Инструменты/Подписать сообщение (PGP)"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/Инструменты/Шифровать сообщение (PGP)"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "Тип MIME"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "Размер"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Отправить"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "Отправить позже"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "Поместить в очередь и отправить позже"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "Черновики"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "Сохранить в папке черновиков"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "Вставить"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "Вставить файл"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "Вложение"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "Вложить файл"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Подпись"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "Добавить подпись"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Редактор"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "Править внешним редактором"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "Перенос строк"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "Отформатировать все сообщение"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "Неверный тип MIME."
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "Файл не существует или пуст."
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "Свойства"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "Кодировка"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Путь"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "Имя файла"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "Неверная команда вызова внешнего редактора: '%s'\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1225,75 +1225,75 @@ msgstr ""
 "Завершить процесс принудительно?\n"
 "Идентификатор группы процессов: %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Завершен процесс группы: %d"
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Временный файл: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Подготовка сообщения: ввод из процесса слежения\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "Не удалось запустить внешний редактор\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "Ошибка записи в файл\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "Ошибка чтения из канала\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "Ошибка постановки в очередь."
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 #, fuzzy
 msgid "Select files"
 msgstr "Выбор файла"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "Выбор файла"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 #, fuzzy
 msgid "Save message"
 msgstr "Отправить сообщение"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Это сообщение изменено. Отказаться от него?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Применить шаблон '%s'?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "Применить шаблон"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Replace"
 msgstr "Заменить"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Insert"
 msgstr "Вставить"
@@ -1455,12 +1455,12 @@ msgstr "Изменить имя папки"
 msgid "Input the new name of folder:"
 msgstr "Введите новое имя папки:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "Новая папка"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "Введите имя новой папки:"
 
@@ -1650,21 +1650,21 @@ msgstr "Корзина"
 msgid "Drafts"
 msgstr "Черновики"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "НоваяПапка"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "Символ '%c' не может входить в имя папки."
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "Папка '%s' уже существует."
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Не удалось создать папку '%s'."
@@ -1769,22 +1769,22 @@ msgstr "Ошибка при перестройке дерева папок."
 msgid "Checking for new messages in all folders..."
 msgstr "Проверка новых сообщений во всех папках..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Папка %s выбрана\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Загружаются сообщения из %s ..."
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Произошла ошибка при загрузке сообщений из '%s'."
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1794,21 +1794,21 @@ msgstr ""
 "(если вы хотите создать папку для вложенных папок,\n"
 " добавьте '/' в конец имени)"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Введите новое имя для '%s':"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "Переименовать папку"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Ошибка при удалении папки '%s'."
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1819,20 +1819,20 @@ msgstr ""
 "Все вложенные папки и сообщения из '%s' будут удалены.\n"
 "Вы действительно хотите удалить папку?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Ошибка при удалении папки '%s'."
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "Очистка корзины"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "Удалить все сообщения из корзины?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1841,34 +1841,34 @@ msgstr ""
 "Удалить почтовый ящик '%s' ?\n"
 "(Сообщения не будут удалены с диска)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "Удалить почтовый ящик"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Удалить учетную запись IMAP4 '%s'?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "Удалить учетную запись IMAP4"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Удалить группу новостей '%s'?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "Удаление группы новостей"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Удалить учетную запись новостей '%s'?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "Удалить учетную запись новостей"
 
@@ -1953,156 +1953,191 @@ msgstr "Создание области просмотра изображени�
 msgid "Can't load the image."
 msgstr "Ошибка загрузки изображения"
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "Соединение IMAP4 с %s прервано. Восстановление соединения...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Каталог сервера IMAP4"
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "установление соединения IMAP4 с %s:%d ...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "Не удалось начать сеанс TLS.\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Удаление сообщения %d"
+
+#: src/imap.c:1212
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Отправка сообщения (%d / %d байт)"
+
+#: src/imap.c:1295
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Копирование сообщения %s%c%d в %s ...\n"
+
+#: src/imap.c:1301
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Копирование сообщения %s%c%d в %s ...\n"
+
+#: src/imap.c:1448
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Получение сообщений с %s..."
+
+#: src/imap.c:1454
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "не удалось установить флаг удаления: %s\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "не удалось очистить папку от удаленных сообщений\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Удалить все сообщения из корзины?"
+
+#: src/imap.c:1551
 msgid "can't set deleted flags: 1:*\n"
 msgstr "не удалось установить флаг удаления: 1:*\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 msgid "can't close folder\n"
 msgstr "невозможно закрыть папку\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "корневая папка %s не существует\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 msgid "error occurred while getting LIST.\n"
 msgstr "произошла ошибка при получении LIST.\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Ошибка при создании '%s'\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Ошибка при создании '%s' внутри INBOX\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "не удается создать почтовый ящик: ошибка LIST\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "не удается создать почтовый ящик\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "не удается переименовать почтовый ящик %s в %s\n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "не удается удалить почтовый ящик\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "не удалось получить данные конверта\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Отправка сообщения (%d / %d байт)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "ошибка при получении данных конверта.\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "ошибка при разборе данных конверта: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Не удалось соединиться с сервером IMAP4: %s:%d\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Не удалось открыть сеанс связи IMAP4 c %s:%d\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "не удалось получить пространство имен\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "невозможно выбрать папку: %s\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 msgid "IMAP4 authentication failed.\n"
 msgstr "Ошибка аутентификации IMAP4.\n"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "Ошибка авторизации IMAP4.\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "не удалось добавить %s к %s\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(передача файла...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "не удалось добавить сообщение к %s\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "не удалось скопировать %s в %s\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "ошибка при выполнении команды IMAP: STORE %s %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "ошибка при выполнении команды IMAP: EXPUNGE\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 msgid "error while imap command: CLOSE\n"
 msgstr "ошибка при выполнении команды IMAP: CLOSE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "ошибка преобразования iconv из UTF-7 в %s\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "ошибка преобразования iconv из %s в UTF-7\n"
@@ -2456,7 +2491,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2464,16 +2499,16 @@ msgstr ""
 "GnuPG установлен неправильно, или установлена устаревшая версия.\n"
 "Поддержка OpenPGP отключена."
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Использование: %s [ПАРАМЕТР]...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [адрес]      открыть окно подготовки сообщения"
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2483,24 +2518,24 @@ msgstr ""
 "                         открыть окно создания сообщения с присоединенными\n"
 "                         файлами"
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive              получить новые сообщения"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr ""
 "  --receive-all          получить новые сообщения со всех учетных записей"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 отослать все сообщения из очереди"
 
-#: src/main.c:461
+#: src/main.c:463
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [папка]...    вывести суммарное количество сообщений"
 
-#: src/main.c:462
+#: src/main.c:464
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2508,41 +2543,41 @@ msgstr ""
 "  --status-full [папка]...\n"
 "                         вывести состояние указанных папок"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                режим отладки"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 отобразить это описание и выйти"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr "  --version              вывести информацию о версии и выйти"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr "Есть редактируемое сообщение. Выходить?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "Сообщения в очереди"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "В очереди есть непосланные сообщения. Выходить?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "другая копия Sylpheed уже запущена.\n"
 
-#: src/main.c:749
+#: src/main.c:751
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Настройка действий"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"

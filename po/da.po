@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed    \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 2003-07-29 09:05+0200\n"
 "Last-Translator: Andreas Hinz <news3@acci.dk>\n"
 "Language-Team: \n"
@@ -95,7 +95,7 @@ msgstr ""
 "`G'-kolonnen, for at aktivere hentning via `hent alle'."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -233,7 +233,7 @@ msgstr "Handlingens bruger parameter"
 msgid "Add Address to Book"
 msgstr "Tilføj adresse i adressebog"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Adresse"
@@ -373,7 +373,7 @@ msgstr "/_Slet"
 msgid "E-Mail address"
 msgstr "E-post adresse"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Adressebog"
 
@@ -431,7 +431,7 @@ msgstr ""
 "Vil du virkeligt slette mappen OG alla adresser i `%s' ? \n"
 "Hvis kun mappen slettes, vil adresserne blive flyttet til hoved mappen."
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "Slet mappe"
 
@@ -584,11 +584,11 @@ msgstr "Normale adresser"
 msgid "Personal address"
 msgstr "Personlige adresser"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "Note"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "Advarsel"
 
@@ -1085,135 +1085,135 @@ msgstr "kan ikke vælge mappe %s\n"
 msgid "can't queue the message\n"
 msgstr "meddelelse kan ikke lægges i kø\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "genereret meddelelses ID: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "Opretter instastnings vindue...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "Fra:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/_Funktioner/_Handlinger"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/_Meddelelse/_Kryptere"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "MIME type"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "Størrelse"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Send"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "Sende meddelelse"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "Send senere"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "Læg i kø og send senere"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "Kladde"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "Gem i Kladde"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "Indæst"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "Insæt fil"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "Vedhæft"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "Vedhæft fil"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Underskrift"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "Indsæt underskrift"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Editor"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "Redigér med ekstern Editor"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "Linie deling"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "/_Redigér/Formater _alle lange linier"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "Ugyldig MIME type"
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "Fil eksisterer ikke eller er tom."
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "Egenskaber"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "Tegnsæt kodning"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Sti"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "Fil navn"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "Sti til ekstern editor er ugyldig: `%s'\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1224,75 +1224,75 @@ msgstr ""
 "Afbryde?\n"
 "ID: %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Afbrudt proces gruppe ID: %d"
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Midlertidig fil: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Instast: fra monitor process\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "Kunne ikke starte ekstern editor\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "Kunne ikke gemme fil\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "Fejl i læsning fra Pipe\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "Meddelelse kan ikke lægges i kø."
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 #, fuzzy
 msgid "Select files"
 msgstr "Vælg fil"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "Vælg fil"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 #, fuzzy
 msgid "Save message"
 msgstr "Sende meddelelse"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Denne meddelelse er ændret. Slet?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Vil du benytte skabelon `%s' ?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "Benyt skabelon"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Replace"
 msgstr "Erstat"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Insert"
 msgstr "Indæst"
@@ -1454,12 +1454,12 @@ msgstr "Redigér mappe"
 msgid "Input the new name of folder:"
 msgstr "Indtast nyt gruppenavn:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "Ny mappe"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "Indtast ny mappes navn:"
 
@@ -1648,21 +1648,21 @@ msgstr "Slettet"
 msgid "Drafts"
 msgstr "Kladde"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "NyMappe"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "`%c' kan ikke benyttes i mappe navn."
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "Mappen `%s' eksisterer allerede."
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Kan ikke oprette mappe `%s'."
@@ -1770,22 +1770,22 @@ msgstr "Gendanner mappe træ..."
 msgid "Checking for new messages in all folders..."
 msgstr "Henter nye meddelelser i alle mapper..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Mappe %s er valgt\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, fuzzy, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Sende meddelelse..."
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, fuzzy, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Fejl ved afsendelse af meddelelse til %s ."
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1795,21 +1795,21 @@ msgstr ""
 "(hvis du vil oprette mappe til undermapper,,\n"
 "så afslut navn med `/')"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Nyt navn for `%s':"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "Omdøb mappe"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Kan ikke slette mappe `%s'."
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1820,20 +1820,20 @@ msgstr ""
 "Alle mapper og meddelelser i `%s' vil blive slettet.\n"
 "Vil du virkelig slette?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Kan ikke slette mappe `%s'."
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "Tøm Slettet"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "Slet alle meddelelser i Slettet?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1842,34 +1842,34 @@ msgstr ""
 "Virklig slette `%s'?\n"
 "(Meddelelser bliver ikke flernet fra disken)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "Slet mappe"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Virklig slette IMAP4 konto `%s'?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "Slet IMAP4 konto"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Virklig slette nyhedsgruppe `%s'?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "Slet nyhedsgruppe"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Virklig slette nyheds konto `%s'?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "Slet nyheds konto"
 
@@ -1954,158 +1954,193 @@ msgstr "Opretter billed visning...\n"
 msgid "Can't load the image."
 msgstr "Kan ikke læse billede."
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "IMAP4 forbindelse til %s blev afbrudt. Forbinder...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP server sti."
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "erstelle IMAP4-Verbindung zu %s:%d ...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "Kan ikke starte TLS session.\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Sletter meddelelse %d"
+
+#: src/imap.c:1212
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Sender meddelelse (%d / %d bytes)"
+
+#: src/imap.c:1295
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Flytter meddelelse %s%c%d til %s ...\n"
+
+#: src/imap.c:1301
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Kopierer meddelelse %s%c%d til %s ...\n"
+
+#: src/imap.c:1448
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Modtager meddelelse fra %s..."
+
+#: src/imap.c:1454
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "kan ikke sætte slettede flag: %s\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "kan ikke slette\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Slet alle meddelelser i Slettet?"
+
+#: src/imap.c:1551
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "kan ikke sætte slettet flag: 1:%d\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 #, fuzzy
 msgid "can't close folder\n"
 msgstr "kan ikke vælge mappe %s\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, fuzzy, c-format
 msgid "root folder %s not exist\n"
 msgstr "Markéret fil ikke fundet.\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 msgid "error occurred while getting LIST.\n"
 msgstr "fejl ved modtagelse af LIST.\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "kan ikke oprette '%s'\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "kan ikke oprette '%s'\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "kan ikke oprette mailbox: LIST fejlet\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "kan ikke oprette mailbox\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "kan ikke omdøbe mailbox: %s til %s\n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "kan ikke slette mailbox\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "kan ikke modtage kovert\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Sender meddelelse (%d / %d bytes)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "fejl ved modtagelse af kuvert.\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "kan ikke læse kuvert: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Ingen forbindelse med IMAP4 server: %s:%d\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Ingen forbindelse med IMAP4 server: %s:%d\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "kan ikke modtage namespace\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "kan ikke vælge mappe %s\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 godkendelse fejlede.\n"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4-Login fejlet.\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kan ikke tilføje %s til %s\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(sender fil...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "kan ikke tilføje meddelelse %s\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kan ikke kopiere %s til %s\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "fejl ved IMAP kommando: STORE %s %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "fejl ved IMAP kommand: EXPUNGE\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 msgid "error while imap command: CLOSE\n"
 msgstr "fejl ved IMAP kommand: CLOSE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kan ikke konvertere UTF-7 til %s\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv can ikke konvertere %s til UTF-7\n"
@@ -2466,7 +2501,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2474,16 +2509,16 @@ msgstr ""
 "GnuPG er ike korrekt installeret eller i for gammel version\n"
 "OpenPGP ikke mulig."
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Bruges som: %s [OPTION]...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [adresse]    åbner nyt meddelelses vindue"
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2493,23 +2528,23 @@ msgstr ""
 "                         åbn ny meddelelse med disse filer vedhæftet\n"
 "                         ."
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive              modtager nye meddelelser"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          modtager nye meddelelser fra alle konti"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 send alle meddelelser i kø"
 
-#: src/main.c:461
+#: src/main.c:463
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [mappe]...   viser antal meddelelser"
 
-#: src/main.c:462
+#: src/main.c:464
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2517,41 +2552,41 @@ msgstr ""
 "  --status-full [mappe]...\n"
 "                         viser status for hver mappe"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                debug mode"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 viser denne hjælp"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr "  --version              viser version og afslutter"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr "Du er ved at skrive ny meddelelse. Virklig afslutte?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "Meddeleser i kø"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Nogle usendte meddelelser i kø. Afslut nu?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "sylpheed kører allerede.\n"
 
-#: src/main.c:749
+#: src/main.c:751
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Handlingsopsæt"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -6720,9 +6755,6 @@ msgstr "fejl ved skrivning til %s.\n"
 
 #~ msgid "Setting widgets..."
 #~ msgstr "Sætter Widgets..."
-
-#~ msgid "Moving message %s%c%d to %s ...\n"
-#~ msgstr "Flytter meddelelse %s%c%d til %s ...\n"
 
 #~ msgid "\tMarking the messages..."
 #~ msgstr "\tMarkérer meddelelser..."

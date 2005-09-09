@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 0.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-26 14:31+0900\n"
+"POT-Creation-Date: 2005-09-09 18:58+0900\n"
 "PO-Revision-Date: 2003-02-18 13:03--100\n"
 "Last-Translator: Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>\n"
 "Language-Team: Dutch <vertaling@nl.linux.rg>\n"
@@ -99,7 +99,7 @@ msgstr ""
 "u op de knop 'Alles ophalen' klikt."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4081 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -235,7 +235,7 @@ msgstr ""
 msgid "Add Address to Book"
 msgstr "Adres toevoegen aan adresboek"
 
-#: src/addressadd.c:202 src/compose.c:4528 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Adres"
@@ -375,7 +375,7 @@ msgstr "/Ver_wijderen"
 msgid "E-Mail address"
 msgstr "E-mail adres"
 
-#: src/addressbook.c:496 src/compose.c:4529 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Adresboek"
 
@@ -434,7 +434,7 @@ msgstr ""
 "Als u alleen de map verwijdert, dan zullen de adressen naar de \n"
 "hoger gelegen map verplaatst worden."
 
-#: src/addressbook.c:1674 src/folderview.c:2145
+#: src/addressbook.c:1674 src/folderview.c:2147
 msgid "Delete folder"
 msgstr "Verwijder map"
 
@@ -591,11 +591,11 @@ msgstr "Algemene adressen"
 msgid "Personal address"
 msgstr "Persoonlijke adressen"
 
-#: src/alertpanel.c:138 src/compose.c:5211 src/main.c:495
+#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
 msgid "Notice"
 msgstr "Bericht"
 
-#: src/alertpanel.c:151 src/main.c:290
+#: src/alertpanel.c:151 src/main.c:292
 msgid "Warning"
 msgstr "Waarschuwing"
 
@@ -1092,135 +1092,135 @@ msgstr "kan de Wachtrij-map niet vinden\n"
 msgid "can't queue the message\n"
 msgstr "kan het bericht niet in de wachtrij plaatsen\n"
 
-#: src/compose.c:3792
+#: src/compose.c:3798
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "gegenereerd bericht-ID: %s\n"
 
-#: src/compose.c:3901
+#: src/compose.c:3907
 msgid "Creating compose window...\n"
 msgstr "Venster \"Bericht opstellen\" wordt aangemaakt...\n"
 
-#: src/compose.c:3949 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "Afzender:"
 
-#: src/compose.c:4021
+#: src/compose.c:4027
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/_Gereedschap/A_cties"
 
-#: src/compose.c:4024
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/Be_richt/Codeer"
 
-#: src/compose.c:4062 src/compose.c:5001
+#: src/compose.c:4068 src/compose.c:5007
 msgid "MIME type"
 msgstr "MIME type"
 
 #. S_COL_DATE
-#: src/compose.c:4071 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
 #: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
 msgid "Size"
 msgstr "Grootte"
 
-#: src/compose.c:4449 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Verzenden"
 
-#: src/compose.c:4450
+#: src/compose.c:4456
 msgid "Send message"
 msgstr "Verzend bericht"
 
-#: src/compose.c:4458
+#: src/compose.c:4464
 msgid "Send later"
 msgstr "Wachtrij"
 
-#: src/compose.c:4459
+#: src/compose.c:4465
 msgid "Put into queue folder and send later"
 msgstr "In de wachtrij plaatsen en later verzenden"
 
-#: src/compose.c:4467
+#: src/compose.c:4473
 msgid "Draft"
 msgstr "Klad"
 
-#: src/compose.c:4468
+#: src/compose.c:4474
 msgid "Save to draft folder"
 msgstr "Opslaan als klad"
 
-#: src/compose.c:4478
+#: src/compose.c:4484
 msgid "Insert"
 msgstr "Invoegen"
 
-#: src/compose.c:4479
+#: src/compose.c:4485
 msgid "Insert file"
 msgstr "Bestand invoegen"
 
-#: src/compose.c:4487
+#: src/compose.c:4493
 msgid "Attach"
 msgstr "Bijvoegen"
 
-#: src/compose.c:4488
+#: src/compose.c:4494
 msgid "Attach file"
 msgstr "Bestand bijvoegen"
 
 #. signature
-#: src/compose.c:4498 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Tekenen"
 
-#: src/compose.c:4499
+#: src/compose.c:4505
 msgid "Insert signature"
 msgstr "Handtekening (signature) invoegen"
 
-#: src/compose.c:4508 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Editor"
 
-#: src/compose.c:4509
+#: src/compose.c:4515
 msgid "Edit with external editor"
 msgstr "Bewerken met ander (extern) programma"
 
-#: src/compose.c:4517
+#: src/compose.c:4523
 msgid "Linewrap"
 msgstr "Terugloop"
 
-#: src/compose.c:4518
+#: src/compose.c:4524
 msgid "Wrap all long lines"
 msgstr "Lange regels op meerdere regels zetten"
 
-#: src/compose.c:4897
+#: src/compose.c:4903
 msgid "Invalid MIME type."
 msgstr "Ongeldig MIME type."
 
-#: src/compose.c:4915
+#: src/compose.c:4921
 msgid "File doesn't exist or is empty."
 msgstr "Bestand bestaat niet of is leeg."
 
-#: src/compose.c:4983
+#: src/compose.c:4989
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: src/compose.c:5003
+#: src/compose.c:5009
 msgid "Encoding"
 msgstr "Codering"
 
-#: src/compose.c:5026 src/prefs_folder_item.c:183
+#: src/compose.c:5032 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Pad"
 
-#: src/compose.c:5027
+#: src/compose.c:5033
 msgid "File name"
 msgstr "Bestandsnaam"
 
-#: src/compose.c:5182
+#: src/compose.c:5188
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "De ingegeven opdracht voor de externe editor is onjuist: '%s'\n"
 
-#: src/compose.c:5208
+#: src/compose.c:5214
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1231,75 +1231,75 @@ msgstr ""
 "Zal ik het programma afbreken?\n"
 "procesgroep id: %d"
 
-#: src/compose.c:5225
+#: src/compose.c:5231
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Programma (id: %d) afgebroken."
 
-#: src/compose.c:5226
+#: src/compose.c:5232
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Tijdelijk bestand: %s"
 
-#: src/compose.c:5250
+#: src/compose.c:5256
 msgid "Compose: input from monitoring process\n"
 msgstr "Opstellen: invoer van \"monitoring process\"\n"
 
 #. failed
-#: src/compose.c:5281
+#: src/compose.c:5287
 msgid "Couldn't exec external editor\n"
 msgstr "Kon het externe programma voor bewerken van e-mail niet aanroepen\n"
 
-#: src/compose.c:5285
+#: src/compose.c:5291
 msgid "Couldn't write to file\n"
 msgstr "Kon niet naar bestand schrijven\n"
 
-#: src/compose.c:5287
+#: src/compose.c:5293
 msgid "Pipe read failed\n"
 msgstr "Inlezen van pijp mislukt\n"
 
-#: src/compose.c:5592 src/compose.c:5600 src/compose.c:5606
+#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
 msgid "Can't queue the message."
 msgstr "Kan bericht niet in de wachtrij plaatsen."
 
-#: src/compose.c:5697
+#: src/compose.c:5703
 #, fuzzy
 msgid "Select files"
 msgstr "Selecteer bestand"
 
-#: src/compose.c:5719
+#: src/compose.c:5725
 msgid "Select file"
 msgstr "Selecteer bestand"
 
-#: src/compose.c:5754
+#: src/compose.c:5760
 #, fuzzy
 msgid "Save message"
 msgstr "Verzend bericht"
 
-#: src/compose.c:5755
+#: src/compose.c:5761
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Dit bericht is aangepast. weggooien?"
 
-#: src/compose.c:5757
+#: src/compose.c:5763
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5799
+#: src/compose.c:5805
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Wilt u het sjabloon '%s' toepassen?"
 
-#: src/compose.c:5801
+#: src/compose.c:5807
 msgid "Apply template"
 msgstr "Sjabloon toepassen"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Replace"
 msgstr "Vervangen"
 
-#: src/compose.c:5802
+#: src/compose.c:5808
 #, fuzzy
 msgid "_Insert"
 msgstr "Invoegen"
@@ -1462,12 +1462,12 @@ msgstr "Map hernoemen"
 msgid "Input the new name of folder:"
 msgstr "Geef de nieuwe naam van de map:"
 
-#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1924
-#: src/folderview.c:1930
+#: src/editgroup.c:524 src/foldersel.c:540 src/folderview.c:1926
+#: src/folderview.c:1932
 msgid "New folder"
 msgstr "Nieuwe map"
 
-#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1931
+#: src/editgroup.c:525 src/foldersel.c:541 src/folderview.c:1933
 msgid "Input the name of new folder:"
 msgstr "Geef de naam van de nieuwe map:"
 
@@ -1657,21 +1657,21 @@ msgstr "Prullenbak"
 msgid "Drafts"
 msgstr "Klad"
 
-#: src/foldersel.c:542 src/folderview.c:1928 src/folderview.c:1932
+#: src/foldersel.c:542 src/folderview.c:1930 src/folderview.c:1934
 msgid "NewFolder"
 msgstr "NieuweMap"
 
-#: src/foldersel.c:550 src/folderview.c:1940 src/folderview.c:1996
+#: src/foldersel.c:550 src/folderview.c:1942 src/folderview.c:1998
 #, c-format
 msgid "`%c' can't be included in folder name."
 msgstr "'%c' mag niet in de naam van een map."
 
-#: src/foldersel.c:560 src/folderview.c:1950 src/folderview.c:2003
+#: src/foldersel.c:560 src/folderview.c:1952 src/folderview.c:2005
 #, c-format
 msgid "The folder `%s' already exists."
 msgstr "De map '%s' bestaat al."
 
-#: src/foldersel.c:568 src/folderview.c:1957
+#: src/foldersel.c:568 src/folderview.c:1959
 #, c-format
 msgid "Can't create the folder `%s'."
 msgstr "Kan map '%s' niet aanmaken."
@@ -1779,22 +1779,22 @@ msgstr "Accountlijst wordt ververst..."
 msgid "Checking for new messages in all folders..."
 msgstr "Bezig met controleren op nieuwe berichten in alle mappen..."
 
-#: src/folderview.c:1685
+#: src/folderview.c:1687
 #, c-format
 msgid "Folder %s is selected\n"
 msgstr "Map %s is geselecteerd\n"
 
-#: src/folderview.c:1840
+#: src/folderview.c:1842
 #, fuzzy, c-format
 msgid "Downloading messages in %s ..."
 msgstr "Bezig met verzenden van bericht"
 
-#: src/folderview.c:1875
+#: src/folderview.c:1877
 #, fuzzy, c-format
 msgid "Error occurred while downloading messages in `%s'."
 msgstr "Er is een fout opgetreden bij het versturen van het bericht naar %s."
 
-#: src/folderview.c:1925
+#: src/folderview.c:1927
 msgid ""
 "Input the name of new folder:\n"
 "(if you want to create a folder to store subfolders,\n"
@@ -1804,21 +1804,21 @@ msgstr ""
 "(Als je een map wilt maken om daarin submappen te plaatsen,\n"
 "sluit de naam dan af met een '/')"
 
-#: src/folderview.c:1987
+#: src/folderview.c:1989
 #, c-format
 msgid "Input new name for `%s':"
 msgstr "Geef een nieuwe naam voor '%s':"
 
-#: src/folderview.c:1988
+#: src/folderview.c:1990
 msgid "Rename folder"
 msgstr "Hernoem map"
 
-#: src/folderview.c:2079
+#: src/folderview.c:2081
 #, fuzzy, c-format
 msgid "Can't move the folder `%s'."
 msgstr "Kan map '%s' niet verwijderen."
 
-#: src/folderview.c:2142
+#: src/folderview.c:2144
 #, fuzzy, c-format
 msgid ""
 "All folders and messages under `%s' will be permanently deleted.\n"
@@ -1829,20 +1829,20 @@ msgstr ""
 "Alle mappen en berichten in '%s' zullen worden verwijderd.\n"
 "Wilt u werkelijk verwijderen?"
 
-#: src/folderview.c:2171
+#: src/folderview.c:2173
 #, c-format
 msgid "Can't remove the folder `%s'."
 msgstr "Kan map '%s' niet verwijderen."
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty trash"
 msgstr "Prullenbak leegmaken"
 
-#: src/folderview.c:2205
+#: src/folderview.c:2207
 msgid "Empty all messages in trash?"
 msgstr "Alle berichten uit de prullenbak weggooien?"
 
-#: src/folderview.c:2241
+#: src/folderview.c:2243
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -1851,34 +1851,34 @@ msgstr ""
 "Wilt u de '%s' mailbox werkelijk verwijderen?\n"
 "(De berichten zelf zullen NIET van de schijf worden verwijderd)"
 
-#: src/folderview.c:2243
+#: src/folderview.c:2245
 msgid "Remove mailbox"
 msgstr "mailbox verwijderen"
 
-#: src/folderview.c:2289
+#: src/folderview.c:2291
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "IMAP4 account '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2290
+#: src/folderview.c:2292
 msgid "Delete IMAP4 account"
 msgstr "Verwijder IMAP4 account"
 
-#: src/folderview.c:2432
+#: src/folderview.c:2434
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Nieuwsgroep '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2433
+#: src/folderview.c:2435
 msgid "Delete newsgroup"
 msgstr "Verwijder nieuwsgroep"
 
-#: src/folderview.c:2480
+#: src/folderview.c:2482
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Nieuwsaccount '%s' werkelijk verwijderen?"
 
-#: src/folderview.c:2481
+#: src/folderview.c:2483
 msgid "Delete news account"
 msgstr "Verwijder nieuwsaccount"
 
@@ -1963,164 +1963,199 @@ msgstr "Plaatje wordt weergegeven...\n"
 msgid "Can't load the image."
 msgstr "Kan plaatje niet weergeven."
 
-#: src/imap.c:461
+#: src/imap.c:464
 #, fuzzy, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr ""
 "IMAP4 verbinding naar %s:%d is verbroken. Contact wordt opnieuw gelegd...\n"
 
-#: src/imap.c:512 src/imap.c:518
+#: src/imap.c:515 src/imap.c:521
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP server-map"
 
-#: src/imap.c:593
+#: src/imap.c:596
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "IMAP4 verbinding naar %s:%d wordt opgezet...\n"
 
-#: src/imap.c:634
+#: src/imap.c:637
 msgid "Can't start TLS session.\n"
 msgstr "Kan geen TLS sessie starten.\n"
 
-#: src/imap.c:1421
+#: src/imap.c:1095
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Bezig met verwijderen van bericht %d"
+
+#: src/imap.c:1212
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Bezig met verzenden van bericht (%d / %d bytes)"
+
+#: src/imap.c:1295
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Bericht %s%c%d wordt verplaatst naar %s ...\n"
+
+#: src/imap.c:1301
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Bericht %s%c%d wordt gekopieerd naar %s...\n"
+
+#: src/imap.c:1448
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Berichten worden van %s naar %s opgehaald...\n"
+
+#: src/imap.c:1454
 #, fuzzy, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "kan verwijderde vlaggen: %d niet instellen\n"
 
-#: src/imap.c:1429 src/imap.c:1521
+#: src/imap.c:1462 src/imap.c:1557
 msgid "can't expunge\n"
 msgstr "kan niet wissen\n"
 
-#: src/imap.c:1515
+#: src/imap.c:1545
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Alle berichten uit de prullenbak weggooien?"
+
+#: src/imap.c:1551
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "kan de vlaggen \"verwijderd\" : 1.%d niet instellen\n"
 
-#: src/imap.c:1560
+#: src/imap.c:1596
 #, fuzzy
 msgid "can't close folder\n"
 msgstr "kan map niet selecteren: %s\n"
 
-#: src/imap.c:1638
+#: src/imap.c:1674
 #, fuzzy, c-format
 msgid "root folder %s not exist\n"
 msgstr "Markeerbestand is niet gevonden\n"
 
-#: src/imap.c:1822 src/imap.c:1830
+#: src/imap.c:1858 src/imap.c:1866
 #, fuzzy
 msgid "error occurred while getting LIST.\n"
 msgstr "er is een fout opgetreden tijdens het ophalen van de LIST.\n"
 
-#: src/imap.c:1944
+#: src/imap.c:1980
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr ""
 "kan %s niet aanmaken\n"
 "\n"
 
-#: src/imap.c:1949
+#: src/imap.c:1985
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "kan %s niet aanmaken onder INBOX\n"
 
-#: src/imap.c:2010
+#: src/imap.c:2046
 msgid "can't create mailbox: LIST failed\n"
 msgstr "Ik kan geen mailbox maken: LIST mislukt\n"
 
-#: src/imap.c:2030
+#: src/imap.c:2066
 msgid "can't create mailbox\n"
 msgstr "Ik kan geen mailbox maken\n"
 
-#: src/imap.c:2126
+#: src/imap.c:2162
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "kan de mailbox niet hernoemen van %s naar %s\n"
 
-#: src/imap.c:2206
+#: src/imap.c:2242
 msgid "can't delete mailbox\n"
 msgstr "Ik kan de mailbox niet verwijderen\n"
 
-#: src/imap.c:2245
+#: src/imap.c:2286
 msgid "can't get envelope\n"
 msgstr "Ik kan de envelope niet verkrijgen\n"
 
-#: src/imap.c:2253
+#: src/imap.c:2299
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Bezig met verzenden van bericht (%d / %d bytes)"
+
+#: src/imap.c:2308
 msgid "error occurred while getting envelope.\n"
 msgstr "Er is een fout opgetreden bij het verkrijgen van de envelope.\n"
 
-#: src/imap.c:2274
+#: src/imap.c:2329
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "Ik kan de envelope niet verwerken: %s\n"
 
-#: src/imap.c:2397
+#: src/imap.c:2452
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Kan niet verbinden met de IMAP4 server: %s:%d\n"
 
-#: src/imap.c:2404
+#: src/imap.c:2459
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Kan gaan sessie opzetten met de IMAP4 server: %s:%d\n"
 
-#: src/imap.c:2479
+#: src/imap.c:2534
 msgid "can't get namespace\n"
 msgstr "kan de NAMESPACE niet vinden\n"
 
-#: src/imap.c:3006
+#: src/imap.c:3061
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "kan map niet selecteren: %s\n"
 
-#: src/imap.c:3181
+#: src/imap.c:3236
 #, fuzzy
 msgid "IMAP4 authentication failed.\n"
 msgstr "Identificatiemethode"
 
-#: src/imap.c:3198
+#: src/imap.c:3253
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 login mislukt.\n"
 
-#: src/imap.c:3528
+#: src/imap.c:3583
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kan %s niet toevoegen aan %s\n"
 
-#: src/imap.c:3535
+#: src/imap.c:3590
 msgid "(sending file...)"
 msgstr "(bestand wordt verzonden...)"
 
-#: src/imap.c:3563
+#: src/imap.c:3618
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "kan bericht %s niet toevoegen\n"
 
-#: src/imap.c:3595
+#: src/imap.c:3650
 #, fuzzy, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kan %d niet naar %s kopiëren\n"
 
-#: src/imap.c:3619
+#: src/imap.c:3674
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Fout tijdens IMAP opdracht: STORE %d:%d %s\n"
 
-#: src/imap.c:3633
+#: src/imap.c:3688
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Fout tijdens IMAP opdracht: EXPUNGE\n"
 
-#: src/imap.c:3646
+#: src/imap.c:3701
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "Fout tijdens IMAP opdracht: EXPUNGE\n"
 
-#: src/imap.c:3879
+#: src/imap.c:3934
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kan UTF-7 niet naar %s omzetten\n"
 
-#: src/imap.c:3909
+#: src/imap.c:3964
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv kan %s niet naar UTF-7 omzetten\n"
@@ -2472,7 +2507,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:291
+#: src/main.c:293
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2480,16 +2515,16 @@ msgstr ""
 "GnuPG is niet goed geïnstalleerd of is te oud.\n"
 "OpenPGP ondersteuning wordt uitgeschakeld."
 
-#: src/main.c:451
+#: src/main.c:453
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Gebruik: %s [OPTIES]...\n"
 
-#: src/main.c:454
+#: src/main.c:456
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [adres]      open venster \"Bericht opstellen\""
 
-#: src/main.c:455
+#: src/main.c:457
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2499,67 +2534,67 @@ msgstr ""
 "                         venster 'bericht opstellen' openen met de\n"
 "                         gespacificeerde bestanden als bijvoegingen"
 
-#: src/main.c:458
+#: src/main.c:460
 msgid "  --receive              receive new messages"
 msgstr "  --receive              haal nieuwe berichten op"
 
-#: src/main.c:459
+#: src/main.c:461
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          Berichten ophalen van alle accounts"
 
-#: src/main.c:460
+#: src/main.c:462
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 verstuur alle berichten uit de wachtrij"
 
-#: src/main.c:461
+#: src/main.c:463
 #, fuzzy
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status\t\t\ttotaal aantal berichten weergeven"
 
-#: src/main.c:462
+#: src/main.c:464
 #, fuzzy
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
 msgstr "  --status\t\t\ttotaal aantal berichten weergeven"
 
-#: src/main.c:464
+#: src/main.c:466
 msgid "  --debug                debug mode"
 msgstr "  --debug                debug modus"
 
-#: src/main.c:465
+#: src/main.c:467
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 geef deze hulp weer"
 
-#: src/main.c:466
+#: src/main.c:468
 msgid "  --version              output version information and exit"
 msgstr " --version\t\tgeef versie informatie en sluit af"
 
-#: src/main.c:496
+#: src/main.c:498
 msgid "Composing message exists. Really quit?"
 msgstr ""
 "U bent een bericht aan het opstellen.\n"
 "Wilt u werkelijk het programma afsluiten?"
 
-#: src/main.c:504
+#: src/main.c:506
 msgid "Queued messages"
 msgstr "Berichten zijn in de wachtrij gezet"
 
-#: src/main.c:505
+#: src/main.c:507
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Er staan nog berichten in de wachtrij. Toch afsluiten?"
 
 #. remote command mode
-#: src/main.c:583
+#: src/main.c:585
 msgid "another Sylpheed is already running.\n"
 msgstr "er draait al een Sylpheed.\n"
 
-#: src/main.c:749
+#: src/main.c:751
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Bezig met wegschrijven van configuratie van acties...\n"
 
-#: src/main.c:750
+#: src/main.c:752
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -6730,9 +6765,6 @@ msgstr "schrijven naar %s is mislukt.\n"
 
 #~ msgid "Setting widgets..."
 #~ msgstr "Widgets worden aangemaakt..."
-
-#~ msgid "Moving message %s%c%d to %s ...\n"
-#~ msgstr "Bericht %s%c%d wordt verplaatst naar %s ...\n"
 
 #~ msgid "\tMarking the messages..."
 #~ msgstr "\tBerichten worden gemarkeerd..."
