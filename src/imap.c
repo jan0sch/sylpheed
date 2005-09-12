@@ -56,7 +56,7 @@
 #define IMAPS_PORT	993
 #endif
 
-#define IMAP_COPY_LIMIT	500
+#define IMAP_COPY_LIMIT	200
 #define IMAP_CMD_LIMIT	1000
 
 #define QUOTE_IF_REQUIRED(out, str)				\
@@ -1211,6 +1211,7 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 		    PROGRESS_UPDATE_INTERVAL * 1000) {
 			status_print(_("Appending messages to %s (%d / %d)"),
 				     dest->path, count, total);
+			progress_show(count, total);
 			ui_update();
 			tv_prev = tv_cur;
 		}
@@ -1222,6 +1223,7 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 		if (ok != IMAP_SUCCESS) {
 			g_warning("can't append message %s\n", fileinfo->file);
 			g_free(destdir);
+			progress_show(0, 0);
 			return -1;
 		}
 
@@ -1241,6 +1243,7 @@ static gint imap_add_msgs(Folder *folder, FolderItem *dest, GSList *file_list,
 			dest->unread++;
 	}
 
+	progress_show(0, 0);
 	g_free(destdir);
 
 	if (remove_source) {
@@ -2298,6 +2301,7 @@ static GSList *imap_get_uncached_messages(IMAPSession *session,
 				status_print
 					(_("Getting message headers (%d / %d)"),
 					 count, exists);
+				progress_show(count, exists);
 				ui_update();
 				tv_prev = tv_cur;
 			}
@@ -2307,6 +2311,7 @@ static GSList *imap_get_uncached_messages(IMAPSession *session,
 		if (sock_getline(SESSION(session)->sock, &tmp) < 0) {
 			log_warning(_("error occurred while getting envelope.\n"));
 			g_string_free(str, TRUE);
+			progress_show(0, 0);
 			return newlist;
 		}
 		strretchomp(tmp);
@@ -2354,6 +2359,7 @@ static GSList *imap_get_uncached_messages(IMAPSession *session,
 			item->total++;
 	}
 
+	progress_show(0, 0);
 	g_string_free(str, TRUE);
 
 	session_set_access_time(SESSION(session));

@@ -1,3 +1,11 @@
+2005-09-12
+
+	* src/main.c
+	  src/imap.c
+	  src/utils.[ch]
+	  src/mainwindow.[ch]: update progress bar when executing long
+	  operations.
+
 2005-09-09
 
 	* src/gtkutils.[ch]

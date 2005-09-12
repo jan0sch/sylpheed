@@ -145,6 +145,8 @@
 }
 
 typedef void (*UIUpdateFunc)	(void);
+typedef void (*ProgressFunc)	(gint		 cur,
+				 gint		 total);
  
 /* for macro expansion */
 #define Str(x)	#x
@@ -438,6 +440,10 @@ size_t my_strftime		(gchar			*s,
 /* UI hints */
 void set_ui_update_func	(UIUpdateFunc	 func);
 void ui_update		(void);
+
+void set_progress_func	(ProgressFunc	 func);
+void progress_show	(gint		 cur,
+			 gint		 total);
 
 /* logging */
 void set_log_file	(const gchar *filename);

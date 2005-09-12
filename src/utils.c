@@ -3183,6 +3183,19 @@ void ui_update(void)
 		ui_update_func();
 }
 
+static ProgressFunc progress_func = NULL;
+
+void set_progress_func(ProgressFunc func)
+{
+	progress_func = func;
+}
+
+void progress_show(gint cur, gint total)
+{
+	if (progress_func)
+		progress_func(cur, total);
+}
+
 static FILE *log_fp = NULL;
 
 void set_log_file(const gchar *filename)

@@ -261,6 +261,7 @@ int main(int argc, char *argv[])
 	set_log_file(RC_DIR G_DIR_SEPARATOR_S "sylpheed.log");
 
 	set_ui_update_func(gtkut_events_flush);
+	set_progress_func(main_window_progress_show);
 
 	prefs_common_read_config();
 

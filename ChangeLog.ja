@@ -1,3 +1,11 @@
+2005-09-12
+
+	* src/main.c
+	  src/imap.c
+	  src/utils.[ch]
+	  src/mainwindow.[ch]: 長い処理の実行中にプログレスバーを更新する
+	  ようにした。
+
 2005-09-09
 
 	* src/gtkutils.[ch]
