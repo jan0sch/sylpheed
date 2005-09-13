@@ -1,3 +1,7 @@
+2005-09-13
+
+	* src/imap.c: imap_do_copy_msgs(): update progress bar on copy.
+
 2005-09-12
 
 	* src/main.c
