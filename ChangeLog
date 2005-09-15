@@ -1,3 +1,7 @@
+2005-09-15
+
+	* configure.in: use ${DATADIRNAME} for $localedir if it is defined.
+
 2005-09-13
 
 	* src/imap.c: imap_do_copy_msgs(): update progress bar on copy.
