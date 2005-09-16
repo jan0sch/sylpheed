@@ -1,3 +1,8 @@
+2005-09-16
+
+	* src/compose.c: compose_write_to_file(): don't display code
+	  conversion error and line limit warning on draft mode.
+
 2005-09-15
 
 	* configure.in: use ${DATADIRNAME} for $localedir if it is defined.
