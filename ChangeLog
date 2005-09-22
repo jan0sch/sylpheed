@@ -1,3 +1,7 @@
+2005-09-22
+
+	* src/summaryview.c: keep selecting row after changing thread display.
+
 2005-09-16
 
 	* src/compose.c: compose_write_to_file(): don't display code

@@ -1,3 +1,8 @@
+2005-09-22
+
+	* src/summaryview.c: スレッド表示を変更した後も行を選択し続ける
+	  ようにした。
+
 2005-09-16
 
 	* src/compose.c: compose_write_to_file(): 草稿モードではコード変換
