@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-09 18:58+0900\n"
+"POT-Creation-Date: 2005-09-29 16:11+0900\n"
 "PO-Revision-Date: 2004-01-22 17:46+0100\n"
 "Last-Translator: Andrej Kacian <andrej@kacian.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -97,7 +97,7 @@ msgstr ""
 "pri voľbe 'Prijať všetko', zatrhnite políčko v stĺpci označenom 'G'."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4090 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -235,7 +235,7 @@ msgstr "Používateľský parameter pre akciu"
 msgid "Add Address to Book"
 msgstr "Pridať adresu do adresára"
 
-#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4537 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Adresár"
@@ -356,9 +356,9 @@ msgstr "/Nový _Priečinok"
 #: src/folderview.c:235 src/folderview.c:237 src/folderview.c:241
 #: src/folderview.c:252 src/folderview.c:254 src/folderview.c:256
 #: src/folderview.c:260 src/folderview.c:270 src/folderview.c:272
-#: src/folderview.c:275 src/summaryview.c:376 src/summaryview.c:380
-#: src/summaryview.c:384 src/summaryview.c:394 src/summaryview.c:396
-#: src/summaryview.c:399 src/summaryview.c:405
+#: src/folderview.c:275 src/summaryview.c:378 src/summaryview.c:382
+#: src/summaryview.c:386 src/summaryview.c:396 src/summaryview.c:398
+#: src/summaryview.c:401 src/summaryview.c:407
 msgid "/---"
 msgstr "/---"
 
@@ -367,7 +367,7 @@ msgstr "/---"
 msgid "/_Edit"
 msgstr "/_Upraviť"
 
-#: src/addressbook.c:385 src/addressbook.c:395 src/summaryview.c:383
+#: src/addressbook.c:385 src/addressbook.c:395 src/summaryview.c:385
 msgid "/_Delete"
 msgstr "/Z_mazať"
 
@@ -375,7 +375,7 @@ msgstr "/Z_mazať"
 msgid "E-Mail address"
 msgstr "E-mailová adresa"
 
-#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4538 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Otvoriť adresár"
 
@@ -385,7 +385,7 @@ msgstr "Meno:"
 
 #. Buttons
 #: src/addressbook.c:628 src/addressbook.c:1680 src/editaddress.c:884
-#: src/editaddress.c:1017 src/mainwindow.c:2292 src/prefs_actions.c:266
+#: src/editaddress.c:1017 src/mainwindow.c:2306 src/prefs_actions.c:266
 #: src/prefs_display_header.c:278 src/prefs_display_header.c:333
 #: src/prefs_template.c:231
 msgid "Delete"
@@ -592,11 +592,11 @@ msgstr "Spoločná adresa"
 msgid "Personal address"
 msgstr "Súkromná adresa"
 
-#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
+#: src/alertpanel.c:138 src/compose.c:5220 src/main.c:498
 msgid "Notice"
 msgstr "Upozornenie"
 
-#: src/alertpanel.c:151 src/main.c:292
+#: src/alertpanel.c:151 src/main.c:293
 msgid "Warning"
 msgstr "Varovanie"
 
@@ -643,7 +643,7 @@ msgstr "Hnedá"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:280 src/prefs_folder_item.c:288 src/summaryview.c:4072
+#: src/colorlabel.c:280 src/prefs_folder_item.c:288 src/summaryview.c:4152
 msgid "None"
 msgstr "Žiadna"
 
@@ -739,7 +739,7 @@ msgid "/_Edit/Aut_o wrapping"
 msgstr "/Úp_ravy/_Kopírovať"
 
 #: src/compose.c:525 src/mainwindow.c:511 src/messageview.c:150
-#: src/summaryview.c:400
+#: src/summaryview.c:402
 msgid "/_View"
 msgstr "/_Zobraziť"
 
@@ -1043,12 +1043,12 @@ msgstr "Správa sa nedá uložiť medzi odoslané správy."
 msgid "Could not find any key associated with currently selected key id `%s'."
 msgstr "Nemôžem nájsť žiadny kľúč asociovaný so zvoleným ID kľúča `%s'."
 
-#: src/compose.c:2706 src/compose.c:2962 src/compose.c:3025 src/compose.c:3145
+#: src/compose.c:2706 src/compose.c:2965 src/compose.c:3028 src/compose.c:3148
 #: src/utils.c:2246
 msgid "can't change file mode\n"
 msgstr "nedá sa zmeniť mód súboru\n"
 
-#: src/compose.c:2738
+#: src/compose.c:2739
 #, fuzzy, c-format
 msgid ""
 "Can't convert the character encoding of the message body from %s to %s.\n"
@@ -1059,12 +1059,12 @@ msgstr ""
 "%s na %s.\n"
 "Odoslať správu aj napriek tomu?"
 
-#: src/compose.c:2744
+#: src/compose.c:2745
 #, fuzzy
 msgid "Code conversion error"
 msgstr "Chyba pri konverzii adresára"
 
-#: src/compose.c:2813
+#: src/compose.c:2816
 #, c-format
 msgid ""
 "Line %d exceeds the line length limit (998 bytes).\n"
@@ -1073,155 +1073,155 @@ msgid ""
 "Send it anyway?"
 msgstr ""
 
-#: src/compose.c:2817
+#: src/compose.c:2820
 msgid "Line length limit"
 msgstr ""
 
-#: src/compose.c:3105
+#: src/compose.c:3108
 msgid "can't remove the old message\n"
 msgstr "nedá sa odstrániť stará správa\n"
 
-#: src/compose.c:3123
+#: src/compose.c:3126
 msgid "queueing message...\n"
 msgstr "zaraďujem správu do fronty...\n"
 
-#: src/compose.c:3205
+#: src/compose.c:3208
 msgid "can't find queue folder\n"
 msgstr "nemôžem nájsť priečinok Na odoslanie\n"
 
-#: src/compose.c:3212
+#: src/compose.c:3215
 msgid "can't queue the message\n"
 msgstr "nemôžem zaradiť správu do fronty\n"
 
-#: src/compose.c:3798
+#: src/compose.c:3801
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "vygenerovaný Message-ID: %s\n"
 
-#: src/compose.c:3907
+#: src/compose.c:3910
 msgid "Creating compose window...\n"
 msgstr "Vytváram okno pre písanie správy...\n"
 
-#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3958 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "Od:"
 
-#: src/compose.c:4027
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/_Nástroje/A_kcie"
 
-#: src/compose.c:4030
+#: src/compose.c:4033
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/Sp_ráva/_Zašifrovať"
 
-#: src/compose.c:4068 src/compose.c:5007
+#: src/compose.c:4071 src/compose.c:5010
 msgid "MIME type"
 msgstr "MIME typ"
 
 #. S_COL_DATE
-#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
-#: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
+#: src/compose.c:4080 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4297
 msgid "Size"
 msgstr "Veľkosť"
 
-#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4458 src/mainwindow.c:2238 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Odoslať"
 
-#: src/compose.c:4456
+#: src/compose.c:4459
 msgid "Send message"
 msgstr "Odoslať správu"
 
-#: src/compose.c:4464
+#: src/compose.c:4467
 msgid "Send later"
 msgstr "Odoslať neskôr"
 
-#: src/compose.c:4465
+#: src/compose.c:4468
 msgid "Put into queue folder and send later"
 msgstr "Zaradiť správu do priečinka Na odoslanie a odoslať neskôr"
 
-#: src/compose.c:4473
+#: src/compose.c:4476
 msgid "Draft"
 msgstr "Koncept"
 
-#: src/compose.c:4474
+#: src/compose.c:4477
 msgid "Save to draft folder"
 msgstr "Uložiť medzi koncepty"
 
-#: src/compose.c:4484
+#: src/compose.c:4487
 msgid "Insert"
 msgstr "Vložiť"
 
-#: src/compose.c:4485
+#: src/compose.c:4488
 msgid "Insert file"
 msgstr "Vložiť obsah súboru"
 
-#: src/compose.c:4493
+#: src/compose.c:4496
 msgid "Attach"
 msgstr "Pripojiť"
 
-#: src/compose.c:4494
+#: src/compose.c:4497
 msgid "Attach file"
 msgstr "Pripojiť súbor"
 
 #. signature
-#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4507 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Podpis"
 
-#: src/compose.c:4505
+#: src/compose.c:4508
 msgid "Insert signature"
 msgstr "Vložiť podpis"
 
-#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4517 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Editor"
 
-#: src/compose.c:4515
+#: src/compose.c:4518
 msgid "Edit with external editor"
 msgstr "Upraviť pomocou externého editoru"
 
-#: src/compose.c:4523
+#: src/compose.c:4526
 msgid "Linewrap"
 msgstr "Riadkovanie"
 
-#: src/compose.c:4524
+#: src/compose.c:4527
 msgid "Wrap all long lines"
 msgstr "Zalomiť všetky dlhé riadky"
 
-#: src/compose.c:4903
+#: src/compose.c:4906
 msgid "Invalid MIME type."
 msgstr "Neplatný MIME typ."
 
-#: src/compose.c:4921
+#: src/compose.c:4924
 msgid "File doesn't exist or is empty."
 msgstr "Súbor neexistuje alebo je prázdny."
 
-#: src/compose.c:4989
+#: src/compose.c:4992
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: src/compose.c:5009
+#: src/compose.c:5012
 msgid "Encoding"
 msgstr "Kódová stránka"
 
-#: src/compose.c:5032 src/prefs_folder_item.c:183
+#: src/compose.c:5035 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Cesta"
 
-#: src/compose.c:5033
+#: src/compose.c:5036
 msgid "File name"
 msgstr "Názov súboru"
 
-#: src/compose.c:5188
+#: src/compose.c:5191
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "Neplatný príkaz pre externý editor: `%s'\n"
 
-#: src/compose.c:5214
+#: src/compose.c:5217
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1232,75 +1232,75 @@ msgstr ""
 "Ukončiť ho násilne?\n"
 "skupinový ID procesu: %d"
 
-#: src/compose.c:5231
+#: src/compose.c:5234
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Ukončená skupina procesov s ID: %d"
 
-#: src/compose.c:5232
+#: src/compose.c:5235
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Dočasný súbor: %s"
 
-#: src/compose.c:5256
+#: src/compose.c:5259
 msgid "Compose: input from monitoring process\n"
 msgstr "Písanie: vstup z externého procesu\n"
 
 #. failed
-#: src/compose.c:5287
+#: src/compose.c:5290
 msgid "Couldn't exec external editor\n"
 msgstr "Nedá sa spustiť externý editor\n"
 
-#: src/compose.c:5291
+#: src/compose.c:5294
 msgid "Couldn't write to file\n"
 msgstr "Nedá sa zapisovať do súboru\n"
 
-#: src/compose.c:5293
+#: src/compose.c:5296
 msgid "Pipe read failed\n"
 msgstr "Nedá sa čítať z potrubia\n"
 
-#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
+#: src/compose.c:5601 src/compose.c:5609 src/compose.c:5615
 msgid "Can't queue the message."
 msgstr "Správa sa nedá zaradiť do fronty."
 
-#: src/compose.c:5703
+#: src/compose.c:5706
 #, fuzzy
 msgid "Select files"
 msgstr "Vybrať súbor"
 
-#: src/compose.c:5725
+#: src/compose.c:5728
 msgid "Select file"
 msgstr "Vybrať súbor"
 
-#: src/compose.c:5760
+#: src/compose.c:5763
 #, fuzzy
 msgid "Save message"
 msgstr "Odoslať správu"
 
-#: src/compose.c:5761
+#: src/compose.c:5764
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Obsah správy sa zmenil. Chcete zahodiť zmeny?"
 
-#: src/compose.c:5763
+#: src/compose.c:5766
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5805
+#: src/compose.c:5808
 #, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Chcete použiť šablónu `%s' ?"
 
-#: src/compose.c:5807
+#: src/compose.c:5810
 msgid "Apply template"
 msgstr "Použiť šablónu"
 
-#: src/compose.c:5808
+#: src/compose.c:5811
 #, fuzzy
 msgid "_Replace"
 msgstr "Nahradiť"
 
-#: src/compose.c:5808
+#: src/compose.c:5811
 #, fuzzy
 msgid "_Insert"
 msgstr "Vložiť"
@@ -1749,12 +1749,12 @@ msgstr "Nastavujem informácie o priečinku...\n"
 msgid "Setting folder info..."
 msgstr "Nastavujem informácie o priečinku..."
 
-#: src/folderview.c:805 src/mainwindow.c:3301 src/setup.c:81
+#: src/folderview.c:805 src/mainwindow.c:3315 src/setup.c:81
 #, c-format
 msgid "Scanning folder %s%c%s ..."
 msgstr "Prehľadávam priečinok %s%c%s ..."
 
-#: src/folderview.c:809 src/mainwindow.c:3306 src/setup.c:86
+#: src/folderview.c:809 src/mainwindow.c:3320 src/setup.c:86
 #, c-format
 msgid "Scanning folder %s ..."
 msgstr "Prehľadávam priečinok %s ..."
@@ -1926,7 +1926,7 @@ msgstr "neznáma"
 msgid "Can't retrieve newsgroup list."
 msgstr "Nedá sa získať zoznam diskusných skupín."
 
-#: src/grouplistdialog.c:450 src/summaryview.c:730
+#: src/grouplistdialog.c:450 src/summaryview.c:732
 msgid "Done."
 msgstr "Hotovo."
 
@@ -1947,11 +1947,11 @@ msgstr "Predmet:"
 msgid "Creating header view...\n"
 msgstr "Vytváram náhľad hlavičky...\n"
 
-#: src/headerview.c:180 src/summaryview.c:1892
+#: src/headerview.c:180 src/summaryview.c:1906
 msgid "(No From)"
 msgstr "(nie je známy odosielateľ)"
 
-#: src/headerview.c:195 src/summaryview.c:1889
+#: src/headerview.c:195 src/summaryview.c:1903
 msgid "(No Subject)"
 msgstr "(bez predmetu)"
 
@@ -1963,191 +1963,191 @@ msgstr "Vytváram náhľad obrázku...\n"
 msgid "Can't load the image."
 msgstr "Nedá sa načítať obrázok."
 
-#: src/imap.c:464
+#: src/imap.c:465
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "IMAP4 spojenie k %s sa prerušilo. Znovu pripájam...\n"
 
-#: src/imap.c:515 src/imap.c:521
+#: src/imap.c:516 src/imap.c:522
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Priečinok serveru IMAP"
 
-#: src/imap.c:596
+#: src/imap.c:597
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "vytváram IMAP4 spojenie k %s:%d ...\n"
 
-#: src/imap.c:637
+#: src/imap.c:638
 msgid "Can't start TLS session.\n"
 msgstr "Nedá sa vytvoriť TLS spojenie.\n"
 
-#: src/imap.c:1095
+#: src/imap.c:1096
 #, fuzzy, c-format
 msgid "Getting message %d"
 msgstr "Odstraňujem správu %d"
 
-#: src/imap.c:1212
+#: src/imap.c:1213
 #, fuzzy, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Odosielam správu (%d / %d bajtov)"
 
-#: src/imap.c:1295
+#: src/imap.c:1303
 #, fuzzy, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Kopírujem správu %s%c%d do %s ...\n"
 
-#: src/imap.c:1301
+#: src/imap.c:1309
 #, fuzzy, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Kopírujem správu %s%c%d do %s ...\n"
 
-#: src/imap.c:1448
+#: src/imap.c:1460
 #, fuzzy, c-format
 msgid "Removing messages %s"
 msgstr "Prijímam správy z %s..."
 
-#: src/imap.c:1454
+#: src/imap.c:1466
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "nedá sa nastaviť príznak zmazania: %s\n"
 
-#: src/imap.c:1462 src/imap.c:1557
+#: src/imap.c:1474 src/imap.c:1569
 msgid "can't expunge\n"
 msgstr "nedá sa odstrániť\n"
 
-#: src/imap.c:1545
+#: src/imap.c:1557
 #, fuzzy, c-format
 msgid "Removing all messages in %s"
 msgstr "Zmazať všetky správy v koši?"
 
-#: src/imap.c:1551
+#: src/imap.c:1563
 msgid "can't set deleted flags: 1:*\n"
 msgstr "nedá sa nastaviť príznak zmazania: 1:*\n"
 
-#: src/imap.c:1596
+#: src/imap.c:1608
 msgid "can't close folder\n"
 msgstr "priečinok sa nedá zatvoriť\n"
 
-#: src/imap.c:1674
+#: src/imap.c:1686
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "koreňový priečinok %s neexistuje\n"
 
-#: src/imap.c:1858 src/imap.c:1866
+#: src/imap.c:1870 src/imap.c:1878
 msgid "error occurred while getting LIST.\n"
 msgstr "pri príkaze LIST sa vyskytla chyba.\n"
 
-#: src/imap.c:1980
+#: src/imap.c:1992
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Nedá sa vytvoriť '%s'\n"
 
-#: src/imap.c:1985
+#: src/imap.c:1997
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Nedá sa vytvoriť '%s' v INBOXe\n"
 
-#: src/imap.c:2046
+#: src/imap.c:2058
 msgid "can't create mailbox: LIST failed\n"
 msgstr "nedá sa vytvoriť schránka: príkaz LIST zlyhal\n"
 
-#: src/imap.c:2066
+#: src/imap.c:2078
 msgid "can't create mailbox\n"
 msgstr "nedá sa vytvoriť schránka\n"
 
-#: src/imap.c:2162
+#: src/imap.c:2174
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "nedá sa premenovať schránka: %s na %s\n"
 
-#: src/imap.c:2242
+#: src/imap.c:2254
 msgid "can't delete mailbox\n"
 msgstr "schránka sa nedá odstrániť \n"
 
-#: src/imap.c:2286
+#: src/imap.c:2298
 msgid "can't get envelope\n"
 msgstr "obálka sa nedá načítať\n"
 
-#: src/imap.c:2299
+#: src/imap.c:2311
 #, fuzzy, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Odosielam správu (%d / %d bajtov)"
 
-#: src/imap.c:2308
+#: src/imap.c:2321
 msgid "error occurred while getting envelope.\n"
 msgstr "pri získavaní obálky sa vyskytla chyba.\n"
 
-#: src/imap.c:2329
+#: src/imap.c:2343
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "obálka sa nedá prečítať: %s\n"
 
-#: src/imap.c:2452
+#: src/imap.c:2467
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Nedá sa pripojiť k serveru IMAP4: %s:%d\n"
 
-#: src/imap.c:2459
+#: src/imap.c:2474
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Nedá sa vytvoriť IMAP4 spojenie s: %s:%d\n"
 
-#: src/imap.c:2534
+#: src/imap.c:2549
 msgid "can't get namespace\n"
 msgstr "nedá sa nájsť obálka\n"
 
-#: src/imap.c:3061
+#: src/imap.c:3076
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "priečinok sa nedá vytvoriť: %s\n"
 
-#: src/imap.c:3236
+#: src/imap.c:3251
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 autentizácia bola neúspešná.\n"
 
-#: src/imap.c:3253
+#: src/imap.c:3268
 msgid "IMAP4 login failed.\n"
 msgstr "neúspešné prihlásenie k IMAP4.\n"
 
-#: src/imap.c:3583
+#: src/imap.c:3598
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "nedá sa napojiť %s k %s\n"
 
-#: src/imap.c:3590
+#: src/imap.c:3605
 msgid "(sending file...)"
 msgstr "(posielam súbor...)"
 
-#: src/imap.c:3618
+#: src/imap.c:3633
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "nedá sa napojiť správa k %s\n"
 
-#: src/imap.c:3650
+#: src/imap.c:3665
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "nedá sa kopírovať %s do %s\n"
 
-#: src/imap.c:3674
+#: src/imap.c:3689
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "chyba pri IMAP príkaze: STORE %s %s\n"
 
-#: src/imap.c:3688
+#: src/imap.c:3703
 msgid "error while imap command: EXPUNGE\n"
 msgstr "chyba pri IMAP príkaze: EXPUNGE\n"
 
-#: src/imap.c:3701
+#: src/imap.c:3716
 msgid "error while imap command: CLOSE\n"
 msgstr "chyba pri IMAP príkaze: CLOSE\n"
 
-#: src/imap.c:3934
+#: src/imap.c:3949
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv nemôže skonvertovať UTF-7 na %s\n"
 
-#: src/imap.c:3964
+#: src/imap.c:3979
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv nemôže skonvertovať %s na UTF-7\n"
@@ -2249,7 +2249,7 @@ msgstr "Importovať súbor LDIF do adresára"
 msgid "Prev"
 msgstr "Predchádzajúci"
 
-#: src/importldif.c:768 src/mainwindow.c:2321
+#: src/importldif.c:768 src/mainwindow.c:2335
 msgid "Next"
 msgstr "Nasledujúca"
 
@@ -2503,7 +2503,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:293
+#: src/main.c:294
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
 "OpenPGP support disabled."
@@ -2511,16 +2511,16 @@ msgstr ""
 "GnuPG nie je nainštalované správne, alebo jeho verzia je príliš stará.\n"
 "Podpora OpenPGP je vypnutá."
 
-#: src/main.c:453
+#: src/main.c:454
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Použitie: %s [VOĽBY]...\n"
 
-#: src/main.c:456
+#: src/main.c:457
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [adresa]    otvorí okno pre písanie novej správy"
 
-#: src/main.c:457
+#: src/main.c:458
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
@@ -2531,23 +2531,23 @@ msgstr ""
 "uvedenými\n"
 "                         súbormi"
 
-#: src/main.c:460
+#: src/main.c:461
 msgid "  --receive              receive new messages"
 msgstr "  --receive              prijme nové správy"
 
-#: src/main.c:461
+#: src/main.c:462
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr "  --receive-all          prijme nové správy pre všetky kontá"
 
-#: src/main.c:462
+#: src/main.c:463
 msgid "  --send                 send all queued messages"
 msgstr "  --send                 pošle všetky správy vo výstupnej fronte"
 
-#: src/main.c:463
+#: src/main.c:464
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status [priečinok]...   zobrazí celkový počet správ"
 
-#: src/main.c:464
+#: src/main.c:465
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
@@ -2555,42 +2555,42 @@ msgstr ""
 "  --status-full [priečinok]...\n"
 "                        zobrazí stav jednotlivých priečinkov"
 
-#: src/main.c:466
+#: src/main.c:467
 msgid "  --debug                debug mode"
 msgstr "  --debug                ladiaci mód"
 
-#: src/main.c:467
+#: src/main.c:468
 msgid "  --help                 display this help and exit"
 msgstr "  --help                zobrazí túto nápovedu a ukončí program"
 
-#: src/main.c:468
+#: src/main.c:469
 msgid "  --version              output version information and exit"
 msgstr ""
 "  --version                zobrazí informácie o verzii a ukončí program"
 
-#: src/main.c:498
+#: src/main.c:499
 msgid "Composing message exists. Really quit?"
 msgstr "Máte rozpísanú správu. Naozaj ukončiť?"
 
-#: src/main.c:506
+#: src/main.c:507
 msgid "Queued messages"
 msgstr "Správy vo fronte"
 
-#: src/main.c:507
+#: src/main.c:508
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Vo fronte sú neodoslané správy. Ukončiť program?"
 
 #. remote command mode
-#: src/main.c:585
+#: src/main.c:586
 msgid "another Sylpheed is already running.\n"
 msgstr "už beží iná kópia Sylpheedu.\n"
 
-#: src/main.c:751
+#: src/main.c:752
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Nastavenie akcií"
 
-#: src/main.c:752
+#: src/main.c:753
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -2902,7 +2902,7 @@ msgstr "/_Zobraziť/_Kódovanie/Čínština (ISO-2022-_CN)"
 msgid "/_View/Character _encoding/Korean (ISO-2022-KR)"
 msgstr "/_Zobraziť/_Kódovanie/Kórea (ISO-2022-KR)"
 
-#: src/mainwindow.c:676 src/summaryview.c:401
+#: src/mainwindow.c:676 src/summaryview.c:403
 msgid "/_View/Open in new _window"
 msgstr "/_Zobraziť/Otvoriť v _novom okne"
 
@@ -3188,8 +3188,8 @@ msgstr "Vytváram hlavné okno...\n"
 msgid "MainWindow: color allocation %d failed\n"
 msgstr "Hlavné Okno: alokácia farieb %d bola neúspešná\n"
 
-#: src/mainwindow.c:1071 src/summaryview.c:2020 src/summaryview.c:2105
-#: src/summaryview.c:3342 src/summaryview.c:3415 src/summaryview.c:3728
+#: src/mainwindow.c:1071 src/summaryview.c:2034 src/summaryview.c:2119
+#: src/summaryview.c:3390 src/summaryview.c:3495 src/summaryview.c:3808
 msgid "done.\n"
 msgstr "hotovo.\n"
 
@@ -3206,29 +3206,29 @@ msgstr "žiadny"
 msgid "Changing window separation type from %d to %d\n"
 msgstr "Mením typ oddeľovača okien z %d na %d\n"
 
-#: src/mainwindow.c:1536
+#: src/mainwindow.c:1550
 msgid "Offline"
 msgstr "Odpojené"
 
-#: src/mainwindow.c:1537
+#: src/mainwindow.c:1551
 msgid "You are offline. Go online?"
 msgstr "Ste odpojený. Pripojiť sa?"
 
-#: src/mainwindow.c:1551
+#: src/mainwindow.c:1565
 #, fuzzy
 msgid "Empty all trash"
 msgstr "Vyprázdniť kôš"
 
-#: src/mainwindow.c:1552
+#: src/mainwindow.c:1566
 #, fuzzy
 msgid "Empty messages in all trash?"
 msgstr "Zmazať všetky správy v koši?"
 
-#: src/mainwindow.c:1580
+#: src/mainwindow.c:1594
 msgid "Add mailbox"
 msgstr "Pridať mailbox"
 
-#: src/mainwindow.c:1581
+#: src/mainwindow.c:1595
 msgid ""
 "Input the location of mailbox.\n"
 "If the existing mailbox is specified, it will be\n"
@@ -3238,16 +3238,16 @@ msgstr ""
 "Ak zadáte existujúci mailbox, bude\n"
 "automaticky prehľadaný."
 
-#: src/mainwindow.c:1587
+#: src/mainwindow.c:1601
 #, c-format
 msgid "The mailbox `%s' already exists."
 msgstr "Mailbox '%s' už existuje."
 
-#: src/mainwindow.c:1592 src/setup.c:57
+#: src/mainwindow.c:1606 src/setup.c:57
 msgid "Mailbox"
 msgstr "Mailbox"
 
-#: src/mainwindow.c:1598 src/setup.c:63
+#: src/mainwindow.c:1612 src/setup.c:63
 msgid ""
 "Creation of the mailbox failed.\n"
 "Maybe some files already exist, or you don't have the permission to write "
@@ -3257,153 +3257,153 @@ msgstr ""
 "Pravdepodobne už niektoré súbory existujú, alebo tam nemáte práva na "
 "zapisovanie."
 
-#: src/mainwindow.c:1989
+#: src/mainwindow.c:2003
 msgid "Sylpheed - Folder View"
 msgstr "Sylpheed - Zobrazenie priečinku"
 
-#: src/mainwindow.c:2009 src/messageview.c:368
+#: src/mainwindow.c:2023 src/messageview.c:368
 msgid "Sylpheed - Message View"
 msgstr "Sylpheed - Zobrazenie správy"
 
-#: src/mainwindow.c:2156 src/summaryview.c:370
+#: src/mainwindow.c:2170 src/summaryview.c:372
 msgid "/_Reply"
 msgstr "/_Odpovedať"
 
-#: src/mainwindow.c:2157
+#: src/mainwindow.c:2171
 #, fuzzy
 msgid "/Reply to _all"
 msgstr "Odpovedať odosielateľovi i všetkým príjemcom"
 
-#: src/mainwindow.c:2158
+#: src/mainwindow.c:2172
 #, fuzzy
 msgid "/Reply to _sender"
 msgstr "/O_dpovedať komu/_odosielateľovi"
 
-#: src/mainwindow.c:2159
+#: src/mainwindow.c:2173
 #, fuzzy
 msgid "/Reply to mailing _list"
 msgstr "/O_dpovedať komu/do _diskusnej skupiny"
 
-#: src/mainwindow.c:2164 src/summaryview.c:377
+#: src/mainwindow.c:2178 src/summaryview.c:379
 msgid "/_Forward"
 msgstr "/_Poslať ďalej"
 
-#: src/mainwindow.c:2165 src/summaryview.c:378
+#: src/mainwindow.c:2179 src/summaryview.c:380
 msgid "/For_ward as attachment"
 msgstr "/Poslať ďalej ako p_rílohu"
 
-#: src/mainwindow.c:2166 src/summaryview.c:379
+#: src/mainwindow.c:2180 src/summaryview.c:381
 msgid "/Redirec_t"
 msgstr "/Pr_esmerovať"
 
-#: src/mainwindow.c:2205
+#: src/mainwindow.c:2219
 msgid "Get"
 msgstr "Prijať"
 
-#: src/mainwindow.c:2206
+#: src/mainwindow.c:2220
 msgid "Incorporate new mail"
 msgstr "Prijať novú poštu"
 
-#: src/mainwindow.c:2213
+#: src/mainwindow.c:2227
 msgid "Get all"
 msgstr "Prijať všetko"
 
-#: src/mainwindow.c:2214
+#: src/mainwindow.c:2228
 msgid "Incorporate new mail of all accounts"
 msgstr "Prijať novú poštu pre všetky kontá"
 
-#: src/mainwindow.c:2225
+#: src/mainwindow.c:2239
 msgid "Send queued message(s)"
 msgstr "Odoslať správy vo fronte"
 
-#: src/mainwindow.c:2235 src/prefs_account.c:720 src/prefs_common.c:945
+#: src/mainwindow.c:2249 src/prefs_account.c:720 src/prefs_common.c:945
 #: src/prefs_folder_item.c:137
 msgid "Compose"
 msgstr "Nová správa"
 
-#: src/mainwindow.c:2236
+#: src/mainwindow.c:2250
 msgid "Compose new message"
 msgstr "Napísať novú správu"
 
-#: src/mainwindow.c:2244 src/prefs_common.c:1444
+#: src/mainwindow.c:2258 src/prefs_common.c:1444
 msgid "Reply"
 msgstr "Odpovedať"
 
-#: src/mainwindow.c:2245 src/mainwindow.c:2258
+#: src/mainwindow.c:2259 src/mainwindow.c:2272
 msgid "Reply to the message"
 msgstr "Odpovedať na správu"
 
-#: src/mainwindow.c:2263
+#: src/mainwindow.c:2277
 msgid "Reply all"
 msgstr "Odp. všetkým"
 
-#: src/mainwindow.c:2264
+#: src/mainwindow.c:2278
 msgid "Reply to all"
 msgstr "Odpovedať odosielateľovi i všetkým príjemcom"
 
-#: src/mainwindow.c:2272 src/prefs_filter_edit.c:741
+#: src/mainwindow.c:2286 src/prefs_filter_edit.c:741
 msgid "Forward"
 msgstr "Poslať ďalej"
 
-#: src/mainwindow.c:2273 src/mainwindow.c:2286
+#: src/mainwindow.c:2287 src/mainwindow.c:2300
 msgid "Forward the message"
 msgstr "Poslať správu ďalej"
 
-#: src/mainwindow.c:2293
+#: src/mainwindow.c:2307
 msgid "Delete the message"
 msgstr "Zmazať správu"
 
-#: src/mainwindow.c:2301 src/prefs_common.c:1984
+#: src/mainwindow.c:2315 src/prefs_common.c:1984
 msgid "Junk"
 msgstr ""
 
-#: src/mainwindow.c:2302
+#: src/mainwindow.c:2316
 #, fuzzy
 msgid "Set as junk mail"
 msgstr "Nastaviť ako východzie"
 
-#: src/mainwindow.c:2311
+#: src/mainwindow.c:2325
 msgid "Execute"
 msgstr "Vykonať"
 
-#: src/mainwindow.c:2312
+#: src/mainwindow.c:2326
 msgid "Execute marked process"
 msgstr "Vykonať označený proces"
 
-#: src/mainwindow.c:2322
+#: src/mainwindow.c:2336
 msgid "Next unread message"
 msgstr "Ďalšia neprečítaná správa"
 
-#: src/mainwindow.c:2334
+#: src/mainwindow.c:2348
 msgid "Prefs"
 msgstr "Nastavenia"
 
-#: src/mainwindow.c:2335
+#: src/mainwindow.c:2349
 msgid "Common preferences"
 msgstr "Všeobecné nastavenia"
 
-#: src/mainwindow.c:2343 src/prefs_folder_item.c:261
+#: src/mainwindow.c:2357 src/prefs_folder_item.c:261
 #: src/prefs_folder_item.c:272 src/progressdialog.c:128
 msgid "Account"
 msgstr "Konto"
 
-#: src/mainwindow.c:2344
+#: src/mainwindow.c:2358
 msgid "Account setting"
 msgstr "Nastavenie konta"
 
-#: src/mainwindow.c:2527
+#: src/mainwindow.c:2541
 msgid "You are offline. Click the icon to go online."
 msgstr "Ste odpojený. Kliknite na ikonu, ak sa chcete pripojiť."
 
-#: src/mainwindow.c:2538
+#: src/mainwindow.c:2552
 msgid "You are online. Click the icon to go offline."
 msgstr "Ste pripojený. Kliknite na ikonu, ak sa chcete odpojiť."
 
-#: src/mainwindow.c:2731
+#: src/mainwindow.c:2745
 msgid "Exit"
 msgstr "Ukončiť"
 
-#: src/mainwindow.c:2731
+#: src/mainwindow.c:2745
 msgid "Exit this program?"
 msgstr "Ukončiť program"
 
@@ -3537,16 +3537,16 @@ msgstr "Text"
 msgid "Attachments"
 msgstr "Prílohy"
 
-#: src/messageview.c:658 src/summaryview.c:2943
+#: src/messageview.c:658 src/summaryview.c:2957
 #, c-format
 msgid "Can't save the file `%s'."
 msgstr "Nemôžem uložiť súbor '%s'."
 
-#: src/messageview.c:713 src/prefs_common.c:2367 src/summaryview.c:2962
+#: src/messageview.c:713 src/prefs_common.c:2367 src/summaryview.c:2976
 msgid "Print"
 msgstr "Tlačiť"
 
-#: src/messageview.c:714 src/summaryview.c:2963
+#: src/messageview.c:714 src/summaryview.c:2977
 #, c-format
 msgid ""
 "Enter the print command line:\n"
@@ -3555,7 +3555,7 @@ msgstr ""
 "Zadajte príkazový riadok tlače:\n"
 "('%s' bude nahradené názvom súboru)"
 
-#: src/messageview.c:720 src/summaryview.c:2969
+#: src/messageview.c:720 src/summaryview.c:2983
 #, c-format
 msgid ""
 "Print command line is invalid:\n"
@@ -5523,17 +5523,17 @@ msgid "Attachment"
 msgstr "Príloha"
 
 #. S_COL_MIME
-#: src/prefs_summary_column.c:72 src/summaryview.c:4210
+#: src/prefs_summary_column.c:72 src/summaryview.c:4290
 msgid "Subject"
 msgstr "Predmet"
 
 #. S_COL_SUBJECT
-#: src/prefs_summary_column.c:73 src/summaryview.c:4213
+#: src/prefs_summary_column.c:73 src/summaryview.c:4293
 msgid "From"
 msgstr "Od"
 
 #. S_COL_FROM
-#: src/prefs_summary_column.c:74 src/summaryview.c:4215
+#: src/prefs_summary_column.c:74 src/summaryview.c:4295
 msgid "Date"
 msgstr "Dátum"
 
@@ -6004,310 +6004,310 @@ msgstr "Bol dosiahnutý začiatok zoznamu; pokračovať od konca?"
 msgid "End of list reached; continue from beginning?"
 msgstr "Bol dosiahnutý koniec zoznamu; pokračovať od začiatku?"
 
-#: src/summaryview.c:371
+#: src/summaryview.c:373
 msgid "/Repl_y to"
 msgstr "/O_dpovedať komu"
 
-#: src/summaryview.c:372
+#: src/summaryview.c:374
 msgid "/Repl_y to/_all"
 msgstr "/O_dpovedať komu/_všetkým"
 
-#: src/summaryview.c:373
+#: src/summaryview.c:375
 msgid "/Repl_y to/_sender"
 msgstr "/O_dpovedať komu/_odosielateľovi"
 
-#: src/summaryview.c:374
+#: src/summaryview.c:376
 msgid "/Repl_y to/mailing _list"
 msgstr "/O_dpovedať komu/do _diskusnej skupiny"
 
-#: src/summaryview.c:381
+#: src/summaryview.c:383
 msgid "/M_ove..."
 msgstr "/Pre_sunúť"
 
-#: src/summaryview.c:382
+#: src/summaryview.c:384
 msgid "/_Copy..."
 msgstr "/_Kopírovať..."
 
-#: src/summaryview.c:385
+#: src/summaryview.c:387
 msgid "/_Mark"
 msgstr "/Oz_načiť"
 
-#: src/summaryview.c:386
+#: src/summaryview.c:388
 msgid "/_Mark/_Mark"
 msgstr "/Oz_načiť/Oz_načiť"
 
-#: src/summaryview.c:387
+#: src/summaryview.c:389
 msgid "/_Mark/_Unmark"
 msgstr "/Oz_načiť/_Odznačiť"
 
-#: src/summaryview.c:388
+#: src/summaryview.c:390
 msgid "/_Mark/---"
 msgstr "/Oz_načiť/---"
 
-#: src/summaryview.c:389
+#: src/summaryview.c:391
 msgid "/_Mark/Mark as unr_ead"
 msgstr "/Oz_načiť/Označiť ako n_eprečítané"
 
-#: src/summaryview.c:390
+#: src/summaryview.c:392
 msgid "/_Mark/Mark as rea_d"
 msgstr "/Oz_načiť/Označiť ako _prečítané"
 
-#: src/summaryview.c:392
+#: src/summaryview.c:394
 msgid "/_Mark/Mark all _read"
 msgstr "/Oz_načiť/Označiť _všetky ako prečítané"
 
-#: src/summaryview.c:393
+#: src/summaryview.c:395
 msgid "/Color la_bel"
 msgstr "/_Farebné označenie"
 
-#: src/summaryview.c:395
+#: src/summaryview.c:397
 msgid "/Re-_edit"
 msgstr "/Znovu upraviť"
 
-#: src/summaryview.c:397
+#: src/summaryview.c:399
 #, fuzzy
 msgid "/Add sender to address boo_k..."
 msgstr "/Pridať odosielateľa do _adresára"
 
-#: src/summaryview.c:403
+#: src/summaryview.c:405
 msgid "/_View/_Source"
 msgstr "/_Zobraziť/_Zdroj"
 
-#: src/summaryview.c:404
+#: src/summaryview.c:406
 msgid "/_View/All _header"
 msgstr "/_Zobraziť/Všetky _hlavičky"
 
-#: src/summaryview.c:406
+#: src/summaryview.c:408
 msgid "/_Print..."
 msgstr "/_Tlačiť..."
 
-#: src/summaryview.c:431
+#: src/summaryview.c:433
 msgid "Creating summary view...\n"
 msgstr "Vytváram zoznam správy...\n"
 
-#: src/summaryview.c:591
+#: src/summaryview.c:593
 msgid "Process mark"
 msgstr "Spracovať značky"
 
-#: src/summaryview.c:592
+#: src/summaryview.c:594
 msgid "Some marks are left. Process it?"
 msgstr "Ostali nejaké značky. Spracovať?"
 
-#: src/summaryview.c:638
+#: src/summaryview.c:640
 #, c-format
 msgid "Scanning folder (%s)..."
 msgstr "Prehľadávam priečinok (%s)..."
 
-#: src/summaryview.c:1147
+#: src/summaryview.c:1149
 #, fuzzy
 msgid "_Search again"
 msgstr "Hľadať znova"
 
-#: src/summaryview.c:1168 src/summaryview.c:1177
+#: src/summaryview.c:1170 src/summaryview.c:1179
 msgid "No more unread messages"
 msgstr "Žiadne neprečítané správy"
 
-#: src/summaryview.c:1169
+#: src/summaryview.c:1171
 msgid "No unread message found. Search from the end?"
 msgstr "Neboli nájdené žiadne neprečítané správy. Hľadať od konca?"
 
-#: src/summaryview.c:1171
+#: src/summaryview.c:1173
 msgid "No unread messages."
 msgstr "Žiadne neprečítané správy."
 
-#: src/summaryview.c:1178
+#: src/summaryview.c:1180
 msgid "No unread message found. Go to next folder?"
 msgstr ""
 "Neboli nájdené žiadne neprečítané správy. Prejsť do ďalšieho priečinku?"
 
-#: src/summaryview.c:1186 src/summaryview.c:1195
+#: src/summaryview.c:1188 src/summaryview.c:1197
 msgid "No more new messages"
 msgstr "Žiadne nové správy"
 
-#: src/summaryview.c:1187
+#: src/summaryview.c:1189
 msgid "No new message found. Search from the end?"
 msgstr "Neboli nájdené žiadne nové správy. Hľadať od konca?"
 
-#: src/summaryview.c:1189
+#: src/summaryview.c:1191
 msgid "No new messages."
 msgstr "Žiadne nové správy."
 
-#: src/summaryview.c:1196
+#: src/summaryview.c:1198
 msgid "No new message found. Go to next folder?"
 msgstr "Neboli nájdené žiadne nové správy. Prejsť do ďalšieho priečinku?"
 
-#: src/summaryview.c:1204 src/summaryview.c:1213
+#: src/summaryview.c:1206 src/summaryview.c:1215
 msgid "No more marked messages"
 msgstr "Žiadne označené správy"
 
-#: src/summaryview.c:1205
+#: src/summaryview.c:1207
 msgid "No marked message found. Search from the end?"
 msgstr "Neboli nájdené žiadné označené správy. Hľadať od konca?"
 
-#: src/summaryview.c:1207 src/summaryview.c:1216
+#: src/summaryview.c:1209 src/summaryview.c:1218
 msgid "No marked messages."
 msgstr "Žiadne označené správy."
 
-#: src/summaryview.c:1214
+#: src/summaryview.c:1216
 msgid "No marked message found. Search from the beginning?"
 msgstr "Neboli nájdené žiadné označené správy. Hľadať od začiatku?"
 
-#: src/summaryview.c:1222 src/summaryview.c:1231
+#: src/summaryview.c:1224 src/summaryview.c:1233
 msgid "No more labeled messages"
 msgstr "Žiadne zafarbené správy"
 
-#: src/summaryview.c:1223
+#: src/summaryview.c:1225
 msgid "No labeled message found. Search from the end?"
 msgstr "Neboli nájdené žiadne zafarbené správy. Hľadať od konca?"
 
-#: src/summaryview.c:1225 src/summaryview.c:1234
+#: src/summaryview.c:1227 src/summaryview.c:1236
 msgid "No labeled messages."
 msgstr "Žiadne zafarbené správy."
 
-#: src/summaryview.c:1232
+#: src/summaryview.c:1234
 msgid "No labeled message found. Search from the beginning?"
 msgstr "Neboli nájdené žiadne zafarbené správy. Hľadať od začiatku?"
 
-#: src/summaryview.c:1517
+#: src/summaryview.c:1531
 msgid "Attracting messages by subject..."
 msgstr "Zoskupujem správu podľa názvu..."
 
-#: src/summaryview.c:1676
+#: src/summaryview.c:1690
 #, c-format
 msgid "%d deleted"
 msgstr "%d zmazaných"
 
-#: src/summaryview.c:1680
+#: src/summaryview.c:1694
 #, c-format
 msgid "%s%d moved"
 msgstr "%s%d presunutých"
 
-#: src/summaryview.c:1681 src/summaryview.c:1688
+#: src/summaryview.c:1695 src/summaryview.c:1702
 msgid ", "
 msgstr ", "
 
-#: src/summaryview.c:1686
+#: src/summaryview.c:1700
 #, c-format
 msgid "%s%d copied"
 msgstr "%s%d skopírovaných"
 
-#: src/summaryview.c:1703
+#: src/summaryview.c:1717
 msgid " item(s) selected"
 msgstr " položiek zvolených"
 
-#: src/summaryview.c:1713
+#: src/summaryview.c:1727
 #, c-format
 msgid "%d new, %d unread, %d total (%s)"
 msgstr "%d novýcvh, %d neprečítaných, %d celkovo (%s)"
 
-#: src/summaryview.c:1719
+#: src/summaryview.c:1733
 #, c-format
 msgid "%d new, %d unread, %d total"
 msgstr "%d novýcvh, %d neprečítaných, %d celkovo"
 
-#: src/summaryview.c:1755
+#: src/summaryview.c:1769
 msgid "Sorting summary..."
 msgstr "Triedim zoznam správ..."
 
-#: src/summaryview.c:1829
+#: src/summaryview.c:1843
 msgid "(No Date)"
 msgstr "(bez dátumu)"
 
-#: src/summaryview.c:1957
+#: src/summaryview.c:1971
 msgid "\tSetting summary from message data..."
 msgstr "\tVytváram zoznam správ..."
 
-#: src/summaryview.c:1959
+#: src/summaryview.c:1973
 msgid "Setting summary from message data..."
 msgstr "Vytváram zoznam správ..."
 
-#: src/summaryview.c:2084
+#: src/summaryview.c:2098
 #, c-format
 msgid "Writing summary cache (%s)..."
 msgstr "Zapisujem stav zoznamu do medzipamäte (%s)..."
 
-#: src/summaryview.c:2388
+#: src/summaryview.c:2402
 #, c-format
 msgid "Message %d is marked\n"
 msgstr "Správa %d je označená\n"
 
-#: src/summaryview.c:2430
+#: src/summaryview.c:2444
 #, c-format
 msgid "Message %d is marked as being read\n"
 msgstr "Správa %d je označená ako čítaná\n"
 
-#: src/summaryview.c:2502
+#: src/summaryview.c:2516
 #, c-format
 msgid "Message %d is marked as unread\n"
 msgstr "Správa %d je označená ako neprečítaná\n"
 
-#: src/summaryview.c:2555
+#: src/summaryview.c:2569
 #, c-format
 msgid "Message %s/%d is set to delete\n"
 msgstr "Správa %s/%d je určená na zmazanie\n"
 
-#: src/summaryview.c:2573
+#: src/summaryview.c:2587
 msgid "Delete message(s)"
 msgstr "Zmazať správy"
 
-#: src/summaryview.c:2574
+#: src/summaryview.c:2588
 msgid "Do you really want to delete message(s) from the trash?"
 msgstr "Naozaj chcete zmazať správy z koša?"
 
-#: src/summaryview.c:2639
+#: src/summaryview.c:2653
 msgid "Deleting duplicated messages..."
 msgstr "Mažem duplikátne správy..."
 
-#: src/summaryview.c:2676
+#: src/summaryview.c:2690
 #, c-format
 msgid "Message %s/%d is unmarked\n"
 msgstr "Správa %s/%d je odznačená\n"
 
-#: src/summaryview.c:2726
+#: src/summaryview.c:2740
 #, c-format
 msgid "Message %d is set to move to %s\n"
 msgstr "Správa %d je určená k presunutiu do %s\n"
 
-#: src/summaryview.c:2743
+#: src/summaryview.c:2757
 msgid "Destination is same as current folder."
 msgstr "Cieľ je zhodný s aktuálnym priečinkom."
 
-#: src/summaryview.c:2797
+#: src/summaryview.c:2811
 #, c-format
 msgid "Message %d is set to copy to %s\n"
 msgstr "Správa %d je určená ku kopírovaniu do %s\n"
 
-#: src/summaryview.c:2814
+#: src/summaryview.c:2828
 #, fuzzy
 msgid "Destination for copy is same as current folder."
 msgstr "Cieľ kopírovania je zhodný s aktuálnym priečinkom."
 
-#: src/summaryview.c:3006
+#: src/summaryview.c:3020
 msgid "Error occurred while processing messages."
 msgstr "Pri spracovávaní pošty sa vyskytla chyba."
 
-#: src/summaryview.c:3300 src/summaryview.c:3301
+#: src/summaryview.c:3319 src/summaryview.c:3320
 msgid "Building threads..."
 msgstr "Vytváram vlákna..."
 
-#: src/summaryview.c:3398 src/summaryview.c:3399
+#: src/summaryview.c:3448 src/summaryview.c:3449
 msgid "Unthreading..."
 msgstr "Odstraňujem štruktúru vlákien..."
 
-#: src/summaryview.c:3704
+#: src/summaryview.c:3784
 msgid "filtering..."
 msgstr "filtrujem..."
 
-#: src/summaryview.c:3705
+#: src/summaryview.c:3785
 msgid "Filtering..."
 msgstr "Filtrujem..."
 
-#: src/summaryview.c:3735
+#: src/summaryview.c:3815
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr ""
 
-#: src/summaryview.c:4219
+#: src/summaryview.c:4299
 msgid "No."
 msgstr "Č."
 

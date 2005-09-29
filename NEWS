@@ -1,5 +1,21 @@
 Changes of Sylpheed
 
+* 2.0.2
+
+    * The auto detection of Japanese encoding now supports UTF-8 encoding.
+    * The number of messages to be copied at a time on IMAP4 was limited to
+      prevent timeout error.
+    * When executing IMAP4 operations which take long time, its progress is
+      now displayed on the statusbar, and the UI is periodically updated.
+    * The selected row of the summary view will be kept when the state of
+      thread display is changed.
+    * The code conversion error and line limit warning will not be displayed
+      anymore when saving as draft.
+    * A bug that prevented the expander of the folder tree of the address book
+      working was fixed.
+    * A bug in which message/rfc822 attachments were broken when pgp-signed
+      was fixed.
+
 * 2.0.1
 
     * The sorting of summary now fall backs to comparison by date.

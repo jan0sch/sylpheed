@@ -1,3 +1,7 @@
+2005-09-29
+
+	* version 2.0.2
+
 2005-09-22
 
 	* src/summaryview.c: keep selecting row after changing thread display.

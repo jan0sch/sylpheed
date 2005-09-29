@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-09 18:58+0900\n"
+"POT-Creation-Date: 2005-09-29 16:11+0900\n"
 "PO-Revision-Date: 2000-08-28\n"
 "Last-Translator: Little Dragon <littledragon@altern.org>\n"
 "Language-Team: Little Dragon <littledragon@altern.org>\n"
@@ -101,7 +101,7 @@ msgstr ""
 "mesajelor de comanda `Ia tot'."
 
 #: src/account.c:691 src/addressadd.c:192 src/addressbook.c:491
-#: src/compose.c:4087 src/editaddress.c:200 src/editaddress.c:942
+#: src/compose.c:4090 src/editaddress.c:200 src/editaddress.c:942
 #: src/editaddress.c:990 src/editbook.c:196 src/editgroup.c:265
 #: src/editjpilot.c:271 src/editldap.c:307 src/editvcard.c:184
 #: src/mimeview.c:201 src/prefs_filter.c:258 src/prefs_folder_item.c:170
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Add Address to Book"
 msgstr "Adăugare în agendă"
 
-#: src/addressadd.c:202 src/compose.c:4534 src/editaddress.c:201
+#: src/addressadd.c:202 src/compose.c:4537 src/editaddress.c:201
 #: src/select-keys.c:320
 msgid "Address"
 msgstr "Adresă"
@@ -360,9 +360,9 @@ msgstr "/_Director nou"
 #: src/folderview.c:235 src/folderview.c:237 src/folderview.c:241
 #: src/folderview.c:252 src/folderview.c:254 src/folderview.c:256
 #: src/folderview.c:260 src/folderview.c:270 src/folderview.c:272
-#: src/folderview.c:275 src/summaryview.c:376 src/summaryview.c:380
-#: src/summaryview.c:384 src/summaryview.c:394 src/summaryview.c:396
-#: src/summaryview.c:399 src/summaryview.c:405
+#: src/folderview.c:275 src/summaryview.c:378 src/summaryview.c:382
+#: src/summaryview.c:386 src/summaryview.c:396 src/summaryview.c:398
+#: src/summaryview.c:401 src/summaryview.c:407
 msgid "/---"
 msgstr "/---"
 
@@ -371,7 +371,7 @@ msgstr "/---"
 msgid "/_Edit"
 msgstr "/_Editare"
 
-#: src/addressbook.c:385 src/addressbook.c:395 src/summaryview.c:383
+#: src/addressbook.c:385 src/addressbook.c:395 src/summaryview.c:385
 msgid "/_Delete"
 msgstr "/Ş_tergere"
 
@@ -379,7 +379,7 @@ msgstr "/Ş_tergere"
 msgid "E-Mail address"
 msgstr "Adresă E-Mail"
 
-#: src/addressbook.c:496 src/compose.c:4535 src/prefs_common.c:2399
+#: src/addressbook.c:496 src/compose.c:4538 src/prefs_common.c:2399
 msgid "Address book"
 msgstr "Agendă"
 
@@ -389,7 +389,7 @@ msgstr " Nume:"
 
 #. Buttons
 #: src/addressbook.c:628 src/addressbook.c:1680 src/editaddress.c:884
-#: src/editaddress.c:1017 src/mainwindow.c:2292 src/prefs_actions.c:266
+#: src/editaddress.c:1017 src/mainwindow.c:2306 src/prefs_actions.c:266
 #: src/prefs_display_header.c:278 src/prefs_display_header.c:333
 #: src/prefs_template.c:231
 msgid "Delete"
@@ -597,11 +597,11 @@ msgstr "Adresse comună:"
 msgid "Personal address"
 msgstr "Adresse personală:"
 
-#: src/alertpanel.c:138 src/compose.c:5217 src/main.c:497
+#: src/alertpanel.c:138 src/compose.c:5220 src/main.c:498
 msgid "Notice"
 msgstr "Informaţie"
 
-#: src/alertpanel.c:151 src/main.c:292
+#: src/alertpanel.c:151 src/main.c:293
 msgid "Warning"
 msgstr "Avertisment"
 
@@ -648,7 +648,7 @@ msgstr "Maro"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:280 src/prefs_folder_item.c:288 src/summaryview.c:4072
+#: src/colorlabel.c:280 src/prefs_folder_item.c:288 src/summaryview.c:4152
 msgid "None"
 msgstr "Niciunul"
 
@@ -747,7 +747,7 @@ msgid "/_Edit/Aut_o wrapping"
 msgstr "/_Editare/_Copiere"
 
 #: src/compose.c:525 src/mainwindow.c:511 src/messageview.c:150
-#: src/summaryview.c:400
+#: src/summaryview.c:402
 msgid "/_View"
 msgstr "/_Vedere"
 
@@ -1056,12 +1056,12 @@ msgstr "Salvarea mesajului în outbox este imposibilă."
 msgid "Could not find any key associated with currently selected key id `%s'."
 msgstr ""
 
-#: src/compose.c:2706 src/compose.c:2962 src/compose.c:3025 src/compose.c:3145
+#: src/compose.c:2706 src/compose.c:2965 src/compose.c:3028 src/compose.c:3148
 #: src/utils.c:2246
 msgid "can't change file mode\n"
 msgstr "schimbarea permisiunilor fişierului este imposibilă\n"
 
-#: src/compose.c:2738
+#: src/compose.c:2739
 #, fuzzy, c-format
 msgid ""
 "Can't convert the character encoding of the message body from %s to %s.\n"
@@ -1069,12 +1069,12 @@ msgid ""
 "Send it as %s anyway?"
 msgstr "Convertirea codificării mesajului este imposibilă."
 
-#: src/compose.c:2744
+#: src/compose.c:2745
 #, fuzzy
 msgid "Code conversion error"
 msgstr "Eroare de convertire a agendei"
 
-#: src/compose.c:2813
+#: src/compose.c:2816
 #, c-format
 msgid ""
 "Line %d exceeds the line length limit (998 bytes).\n"
@@ -1083,157 +1083,157 @@ msgid ""
 "Send it anyway?"
 msgstr ""
 
-#: src/compose.c:2817
+#: src/compose.c:2820
 msgid "Line length limit"
 msgstr ""
 
-#: src/compose.c:3105
+#: src/compose.c:3108
 msgid "can't remove the old message\n"
 msgstr "ştergerea mesajului vechi a eşuat\n"
 
-#: src/compose.c:3123
+#: src/compose.c:3126
 msgid "queueing message...\n"
 msgstr "punere mesaj în lista de aşteptare...\n"
 
-#: src/compose.c:3205
+#: src/compose.c:3208
 #, fuzzy
 msgid "can't find queue folder\n"
 msgstr "directorul nu a putut fi selectat: %s\n"
 
-#: src/compose.c:3212
+#: src/compose.c:3215
 msgid "can't queue the message\n"
 msgstr "punerea mesajului în lista de aşteptare este imposibilă\n"
 
-#: src/compose.c:3798
+#: src/compose.c:3801
 #, c-format
 msgid "generated Message-ID: %s\n"
 msgstr "Message-ID creat: %s\n"
 
-#: src/compose.c:3907
+#: src/compose.c:3910
 msgid "Creating compose window...\n"
 msgstr "Creare fereastra de compunere...\n"
 
-#: src/compose.c:3955 src/headerview.c:54 src/summary_search.c:214
+#: src/compose.c:3958 src/headerview.c:54 src/summary_search.c:214
 msgid "From:"
 msgstr "De la:"
 
-#: src/compose.c:4027
+#: src/compose.c:4030
 #, fuzzy
 msgid "PGP Sign"
 msgstr "/E_xecutare"
 
-#: src/compose.c:4030
+#: src/compose.c:4033
 #, fuzzy
 msgid "PGP Encrypt"
 msgstr "/_Message/Cr_iptare"
 
-#: src/compose.c:4068 src/compose.c:5007
+#: src/compose.c:4071 src/compose.c:5010
 msgid "MIME type"
 msgstr "Tip MIME"
 
 #. S_COL_DATE
-#: src/compose.c:4077 src/mimeview.c:192 src/prefs_filter_edit.c:585
-#: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4217
+#: src/compose.c:4080 src/mimeview.c:192 src/prefs_filter_edit.c:585
+#: src/prefs_summary_column.c:75 src/select-keys.c:317 src/summaryview.c:4297
 msgid "Size"
 msgstr "Dimensiune"
 
-#: src/compose.c:4455 src/mainwindow.c:2224 src/prefs_account.c:718
+#: src/compose.c:4458 src/mainwindow.c:2238 src/prefs_account.c:718
 #: src/prefs_common.c:943
 msgid "Send"
 msgstr "Trimitere"
 
-#: src/compose.c:4456
+#: src/compose.c:4459
 msgid "Send message"
 msgstr "Trimitere mesaj"
 
-#: src/compose.c:4464
+#: src/compose.c:4467
 msgid "Send later"
 msgstr "Mai târziu"
 
-#: src/compose.c:4465
+#: src/compose.c:4468
 msgid "Put into queue folder and send later"
 msgstr "Punere în lista de aşteptare şi trimitere mai târziu"
 
-#: src/compose.c:4473
+#: src/compose.c:4476
 msgid "Draft"
 msgstr "Salvare"
 
-#: src/compose.c:4474
+#: src/compose.c:4477
 msgid "Save to draft folder"
 msgstr "Salvare"
 
-#: src/compose.c:4484
+#: src/compose.c:4487
 msgid "Insert"
 msgstr "Inserare"
 
-#: src/compose.c:4485
+#: src/compose.c:4488
 msgid "Insert file"
 msgstr "Isertion fişier"
 
-#: src/compose.c:4493
+#: src/compose.c:4496
 msgid "Attach"
 msgstr "Ataşament"
 
-#: src/compose.c:4494
+#: src/compose.c:4497
 msgid "Attach file"
 msgstr "Ataşare fişier"
 
 #. signature
-#: src/compose.c:4504 src/prefs_account.c:1390 src/prefs_common.c:1352
+#: src/compose.c:4507 src/prefs_account.c:1390 src/prefs_common.c:1352
 msgid "Signature"
 msgstr "Semnătură"
 
-#: src/compose.c:4505
+#: src/compose.c:4508
 msgid "Insert signature"
 msgstr "Inserare semnătură"
 
-#: src/compose.c:4514 src/prefs_common.c:1374 src/prefs_common.c:2378
+#: src/compose.c:4517 src/prefs_common.c:1374 src/prefs_common.c:2378
 msgid "Editor"
 msgstr "Editor"
 
-#: src/compose.c:4515
+#: src/compose.c:4518
 msgid "Edit with external editor"
 msgstr "Editare cu editor extern"
 
-#: src/compose.c:4523
+#: src/compose.c:4526
 msgid "Linewrap"
 msgstr "Tăiere linii"
 
-#: src/compose.c:4524
+#: src/compose.c:4527
 msgid "Wrap all long lines"
 msgstr "Tăiere toate liniile lungi"
 
-#: src/compose.c:4903
+#: src/compose.c:4906
 msgid "Invalid MIME type."
 msgstr "Tip MIME invalid."
 
-#: src/compose.c:4921
+#: src/compose.c:4924
 msgid "File doesn't exist or is empty."
 msgstr "Fişierul nu există sau este gol."
 
-#: src/compose.c:4989
+#: src/compose.c:4992
 #, fuzzy
 msgid "Properties"
 msgstr "Proprietate"
 
-#: src/compose.c:5009
+#: src/compose.c:5012
 msgid "Encoding"
 msgstr "Codare"
 
-#: src/compose.c:5032 src/prefs_folder_item.c:183
+#: src/compose.c:5035 src/prefs_folder_item.c:183
 msgid "Path"
 msgstr "Cale"
 
-#: src/compose.c:5033
+#: src/compose.c:5036
 msgid "File name"
 msgstr "Numele fişierului"
 
-#: src/compose.c:5188
+#: src/compose.c:5191
 #, c-format
 msgid "External editor command line is invalid: `%s'\n"
 msgstr "Linia de comandă este invalidă: '%s'\n"
 
-#: src/compose.c:5214
+#: src/compose.c:5217
 #, c-format
 msgid ""
 "The external editor is still working.\n"
@@ -1244,76 +1244,76 @@ msgstr ""
 "Doriţi terminarea forţată a procesului ?\n"
 "process group id: %d"
 
-#: src/compose.c:5231
+#: src/compose.c:5234
 #, c-format
 msgid "Terminated process group id: %d"
 msgstr "Procesul a fost terminat: %d"
 
-#: src/compose.c:5232
+#: src/compose.c:5235
 #, c-format
 msgid "Temporary file: %s"
 msgstr "Fişier temporar: %s"
 
-#: src/compose.c:5256
+#: src/compose.c:5259
 msgid "Compose: input from monitoring process\n"
 msgstr "Compunere: introducere din proces monitorizat\n"
 
 #. failed
-#: src/compose.c:5287
+#: src/compose.c:5290
 msgid "Couldn't exec external editor\n"
 msgstr "Editorul extern nu poate fi executat\n"
 
-#: src/compose.c:5291
+#: src/compose.c:5294
 msgid "Couldn't write to file\n"
 msgstr "Scrierea în fişier este imposibilă\n"
 
-#: src/compose.c:5293
+#: src/compose.c:5296
 msgid "Pipe read failed\n"
 msgstr "Citirea din pipe a eşuat\n"
 
-#: src/compose.c:5598 src/compose.c:5606 src/compose.c:5612
+#: src/compose.c:5601 src/compose.c:5609 src/compose.c:5615
 msgid "Can't queue the message."
 msgstr "Este imposibilă punerea mesajului în lista de aşteptare."
 
-#: src/compose.c:5703
+#: src/compose.c:5706
 #, fuzzy
 msgid "Select files"
 msgstr "Selectare fişier"
 
-#: src/compose.c:5725
+#: src/compose.c:5728
 msgid "Select file"
 msgstr "Selectare fişier"
 
-#: src/compose.c:5760
+#: src/compose.c:5763
 #, fuzzy
 msgid "Save message"
 msgstr "Trimitere mesaj"
 
-#: src/compose.c:5761
+#: src/compose.c:5764
 #, fuzzy
 msgid "This message has been modified. Save it to draft folder?"
 msgstr "Acest mesaj a fost modificat. Doriţi sa anulaţi schimbările ?"
 
-#: src/compose.c:5763
+#: src/compose.c:5766
 msgid "Close _without saving"
 msgstr ""
 
-#: src/compose.c:5805
+#: src/compose.c:5808
 #, fuzzy, c-format
 msgid "Do you want to apply the template `%s' ?"
 msgstr "Sunteţi sigur că doriţi să ştergeţi această regulă ?"
 
-#: src/compose.c:5807
+#: src/compose.c:5810
 #, fuzzy
 msgid "Apply template"
 msgstr "Ştergere mesaj"
 
-#: src/compose.c:5808
+#: src/compose.c:5811
 #, fuzzy
 msgid "_Replace"
 msgstr "/_Utilitare/_Modele"
 
-#: src/compose.c:5808
+#: src/compose.c:5811
 #, fuzzy
 msgid "_Insert"
 msgstr "Inserare"
@@ -1770,12 +1770,12 @@ msgstr "Setare informaţii despre director...\n"
 msgid "Setting folder info..."
 msgstr "Setare informaţii despre director..."
 
-#: src/folderview.c:805 src/mainwindow.c:3301 src/setup.c:81
+#: src/folderview.c:805 src/mainwindow.c:3315 src/setup.c:81
 #, c-format
 msgid "Scanning folder %s%c%s ..."
 msgstr "Scanare director %s%c%s ..."
 
-#: src/folderview.c:809 src/mainwindow.c:3306 src/setup.c:86
+#: src/folderview.c:809 src/mainwindow.c:3320 src/setup.c:86
 #, c-format
 msgid "Scanning folder %s ..."
 msgstr "Scanare director %s ..."
@@ -1953,7 +1953,7 @@ msgstr "necunoscut"
 msgid "Can't retrieve newsgroup list."
 msgstr "Lista de newsgroup-uri nu a putut fi obţinută."
 
-#: src/grouplistdialog.c:450 src/summaryview.c:730
+#: src/grouplistdialog.c:450 src/summaryview.c:732
 msgid "Done."
 msgstr "Gata."
 
@@ -1974,11 +1974,11 @@ msgstr "Subiect:"
 msgid "Creating header view...\n"
 msgstr "Creare vedere antet...\n"
 
-#: src/headerview.c:180 src/summaryview.c:1892
+#: src/headerview.c:180 src/summaryview.c:1906
 msgid "(No From)"
 msgstr "(Fără expeditor)"
 
-#: src/headerview.c:195 src/summaryview.c:1889
+#: src/headerview.c:195 src/summaryview.c:1903
 msgid "(No Subject)"
 msgstr "(Fără subiect)"
 
@@ -1990,197 +1990,197 @@ msgstr "Creare vedere imagine...\n"
 msgid "Can't load the image."
 msgstr "Imaginea nu a putut fi încărcată."
 
-#: src/imap.c:464
+#: src/imap.c:465
 #, fuzzy, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "Conexiunea IMAP4 la %s:%d a fost întreruptă. Reconectare...\n"
 
-#: src/imap.c:515 src/imap.c:521
+#: src/imap.c:516 src/imap.c:522
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Serverul IMAP4 nu a fost introdus."
 
-#: src/imap.c:596
+#: src/imap.c:597
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "creare conexiune IMAP4 la %s:%d ...\n"
 
-#: src/imap.c:637
+#: src/imap.c:638
 msgid "Can't start TLS session.\n"
 msgstr ""
 
-#: src/imap.c:1095
+#: src/imap.c:1096
 #, fuzzy, c-format
 msgid "Getting message %d"
 msgstr "Ştergere mesaj"
 
-#: src/imap.c:1212
+#: src/imap.c:1213
 #, fuzzy, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Recepţionare mesaj (%d / %d) (%s / %s octeţi)"
 
-#: src/imap.c:1295
+#: src/imap.c:1303
 #, fuzzy, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Mutare mesaj %s%c%d în %s ...\n"
 
-#: src/imap.c:1301
+#: src/imap.c:1309
 #, fuzzy, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Copiere mesaj %s%c%d în %s ...\n"
 
-#: src/imap.c:1448
+#: src/imap.c:1460
 #, fuzzy, c-format
 msgid "Removing messages %s"
 msgstr "Recepţionare mesaje din %s în %s...\n"
 
-#: src/imap.c:1454
+#: src/imap.c:1466
 #, fuzzy, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "marcajul de ştergere nu a putut fi setat: %d\n"
 
-#: src/imap.c:1462 src/imap.c:1557
+#: src/imap.c:1474 src/imap.c:1569
 msgid "can't expunge\n"
 msgstr "ştergere imposibilă\n"
 
-#: src/imap.c:1545
+#: src/imap.c:1557
 #, fuzzy, c-format
 msgid "Removing all messages in %s"
 msgstr "Doriţi ştergerea tuturor mesajelor din gunoi ?"
 
-#: src/imap.c:1551
+#: src/imap.c:1563
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "marcajul de ştergere nu a putut fi setat: 1:%d\n"
 
-#: src/imap.c:1596
+#: src/imap.c:1608
 #, fuzzy
 msgid "can't close folder\n"
 msgstr "directorul nu a putut fi selectat: %s\n"
 
-#: src/imap.c:1674
+#: src/imap.c:1686
 #, fuzzy, c-format
 msgid "root folder %s not exist\n"
 msgstr "Fişierul de marcaje nu a fost găsit.\n"
 
-#: src/imap.c:1858 src/imap.c:1866
+#: src/imap.c:1870 src/imap.c:1878
 #, fuzzy
 msgid "error occurred while getting LIST.\n"
 msgstr "a avut loc o eroare la comanda LIST.\n"
 
-#: src/imap.c:1980
+#: src/imap.c:1992
 #, fuzzy, c-format
 msgid "Can't create '%s'\n"
 msgstr "nu poate fi creat %s\n"
 
-#: src/imap.c:1985
+#: src/imap.c:1997
 #, fuzzy, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "nu poate fi creat %s\n"
 
-#: src/imap.c:2046
+#: src/imap.c:2058
 msgid "can't create mailbox: LIST failed\n"
 msgstr "crearea cutiei poştale a eşuat: LIST a eşuat.\n"
 
-#: src/imap.c:2066
+#: src/imap.c:2078
 msgid "can't create mailbox\n"
 msgstr "crearea cutiei poştale este imposibilă\n"
 
-#: src/imap.c:2162
+#: src/imap.c:2174
 #, fuzzy, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "cutia poştală nu a putut fi setată: %s\n"
 
-#: src/imap.c:2242
+#: src/imap.c:2254
 msgid "can't delete mailbox\n"
 msgstr "ştergerea cutiei poştale este imposibilă\n"
 
-#: src/imap.c:2286
+#: src/imap.c:2298
 msgid "can't get envelope\n"
 msgstr "recepţionarea plicului nu a putut fi realizată\n"
 
-#: src/imap.c:2299
+#: src/imap.c:2311
 #, fuzzy, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Recepţionare mesaj (%d / %d) (%s / %s octeţi)"
 
-#: src/imap.c:2308
+#: src/imap.c:2321
 msgid "error occurred while getting envelope.\n"
 msgstr "a avut loc o eroare în timpul recepţionării plicului.\n"
 
-#: src/imap.c:2329
+#: src/imap.c:2343
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "plicul nu poate fi analizat: %s\n"
 
-#: src/imap.c:2452
+#: src/imap.c:2467
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Încercarea de conectare la serverul IMAP4 a eşuat: %s:%d\n"
 
-#: src/imap.c:2459
+#: src/imap.c:2474
 #, fuzzy, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Încercarea de conectare la serverul IMAP4 a eşuat: %s:%d\n"
 
-#: src/imap.c:2534
+#: src/imap.c:2549
 msgid "can't get namespace\n"
 msgstr "spaţiul de nume nu a putut fi obţinut\n"
 
-#: src/imap.c:3061
+#: src/imap.c:3076
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "directorul nu a putut fi selectat: %s\n"
 
-#: src/imap.c:3236
+#: src/imap.c:3251
 #, fuzzy
 msgid "IMAP4 authentication failed.\n"
 msgstr "Autentificare..."
 
-#: src/imap.c:3253
+#: src/imap.c:3268
 msgid "IMAP4 login failed.\n"
 msgstr "Logare IMAP4 eşuată.\n"
 
-#: src/imap.c:3583
+#: src/imap.c:3598
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "nu a putut fi adăugat %s la %s\n"
 
-#: src/imap.c:3590
+#: src/imap.c:3605
 #, fuzzy
 msgid "(sending file...)"
 msgstr "Citire director %s ..."
 
-#: src/imap.c:3618
+#: src/imap.c:3633
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "mesajul %s nu a putut fi adăugat\n"
 
-#: src/imap.c:3650
+#: src/imap.c:3665
 #, fuzzy, c-format
 msgid "can't copy %s to %s\n"
 msgstr "nu a putut fi copiat %d la %s\n"
 
-#: src/imap.c:3674
+#: src/imap.c:3689
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "eroare comandă IMAP: STORE %d:%d %s\n"
 
-#: src/imap.c:3688
+#: src/imap.c:3703
 msgid "error while imap command: EXPUNGE\n"
 msgstr "eroare comandă IMAP: EXPUNGE\n"
 
-#: src/imap.c:3701
+#: src/imap.c:3716
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "eroare comandă IMAP: EXPUNGE\n"
 
-#: src/imap.c:3934
+#: src/imap.c:3949
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr ""
 
-#: src/imap.c:3964
+#: src/imap.c:3979
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr ""
@@ -2282,7 +2282,7 @@ msgstr "Importare fişier LDIF în agendă"
 msgid "Prev"
 msgstr "Înapio"
 
-#: src/importldif.c:768 src/mainwindow.c:2321
+#: src/importldif.c:768 src/mainwindow.c:2335
 msgid "Next"
 msgstr "Înainte"
 
@@ -2538,7 +2538,7 @@ msgid ""
 "Continue?"
 msgstr ""
 
-#: src/main.c:293
+#: src/main.c:294
 #, fuzzy
 msgid ""
 "GnuPG is not installed properly, or its version is too old.\n"
@@ -2547,85 +2547,85 @@ msgstr ""
 "GnuPG nu este instalat corect.\n"
 "Suportul pentru OpenPGP a fost dezactivat."
 
-#: src/main.c:453
+#: src/main.c:454
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Utilizare: %s [OPŢIUNE]...\n"
 
-#: src/main.c:456
+#: src/main.c:457
 msgid "  --compose [address]    open composition window"
 msgstr "  --compose [adresă]    deschidere fereastră de compunere"
 
-#: src/main.c:457
+#: src/main.c:458
 msgid ""
 "  --attach file1 [file2]...\n"
 "                         open composition window with specified files\n"
 "                         attached"
 msgstr ""
 
-#: src/main.c:460
+#: src/main.c:461
 msgid "  --receive              receive new messages"
 msgstr "  --receive              recepţionare mesaje noi"
 
-#: src/main.c:461
+#: src/main.c:462
 msgid "  --receive-all          receive new messages of all accounts"
 msgstr ""
 "  --receive-all          recepţionare mesaje noi pentru toate conturile"
 
-#: src/main.c:462
+#: src/main.c:463
 #, fuzzy
 msgid "  --send                 send all queued messages"
 msgstr "  --status              afişare număr total de mesaje"
 
-#: src/main.c:463
+#: src/main.c:464
 #, fuzzy
 msgid "  --status [folder]...   show the total number of messages"
 msgstr "  --status              afişare număr total de mesaje"
 
-#: src/main.c:464
+#: src/main.c:465
 #, fuzzy
 msgid ""
 "  --status-full [folder]...\n"
 "                         show the status of each folder"
 msgstr "  --status              afişare număr total de mesaje"
 
-#: src/main.c:466
+#: src/main.c:467
 msgid "  --debug                debug mode"
 msgstr "  --debug                mod debug"
 
-#: src/main.c:467
+#: src/main.c:468
 msgid "  --help                 display this help and exit"
 msgstr "  --help                 afişare ajutor şi ieşire"
 
-#: src/main.c:468
+#: src/main.c:469
 msgid "  --version              output version information and exit"
 msgstr "  --version              afişare versiune şi ieşire"
 
-#: src/main.c:498
+#: src/main.c:499
 msgid "Composing message exists. Really quit?"
 msgstr ""
 "Fereastra de compunere de mesaje există.\n"
 "Sunteţi sigur că doriţi sa ieşiţi ?"
 
-#: src/main.c:506
+#: src/main.c:507
 msgid "Queued messages"
 msgstr "Mesaje în lista de aşteptare"
 
-#: src/main.c:507
+#: src/main.c:508
 msgid "Some unsent messages are queued. Exit now?"
 msgstr "Exista mesaje netrimise în lista de aşteptare. Doriţi sa ieşiţi ?"
 
 #. remote command mode
-#: src/main.c:585
+#: src/main.c:586
 msgid "another Sylpheed is already running.\n"
 msgstr "rulează o alta sesiune Sylpheed.\n"
 
-#: src/main.c:751
+#: src/main.c:752
 #, fuzzy
 msgid "Migration of configuration"
 msgstr "Scriere configuraţia filtrului...\n"
 
-#: src/main.c:752
+#: src/main.c:753
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -2988,7 +2988,7 @@ msgstr "/_Mesaj/Set de _caractere/Chinezesc (ISO-2022-_CN)"
 msgid "/_View/Character _encoding/Korean (ISO-2022-KR)"
 msgstr "/_Mesaj/Set de _caractere/Corean (ISO-2022-KR)"
 
-#: src/mainwindow.c:676 src/summaryview.c:401
+#: src/mainwindow.c:676 src/summaryview.c:403
 #, fuzzy
 msgid "/_View/Open in new _window"
 msgstr "/Deschidere în _fereastră nouă"
@@ -3312,8 +3312,8 @@ msgstr "Creare fereastră principală...\n"
 msgid "MainWindow: color allocation %d failed\n"
 msgstr "Fereastra principală: alocarea culorii %d a eşuat\n"
 
-#: src/mainwindow.c:1071 src/summaryview.c:2020 src/summaryview.c:2105
-#: src/summaryview.c:3342 src/summaryview.c:3415 src/summaryview.c:3728
+#: src/mainwindow.c:1071 src/summaryview.c:2034 src/summaryview.c:2119
+#: src/summaryview.c:3390 src/summaryview.c:3495 src/summaryview.c:3808
 msgid "done.\n"
 msgstr "gata.\n"
 
@@ -3330,29 +3330,29 @@ msgstr "nimic"
 msgid "Changing window separation type from %d to %d\n"
 msgstr ""
 
-#: src/mainwindow.c:1536
+#: src/mainwindow.c:1550
 msgid "Offline"
 msgstr ""
 
-#: src/mainwindow.c:1537
+#: src/mainwindow.c:1551
 msgid "You are offline. Go online?"
 msgstr ""
 
-#: src/mainwindow.c:1551
+#: src/mainwindow.c:1565
 #, fuzzy
 msgid "Empty all trash"
 msgstr "/_Fişier/_Curăţare gunoi"
 
-#: src/mainwindow.c:1552
+#: src/mainwindow.c:1566
 #, fuzzy
 msgid "Empty messages in all trash?"
 msgstr "Doriţi ştergerea tuturor mesajelor din gunoi ?"
 
-#: src/mainwindow.c:1580
+#: src/mainwindow.c:1594
 msgid "Add mailbox"
 msgstr "Adăugare cutie poştală"
 
-#: src/mainwindow.c:1581
+#: src/mainwindow.c:1595
 msgid ""
 "Input the location of mailbox.\n"
 "If the existing mailbox is specified, it will be\n"
@@ -3362,16 +3362,16 @@ msgstr ""
 "Dacă este specificată o cutie poştală existentă, aceasta\n"
 "va fi scanată automat."
 
-#: src/mainwindow.c:1587
+#: src/mainwindow.c:1601
 #, c-format
 msgid "The mailbox `%s' already exists."
 msgstr "Cutia poştală '%s' există deja."
 
-#: src/mainwindow.c:1592 src/setup.c:57
+#: src/mainwindow.c:1606 src/setup.c:57
 msgid "Mailbox"
 msgstr "Cutie poştală"
 
-#: src/mainwindow.c:1598 src/setup.c:63
+#: src/mainwindow.c:1612 src/setup.c:63
 msgid ""
 "Creation of the mailbox failed.\n"
 "Maybe some files already exist, or you don't have the permission to write "
@@ -3381,155 +3381,155 @@ msgstr ""
 "Probabil că anumite fişiere există deja, sau nu aveţi permisiuni de "
 "scriereadecvate."
 
-#: src/mainwindow.c:1989
+#: src/mainwindow.c:2003
 msgid "Sylpheed - Folder View"
 msgstr ""
 
-#: src/mainwindow.c:2009 src/messageview.c:368
+#: src/mainwindow.c:2023 src/messageview.c:368
 msgid "Sylpheed - Message View"
 msgstr ""
 
-#: src/mainwindow.c:2156 src/summaryview.c:370
+#: src/mainwindow.c:2170 src/summaryview.c:372
 msgid "/_Reply"
 msgstr "/_Răspunde"
 
-#: src/mainwindow.c:2157
+#: src/mainwindow.c:2171
 #, fuzzy
 msgid "/Reply to _all"
 msgstr "Răspunde la toţi"
 
-#: src/mainwindow.c:2158
+#: src/mainwindow.c:2172
 #, fuzzy
 msgid "/Reply to _sender"
 msgstr "/Răspunde _la toţi"
 
-#: src/mainwindow.c:2159
+#: src/mainwindow.c:2173
 #, fuzzy
 msgid "/Reply to mailing _list"
 msgstr "/Răspunde _la toţi"
 
-#: src/mainwindow.c:2164 src/summaryview.c:377
+#: src/mainwindow.c:2178 src/summaryview.c:379
 msgid "/_Forward"
 msgstr "/Î_naintare"
 
-#: src/mainwindow.c:2165 src/summaryview.c:378
+#: src/mainwindow.c:2179 src/summaryview.c:380
 #, fuzzy
 msgid "/For_ward as attachment"
 msgstr "/Înaintare ca a_taşament"
 
-#: src/mainwindow.c:2166 src/summaryview.c:379
+#: src/mainwindow.c:2180 src/summaryview.c:381
 #, fuzzy
 msgid "/Redirec_t"
 msgstr "/Re_editare"
 
-#: src/mainwindow.c:2205
+#: src/mainwindow.c:2219
 msgid "Get"
 msgstr "Ia"
 
-#: src/mainwindow.c:2206
+#: src/mainwindow.c:2220
 msgid "Incorporate new mail"
 msgstr "Recepţionare mesaje noi pentru contul curent"
 
-#: src/mainwindow.c:2213
+#: src/mainwindow.c:2227
 msgid "Get all"
 msgstr "Ia tot"
 
-#: src/mainwindow.c:2214
+#: src/mainwindow.c:2228
 msgid "Incorporate new mail of all accounts"
 msgstr "Recepţionare mesaje noi pentru toate conturile"
 
-#: src/mainwindow.c:2225
+#: src/mainwindow.c:2239
 msgid "Send queued message(s)"
 msgstr "Trimiterea mesajului(lor) din lista de aşteptare"
 
-#: src/mainwindow.c:2235 src/prefs_account.c:720 src/prefs_common.c:945
+#: src/mainwindow.c:2249 src/prefs_account.c:720 src/prefs_common.c:945
 #: src/prefs_folder_item.c:137
 msgid "Compose"
 msgstr "Creare"
 
-#: src/mainwindow.c:2236
+#: src/mainwindow.c:2250
 msgid "Compose new message"
 msgstr "Creare mesaj nou"
 
-#: src/mainwindow.c:2244 src/prefs_common.c:1444
+#: src/mainwindow.c:2258 src/prefs_common.c:1444
 msgid "Reply"
 msgstr "Răspuns"
 
-#: src/mainwindow.c:2245 src/mainwindow.c:2258
+#: src/mainwindow.c:2259 src/mainwindow.c:2272
 msgid "Reply to the message"
 msgstr "Răspunde la mesaj"
 
-#: src/mainwindow.c:2263
+#: src/mainwindow.c:2277
 msgid "Reply all"
 msgstr "Răspuns toţi"
 
-#: src/mainwindow.c:2264
+#: src/mainwindow.c:2278
 msgid "Reply to all"
 msgstr "Răspunde la toţi"
 
-#: src/mainwindow.c:2272 src/prefs_filter_edit.c:741
+#: src/mainwindow.c:2286 src/prefs_filter_edit.c:741
 msgid "Forward"
 msgstr "Înaintare"
 
-#: src/mainwindow.c:2273 src/mainwindow.c:2286
+#: src/mainwindow.c:2287 src/mainwindow.c:2300
 msgid "Forward the message"
 msgstr "Înaintare mesaj"
 
-#: src/mainwindow.c:2293
+#: src/mainwindow.c:2307
 msgid "Delete the message"
 msgstr "Ştergere mesaj"
 
-#: src/mainwindow.c:2301 src/prefs_common.c:1984
+#: src/mainwindow.c:2315 src/prefs_common.c:1984
 msgid "Junk"
 msgstr ""
 
-#: src/mainwindow.c:2302
+#: src/mainwindow.c:2316
 msgid "Set as junk mail"
 msgstr ""
 
-#: src/mainwindow.c:2311
+#: src/mainwindow.c:2325
 msgid "Execute"
 msgstr "Executare"
 
-#: src/mainwindow.c:2312
+#: src/mainwindow.c:2326
 msgid "Execute marked process"
 msgstr "Execută toate procesele marcate"
 
-#: src/mainwindow.c:2322
+#: src/mainwindow.c:2336
 msgid "Next unread message"
 msgstr "Următorul mesaj necitit"
 
-#: src/mainwindow.c:2334
+#: src/mainwindow.c:2348
 msgid "Prefs"
 msgstr "Preferinţe"
 
-#: src/mainwindow.c:2335
+#: src/mainwindow.c:2349
 #, fuzzy
 msgid "Common preferences"
 msgstr "Preferinţe comune"
 
-#: src/mainwindow.c:2343 src/prefs_folder_item.c:261
+#: src/mainwindow.c:2357 src/prefs_folder_item.c:261
 #: src/prefs_folder_item.c:272 src/progressdialog.c:128
 msgid "Account"
 msgstr "Cont"
 
-#: src/mainwindow.c:2344
+#: src/mainwindow.c:2358
 msgid "Account setting"
 msgstr "Setări cont curent"
 
-#: src/mainwindow.c:2527
+#: src/mainwindow.c:2541
 msgid "You are offline. Click the icon to go online."
 msgstr ""
 
-#: src/mainwindow.c:2538
+#: src/mainwindow.c:2552
 msgid "You are online. Click the icon to go offline."
 msgstr ""
 
-#: src/mainwindow.c:2731
+#: src/mainwindow.c:2745
 msgid "Exit"
 msgstr "Ieşire"
 
-#: src/mainwindow.c:2731
+#: src/mainwindow.c:2745
 msgid "Exit this program?"
 msgstr "Doriţi să părăsiţi acest program ?"
 
@@ -3668,16 +3668,16 @@ msgstr "Înainte"
 msgid "Attachments"
 msgstr "Ataşamente"
 
-#: src/messageview.c:658 src/summaryview.c:2943
+#: src/messageview.c:658 src/summaryview.c:2957
 #, fuzzy, c-format
 msgid "Can't save the file `%s'."
 msgstr "Directorul `%s' nu a putut fi creat."
 
-#: src/messageview.c:713 src/prefs_common.c:2367 src/summaryview.c:2962
+#: src/messageview.c:713 src/prefs_common.c:2367 src/summaryview.c:2976
 msgid "Print"
 msgstr "Imprimare"
 
-#: src/messageview.c:714 src/summaryview.c:2963
+#: src/messageview.c:714 src/summaryview.c:2977
 #, c-format
 msgid ""
 "Enter the print command line:\n"
@@ -3686,7 +3686,7 @@ msgstr ""
 "Introduceţi linia de comandă pentru imprimare:\n"
 "('%s' va fi înlocuit cu numele fişierului)"
 
-#: src/messageview.c:720 src/summaryview.c:2969
+#: src/messageview.c:720 src/summaryview.c:2983
 #, c-format
 msgid ""
 "Print command line is invalid:\n"
@@ -5683,17 +5683,17 @@ msgid "Attachment"
 msgstr "Ataşamente"
 
 #. S_COL_MIME
-#: src/prefs_summary_column.c:72 src/summaryview.c:4210
+#: src/prefs_summary_column.c:72 src/summaryview.c:4290
 msgid "Subject"
 msgstr "Subiect"
 
 #. S_COL_SUBJECT
-#: src/prefs_summary_column.c:73 src/summaryview.c:4213
+#: src/prefs_summary_column.c:73 src/summaryview.c:4293
 msgid "From"
 msgstr "De la"
 
 #. S_COL_FROM
-#: src/prefs_summary_column.c:74 src/summaryview.c:4215
+#: src/prefs_summary_column.c:74 src/summaryview.c:4295
 msgid "Date"
 msgstr "Data"
 
@@ -6194,349 +6194,349 @@ msgstr "S-a atins prima linie din listă; continuaţi de la sfârşit ?"
 msgid "End of list reached; continue from beginning?"
 msgstr "S-a atins sfârşitul listei; continuaţi de la început ?"
 
-#: src/summaryview.c:371
+#: src/summaryview.c:373
 #, fuzzy
 msgid "/Repl_y to"
 msgstr "/Răspunde _la toţi"
 
-#: src/summaryview.c:372
+#: src/summaryview.c:374
 #, fuzzy
 msgid "/Repl_y to/_all"
 msgstr "/Răspunde _la toţi"
 
-#: src/summaryview.c:373
+#: src/summaryview.c:375
 #, fuzzy
 msgid "/Repl_y to/_sender"
 msgstr "/Răspunde _la toţi"
 
-#: src/summaryview.c:374
+#: src/summaryview.c:376
 #, fuzzy
 msgid "/Repl_y to/mailing _list"
 msgstr "/Răspunde _la toţi"
 
-#: src/summaryview.c:381
+#: src/summaryview.c:383
 msgid "/M_ove..."
 msgstr "/M_utare..."
 
-#: src/summaryview.c:382
+#: src/summaryview.c:384
 msgid "/_Copy..."
 msgstr "/_Copiere..."
 
-#: src/summaryview.c:385
+#: src/summaryview.c:387
 msgid "/_Mark"
 msgstr "/_Marcare"
 
-#: src/summaryview.c:386
+#: src/summaryview.c:388
 msgid "/_Mark/_Mark"
 msgstr "/_Marcare/_Marcare"
 
-#: src/summaryview.c:387
+#: src/summaryview.c:389
 msgid "/_Mark/_Unmark"
 msgstr "/_Marcare/_Demarcare"
 
-#: src/summaryview.c:388
+#: src/summaryview.c:390
 msgid "/_Mark/---"
 msgstr "/_Marcare/---"
 
-#: src/summaryview.c:389
+#: src/summaryview.c:391
 msgid "/_Mark/Mark as unr_ead"
-msgstr "/_Marcare/Marcare mesaj n_ecitit"
-
-#: src/summaryview.c:390
-#, fuzzy
-msgid "/_Mark/Mark as rea_d"
 msgstr "/_Marcare/Marcare mesaj n_ecitit"
 
 #: src/summaryview.c:392
 #, fuzzy
+msgid "/_Mark/Mark as rea_d"
+msgstr "/_Marcare/Marcare mesaj n_ecitit"
+
+#: src/summaryview.c:394
+#, fuzzy
 msgid "/_Mark/Mark all _read"
 msgstr "/_Marcare/Marcare mesaj n_ecitit"
 
-#: src/summaryview.c:393
+#: src/summaryview.c:395
 msgid "/Color la_bel"
 msgstr ""
 
-#: src/summaryview.c:395
+#: src/summaryview.c:397
 #, fuzzy
 msgid "/Re-_edit"
 msgstr "/Re_editare"
 
-#: src/summaryview.c:397
+#: src/summaryview.c:399
 #, fuzzy
 msgid "/Add sender to address boo_k..."
 msgstr "Adăugare agendă"
 
-#: src/summaryview.c:403
+#: src/summaryview.c:405
 #, fuzzy
 msgid "/_View/_Source"
 msgstr "/_Vedere/_La"
 
-#: src/summaryview.c:404
+#: src/summaryview.c:406
 #, fuzzy
 msgid "/_View/All _header"
 msgstr "Toate antetele"
 
-#: src/summaryview.c:406
+#: src/summaryview.c:408
 msgid "/_Print..."
 msgstr "/Im_primare..."
 
-#: src/summaryview.c:431
+#: src/summaryview.c:433
 msgid "Creating summary view...\n"
 msgstr "Creare rezumat...\n"
 
-#: src/summaryview.c:591
+#: src/summaryview.c:593
 msgid "Process mark"
 msgstr "Procesare marcaje"
 
-#: src/summaryview.c:592
+#: src/summaryview.c:594
 msgid "Some marks are left. Process it?"
 msgstr "Au mai rămas nişte marcaje. Doriţi să fie procesate ?"
 
-#: src/summaryview.c:638
+#: src/summaryview.c:640
 #, c-format
 msgid "Scanning folder (%s)..."
 msgstr "Scanare director (%s)..."
 
-#: src/summaryview.c:1147
+#: src/summaryview.c:1149
 #, fuzzy
 msgid "_Search again"
 msgstr "Căutarea a eşuat"
 
-#: src/summaryview.c:1168 src/summaryview.c:1177
+#: src/summaryview.c:1170 src/summaryview.c:1179
 #, fuzzy
 msgid "No more unread messages"
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1169
+#: src/summaryview.c:1171
 #, fuzzy
 msgid "No unread message found. Search from the end?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1171
+#: src/summaryview.c:1173
 #, fuzzy
 msgid "No unread messages."
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1178
+#: src/summaryview.c:1180
 msgid "No unread message found. Go to next folder?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1186 src/summaryview.c:1195
+#: src/summaryview.c:1188 src/summaryview.c:1197
 #, fuzzy
 msgid "No more new messages"
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1187
+#: src/summaryview.c:1189
 #, fuzzy
 msgid "No new message found. Search from the end?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1189
+#: src/summaryview.c:1191
 #, fuzzy
 msgid "No new messages."
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1196
+#: src/summaryview.c:1198
 #, fuzzy
 msgid "No new message found. Go to next folder?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1204 src/summaryview.c:1213
+#: src/summaryview.c:1206 src/summaryview.c:1215
 #, fuzzy
 msgid "No more marked messages"
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1205
+#: src/summaryview.c:1207
 #, fuzzy
 msgid "No marked message found. Search from the end?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1207 src/summaryview.c:1216
+#: src/summaryview.c:1209 src/summaryview.c:1218
 #, fuzzy
 msgid "No marked messages."
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1214
+#: src/summaryview.c:1216
 #, fuzzy
 msgid "No marked message found. Search from the beginning?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1222 src/summaryview.c:1231
+#: src/summaryview.c:1224 src/summaryview.c:1233
 #, fuzzy
 msgid "No more labeled messages"
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1223
+#: src/summaryview.c:1225
 #, fuzzy
 msgid "No labeled message found. Search from the end?"
 msgstr ""
 "Nu au fost găsite mesaje necitite.\n"
 "Doriţi avansarea la directorul următor ?"
 
-#: src/summaryview.c:1225 src/summaryview.c:1234
+#: src/summaryview.c:1227 src/summaryview.c:1236
 #, fuzzy
 msgid "No labeled messages."
 msgstr "Nu există mesaje necitite"
 
-#: src/summaryview.c:1232
+#: src/summaryview.c:1234
 msgid "No labeled message found. Search from the beginning?"
 msgstr ""
 
-#: src/summaryview.c:1517
+#: src/summaryview.c:1531
 msgid "Attracting messages by subject..."
 msgstr "Atragere mesaje după subiect..."
 
-#: src/summaryview.c:1676
+#: src/summaryview.c:1690
 #, c-format
 msgid "%d deleted"
 msgstr "%d şters(e)"
 
-#: src/summaryview.c:1680
+#: src/summaryview.c:1694
 #, fuzzy, c-format
 msgid "%s%d moved"
 msgstr "%d mutat(e)"
 
-#: src/summaryview.c:1681 src/summaryview.c:1688
+#: src/summaryview.c:1695 src/summaryview.c:1702
 msgid ", "
 msgstr ", "
 
-#: src/summaryview.c:1686
+#: src/summaryview.c:1700
 #, fuzzy, c-format
 msgid "%s%d copied"
 msgstr "%d mutat(e)"
 
-#: src/summaryview.c:1703
+#: src/summaryview.c:1717
 msgid " item(s) selected"
 msgstr " elemente selectate"
 
-#: src/summaryview.c:1713
+#: src/summaryview.c:1727
 #, c-format
 msgid "%d new, %d unread, %d total (%s)"
 msgstr "%d noi, %d necitite, %d în total (%s)"
 
-#: src/summaryview.c:1719
+#: src/summaryview.c:1733
 #, c-format
 msgid "%d new, %d unread, %d total"
 msgstr "%d nou(i), %d necitit(e), %d în total"
 
-#: src/summaryview.c:1755
+#: src/summaryview.c:1769
 msgid "Sorting summary..."
 msgstr "Sortare rezumat..."
 
-#: src/summaryview.c:1829
+#: src/summaryview.c:1843
 msgid "(No Date)"
 msgstr "(Fără Dată)"
 
-#: src/summaryview.c:1957
+#: src/summaryview.c:1971
 msgid "\tSetting summary from message data..."
 msgstr "\tDefinire rezumat din datele din mesaj..."
 
-#: src/summaryview.c:1959
+#: src/summaryview.c:1973
 msgid "Setting summary from message data..."
 msgstr "Definire rezumat din datele din mesaj..."
 
-#: src/summaryview.c:2084
+#: src/summaryview.c:2098
 #, c-format
 msgid "Writing summary cache (%s)..."
 msgstr "Scriere cache rezumat (%s)..."
 
-#: src/summaryview.c:2388
+#: src/summaryview.c:2402
 #, c-format
 msgid "Message %d is marked\n"
 msgstr "Mesajul %d este marcat\n"
 
-#: src/summaryview.c:2430
+#: src/summaryview.c:2444
 #, c-format
 msgid "Message %d is marked as being read\n"
 msgstr "Mesajul %d este marcat ca citit\n"
 
-#: src/summaryview.c:2502
+#: src/summaryview.c:2516
 #, c-format
 msgid "Message %d is marked as unread\n"
 msgstr "Mesajul %d este marcat ca necitit\n"
 
-#: src/summaryview.c:2555
+#: src/summaryview.c:2569
 #, c-format
 msgid "Message %s/%d is set to delete\n"
 msgstr "Mesajul %s/%d este marcat pentru ştergere\n"
 
-#: src/summaryview.c:2573
+#: src/summaryview.c:2587
 #, fuzzy
 msgid "Delete message(s)"
 msgstr "Ştergere mesaj"
 
-#: src/summaryview.c:2574
+#: src/summaryview.c:2588
 #, fuzzy
 msgid "Do you really want to delete message(s) from the trash?"
 msgstr "Sunteţi sigur că doriţi să ştergeţi această regulă ?"
 
-#: src/summaryview.c:2639
+#: src/summaryview.c:2653
 msgid "Deleting duplicated messages..."
 msgstr "Ştergere mesaje duplicate..."
 
-#: src/summaryview.c:2676
+#: src/summaryview.c:2690
 #, c-format
 msgid "Message %s/%d is unmarked\n"
 msgstr "Mesajul %s/%d este demarcat\n"
 
-#: src/summaryview.c:2726
+#: src/summaryview.c:2740
 #, c-format
 msgid "Message %d is set to move to %s\n"
 msgstr "Mesajul %d este marcat pentru mutare în %s\n"
 
-#: src/summaryview.c:2743
+#: src/summaryview.c:2757
 msgid "Destination is same as current folder."
 msgstr "Destinaţia este aceeaşi cu directorul curent."
 
-#: src/summaryview.c:2797
+#: src/summaryview.c:2811
 #, fuzzy, c-format
 msgid "Message %d is set to copy to %s\n"
 msgstr "Mesajul %d este marcat pentru mutare în %s\n"
 
-#: src/summaryview.c:2814
+#: src/summaryview.c:2828
 #, fuzzy
 msgid "Destination for copy is same as current folder."
 msgstr "Destinaţia este aceeaşi cu directorul curent."
 
-#: src/summaryview.c:3006
+#: src/summaryview.c:3020
 #, fuzzy
 msgid "Error occurred while processing messages."
 msgstr "A avut loc o eroare la procesarea mesajului."
 
-#: src/summaryview.c:3300 src/summaryview.c:3301
+#: src/summaryview.c:3319 src/summaryview.c:3320
 msgid "Building threads..."
 msgstr "Construire fire de discuţie..."
 
-#: src/summaryview.c:3398 src/summaryview.c:3399
+#: src/summaryview.c:3448 src/summaryview.c:3449
 msgid "Unthreading..."
 msgstr "Distrugere fire de discuţie..."
 
-#: src/summaryview.c:3704
+#: src/summaryview.c:3784
 msgid "filtering..."
 msgstr "filtrare..."
 
-#: src/summaryview.c:3705
+#: src/summaryview.c:3785
 msgid "Filtering..."
 msgstr "Filtrare..."
 
-#: src/summaryview.c:3735
+#: src/summaryview.c:3815
 #, fuzzy, c-format
 msgid "%d message(s) have been filtered."
 msgstr "mesajul %d a fost deja stocat.\n"
 
-#: src/summaryview.c:4219
+#: src/summaryview.c:4299
 msgid "No."
 msgstr "Nu."
 
