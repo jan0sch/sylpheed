@@ -1,5 +1,11 @@
 2005-10-17
 
+	* src/recv.[ch]
+	  src/imap.c: imap_cmd_ok(): 応答中のリテラルに対応
+	  (リテラルが現われた際に同期がとれなくなるのを修正)。
+
+2005-10-17
+
 	* libsylph/codeconv.c:
 	  conv_filename_from_utf8(), conv_filename_to_utf8(): assertion を
 	  追加。

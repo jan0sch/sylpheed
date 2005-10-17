@@ -1,5 +1,11 @@
 2005-10-17
 
+	* src/recv.[ch]
+	  src/imap.c: imap_cmd_ok(): support literals in response
+	  (fixed out of sync when literals appeared).
+
+2005-10-17
+
 	* src/codeconv.c:
 	  conv_filename_from_utf8(), conv_filename_to_utf8(): put an
 	  assertion.
