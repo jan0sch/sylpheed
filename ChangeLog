@@ -1,3 +1,9 @@
+2005-10-17
+
+	* src/codeconv.c:
+	  conv_filename_from_utf8(), conv_filename_to_utf8(): put an
+	  assertion.
+
 2005-09-29
 
 	* version 2.0.2
