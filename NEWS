@@ -1,5 +1,11 @@
 Changes of Sylpheed
 
+* 2.0.3
+
+    * The IMAP4 parser was fixed so that it can handle literals in response.
+    * A bug that caused crashes on receive if Date header has abnormal time
+      was fixed.
+
 * 2.0.2
 
     * The auto detection of Japanese encoding now supports UTF-8 encoding.
