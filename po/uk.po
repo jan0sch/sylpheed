@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 1.0.0beta1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: Sun 31 Oct 2004 23:17:57\n"
 "Last-Translator: O. Nykyforchyn <nick@pu.if,ua>, 2004.\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -2087,52 +2087,57 @@ msgstr "не вдалось отримати простір імен\n"
 msgid "can't select folder: %s\n"
 msgstr "не вдалось отримати папку: %s\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "помилка при виконанні команди imap: CLOSE\n"
+
+#: src/imap.c:3253
 msgid "IMAP4 authentication failed.\n"
 msgstr "Невдача авторизації IMAP4.\n"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "Невдача авторизації IMAP4.\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "не вдалось додати %s до %s\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 msgid "(sending file...)"
 msgstr "(посилаємо файл...)"
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "не вдалось приєднати лист до %s\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "не вдалось скопіювати %s в %s\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "помилка при виконанні команди imap:  STORE %s %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "помилка при виконанні команди imap: EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 msgid "error while imap command: CLOSE\n"
 msgstr "помилка при виконанні команди imap: CLOSE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv не може конвертувати UTF-7 в %s\n"
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv не може конвертувати %s в UTF-7\n"
@@ -5596,11 +5601,11 @@ msgstr "Створюємо діалогове вікно прогресу...\n"
 msgid "Status"
 msgstr "Стан"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "трапилась помилка при отриманні даних.\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "Не вдалось писати в файл.\n"
 

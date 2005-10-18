@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: 2001-10-08\n"
 "Last-Translator: Michalis Kabrianis <Michalis@bigfoot.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -2140,55 +2140,60 @@ msgstr ""
 msgid "can't select folder: %s\n"
 msgstr "δεν μπορώ να επιλέξω τον κατάλογο: %s\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
+
+#: src/imap.c:3253
 #, fuzzy
 msgid "IMAP4 authentication failed.\n"
 msgstr "Πιστοποίηση"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "Η είσοδος στο IMAP4 απέτυχε.\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "δεν μπορώ να προσθέσω το %s στο %s\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 #, fuzzy
 msgid "(sending file...)"
 msgstr "Στέλνω DATA..."
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "δεν μπορώ να προσθέσω το μήνυμα %s\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, fuzzy, c-format
 msgid "can't copy %s to %s\n"
 msgstr "δεν μπορώ να αντιγράψω το %d στο %s\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "σφάλμα κατά την εντολή imap: STORE %d:%d %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr ""
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr ""
@@ -5798,11 +5803,11 @@ msgstr "Δημιουργώ διάλογο προόδου...\n"
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "προέκυψε σφάλμα κατά την λήψη δεδομένων.\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "Δεν μπορώ να γράψω σε αρχείο.\n"
 

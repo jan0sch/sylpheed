@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed  0.8.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: 2002-12-02 11:09+0900\n"
 "Last-Translator: Nam SungHyun <namsh@kldp.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
@@ -2083,54 +2083,59 @@ msgstr "namespace를 얻을 수 없습니다\n"
 msgid "can't select folder: %s\n"
 msgstr "폴더를 선택할 수가 없습니다: %s\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
+
+#: src/imap.c:3253
 #, fuzzy
 msgid "IMAP4 authentication failed.\n"
 msgstr "인증 방법"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 로그인을 실패했습니다.\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s를 %s에 붙일 수 없습니다\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 msgid "(sending file...)"
 msgstr "(파일을 보냅니다...)"
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "%s 메시지를 추가할 수가 없습니다\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, fuzzy, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%d를 %s로 복사할 수가 없습니다\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap 명령어 실행중 에러: STORE %d:%d %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv가 UTF-7를 %s로 변환할 수 없습니다\n"
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv가 %s를 UTF-7로 변환할 수 없습니다\n"
@@ -5589,11 +5594,11 @@ msgstr "진행 다이얼로그를 생성합니다...\n"
 msgid "Status"
 msgstr "상태"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "데이타를 가져오는 중 에러가 발생했습니다.\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "파일에 쓸 수가 없습니다.\n"
 

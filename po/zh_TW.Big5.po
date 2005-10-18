@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 2.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: 2005-09-08 17:11+0800\n"
 "Last-Translator: Wei-Lun Chao <chaoweilun@pcmail.com.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -2049,52 +2049,57 @@ msgstr "無法取得信封。\n"
 msgid "can't select folder: %s\n"
 msgstr "無法選擇資料夾：%s\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "imap 發生錯誤，命令為： CLOSE\n"
+
+#: src/imap.c:3253
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 認證失敗\n"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 登入失敗。\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "無法將郵件從 %s 搬移到 %s。\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 msgid "(sending file...)"
 msgstr "（送出檔案 ...）"
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "無法附加訊息到 %s\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "無法將郵件 %s 移到 %s\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap 發生錯誤，命令為： STORE %s %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "imap 發生錯誤，命令為： EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 msgid "error while imap command: CLOSE\n"
 msgstr "imap 發生錯誤，命令為： CLOSE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "無法將 UTF-7 轉換為 %s\n"
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "無法轉換 %s 為 UTF-7\n"
@@ -5499,11 +5504,11 @@ msgstr "正在建立進度對話框...\n"
 msgid "Status"
 msgstr "狀態"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "擷取資料時發生錯誤。\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "無法寫入檔案。\n"
 

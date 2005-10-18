@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: 2005-07-22 18:18+0100\n"
 "Last-Translator: Joo Martin <debian@joomart.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -2060,52 +2060,57 @@ msgstr "kann Namensraum nicht empfangen\n"
 msgid "can't select folder: %s\n"
 msgstr "kann Ablage %s nicht auswählen\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "Fehler beim IMAP-Befehl: CLOSE\n"
+
+#: src/imap.c:3253
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4-Beglaubigung fehlgeschlagen.\n"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4-Login fehlgeschlagen.\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kann %s nicht an %s anhängen\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 msgid "(sending file...)"
 msgstr "(Datei versenden...)"
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "kann Nachricht nicht anhängen an %s\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kann %s nicht nach %s kopieren\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Fehler beim IMAP-Befehl: STORE %s %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Fehler beim IMAP-Befehl: EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 msgid "error while imap command: CLOSE\n"
 msgstr "Fehler beim IMAP-Befehl: CLOSE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kann UTF-7 nicht nach %s konvertieren\n"
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv kann %s nicht nach UTF-7  konvertieren\n"
@@ -5548,11 +5553,11 @@ msgstr "Erstelle Fortschrittsdialog...\n"
 msgid "Status"
 msgstr "Status"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "Fehler beim Empfang von Daten.\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "Kann nicht in Datei schreiben.\n"
 

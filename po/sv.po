@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-29 16:11+0900\n"
+"POT-Creation-Date: 2005-10-18 18:37+0900\n"
 "PO-Revision-Date: 2004-12-05 14:40+0100\n"
 "Last-Translator: Mattias Ostergren <spikboll@gmx.net>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -2088,52 +2088,57 @@ msgstr "kan inte hämta namnutrymme\n"
 msgid "can't select folder: %s\n"
 msgstr "kan inte välja mapp: %s\n"
 
-#: src/imap.c:3251
+#: src/imap.c:3111
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "fel vid imapkommando: CLOSE\n"
+
+#: src/imap.c:3253
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4-autentisering misslyckades.\n"
 
-#: src/imap.c:3268
+#: src/imap.c:3270
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4-inloggning misslyckades.\n"
 
-#: src/imap.c:3598
+#: src/imap.c:3600
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kan inte lägga till %s till %s\n"
 
-#: src/imap.c:3605
+#: src/imap.c:3607
 msgid "(sending file...)"
 msgstr "(skickar fil...)"
 
-#: src/imap.c:3633
+#: src/imap.c:3635
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "kan inte lägga till meddelande till %s\n"
 
-#: src/imap.c:3665
+#: src/imap.c:3667
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kan inte kopiera %s till %s\n"
 
-#: src/imap.c:3689
+#: src/imap.c:3691
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "fel vid imapkommando: STORE %s %s\n"
 
-#: src/imap.c:3703
+#: src/imap.c:3705
 msgid "error while imap command: EXPUNGE\n"
 msgstr "fel vid imapkommando: EXPUNGE\n"
 
-#: src/imap.c:3716
+#: src/imap.c:3718
 msgid "error while imap command: CLOSE\n"
 msgstr "fel vid imapkommando: CLOSE\n"
 
-#: src/imap.c:3949
+#: src/imap.c:3985
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kan inte konvertera UTF-7 till %s\n"
 
-#: src/imap.c:3979
+#: src/imap.c:4015
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv kan inte konvertera %s till UTF-7\n"
@@ -5587,11 +5592,11 @@ msgstr "Skapar förloppsdialog...\n"
 msgid "Status"
 msgstr "Status"
 
-#: src/recv.c:113
+#: src/recv.c:140
 msgid "error occurred while retrieving data.\n"
 msgstr "fel uppstod vid inhämtning av data.\n"
 
-#: src/recv.c:155 src/recv.c:197 src/recv.c:212
+#: src/recv.c:182 src/recv.c:214 src/recv.c:229
 msgid "Can't write to file.\n"
 msgstr "Kan inte skriva till fil.\n"
 

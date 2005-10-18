@@ -1,5 +1,9 @@
 2005-10-18
 
+	* version 2.0.3
+
+2005-10-18
+
 	* libsylph/utils.c
 	  libsylph/procheader.c: fixed a bug that caused crashes on receive
 	  if Date: header has abnormal time.
