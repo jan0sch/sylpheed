@@ -1,3 +1,9 @@
+2005-10-18
+
+	* libsylph/utils.c
+	  libsylph/procheader.c: Date: ヘッダが異常な時間の場合受信時に
+	  クラッシュを起こすバグを修正。
+
 2005-10-17
 
 	* src/recv.[ch]
