@@ -2,7 +2,7 @@ Changes of Sylpheed
 
 * 2.0.4
 
-    * A buffer overflow of LDAP import was fixed.
+    * A buffer overflow of LDIF import was fixed.
     * The problem that drag and drop didn't work with GTK+ 2.8 was fixed.
 
 * 2.0.3
