@@ -1,5 +1,10 @@
 Changes of Sylpheed
 
+* 2.0.4
+
+    * A buffer overflow of LDAP import was fixed.
+    * The problem that drag and drop didn't work with GTK+ 2.8 was fixed.
+
 * 2.0.3
 
     * The IMAP4 parser was fixed so that it can handle literals in response.
