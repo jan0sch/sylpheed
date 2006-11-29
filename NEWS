@@ -1,5 +1,10 @@
 NEWS
 
+* 1.0.0 (stable)
+
+    * The reference manuals were mostly completed.
+    * The libtool version was increased.
+
 * 1.0.0beta1 (beta)
 
     * The reference manuals were added.
