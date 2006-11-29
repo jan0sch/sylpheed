@@ -147,65 +147,26 @@ struct _ComposeAttachInfo
 compose_attach_info_free() で解放します。
 
 ------------------------------------------------------------------------------
-typedef gint (*ComposePreFunc)	(ComposeInfo	*compose,
+gint (*ComposePreFunc)		(ComposeInfo	*compose,
 				 gpointer	 user_data);
-typedef gint (*ComposePostFunc)	(ComposeInfo	*compose,
+
+compose_write_to_file() から呼ばれるコールバック関数の型です。
+
+compose: ComposeInfo構造体へのポインタ
+user_data: ComposeInfoにセットされているユーザデータ
+戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。
+
+------------------------------------------------------------------------------
+gint (*ComposePostFunc)		(ComposeInfo	*compose,
 				 const gchar	*file,
 				 gpointer	 user_data);
 
-ComposeInfo *compose_info_new	(PrefsAccount	*account,
-				 ComposeMode	 mode);
-void compose_info_free		(ComposeInfo	*compose);
+compose_write_to_file() から呼ばれるコールバック関数の型です。
 
-ComposeAttachInfo *compose_attach_info_new	(const gchar	*file,
-						 const gchar	*content_type,
-						 EncodingType	 encoding,
-						 const gchar	*name,
-						 gsize		 size);
-
-void compose_attach_info_free	(ComposeAttachInfo	*ainfo);
-
-gint compose_parse_header	(ComposeInfo	*compose,
-				 MsgInfo	*msginfo);
-
-gint compose_set_headers	(ComposeInfo	*compose,
-				 const gchar	*to,
-				 const gchar	*cc,
-				 const gchar	*bcc,
-				 const gchar	*replyto,
-				 const gchar	*subject);
-gint compose_set_news_headers	(ComposeInfo	*compose,
-				 const gchar	*newsgroups,
-				 const gchar	*followup_to);
-gint compose_set_body		(ComposeInfo	*compose,
-				 const gchar	*body);
-gint compose_set_encoding	(ComposeInfo	*compose,
-				 const gchar	*header_encoding,
-				 const gchar	*body_encoding);
-gint compose_set_attachments	(ComposeInfo	*compose,
-				 GList		*attach_list);
-
-gint compose_write_to_file	(ComposeInfo	*compose,
-				 const gchar	*out_file,
-				 GError		*error);
-
-gint compose_redirect_write_to_file	(ComposeInfo	*compose,
-					 const gchar	*out_file,
-					 GError		*error);
-
-gint compose_remove_reedit_target	(ComposeInfo	*compose);
-
-gint compose_queue			(ComposeInfo	*compose,
-					 const gchar	*file);
-
-void compose_generate_msgid		(ComposeInfo	*compose,
-					 gchar		*buf,
-					 gint		 len);
-
-void compose_set_preprocess_func	(ComposeInfo		*compose,
-					 ComposePreFunc		 func);
-void compose_set_postprocess_func	(ComposeInfo		*compose,
-					 ComposePostFunc	 func);
+compose: ComposeInfo構造体へのポインタ
+file: 出力されたメッセージファイルのパス(改行コード変換前)
+user_data: ComposeInfoにセットされているユーザデータ
+戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。
 
 ------------------------------------------------------------------------------
 ComposeInfo *compose_info_new	(PrefsAccount	*account,
@@ -372,7 +333,7 @@ gint compose_queue			(ComposeInfo	*compose,
 compose_write_to_file() で作成したメッセージファイルを送信待ちフォルダに
 入れます。 ComposeInfo の内容と file の内容は対応している必要があります。
 送信待ちフォルダに入れたメッセージは send_message_queue_all() などで
-送信できます(FIXME: 未実装)。
+送信できます(注: 現在未実装)。
 
 compose: ComposeInfo構造体へのポインタ
 file: compose_write_to_file() で作成したメッセージファイルのフルパス
@@ -409,16 +370,6 @@ compose: ComposeInfo構造体へのポインタ
 func: ComposePreFunc型の関数ポインタ
 
 ------------------------------------------------------------------------------
-gint (*ComposePreFunc)		(ComposeInfo	*compose,
-				 gpointer	 user_data);
-
-compose_write_to_file() から呼ばれるコールバック関数の型です。
-
-compose: ComposeInfo構造体へのポインタ
-user_data: ComposeInfoにセットされているユーザデータ
-戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。
-
-------------------------------------------------------------------------------
 void compose_set_postprocess_func	(ComposeInfo		*compose,
 					 ComposePostFunc	 func);
 
@@ -434,15 +385,3 @@ func が -1 を返せば処理を中断することができます(compose_write
 
 compose: ComposeInfo構造体へのポインタ
 func: ComposePostFunc型の関数ポインタ
-
-------------------------------------------------------------------------------
-gint (*ComposePostFunc)		(ComposeInfo	*compose,
-				 const gchar	*file,
-				 gpointer	 user_data);
-
-compose_write_to_file() から呼ばれるコールバック関数の型です。
-
-compose: ComposeInfo構造体へのポインタ
-file: 出力されたメッセージファイルのパス(改行コード変換前)
-user_data: ComposeInfoにセットされているユーザデータ
-戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。
