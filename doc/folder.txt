@@ -1,0 +1,945 @@
+folder - フォルダ構造の管理
+
+------------------------------------------------------------------------------
+#define FOLDER(obj)
+
+FolderクラスのオブジェクトをFolder型にキャストします。
+
+------------------------------------------------------------------------------
+#define FOLDER_CLASS(obj)
+
+Folderクラスのオブジェクトから FolderClass を取り出します。
+
+------------------------------------------------------------------------------
+#define FOLDER_TYPE(obj)
+
+Folderオブジェクトから FolderType を得ます。
+
+------------------------------------------------------------------------------
+#define LOCAL_FOLDER(obj)
+
+Folderオブジェクトを LocalFolder オブジェクトにキャストします。
+
+------------------------------------------------------------------------------
+#define REMOTE_FOLDER(obj)
+
+Folderオブジェクトを RemoteFolder オブジェクトにキャストします。
+
+------------------------------------------------------------------------------
+#define FOLDER_IS_LOCAL(obj)
+
+Folderオブジェクトが LocalFolder であるかどうかを gboolean 値で返します。
+
+------------------------------------------------------------------------------
+#define FOLDER_IS_REMOTE(obj)
+
+Folderオブジェクトが RemoteFolder であるかどうかを gboolean 値で返します。
+
+------------------------------------------------------------------------------
+#define FOLDER_ITEM(obj)
+
+任意のポインタを FolderItem にキャストします。
+
+------------------------------------------------------------------------------
+#define FOLDER_ITEM_CAN_ADD(obj)
+
+FolderItem オブジェクトにメッセージを追加(または削除)可能かどうかを
+gboolean 値で返します。
+
+------------------------------------------------------------------------------
+FolderType
+
+typedef enum
+{
+	F_MH,
+	F_MBOX,
+	F_MAILDIR,
+	F_IMAP,
+	F_NEWS,
+	F_UNKNOWN
+} FolderType;
+
+Folder のタイプを表すenum型です。
+
+F_MH: MH形式
+F_MBOX: Unix MBOX形式(未実装)
+F_MAILDIR: Maildir形式(未実装)
+F_IMAP: IMAP4フォルダ
+F_NEWS: News (NNTP) フォルダ
+F_UNKNOWN: 不明
+
+------------------------------------------------------------------------------
+SpecialFolderItemType
+
+typedef enum
+{
+	F_NORMAL,
+	F_INBOX,
+	F_OUTBOX,
+	F_DRAFT,
+	F_QUEUE,
+	F_TRASH,
+	F_JUNK,
+	F_VIRTUAL
+} SpecialFolderItemType;
+
+FolderItem のタイプを表すenum型です。
+
+F_NORMAL: 通常のフォルダ
+F_INBOX: 受信箱
+F_OUTBOX: 送信控え
+F_DRAFT: 草稿
+F_QUEUE: 送信待ち
+F_TRASH: ごみ箱
+F_JUNK: 迷惑メール
+F_VIRTUAL: 仮想フォルダ(検索フォルダ)
+
+------------------------------------------------------------------------------
+FolderSortKey
+
+typedef enum
+{
+	SORT_BY_NONE,
+	SORT_BY_NUMBER,
+	SORT_BY_SIZE,
+	SORT_BY_DATE,
+	SORT_BY_TDATE,
+	SORT_BY_FROM,
+	SORT_BY_SUBJECT,
+	SORT_BY_SCORE,
+	SORT_BY_LABEL,
+	SORT_BY_MARK,
+	SORT_BY_UNREAD,
+	SORT_BY_MIME,
+	SORT_BY_TO
+} FolderSortKey;
+
+フォルダのメッセージ一覧をソートするためのキーを表します。
+
+------------------------------------------------------------------------------
+FolderSortType
+
+typedef enum
+{
+	SORT_ASCENDING,
+	SORT_DESCENDING
+} FolderSortType;
+
+フォルダのメッセージ一覧をソートする場合昇順あるいは降順でソートするかを
+表します。
+
+------------------------------------------------------------------------------
+typedef void (*FolderUIFunc)		(Folder		*folder,
+					 FolderItem	*item,
+					 gpointer	 data);
+typedef void (*FolderDestroyNotify)	(Folder		*folder,
+					 FolderItem	*item,
+					 gpointer	 data);
+------------------------------------------------------------------------------
+Folder
+
+struct _Folder
+{
+	FolderClass *klass;
+
+	gchar *name;
+	PrefsAccount *account;
+
+	FolderItem *inbox;
+	FolderItem *outbox;
+	FolderItem *draft;
+	FolderItem *queue;
+	FolderItem *trash;
+
+	FolderUIFunc ui_func;
+	gpointer     ui_func_data;
+
+	GNode *node;
+
+	gpointer data;
+};
+
+Folder オブジェクトはメールボックスを表し、 FolderItem のツリーが格納
+されます。実際には Folder 構造体は抽象クラスの一種として扱われ、
+これを継承して MHFolder や IMAPFolder 等のオブジェクトとして実装されます。
+
+------------------------------------------------------------------------------
+FolderClass
+
+struct _FolderClass
+{
+	FolderType type;
+
+	/* virtual functions */
+	Folder * (*folder_new)		(const gchar	*name,
+					 const gchar	*path);
+	void     (*destroy)		(Folder		*folder);
+
+	gint     (*scan_tree)		(Folder		*folder);
+	gint     (*create_tree)		(Folder		*folder);
+
+	GSList * (*get_msg_list)	(Folder		*folder,
+					 FolderItem	*item,
+					 gboolean	 use_cache);
+	/* return value is filename encoding */
+	gchar *  (*fetch_msg)		(Folder		*folder,
+					 FolderItem	*item,
+					 gint		 num);
+	MsgInfo * (*get_msginfo)	(Folder		*folder,
+					 FolderItem	*item,
+					 gint		 num);
+	gint     (*add_msg)		(Folder		*folder,
+					 FolderItem	*dest,
+					 const gchar	*file,
+					 MsgFlags	*flags,
+					 gboolean	 remove_source);
+	gint     (*add_msgs)		(Folder		*folder,
+					 FolderItem	*dest,
+					 GSList		*file_list,
+					 gboolean	 remove_source,
+					 gint		*first);
+	gint     (*move_msg)		(Folder		*folder,
+					 FolderItem	*dest,
+					 MsgInfo	*msginfo);
+	gint     (*move_msgs)		(Folder		*folder,
+					 FolderItem	*dest,
+					 GSList		*msglist);
+	gint     (*copy_msg)		(Folder		*folder,
+					 FolderItem	*dest,
+					 MsgInfo	*msginfo);
+	gint     (*copy_msgs)		(Folder		*folder,
+					 FolderItem	*dest,
+					 GSList		*msglist);
+	gint     (*remove_msg)		(Folder		*folder,
+					 FolderItem	*item,
+					 MsgInfo	*msginfo);
+	gint     (*remove_msgs)		(Folder		*folder,
+					 FolderItem	*item,
+					 GSList		*msglist);
+	gint     (*remove_all_msg)	(Folder		*folder,
+					 FolderItem	*item);
+	gboolean (*is_msg_changed)	(Folder		*folder,
+					 FolderItem	*item,
+					 MsgInfo	*msginfo);
+	gint     (*close)		(Folder		*folder,
+					 FolderItem	*item);
+	gint     (*scan)		(Folder		*folder,
+					 FolderItem	*item);
+
+	FolderItem * (*create_folder)	(Folder		*folder,
+					 FolderItem	*parent,
+					 const gchar	*name);
+	gint     (*rename_folder)	(Folder		*folder,
+					 FolderItem	*item,
+					 const gchar	*name);
+	gint     (*move_folder)		(Folder		*folder,
+					 FolderItem	*item,
+					 FolderItem	*new_parent);
+	gint     (*remove_folder)	(Folder		*folder,
+					 FolderItem	*item);
+};
+
+FolderClass は Folder のタイプごとに実装される仮想関数を提供する抽象クラス
+です。
+
+------------------------------------------------------------------------------
+LocalFolder
+
+struct _LocalFolder
+{
+	Folder folder;
+
+	gchar *rootpath;
+};
+
+LocalFolder は Folder のサブクラスです。ローカルフォルダに共通の情報が
+格納されます。
+
+------------------------------------------------------------------------------
+RemoteFolder
+
+struct _RemoteFolder
+{
+	Folder folder;
+
+	Session *session;
+};
+
+RemoteFolder は Folder のサブクラスです。リモートフォルダに共通の情報が
+格納されます。
+
+------------------------------------------------------------------------------
+FolderItem
+
+struct _FolderItem
+{
+	SpecialFolderItemType stype;
+
+	gchar *name; /* UTF-8 */
+	gchar *path; /* UTF-8 */
+
+	time_t mtime;
+
+	gint new;
+	gint unread;
+	gint total;
+	gint unmarked_num;
+
+	gint last_num;
+
+	/* special flags */
+	guint no_sub    : 1; /* no child allowed?    */
+	guint no_select : 1; /* not selectable?      */
+	guint collapsed : 1; /* collapsed item       */
+	guint threaded  : 1; /* threaded folder view */
+
+	guint opened    : 1; /* opened by summary view */
+	guint updated   : 1; /* folderview should be updated */
+
+	guint cache_dirty : 1; /* cache file needs to be updated */
+	guint mark_dirty  : 1; /* mark file needs to be updated */
+
+	FolderSortKey sort_key;
+	FolderSortType sort_type;
+
+	GNode *node;
+
+	FolderItem *parent;
+
+	Folder *folder;
+
+	PrefsAccount *account;
+
+	gboolean ac_apply_sub;
+
+	gchar *auto_to;
+	gboolean use_auto_to_on_reply;
+	gchar *auto_cc;
+	gchar *auto_bcc;
+	gchar *auto_replyto;
+
+	gboolean trim_summary_subject;
+	gboolean trim_compose_subject;
+
+	GSList *mark_queue;
+
+	gpointer data;
+};
+
+FolderItem はフォルダツリーの各ノードを表すオブジェクトです。
+
+------------------------------------------------------------------------------
+Folder     *folder_new			(FolderType	 type,
+					 const gchar	*name,
+					 const gchar	*path);
+
+Folder オブジェクトを作成します。実際には type に応じて Folder のサブクラス
+のオブジェクトを生成し、 Folder 型にキャストして返します。作成時には
+メールボックス名を指定します。ローカルフォルダの場合はファイルシステム上の
+パスを指定します。
+
+type: フォルダのタイプ
+name: メールボックス名(UTF-8)
+path: ローカルフォルダの場合ファイルシステム上のフォルダのパス(UTF-8)
+戻り値: 作成された Folder オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_local_folder_init	(Folder		*folder,
+					 const gchar	*name,
+					 const gchar	*path);
+
+LocalFolder オブジェクトを作成した後、初期化のために呼びます。
+folder_new() 内で自動的に呼ばれます。
+
+folder: Folder オブジェクト
+name: メールボックス名(UTF-8)
+path: ファイルシステム上のフォルダのパス(UTF-8)
+
+------------------------------------------------------------------------------
+void        folder_remote_folder_init	(Folder		*folder,
+					 const gchar	*name,
+					 const gchar	*path);
+
+RemoteFolder オブジェクトを作成した後、初期化のために呼びます。
+folder_new() 内で自動的に呼ばれます。
+
+folder: Folder オブジェクト
+name: メールボックス名(UTF-8)
+path: 未使用
+
+------------------------------------------------------------------------------
+void        folder_destroy		(Folder		*folder);
+
+Folder オブジェクトを破棄します。
+
+folder: Folder オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_local_folder_destroy	(LocalFolder	*lfolder);
+
+LocalFolder オブジェクトを破棄します。 folder_destroy() 内で自動的に
+呼ばれます。
+
+lfolder: LocalFolder オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_remote_folder_destroy(RemoteFolder	*rfolder);
+
+RemoteFolder オブジェクトを破棄します。 folder_destroy() 内で自動的に
+呼ばれます。
+
+rfolder: RemoteFolder オブジェクト
+
+------------------------------------------------------------------------------
+gint        folder_scan_tree		(Folder		*folder);
+
+folder が示すメールボックス以下のディレクトリ階層を調べ、メモリ上に
+ツリー構造を生成します。必要な特別フォルダに対応する物理的なフォルダが
+存在しない場合は自動的に作成します。
+既にツリー構造が生成されている Folder オブジェクトに対してこれを呼んだ
+場合、変更のないフォルダについてはそのまま保持した上で変更部分のみを
+更新します。
+FolderClass::scan_tree が実装されていない場合はエラーになります。
+
+folder: Folder オブジェクト
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint        folder_create_tree		(Folder		*folder);
+
+folder に対応する物理的なフォルダの存在を調べ、存在しなかった場合それらを
+作成します。
+フォルダが作成できなかった場合や、 FolderClass::create_tree が実装されて
+いない場合はエラーになります。
+
+folder: Folder オブジェクト
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+FolderItem *folder_item_new		(const gchar	*name,
+					 const gchar	*path);
+
+FolderItem オブジェクトを作成します。
+
+name: フォルダ名
+path: フォルダの相対パス
+
+------------------------------------------------------------------------------
+void        folder_item_append		(FolderItem	*parent,
+					 FolderItem	*item);
+
+item を parent の子として追加します。
+
+parent: 親となる FolderItem オブジェクト
+item: parent の子となる FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_item_remove		(FolderItem	*item);
+
+item とその子フォルダをフォルダツリーから取り除き、破棄します。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_item_remove_children	(FolderItem	*item);
+
+item の子フォルダをすべてフォルダツリーから取り除き、破棄します。
+item 自体は取り除かれません。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+void        folder_item_destroy		(FolderItem	*item);
+
+FolderItem オブジェクトを破棄します。 Folder オブジェクトから item への
+参照も取り除かれます。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+gint        folder_item_compare		(FolderItem	*item_a,
+					 FolderItem	*item_b);
+
+2つの FolderItem を比較し、その結果を返します。返った値はソートに使用
+できます。特別なフォルダは通常のフォルダよりも優先されます。
+
+item_a: FolderItem オブジェクト
+item_b: FolderItem オブジェクト
+戻り値: item_a < item_b の場合負の値
+        item_a == item_b の場合0
+        item_a > item_b の場合正の値
+
+------------------------------------------------------------------------------
+void        folder_set_ui_func	(Folder		*folder,
+				 FolderUIFunc	 func,
+				 gpointer	 data);
+
+長い処理を行う場合に定期的に呼ばれるコールバック関数を指定します。
+
+folder: Folder オブジェクト
+func: FolderUIFunc 型のコールバック関数
+data: func に渡すデータ
+
+------------------------------------------------------------------------------
+void        folder_set_name	(Folder		*folder,
+				 const gchar	*name);
+
+メールボックスの名前を指定します。
+
+folder: Folder オブジェクト
+name: メールボックス名(UTF-8)
+
+------------------------------------------------------------------------------
+void        folder_tree_destroy	(Folder		*folder);
+
+フォルダツリーを破棄します。 folder->node は無効になります。
+
+folder: Folder オブジェクト
+
+------------------------------------------------------------------------------
+void   folder_add		(Folder		*folder);
+
+Folder オブジェクトを内部で保持しているリストに追加します。
+Folder オブジェクトのリストは folder_get_list() で取得できます。
+
+folder: Folder オブジェクト
+
+------------------------------------------------------------------------------
+GList *folder_get_list		(void);
+
+LibSylph 内部で保持している Folder オブジェクトのリストを取得します。
+
+戻り値: Folder オブジェクトのリスト
+
+------------------------------------------------------------------------------
+gint   folder_read_list		(void);
+
+設定ファイル folderlist.xml を読み込み、 Folder オブジェクトと
+フォルダツリーを生成してメモリ上に格納します。
+
+戻り値: Folder オブジェクトが1つ以上存在する場合は0、存在しない場合は-1
+
+------------------------------------------------------------------------------
+void   folder_write_list	(void);
+
+メモリ上の Folder オブジェクトのリストから設定ファイル folderlist.xml を
+書き出します。
+
+------------------------------------------------------------------------------
+gchar *folder_get_status	(GPtrArray	*folders,
+				 gboolean	 full);
+
+フォルダツリーの統計情報を "新着数 未読数 総数" の形式で文字列で返します。
+
+folders が指定されていれば、指定したフォルダのみを集計します。指定されて
+いなければすべてのフォルダを集計します。
+
+full が TRUE の場合は、各フォルダ毎に "新着数 未読数 総数 フォルダ識別子"
+の形式で情報を返します。
+
+返った文字列は g_free() で解放する必要があります。
+
+folders: FolderItem オブジェクトの配列(GPtrArray)
+full: TRUE の場合はフォルダ毎の情報を返す
+戻り値: 統計情報の文字列
+
+------------------------------------------------------------------------------
+Folder     *folder_find_from_path		(const gchar	*path);
+
+メールボックスのパスから Folder オブジェクトを検索して返します。
+パスはメールボックスの格納ディレクトリからの相対パス、あるいは絶対パスに
+なります。
+
+path: メールボックスのパス
+戻り値: 見つかった場合は Folder オブジェクト、見つからなかった場合は NULL
+
+------------------------------------------------------------------------------
+Folder     *folder_find_from_name		(const gchar	*name,
+						 FolderType	 type);
+
+メールボックス名とメールボックスのタイプから Folder オブジェクトを検索して
+返します。
+
+name: メールボックス名
+type: メールボックスのタイプ
+戻り値: 見つかった場合は Folder オブジェクト、見つからなかった場合は NULL
+
+------------------------------------------------------------------------------
+FolderItem *folder_find_item_from_path		(const gchar	*path);
+
+フォルダの相対パスから FolderItem オブジェクトを検索して返します。
+一番最初の Folder オブジェクトのみが検索対象となります。
+検索対象となる Folder オブジェクトを指定したい場合は
+folder_find_item_from_identifier() を使用してください。
+
+path: フォルダの相対パス
+戻り値: 見つかった場合は FolderItem オブジェクト、見つからなかった場合は NULL
+
+------------------------------------------------------------------------------
+FolderItem *folder_find_child_item_by_name	(FolderItem	*item,
+						 const gchar	*name);
+
+フォルダ item の直接の子からフォルダ名で FolderItem オブジェクトを検索して
+返します。
+
+item: 検索対象となる FolderItem オブジェクト
+name: フォルダ名
+戻り値: 見つかった場合は FolderItem オブジェクト、見付からなかった場合は NULL
+
+------------------------------------------------------------------------------
+gchar      *folder_get_identifier		(Folder		*folder);
+
+メールボックスの識別子を得ます。識別子は "#フォルダタイプ/フォルダ名"
+の形式になります。
+
+返った文字列は g_free() で解放する必要があります。
+
+folder: Folder オブジェクト
+戻り値: メールボックスの識別子(情報が得られなかった場合は NULL)
+
+------------------------------------------------------------------------------
+gchar      *folder_item_get_identifier		(FolderItem	*item);
+
+フォルダの識別子を得ます。識別子は "#フォルダタイプ/フォルダ名/フォルダのパス"
+の形式になります(例: #mh/Mailbox/inbox)。
+
+返った文字列は g_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+戻り値: メールボックスの識別子(情報が得られなかった場合は NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_find_item_from_identifier	(const gchar	*identifier);
+
+フォルダの識別子から FolderItem オブジェクトを検索して返します。
+
+identifier: フォルダの識別子
+戻り値: 見つかった場合は FolderItem オブジェクト、見つからなかった場合は NULL
+
+------------------------------------------------------------------------------
+Folder     *folder_get_default_folder	(void);
+
+デフォルトの Folder オブジェクトを返します。
+Folder オブジェクトのリストの先頭にあるものがデフォルトとして扱われます。
+
+戻り値: デフォルトの Folder オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_get_default_inbox	(void);
+
+デフォルトの Folder オブジェクトに含まれる受信箱を示す FolderItem を返します。
+デフォルトの Folder オブジェクトは folder_get_default_folder() が返す
+ものに相当します。
+
+戻り値: デフォルトの受信箱の FolderItem オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_get_default_outbox	(void);
+
+デフォルトの Folder オブジェクトに含まれる送信控を示す FolderItem を返します。
+デフォルトの Folder オブジェクトは folder_get_default_folder() が返す
+ものに相当します。
+
+戻り値: デフォルトの送信控の FolderItem オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_get_default_draft	(void);
+
+デフォルトの Folder オブジェクトに含まれる草稿を示す FolderItem を返します。
+デフォルトの Folder オブジェクトは folder_get_default_folder() が返す
+ものに相当します。
+
+戻り値: デフォルトの草稿の FolderItem オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_get_default_queue	(void);
+
+デフォルトの Folder オブジェクトに含まれる送信待ちを示す FolderItem を返します。
+デフォルトの Folder オブジェクトは folder_get_default_folder() が返す
+ものに相当します。
+
+戻り値: デフォルトの送信待ちの FolderItem オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+FolderItem *folder_get_default_trash	(void);
+
+デフォルトの Folder オブジェクトに含まれるごみ箱を示す FolderItem を返します。
+デフォルトの Folder オブジェクトは folder_get_default_folder() が返す
+ものに相当します。
+
+戻り値: デフォルトのごみ箱の FolderItem オブジェクト(存在しなければ NULL)
+
+------------------------------------------------------------------------------
+void folder_set_missing_folders		(void);
+
+メモリ上のすべての Folder オブジェクトを調べ、各種の特別フォルダそれぞれに
+対応する物理的なフォルダが存在しない場合はそれらを作成します。
+Folder からそれらの FolderItem に対応する参照が存在しない場合もそれらを
+作成します。
+
+------------------------------------------------------------------------------
+void folder_unref_account_all		(PrefsAccount	*account);
+
+メモリ上の Folder または FolderItem から account への参照が存在する場合、
+それをすべて解除します。
+
+account を削除する場合、その前にこれを呼ぶ必要があります。
+
+account: 参照を解除したい PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gchar *folder_get_path			(Folder		*folder);
+
+folder のファイルシステム上の絶対パスを取得します。
+戻り値はファイル名エンコーディングになります。
+
+返った文字列は g_free() で解放する必要があります。
+
+folder: Folder オブジェクト
+戻り値: folder のファイルシステム上の絶対パス(ファイル名エンコーディング)
+
+------------------------------------------------------------------------------
+gchar *folder_item_get_path		(FolderItem	*item);
+
+item のファイルシステム上の絶対パスを取得します。
+戻り値はファイル名エンコーディングになります。
+
+返った文字列は g_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+戻り値: item のファイルシステム上の絶対パス(ファイル名エンコーディング)
+
+------------------------------------------------------------------------------
+gint   folder_item_scan			(FolderItem	*item);
+
+item が指し示す物理的な(あるいはサーバ上の)フォルダの内容をスキャンし、
+同期を取ります。
+
+item: FolderItem オブジェクト
+戻り値: 成功の場合0、エラーの場合-1
+
+------------------------------------------------------------------------------
+void   folder_item_scan_foreach		(GHashTable	*table);
+
+table に含まれる各 FolderItem オブジェクトに対して folder_item_scan()
+を呼びます。
+
+table: FolderItem オブジェクトをキーとして含む GHashTable オブジェクト
+
+------------------------------------------------------------------------------
+GSList *folder_item_get_msg_list	(FolderItem	*item,
+					 gboolean	 use_cache);
+
+item からフォルダ中のメッセージ一覧を GSList として得ます。
+use_cache が TRUE の場合はキャッシュを使用し、 FALSE の場合は
+完全にフォルダの内容を読み直します。
+
+返ったリストは procmsg_msg_list_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+use_cache: TRUE の場合キャッシュを使用、 FALSE の場合はキャッシュを使用しない
+戻り値: MsgInfo 構造体へのポインタの GSList 型のリスト
+
+------------------------------------------------------------------------------
+gchar *folder_item_fetch_msg		(FolderItem	*item,
+					 gint		 num);
+
+フォルダ item 内のメッセージ番号 num に対応するメッセージを取得し、
+そのファイルの絶対パスを返します。ファイル名はファイル名エンコーディングに
+なります。
+
+返った文字列は g_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+num: メッセージ番号
+戻り値: 取得したメッセージのファイルの絶対パス(ファイル名エンコーディング)
+        取得に失敗、または該当するメッセージが存在しない場合は NULL
+
+------------------------------------------------------------------------------
+gint   folder_item_fetch_all_msg	(FolderItem	*item);
+
+フォルダ item 内のすべてのメッセージを取得します。
+リモートのメールボックス(IMAP4, News等)の場合すべてのメッセージが
+ダウンロードされ、キャッシュされます。
+
+item: FolderItem オブジェクト
+戻り値: 成功した場合0、エラーの場合-1
+
+------------------------------------------------------------------------------
+MsgInfo *folder_item_get_msginfo	(FolderItem	*item,
+					 gint		 num);
+
+フォルダ item 内のメッセージ番号 num に対応するメッセージを取得し、
+そのメッセージをパースして MsgInfo 構造体を生成して返します。
+
+返った MsgInfo は procmsg_msginfo_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+num: メッセージ番号
+戻り値: 取得したメッセージの MsgInfo 構造体へのポインタ
+        取得に失敗、または該当するメッセージが存在しない場合は NULL
+
+------------------------------------------------------------------------------
+gint   folder_item_add_msg		(FolderItem	*dest,
+					 const gchar	*file,
+					 MsgFlags	*flags,
+					 gboolean	 remove_source);
+
+フォルダ dest に RFC 2822 メッセージファイル file を追加します。
+flags を指定した場合は指定に従ってそのメッセージにフラグが設定されます。
+追加に成功した場合で、 remove_source が TRUE の場合は、
+ファイル file が削除されます。
+
+dest: FolderItem オブジェクト
+file: 追加する RFC 2822 メッセージファイル(ファイル名エンコーディング)
+flags: MsgFlags 構造体へのポインタ
+remove_source: TRUE の場合はファイル file を削除する
+戻り値: 追加したメッセージの dest 中での番号
+
+------------------------------------------------------------------------------
+gint   folder_item_add_msgs		(FolderItem	*dest,
+					 GSList		*file_list,
+					 gboolean	 remove_source,
+					 gint		*first);
+
+フォルダ dest に MsgFileInfo 構造体へのポインタのリスト file_list
+で指定した複数の RFC 2822 メッセージファイルを追加します。
+MsgFileInfo で flags を指定した場合は指定に従って各メッセージにフラグが
+設定されます。
+追加に成功した場合で、 remove_source が TRUE の場合は、
+file_list で指定したすべてのファイルが削除されます。
+first を指定した場合は、最初に追加したメッセージの番号がセットされます。
+
+dest: FolderItem オブジェクト
+file_list: MsgFileInfo 構造体へのポインタのリスト
+remove_source: TRUE の場合はファイル file を削除する
+first: NULL でない場合は最初に追加したメッセージの番号がセットされる
+戻り値: 最後に追加したメッセージの dest 中での番号
+
+------------------------------------------------------------------------------
+gint   folder_item_move_msg		(FolderItem	*dest,
+					 MsgInfo	*msginfo);
+
+フォルダ dest にメッセージ msginfo を移動します。
+dest と msginfo が同じ Folder に属する場合は通常の移動が行われます。
+そうでない場合はコピーした後元メッセージの削除という動作になります。
+
+dest: FolderItem オブジェクト
+msginfo: 移動するメッセージの MsgInfo 構造体へのポインタ
+戻り値: 成功した場合は追加したメッセージの dest 中での番号、
+        あるいはコピー+削除の動作の場合は0
+        エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_move_msgs		(FolderItem	*dest,
+					 GSList		*msglist);
+
+フォルダ dest に MsgInfo 構造体へのポインタのリスト msglist で指定された
+複数のメッセージを移動します。
+
+dest: FolderItem オブジェクト
+msglist: MsgInfo 構造体へのポインタのリスト
+戻り値: 成功した場合は最後に追加したメッセージの dest 中での番号、
+        あるいはコピー+削除の動作の場合は0
+        エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_copy_msg		(FolderItem	*dest,
+					 MsgInfo	*msginfo);
+
+フォルダ dest にメッセージ msginfo をコピーします。
+
+dest: FolderItem オブジェクト
+msginfo: コピーするメッセージの MsgInfo 構造体へのポインタ
+戻り値: 成功した場合は追加したメッセージの dest 中での番号
+        エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_copy_msgs		(FolderItem	*dest,
+					 GSList		*msglist);
+
+フォルダ dest に MsgInfo 構造体へのポインタのリスト msglist で指定された
+複数のメッセージをコピーします。
+
+dest: FolderItem オブジェクト
+msglist: MsgInfo 構造体へのポインタのリスト
+戻り値: 成功した場合は最後に追加したメッセージの dest 中での番号、
+        エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_remove_msg		(FolderItem	*item,
+					 MsgInfo	*msginfo);
+
+フォルダ item から item に属するメッセージ msginfo を削除します。
+msginfo には MSG_INVALID フラグが立ちます(削除はされません)。
+
+item: FolderItem オブジェクト
+msginfo: 削除するメッセージの MsgInfo 構造体へのポインタ
+戻り値: 成功した場合は0、エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_remove_msgs		(FolderItem	*item,
+					 GSList		*msglist);
+
+フォルダ item から item に属する複数のメッセージ msglist を削除します。
+msglist の各 msginfo には MSG_INVALID フラグが立ちます(削除はされません)。
+
+item: FolderItem オブジェクト
+msglist: 削除するメッセージの MsgInfo 構造体へのポインタのリスト
+戻り値: 成功した場合は0、エラーの場合は-1
+
+------------------------------------------------------------------------------
+gint   folder_item_remove_all_msg	(FolderItem	*item);
+
+フォルダ item からすべてのメッセージを削除します。
+
+item: FolderItem オブジェクト
+戻り値: 成功した場合は0、エラーの場合は-1
+
+------------------------------------------------------------------------------
+gboolean folder_item_is_msg_changed	(FolderItem	*item,
+					 MsgInfo	*msginfo);
+
+msginfo と実際のファイルシステム上のファイルを比較し、変更があった
+場合は TRUE を返します。
+
+item: FolderItem オブジェクト
+msginfo: 比較するメッセージの MsgInfo 構造体へのポインタ
+戻り値: ファイルシステム上のファイルが変更されていた場合は TRUE
+        変更がなければ FALSE
+
+------------------------------------------------------------------------------
+gchar *folder_item_get_cache_file	(FolderItem	*item);
+
+フォルダ item のキャッシュファイルの絶対パスを返します。
+戻り値はファイル名エンコーディングになります。
+
+返った文字列は g_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+戻り値: キャッシュファイルの絶対パス(ファイル名エンコーディング)
+        item が無効、またはパスが取得できない場合は NULL
+
+------------------------------------------------------------------------------
+gchar *folder_item_get_mark_file	(FolderItem	*item);
+
+フォルダ item のマークファイルの絶対パスを返します。
+戻り値はファイル名エンコーディングになります。
+
+返った文字列は g_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+戻り値: マークファイルの絶対パス(ファイル名エンコーディング)
+        item が無効、またはパスが取得できない場合は NULL
+
+------------------------------------------------------------------------------
+gint   folder_item_close		(FolderItem	*item);
+
+開いていたフォルダ item を閉じます。
+item の opened フラグは FALSE になります。
+フォルダのタイプによってはクローズ処理が行われます。
+
+item: FolderItem オブジェクト
+戻り値: 成功した場合は0、エラーの場合は0以外

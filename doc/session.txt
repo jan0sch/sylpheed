@@ -1,0 +1,420 @@
+session - ネットワークセッションの管理
+
+------------------------------------------------------------------------------
+#define SESSION_BUFFSIZE	8192
+
+セッションの処理用のバッファサイズです。
+
+------------------------------------------------------------------------------
+#define SESSION(obj)
+
+obj を Session 型にキャッシュします。
+
+------------------------------------------------------------------------------
+SessionType
+
+typedef enum {
+	SESSION_UNKNOWN,
+	SESSION_IMAP,
+	SESSION_NEWS,
+	SESSION_SMTP,
+	SESSION_POP3
+} SessionType;
+
+Session のタイプを表す enum 型です。
+
+SESSION_UNKNOWN: 未知のタイプ
+SESSION_IMAP: IMAP4 セッション
+SESSION_NEWS: News (NNTP) セッション
+SESSION_SMTP: SMTP セッション
+SESSION_POP3: POP3 セッション
+
+------------------------------------------------------------------------------
+SessionState
+
+typedef enum {
+	SESSION_READY,
+	SESSION_SEND,
+	SESSION_RECV,
+	SESSION_EOF,
+	SESSION_TIMEOUT,
+	SESSION_ERROR,
+	SESSION_DISCONNECTED
+} SessionState;
+
+セッションの状態を表す enum 型です。
+
+SESSION_READY: 準備完了(未接続)
+SESSION_SEND: メッセージ送信中
+SESSION_RECV: メッセージ受信中
+SESSION_EOF: EOF を受信
+SESSION_TIMEOUT: タイムアウト
+SESSION_ERROR: エラー発生
+SESSION_DISCONNECTED: 接続切断済
+
+------------------------------------------------------------------------------
+SessionMsgType
+
+typedef enum
+{
+	SESSION_MSG_NORMAL,
+	SESSION_MSG_SEND_DATA,
+	SESSION_MSG_RECV_DATA,
+	SESSION_MSG_CONTROL,
+	SESSION_MSG_ERROR,
+	SESSION_MSG_UNKNOWN
+} SessionMsgType;
+
+セッションのメッセージのタイプを表します(現在未使用)。
+
+SESSION_MSG_NORMAL: 通常のメッセージ
+SESSION_MSG_SEND_DATA: データ送信
+SESSION_MSG_RECV_DATA: データ受信
+SESSION_MSG_CONTROL: コントロールメッセージ
+SESSION_MSG_ERROR: エラーメッセージ
+SESSION_MSG_UNKNOWN: 不明
+
+------------------------------------------------------------------------------
+typedef gint (*RecvMsgNotify)			(Session	*session,
+						 const gchar	*msg,
+						 gpointer	 user_data);
+
+メッセージを受信したときにユーザに通知するためのコールバック関数の型です。
+
+------------------------------------------------------------------------------
+typedef gint (*RecvDataProgressiveNotify)	(Session	*session,
+						 guint		 cur_len,
+						 guint		 total_len,
+						 gpointer	 user_data);
+
+大きなデータの受信中に定期的にユーザに進捗を通知するためのコールバック関数の
+型です。
+
+------------------------------------------------------------------------------
+typedef gint (*RecvDataNotify)			(Session	*session,
+						 guint		 len,
+						 gpointer	 user_data);
+
+大きなデータの受信が完了したときにユーザに通知するためのコールバック関数の
+型です。
+
+------------------------------------------------------------------------------
+typedef gint (*SendDataProgressiveNotify)	(Session	*session,
+						 guint		 cur_len,
+						 guint		 total_len,
+						 gpointer	 user_data);
+
+大きなデータの送信中に定期的にユーザに進捗を通知するためのコールバック関数の
+型です。
+
+------------------------------------------------------------------------------
+typedef gint (*SendDataNotify)			(Session	*session,
+						 guint		 len,
+						 gpointer	 user_data);
+
+大きなデータの送信が完了したときにユーザに通知するためのコールバック関数の
+型です。
+
+------------------------------------------------------------------------------
+Session
+
+struct _Session
+{
+	SessionType type;
+
+	SockInfo *sock;
+
+	gchar *server;
+	gushort port;
+
+	SSLType ssl_type;
+
+	gboolean nonblocking;
+
+	SessionState state;
+
+	time_t last_access_time;
+	GTimeVal tv_prev;
+
+	gint conn_id;
+
+	gint io_tag;
+
+	gchar read_buf[SESSION_BUFFSIZE];
+	gchar *read_buf_p;
+	gint read_buf_len;
+
+	/* buffer for short messages */
+	GString *read_msg_buf;
+
+	/* buffer for relatively short multiple lines data */
+	GByteArray *read_data_buf;
+	gchar *read_data_terminator;
+
+	/* buffer for large data */
+	FILE *read_data_fp;
+	gint read_data_pos;
+
+	gint preread_len;
+
+	/* buffer for short messages */
+	gchar *write_buf;
+	gchar *write_buf_p;
+	gint write_buf_len;
+
+	/* buffer for large data */
+	FILE *write_data_fp;
+	gint write_data_pos;
+	gint write_data_len;
+
+	guint timeout_tag;
+	guint timeout_interval;
+
+	guint ping_tag;
+
+	gpointer data;
+
+	/* virtual methods to parse server responses */
+	gint (*recv_msg)		(Session	*session,
+					 const gchar	*msg);
+
+	gint (*send_data_finished)	(Session	*session,
+					 guint		 len);
+	gint (*recv_data_finished)	(Session	*session,
+					 guchar		*data,
+					 guint		 len);
+
+	gint (*recv_data_as_file_finished)	(Session	*session,
+						 FILE		*fp,
+						 guint		 len);
+
+	void (*destroy)			(Session	*session);
+
+	/* notification functions */
+	RecvMsgNotify			recv_msg_notify;
+	RecvDataProgressiveNotify	recv_data_progressive_notify;
+	RecvDataNotify			recv_data_notify;
+	SendDataProgressiveNotify	send_data_progressive_notify;
+	SendDataNotify			send_data_notify;
+
+	gpointer recv_msg_notify_data;
+	gpointer recv_data_progressive_notify_data;
+	gpointer recv_data_notify_data;
+	gpointer send_data_progressive_notify_data;
+	gpointer send_data_notify_data;
+};
+
+Session 構造体はサーバとの通信セッションの情報を表します。
+
+------------------------------------------------------------------------------
+void session_init		(Session	*session);
+
+Session 構造体を初期化します。 Session 構造体のメモリを確保した直後にこの
+関数を呼び出します。
+
+session: Session 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gint session_connect		(Session	*session,
+				 const gchar	*server,
+				 gushort	 port);
+
+サーバ server のポート番号 port への接続を開始します。
+接続は非同期で行われるため(Win32 の場合は同期)、この関数が返った段階では
+まだ接続は完了していないので、 g_main_iteration() 等でイベントループを
+回して接続を待つ必要があります。
+接続が完了した場合、サーバからの最初のメッセージが到着した時点で
+session_set_recv_message_notify() で指定したコールバック関数が呼ばれます。
+
+session: Session 構造体へのポインタ
+server: 接続先サーバ
+port: 接続先ポート
+
+------------------------------------------------------------------------------
+gint session_disconnect		(Session	*session);
+
+セッション session の接続を切断します。
+
+session: Session 構造体へのポインタ
+戻り値: 常に 0
+
+------------------------------------------------------------------------------
+void session_destroy		(Session	*session);
+
+セッション session を破棄します。サーバとの接続が確立されていた場合は
+切断します。
+
+------------------------------------------------------------------------------
+gboolean session_is_connected	(Session	*session);
+
+セッション session の接続が確立されている場合は TRUE を返します。
+接続が確立されている間イベントループを回したい場合以下のようにします。
+
+	while (session_is_connected(session))
+		g_main_iteration(TRUE);
+
+session: Session 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void session_set_access_time	(Session	*session);
+
+現在の時刻を最後にサーバにアクセスした時刻としてセッション session に
+通知します。
+
+session: Session 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void session_set_timeout	(Session	*session,
+				 guint		 interval);
+
+セッションのタイムアウト時間を秒数で設定します。 session_set_timeout()
+を呼び出した後 interval 秒経過した場合、 Session::state に SESSION_TIMEOUT
+をセットして処理を中断します。
+
+session: Session 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void session_set_recv_message_notify	(Session	*session,
+					 RecvMsgNotify	 notify_func,
+					 gpointer	 data);
+
+メッセージを受信したときにユーザに通知するためのコールバック関数を指定します。
+
+session: Session 構造体へのポインタ
+notify_func: RecvMsgNotify 型の関数へのポインタ
+data: notify_func に渡すユーザデータ
+
+------------------------------------------------------------------------------
+void session_set_recv_data_progressive_notify
+					(Session	*session,
+					 RecvDataProgressiveNotify notify_func,
+					 gpointer	 data);
+
+大きなデータの受信中に定期的にユーザに進捗を通知するためのコールバック関数
+を指定します。
+
+session: Session 構造体へのポインタ
+notify_func: RecvDataProgressiveNotify 型の関数へのポインタ
+data: notify_func に渡すユーザデータ
+
+------------------------------------------------------------------------------
+void session_set_recv_data_notify	(Session	*session,
+					 RecvDataNotify	 notify_func,
+					 gpointer	 data);
+
+大きなデータの受信が完了したときにユーザに通知するためのコールバック関数を
+指定します。
+
+session: Session 構造体へのポインタ
+notify_func: RecvDataNotify 型の関数へのポインタ
+data: notify_func に渡すユーザデータ
+
+------------------------------------------------------------------------------
+void session_set_send_data_progressive_notify
+					(Session	*session,
+					 SendDataProgressiveNotify notify_func,
+					 gpointer	 data);
+
+大きなデータの送信中に定期的にユーザに進捗を通知するためのコールバック関数
+を指定します。
+
+session: Session 構造体へのポインタ
+notify_func: SendDataProgressiveNotify 型の関数へのポインタ
+data: notify_func に渡すユーザデータ
+
+------------------------------------------------------------------------------
+void session_set_send_data_notify	(Session	*session,
+					 SendDataNotify	 notify_func,
+					 gpointer	 data);
+
+大きなデータの送信が完了したときにユーザに通知するためのコールバック関数を
+指定します。
+
+session: Session 構造体へのポインタ
+notify_func: SendDataNotify 型の関数へのポインタ
+data: notify_func に渡すユーザデータ
+
+------------------------------------------------------------------------------
+#if USE_SSL
+gint session_start_tls	(Session	*session);
+#endif
+
+接続が確立中のセッションで TLS セッションを開始します。
+初期化が完了するまでソケットはブロッキングモードに移行します。
+OpenSSL を有効にしてコンパイルしている場合のみ使用可能です。
+
+session: Session 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint session_send_msg	(Session	*session,
+			 SessionMsgType	 type,
+			 const gchar	*msg);
+
+サーバにメッセージ msg を送信します。 type には常に SESSION_MSG_NORMAL を
+指定します。
+
+session: Session 構造体へのポインタ
+type: メッセージのタイプ(現在未使用)
+msg: サーバに送信するメッセージ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint session_recv_msg	(Session	*session);
+
+サーバからメッセージを受信します。受信が完了した場合、
+session_set_recv_message_notify() で設定したコールバック関数が呼び出されます。
+
+session: Session 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint session_send_data	(Session	*session,
+			 FILE		*data_fp,
+			 guint		 size);
+
+サーバにデータを送信します。データはファイルストリームとして渡します。
+ファイルストリーム data_fp の現在位置から size バイト送信されます。
+送信が完了した場合、 session_set_send_data_notify() で設定したコールバック
+関数が呼び出されます。
+
+session: Session 構造体へのポインタ
+data_fp: 送信するデータを格納したファイルストリーム
+size: 送信するデータのサイズ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint session_recv_data	(Session	*session,
+			 guint		 size,
+			 const gchar	*terminator);
+
+サーバからデータを受信し、メモリに格納して取得します。
+データが比較的小さい場合はこちらを使用します。
+文字列 terminator + CR + LF をデータの終端とみなしてデータの終了を判断します
+(size は現在未使用)。
+受信が完了した場合、 session_set_recv_data_notify() で設定したコールバック
+関数が呼び出されます。
+
+session: Session 構造体へのポインタ
+size: データのサイズ(現在未使用)
+terminator: データの終端を表す文字列
+
+------------------------------------------------------------------------------
+gint session_recv_data_as_file	(Session	*session,
+				 guint		 size,
+				 const gchar	*terminator);
+
+サーバからデータを受信し、ファイルストリームに格納して取得します。
+データが大きくなる可能性がある(数MB〜)場合はこちらを使用します。
+文字列 terminator + CR + LF をデータの終端とみなしてデータの終了を判断します
+(size は現在未使用)。
+受信が完了した場合、 session_set_recv_data_notify() で設定したコールバック
+関数が呼び出されます。
+
+session: Session 構造体へのポインタ
+size: データのサイズ(現在未使用)
+terminator: データの終端を表す文字列

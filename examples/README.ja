@@ -1,0 +1,13 @@
+このディレクトリにはいくつかのサンプルプログラムが含まれます。
+ほとんどのサンプルでは事前に Sylpheed の設定が必要となっています。
+
+このサンプルプログラムのライセンスはパブリックドメインとします。
+
+libsylph-compose.c: メッセージの作成
+libsylph-createmailbox.c: メールボックスの作成
+libsylph-listfolder.c: すべてのフォルダのリストアップ
+libsylph-listprefs.c: すべての全般の設定のリストアップ
+libsylph-listsummary.c: 指定したフォルダのメッセージサマリ一覧を表示
+libsylph-pop.c: POP3 サーバからメッセージを受信
+libsylph-send.c: SMTP サーバ経由でメッセージを送信
+libsylph-template.c: ソースのテンプレート

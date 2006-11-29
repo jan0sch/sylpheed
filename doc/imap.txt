@@ -1,0 +1,177 @@
+imap - IMAP4 に対する Folder インタフェース
+
+------------------------------------------------------------------------------
+#define IMAP_FOLDER(obj)
+
+Folder クラスのオブジェクト obj を Folder 型にキャストします。
+
+------------------------------------------------------------------------------
+#define IMAP_SESSION(obj)
+
+Session クラスのオブジェクトを IMAPSession 型にキャストします。
+
+------------------------------------------------------------------------------
+IMAPAuthType
+
+typedef enum
+{
+	IMAP_AUTH_LOGIN		= 1 << 0,
+	IMAP_AUTH_CRAM_MD5	= 1 << 1,
+	IMAP_AUTH_PLAIN		= 1 << 2
+} IMAPAuthType;
+
+IMAP の認証方法を指定するときに使用する enum です。
+
+------------------------------------------------------------------------------
+IMAPFolder
+
+struct _IMAPFolder
+{
+	RemoteFolder rfolder;
+
+	/* list of IMAPNameSpace */
+	GList *ns_personal;
+	GList *ns_others;
+	GList *ns_shared;
+};
+
+1つの IMAP アカウントに属するサーバの情報とフォルダツリーを格納するための
+構造体です。 RemoteFolder のサブクラスになります。
+
+------------------------------------------------------------------------------
+IMAPSession
+
+struct _IMAPSession
+{
+	Session session;
+
+	gboolean authenticated;
+
+	gchar **capability;
+	gboolean uidplus;
+
+	gchar *mbox;
+	guint cmd_count;
+};
+
+IMAP セッションを表す構造体です。 Session のサブクラスになります。
+
+------------------------------------------------------------------------------
+IMAPNameSpace
+
+struct _IMAPNameSpace
+{
+	gchar *name;
+	gchar separator;
+};
+
+IMAP のネームスペースの名前と区切り記号の組を表す構造体です。
+
+------------------------------------------------------------------------------
+#define IMAP_SUCCESS	0
+#define IMAP_SOCKET	2
+#define IMAP_AUTHFAIL	3
+#define IMAP_PROTOCOL	4
+#define IMAP_SYNTAX	5
+#define IMAP_IOERR	6
+#define IMAP_ERROR	7
+
+IMAP のエラー状態を表す値です。
+
+------------------------------------------------------------------------------
+#define IMAPBUFSIZE
+
+IMAP の処理に使用するバッファのサイズを表します。
+
+------------------------------------------------------------------------------
+IMAPFlags
+
+typedef enum
+{
+	IMAP_FLAG_SEEN		= 1 << 0,
+	IMAP_FLAG_ANSWERED	= 1 << 1,
+	IMAP_FLAG_FLAGGED	= 1 << 2,
+	IMAP_FLAG_DELETED	= 1 << 3,
+	IMAP_FLAG_DRAFT		= 1 << 4
+} IMAPFlags;
+
+IMAP のメッセージのフラグを表す enum です。
+
+------------------------------------------------------------------------------
+#define IMAP_IS_SEEN(flags)
+
+IMAPFlags flags に SEEN フラグが立っていれば TRUE を返します。
+
+------------------------------------------------------------------------------
+#define IMAP_IS_ANSWERED(flags)
+
+IMAPFlags flags に ANSWERED フラグが立っていれば TRUE を返します。
+
+------------------------------------------------------------------------------
+#define IMAP_IS_FLAGGED(flags)
+
+IMAPFlags flags に FLAGGED フラグが立っていれば TRUE を返します。
+
+------------------------------------------------------------------------------
+#define IMAP_IS_DELETED(flags)
+
+IMAPFlags flags に DELETED フラグが立っていれば TRUE を返します。
+
+------------------------------------------------------------------------------
+#define IMAP_IS_DRAFT(flags)
+
+IMAPFlags flags に DRAFT フラグが立っていれば TRUE を返します。
+
+------------------------------------------------------------------------------
+FolderClass *imap_get_class		(void);
+
+IMAPFolder の FolderClass を取得します。
+
+戻り値: FolderClass へのポインタ
+
+------------------------------------------------------------------------------
+gint imap_msg_set_perm_flags		(MsgInfo	*msginfo,
+					 MsgPermFlags	 flags);
+
+メッセージ msginfo の IMAP サーバ上のフラグを flags 相当の状態に変更します。
+
+msginfo: MsgInfo 構造体へのポインタ
+flags: msginfo に対してセットする永続フラグ
+戻り値: 成功した場合 IMAP_SUCCESS
+        エラーの場合 IMAP_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint imap_msg_unset_perm_flags		(MsgInfo	*msginfo,
+					 MsgPermFlags	 flags);
+
+メッセージ msginfo の IMAP サーバ上のフラグのうち flags で指定されている
+ものを解除します。
+
+msginfo: MsgInfo 構造体へのポインタ
+flags: msginfo に対して解除する永続フラグ
+戻り値: 成功した場合 IMAP_SUCCESS
+        エラーの場合 IMAP_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint imap_msg_list_set_perm_flags	(GSList		*msglist,
+					 MsgPermFlags	 flags);
+
+メッセージのリスト msglist の IMAP サーバ上の各フラグを flags 相当の状態に
+変更します。
+
+msglist: MsgInfo 構造体へのポインタのリスト
+flags: msglist に対してセットする永続フラグ
+戻り値: 成功した場合 IMAP_SUCCESS
+        エラーの場合 IMAP_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint imap_msg_list_unset_perm_flags	(GSList		*msglist,
+					 MsgPermFlags	 flags);
+
+メッセージのリスト msglist の IMAP サーバ上の各フラグのうち flags で指定
+されているものを解除します。
+
+msglist: MsgInfo 構造体へのポインタのリスト
+flags: msglist に対して解除する永続フラグ
+戻り値: 成功した場合 IMAP_SUCCESS
+        エラーの場合 IMAP_SUCCESS 以外

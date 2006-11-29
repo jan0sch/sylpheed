@@ -1,0 +1,186 @@
+pop - POP3 セッションの処理
+
+------------------------------------------------------------------------------
+#define POP3_SESSION(obj)	((Pop3Session *)obj)
+
+Session オブジェクト obj を Pop3Session にキャストします。
+
+------------------------------------------------------------------------------
+Pop3State
+
+typedef enum {
+	POP3_READY,
+	POP3_GREETING,
+	POP3_STLS,
+	POP3_GETAUTH_USER,
+	POP3_GETAUTH_PASS,
+	POP3_GETAUTH_APOP,
+	POP3_GETRANGE_STAT,
+	POP3_GETRANGE_LAST,
+	POP3_GETRANGE_UIDL,
+	POP3_GETRANGE_UIDL_RECV,
+	POP3_GETSIZE_LIST,
+	POP3_GETSIZE_LIST_RECV,
+	POP3_RETR,
+	POP3_RETR_RECV,
+	POP3_DELETE,
+	POP3_LOGOUT,
+	POP3_DONE,
+	POP3_ERROR,
+
+	N_POP3_STATE
+} Pop3State;
+
+Pop3Session の状態を表す enum です。
+
+------------------------------------------------------------------------------
+Pop3ErrorValue
+
+typedef enum {
+	PS_SUCCESS	= 0,	/* command successful */
+	PS_NOMAIL	= 1,	/* no mail available */
+	PS_SOCKET	= 2,	/* socket I/O woes */
+	PS_AUTHFAIL	= 3,	/* user authorization failed */
+	PS_PROTOCOL	= 4,	/* protocol violation */
+	PS_SYNTAX	= 5,	/* command-line syntax error */
+	PS_IOERR	= 6,	/* file I/O error */
+	PS_ERROR	= 7,	/* protocol error */
+	PS_EXCLUDE	= 8,	/* client-side exclusion error */
+	PS_LOCKBUSY	= 9,	/* server responded lock busy */
+	PS_SMTP		= 10,	/* SMTP error */
+	PS_DNS		= 11,	/* fatal DNS error */
+	PS_BSMTP	= 12,	/* output batch could not be opened */
+	PS_MAXFETCH	= 13,	/* poll ended by fetch limit */
+
+	PS_NOTSUPPORTED	= 14,	/* command not supported */
+
+	/* leave space for more codes */
+
+	PS_CONTINUE	= 128	/* more responses may follow */
+} Pop3ErrorValue;
+
+POP3 のエラー状態を表す enum です。
+
+------------------------------------------------------------------------------
+RecvTime
+
+typedef enum {
+	RECV_TIME_NONE     = 0,
+	RECV_TIME_RECEIVED = 1,
+	RECV_TIME_KEEP     = 2,
+	RECV_TIME_DELETE   = 3
+} RecvTime;
+
+特殊なメッセージの受信時間を表す enum です。
+
+------------------------------------------------------------------------------
+Pop3DropValue
+
+typedef enum {
+	DROP_OK = 0,
+	DROP_DONT_RECEIVE = 1,
+	DROP_DELETE = 2,
+	DROP_ERROR = -1
+} Pop3DropValue;
+
+メッセージをローカルメールボックスに取り込むコールバック関数の戻り値です。
+
+------------------------------------------------------------------------------
+Pop3MsgInfo
+
+struct _Pop3MsgInfo
+{
+	gint size;
+	gchar *uidl;
+	time_t recv_time;
+	guint received : 1;
+	guint deleted  : 1;
+};
+
+POP3 の1メッセージを表す構造体です。
+
+------------------------------------------------------------------------------
+Pop3Session
+
+struct _Pop3Session
+{
+	Session session;
+
+	Pop3State state;
+
+	PrefsAccount *ac_prefs;
+
+	gchar *greeting;
+	gchar *user;
+	gchar *pass;
+	gint count;
+	gint64 total_bytes;
+	gint cur_msg;
+	gint cur_total_num;
+	gint64 cur_total_bytes;
+	gint64 cur_total_recv_bytes;
+	gint skipped_num;
+
+	Pop3MsgInfo *msg;
+
+	GHashTable *uidl_table;
+
+	gboolean auth_only;
+
+	gboolean new_msg_exist;
+	gboolean uidl_is_valid;
+
+	time_t current_time;
+
+	Pop3ErrorValue error_val;
+	gchar *error_msg;
+
+	gpointer data;
+
+	/* virtual method to drop message */
+	gint (*drop_message)	(Pop3Session	*session,
+				 const gchar	*file);
+};
+
+POP3 セッションを表す構造体です。 Session のサブクラスになります。
+
+------------------------------------------------------------------------------
+#define POPBUFSIZE
+
+POP3 の処理に使用するバッファのサイズを表します。
+
+------------------------------------------------------------------------------
+#define IDLEN
+
+UIDL 文字列の最大文字数です。
+
+------------------------------------------------------------------------------
+Session *pop3_session_new	(PrefsAccount	*account);
+
+Pop3Session オブジェクトを作成します。
+
+account: POP3 アカウント
+戻り値: 新しい Pop3Session オブジェクト(Session にキャスト)
+       エラーの場合 NULL
+
+------------------------------------------------------------------------------
+GHashTable *pop3_get_uidl_table	(PrefsAccount	*account);
+
+ローカルに保存されているアカウント account の既読メッセージの UIDL のリストを読み込み、
+ハッシュテーブルに格納します。ハッシュテーブルの各 UIDL に対応する値はそれぞれの受信時間
+となります。
+
+account: POP3 アカウント
+戻り値: UIDL をキーに、受信時間を値にしたハッシュテーブル
+       UIDL のリストが読み込めなかった場合は空のハッシュテーブル
+
+------------------------------------------------------------------------------
+gint pop3_write_uidl_list	(Pop3Session	*session);
+
+現在のセッション session の UIDL リストをファイルに書き出します。書き出した UIDL
+リストは pop3_get_uidl_table() で読み出せます。現在のセッションの UIDL リストが
+有効でない場合は何もしません。
+
+session: POP3 セッション
+戻り値: 成功した場合、または UIDL が有効でない場合 0
+       エラーの場合 -1

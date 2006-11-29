@@ -1,0 +1,66 @@
+stringtable - 文字列テーブル
+
+StringTable は、多量に確保する文字列が互いに重複する可能性が高い場合に、
+メモリの消費量を節約する目的で使用します。
+
+------------------------------------------------------------------------------
+StringTable
+
+typedef struct {
+	GHashTable *hash_table;
+} StringTable;
+
+文字列テーブルを表す構造体です。
+
+------------------------------------------------------------------------------
+StringTable *string_table_new     (void);
+
+StringTable を作成します。
+
+返った値は string_table_free() で解放する必要があります。
+
+戻り値: StringTable 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void         string_table_free    (StringTable *table);
+
+StringTable を解放します。
+
+table: StringTable 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gchar *string_table_lookup_string (StringTable *table, const gchar *str);
+
+文字列テーブル table 内の文字列 str に一致する文字列エントリを返します。
+
+table: StringTable 構造体へのポインタ
+str: 検索文字列
+戻り値: table 内の文字列エントリ
+        見つからなければ NULL
+
+------------------------------------------------------------------------------
+gchar *string_table_insert_string (StringTable *table, const gchar *str);
+
+文字列テーブル table に文字列 str を追加します。
+該当するエントリが既に存在する場合は、参照カウントのみを増加させます。
+
+table: StringTable 構造体へのポインタ
+str: 追加する文字列
+戻り値: table 内の文字列エントリ
+
+------------------------------------------------------------------------------
+void   string_table_free_string   (StringTable *table, const gchar *str);
+
+文字列テーブル table から文字列 str を削除します。
+該当するエントリの参照カウントを減らし、0になった場合はエントリが削除
+されます。該当するエントリが存在しなければ何もしません。
+
+table: StringTable 構造体へのポインタ
+str: 削除する文字列
+
+------------------------------------------------------------------------------
+void   string_table_get_stats     (StringTable *table);
+
+文字列テーブル table の統計情報を出力します(デバッグモード時のみ)。
+
+table: StringTable 構造体へのポインタ

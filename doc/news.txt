@@ -1,0 +1,94 @@
+news - NNTP に対する Folder インタフェース
+
+------------------------------------------------------------------------------
+NewsFolder
+
+struct _NewsFolder
+{
+	RemoteFolder rfolder;
+
+	gboolean use_auth;
+};
+
+1つの NNTP サーバに属する購読しているニュースグループの一覧を表す構造体
+です。 RemoteFolder のサブクラスになります。
+
+------------------------------------------------------------------------------
+NewsGroupInfo
+
+struct _NewsGroupInfo
+{
+	gchar *name;
+	guint first;
+	guint last;
+	gchar type;
+	gboolean subscribed;
+};
+
+1つのニュースグループに関する情報を表す構造体です。
+
+name: ニュースグループ名
+first: 最初の記事番号
+last: 最後の記事番号
+type: グループのタイプ(モデレートかどうか)
+subscribed: 購読している場合 TRUE
+            購読していない場合 FALSE
+
+------------------------------------------------------------------------------
+FolderClass *news_get_class		(void);
+
+NewsFolder の FolderClass を取得します。
+
+戻り値: FolderClass へのポインタ
+
+------------------------------------------------------------------------------
+GSList *news_get_group_list		(Folder		*folder);
+
+NewsFolder folder に対応する NNTP サーバからニュースグループ一覧を取得します。
+以前既に取得している場合はキャッシュが使用されます。
+
+返った値は news_group_list_free() で解放する必要があります。
+
+folder: NewsFolder オブジェクト
+戻り値: NewsGroupInfo 構造体のリスト
+
+------------------------------------------------------------------------------
+void news_group_list_free		(GSList		*group_list);
+
+NewsGroupInfo 構造体のリストを解放します。
+
+group_list: NewsGroupInfo 構造体のリスト
+
+------------------------------------------------------------------------------
+void news_remove_group_list_cache	(Folder		*folder);
+
+folder に対応するニュースグループリストのキャッシュが存在すればそれを
+削除します。
+
+folder: NewsFolder オブジェクト
+
+------------------------------------------------------------------------------
+gint news_post				(Folder		*folder,
+					 const gchar	*file);
+
+folder が指す NNTP サーバにメッセージ file を 投稿します。
+メッセージでは Newsgroups ヘッダで投稿するグループが指定されている必要が
+あります。
+
+folder: NewsFolder オブジェクト
+file: 投稿するメッセージのファイル
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint news_post_stream			(Folder		*folder,
+					 FILE		*fp);
+
+folder が指す NNTP サーバにメッセージのファイルストリーム fp の内容を
+投稿します。メッセージでは Newsgroups ヘッダで投稿するグループが指定
+されている必要があります。
+
+folder: NewsFolder オブジェクト
+file: 投稿するメッセージのファイルストリーム
+戻り値: 成功した場合 0
+        エラーの場合 -1

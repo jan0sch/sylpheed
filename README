@@ -1,0 +1,159 @@
+	LibSylph -- E-Mail client library
+
+   Copyright (C) 1999-2006 Hiroyuki Yamamoto
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+   For more details see the file COPYING.
+
+
+What's LibSylph
+===============
+
+LibSylph is an e-mail client library which is derived from Sylpheed.
+LibSylph is a lightweight but featureful library. It has many common e-mail
+related features and other useful functions, and you can utilize them from
+your application. Moreover you can create a new e-mail client by wrapping
+LibSylph with any UI.
+
+LibSylph is a free software distributed under the GNU LGPL.
+
+Currently implemented major features
+====================================
+
+Supported protocols
+
+	o POP3
+	o IMAP4rev1
+	o SMTP
+	o NNTP
+	o SSL/TLSv1 (POP3, SMTP, IMAP4rev1, NNTP)
+	o IPv6
+
+Features
+
+	o OOP-like message management
+	o multiple accounts
+	o powerful filtering
+	o powerful search (query search and search folder)
+	o MIME handling
+	o SMTP AUTH support (PLAIN / LOGIN / CRAM-MD5)
+	o CRAM-MD5 authentication (SMTP AUTH / IMAP4rev1)
+	o APOP authentication (POP3)
+	o multiple MH folder support
+	o per-folder configuration
+	o autoconf, automake support
+	o internationalization of messages by gettext
+	o m17n (multilingualization) support
+
+and more.
+
+Installation
+============
+
+See INSTALL for installation instructions.
+
+Notice
+======
+
+The current LibSylph is still under the development, and its specification
+may be changed in the future.
+
+Usage
+=====
+
+Preparation before running
+--------------------------
+
+If you are using a character encodings other than UTF-8 for filename on
+Unix-like OS, you must set the following environmental variable (it will not
+work correctly if it is not specified):
+
+(use locale-specific encoding)
+% export G_FILENAME_ENCODING=@locale
+
+or
+
+(manually specifying encoding)
+% export G_FILENAME_ENCODING=ISO-8859-1
+
+If you want to display messages translated to your language,
+you must specify some environmental variables related to locale.
+For example:
+
+% export LANG=de_DE
+
+(replace de_DE to the actual locale name)
+
+If you don't want translated messages, set LC_MESSAGES to "C"
+(and unset LC_ALL if specified).
+
+How to use
+----------
+
+The simplest way for linking:
+
+gcc -o foo foo.c `pkg-config glib-2.0 --cflags --libs` -lsylph
+
+There are sample programs under examples directory in the distributed packages.
+The method of compilation is described at the head of the sources as a comment.
+The license of these sample programs is public domain.
+See examples/README for details.
+
+Documentation
+-------------
+
+The reference manuals are under doc directory (Japanese).
+See doc/README.ja for details.
+
+Information
+===========
+
+You can check the newest version and information about Sylpheed and LibSylph
+at:
+
+	http://sylpheed.sraoss.jp/
+
+Feedback
+========
+
+Comments, ideas and (most of all) bug reports (and especially patches) are
+very welcome.
+
+Subversion
+==========
+
+You can get the newest source code from the Subversion repository.
+
+Move to an appropriate directory, and with the command:
+
+	svn checkout svn://sylpheed.sraoss.jp/sylpheed/trunk
+
+a source tree named 'trunk' is created under the current directory.
+
+The subdirectory of sylpheed is divided as following:
+
+    * trunk/     Main tree
+    * branches/  Miscellaneous experimental branches
+    * tags/      Release-tagged branches
+
+To update to the newest source tree, run the command:
+
+	svn update
+
+at the target directory.
+
+-- 
+Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>

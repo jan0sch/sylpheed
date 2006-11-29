@@ -1,0 +1,290 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_PREREQ(2.50)
+AC_INIT(libsylph/account.c)
+PACKAGE=libsylph
+
+dnl version number
+MAJOR_VERSION=1
+MINOR_VERSION=0
+MICRO_VERSION=0
+INTERFACE_AGE=0
+BINARY_AGE=0
+EXTRA_VERSION=
+BUILD_REVISION=0
+VERSION=$MAJOR_VERSION.$MINOR_VERSION.$MICRO_VERSION$EXTRA_VERSION
+
+dnl set $target
+AC_CANONICAL_SYSTEM
+
+dnl
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
+dnl AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+dnl AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+AC_SUBST(PACKAGE)
+AC_SUBST(VERSION)
+AC_SUBST(MAJOR_VERSION)
+AC_SUBST(MINOR_VERSION)
+AC_SUBST(MICRO_VERSION)
+AC_SUBST(BUILD_REVISION)
+
+dnl libtool versioning
+LT_RELEASE=$MAJOR_VERSION.$MINOR_VERSION
+LT_CURRENT=1
+LT_REVISION=0
+LT_AGE=0
+AC_SUBST(LT_RELEASE)
+AC_SUBST(LT_CURRENT)
+AC_SUBST(LT_REVISION)
+AC_SUBST(LT_AGE)
+
+dnl Specify a header configuration file
+AM_CONFIG_HEADER(config.h)
+
+AM_MAINTAINER_MODE
+
+dnl Checks for programs.
+dnl AC_ARG_PROGRAM
+AC_PROG_CC
+AC_ISC_POSIX
+AM_PROG_CC_STDC
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_CPP
+dnl AC_PROG_RANLIB
+AM_PROG_LEX
+AC_PROG_YACC
+AM_PROG_LIBTOOL
+
+AC_CHECK_PROG(WINDRES, windres, windres)
+AM_CONDITIONAL(HAVE_WINDRES, test x"$WINDRES" != x)
+
+SYLPHEED_ACLOCAL_INCLUDE(ac)
+
+native_win32=no
+
+case "$target" in
+*-darwin*)
+	CFLAGS="$CFLAGS -no-cpp-precomp -fno-common"
+	;;
+*-*-mingw*)
+	native_win32=yes
+	CFLAGS="$CFLAGS -mms-bitfields -mwindows"
+	LIBS="$LIBS -lws2_32"
+	;;
+esac
+
+AM_CONDITIONAL(OS_WIN32, [test "$native_win32" = "yes"])
+
+dnl Checks for libraries.
+AM_PATH_GLIB_2_0(2.4.0,, AC_MSG_ERROR(Test for GLib failed. See the 'INSTALL' for help.))
+
+AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
+
+dnl checks for iconv
+AM_ICONV
+
+AC_CHECK_FUNCS(bind_textdomain_codeset)
+
+dnl for gettext
+ALL_LINGUAS="bg cs da de el es et fr gl hr hu it ja ko lt nl pl pt_BR ro ru sk sl sr sv tr uk vi zh_CN zh_TW"
+GETTEXT_PACKAGE=libsylph
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Define text domain.])
+
+AM_GLIB_GNU_GETTEXT
+dnl AM_GNU_GETTEXT
+dnl AC_CHECK_FUNC(gettext, AC_CHECK_LIB(intl, gettext))
+
+if test "x$DATADIRNAME" != "x"; then
+	localedir='${prefix}/${DATADIRNAME}/locale'
+else
+	localedir='${datadir}/locale'
+fi
+AC_ARG_WITH(localedir,
+	[  --with-localedir=DIR    Locale directory],
+	[localedir="$withval"])
+AC_SUBST(localedir)
+
+dnl Check for OpenSSL
+AC_ARG_ENABLE(ssl,
+	[  --disable-ssl           Disable SSL support using OpenSSL],
+	[ac_cv_enable_ssl=$enableval], [ac_cv_enable_ssl=yes])
+AC_MSG_CHECKING([whether to use OpenSSL])
+if test $ac_cv_enable_ssl = yes; then
+	AC_MSG_RESULT(yes)
+	dnl First check with pkg-config
+	PKG_CHECK_MODULES(OPENSSL, openssl, [:], [:])
+	if test "x$OPENSSL_LIBS" != "x"; then
+		CFLAGS="$CFLAGS $OPENSSL_CFLAGS"
+		LIBS="$LIBS $OPENSSL_LIBS"
+		AC_MSG_CHECKING([if openssl is available])
+		AC_MSG_RESULT(yes)
+		AC_DEFINE(USE_SSL, 1, Define if you use OpenSSL to support SSL.)
+	else
+		dnl If pkg-config fails, run compile/link test.
+		AC_MSG_CHECKING([if openssl is available])
+		ac_save_LIBS="$LIBS"
+		if test "$native_win32" = yes; then
+			LIBS="$LIBS -lssl32 -leay32"
+		else
+			LIBS="$LIBS -lssl -lcrypto"
+		fi
+		AC_TRY_LINK([
+#include <openssl/opensslv.h>
+],		[ return OPENSSL_VERSION_NUMBER; ],
+		[ AC_MSG_RESULT(yes)
+		  AC_DEFINE(USE_SSL, 1, Define if you use OpenSSL to support SSL.) ],
+		[ AC_MSG_RESULT(no)
+		  LIBS="$ac_save_LIBS"
+		  ac_cv_enable_ssl=no ])
+	fi
+else
+	AC_MSG_RESULT(no)
+fi
+
+dnl Check for Oniguruma support in message filtering
+AC_ARG_ENABLE(oniguruma,
+	[  --enable-oniguruma      Use Oniguruma instead of system's regex [[default=no]]],
+	[ac_cv_enable_oniguruma=$enableval], [ac_cv_enable_oniguruma=no])
+AC_MSG_CHECKING([whether to use Oniguruma])
+if test "$ac_cv_enable_oniguruma" = yes; then
+	AC_MSG_RESULT(yes)
+	AC_MSG_CHECKING([whether Oniguruma is available])
+        dnl AC_CHECK_PROG(ONIG_CONFIG, onig-config, onig-config)
+	ONIG_CONFIG=onig-config
+	ONIG_VERSION=`$ONIG_CONFIG --version 2>/dev/null`
+	if test "x$ONIG_VERSION" != "x"; then
+		AC_MSG_RESULT(yes)
+		CFLAGS="$CFLAGS `$ONIG_CONFIG --cflags`"
+		LIBS="$LIBS `$ONIG_CONFIG --libs`"
+		AC_DEFINE(USE_ONIGURUMA, 1, Define if you want to use Oniguruma.)
+	else
+		AC_MSG_RESULT(no)
+		ac_cv_enable_oniguruma=no
+	fi
+else
+	AC_MSG_RESULT(no)
+fi
+
+dnl for GThread support (currently disabled)
+dnl AC_ARG_ENABLE(threads,
+dnl	[  --enable-threads        Enable multithread support [[default=no]]],
+dnl	[use_threads=$enableval], [use_threads=no])
+
+AC_MSG_CHECKING([whether to use threads])
+if test x"$use_threads" = xyes ; then
+	AC_MSG_RESULT(yes)
+	if test ! -z `$PKG_CONFIG --help 2>&1 |grep 'gthread-2.0'` ; then
+		CFLAGS="$CFLAGS `$PKG_CONFIG --cflags gthread-2.0`"
+		LIBS="$LIBS `$PKG_CONFIG --libs gthread-2.0`"
+		AC_DEFINE(USE_THREADS, 1, Whether to use multithread or not)
+	else
+		AC_MSG_ERROR([LibSylph requires GThread from GLib to use threading.])
+	fi
+else
+	AC_MSG_RESULT(no)
+fi
+
+dnl check for IPv6 option
+AC_ARG_ENABLE(ipv6,
+	[  --disable-ipv6          Disable IPv6 support],
+	[ac_cv_enable_ipv6=$enableval], [ac_cv_enable_ipv6=yes])
+
+dnl automated checks for IPv6 support.
+AC_MSG_CHECKING([whether to use IPv6])
+if test x"$ac_cv_enable_ipv6" = xyes; then
+	AC_MSG_RESULT(yes)
+	AC_MSG_CHECKING([for IPv6 support])
+	if test "$native_win32" = yes; then
+		AC_CACHE_VAL(ac_cv_ipv6,[
+			AC_TRY_COMPILE([#define INET6
+					#include <sys/types.h>
+					#include <winsock2.h>
+					#include <ws2tcpip.h>],
+				[int x = IPPROTO_IPV6; struct in6_addr a;],
+				ac_cv_ipv6=yes, ac_cv_ipv6=no)
+		])
+	else
+		AC_CACHE_VAL(ac_cv_ipv6,[
+			AC_TRY_COMPILE([#define INET6
+					#include <sys/types.h>
+					#include <netinet/in.h>],
+				[int x = IPPROTO_IPV6; struct in6_addr a;],
+				ac_cv_ipv6=yes, ac_cv_ipv6=no)
+		])
+	fi
+	AC_MSG_RESULT($ac_cv_ipv6)
+	if test $ac_cv_ipv6 = yes; then
+		AC_DEFINE(INET6, 1, Define if you want IPv6 support.)
+	else
+		AC_MSG_WARN(*** IPv6 will not be supported ***)
+		ac_cv_enable_ipv6=no
+	fi
+else
+	AC_MSG_RESULT(no)
+fi
+
+dnl Check for d_type member in struct dirent
+AC_MSG_CHECKING([whether struct dirent has d_type member])
+AC_CACHE_VAL(ac_cv_dirent_d_type,[
+	AC_TRY_COMPILE([#include <dirent.h>],
+		       [struct dirent d; d.d_type = DT_REG;],
+		       ac_cv_dirent_d_type=yes, ac_cv_dirent_d_type=no)
+])
+AC_MSG_RESULT($ac_cv_dirent_d_type)
+if test $ac_cv_dirent_d_type = yes; then
+	AC_DEFINE(HAVE_DIRENT_D_TYPE, 1,
+		  Define if `struct dirent' has `d_type' member.)
+fi
+
+
+dnl Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS(fcntl.h sys/file.h unistd.h paths.h \
+		 sys/param.h sys/utsname.h sys/select.h \
+		 netdb.h regex.h sys/mman.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_OFF_T
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+AC_STRUCT_TM
+
+AC_SYS_LARGEFILE
+AC_FUNC_FSEEKO
+
+AC_CHECK_SIZEOF(unsigned short, 2)
+AC_CHECK_SIZEOF(unsigned int, 4)
+AC_CHECK_SIZEOF(unsigned long, 4)
+
+dnl Checks for library functions.
+AC_FUNC_ALLOCA
+AC_CHECK_FUNCS(gethostname mkdir mktime socket strstr strchr \
+	       uname flock lockf inet_aton inet_addr \
+	       fchmod truncate getuid regcomp mlock)
+
+AC_OUTPUT([
+Makefile
+ac/Makefile
+doc/Makefile
+examples/Makefile
+libsylph/Makefile
+po/Makefile.in
+])
+
+dnl Output the configuration summary
+echo ""
+echo "$PACKAGE $VERSION"
+echo ""
+echo "OpenSSL       : $ac_cv_enable_ssl"
+echo "iconv         : $am_cv_func_iconv"
+echo "IPv6          : $ac_cv_enable_ipv6"
+echo "Oniguruma     : $ac_cv_enable_oniguruma"
+echo ""
+echo "The binary will be installed in $prefix/lib"
+echo ""
+echo "Configure finished, type 'make' to build."

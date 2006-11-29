@@ -1,0 +1,603 @@
+# Japanese translation of Sylpheed
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>, 1999,2000,2001,2002,2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 1999-10-12\n"
+"Last-Translator: Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "すべてのアカウント毎の設定を読み込み中...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "%s へのIMAP4の接続が切れています。再接続します...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "IMAPサーバは LOGIN を無効にしています。\n"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "%s:%d へのIMAP4の接続を確立中...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "TLS セッションを開始できません。\n"
+
+#: libsylph/imap.c:1120
+#, c-format
+msgid "Getting message %d"
+msgstr "メッセージ %d を取得中"
+
+#: libsylph/imap.c:1236
+#, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "メッセージを %s に追加しています (%d / %d)"
+
+#: libsylph/imap.c:1328
+#, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "メッセージ %s を %s に移動しています..."
+
+#: libsylph/imap.c:1334
+#, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "メッセージ %s を %s にコピーしています..."
+
+#: libsylph/imap.c:1473
+#, c-format
+msgid "Removing messages %s"
+msgstr "メッセージ %s を削除しています"
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "deleted フラグをセットできません: %s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "expunge できません\n"
+
+#: libsylph/imap.c:1570
+#, c-format
+msgid "Removing all messages in %s"
+msgstr "%s のすべてのメッセージを削除しています"
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "deleted フラグをセットできません: 1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "フォルダをクローズできません\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "ルートフォルダ %s が存在しません\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "LIST の取得中にエラーが発生しました。\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "'%s' を作成できません。\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "INBOX の下に '%s' を作成できません。\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "メールボックスを作成できません: LIST に失敗\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "メールボックスを作成できません\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "メールボックスを名称変更できません: %s -> %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "メールボックスを削除できません\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "エンベロープを取得できません\n"
+
+#: libsylph/imap.c:2340
+#, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "メッセージのヘッダを取得中 (%d / %d)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "エンベロープを取得中にエラーが発生しました。\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "エンベロープを解析できません: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "IMAP4 サーバ: %s:%d に接続できません\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "%s:%d との IMAP4 セッションを確立できません\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "namespace を取得できません\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "フォルダ %s を選択できません\n"
+
+#: libsylph/imap.c:3146
+msgid "error on imap command: STATUS\n"
+msgstr "imap コマンド中のエラー: STATUS\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "IMAP4 の認証に失敗しました。\n"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "IMAP4のログインに失敗しました。\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "%s を %s に追加できません\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(ファイルを送信中...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "メッセージを %s に追加できません\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "%s を %s にコピーできません\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "imap コマンド中のエラー: STORE %s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "imap コマンド中のエラー: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "imap コマンド中のエラー: CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv が UTF-7 を %s に変換できません\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv が %s を UTF-7 に変換できません\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "一時ファイルに書き込めません\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "メッセージを %s から %s に取り込んでいます...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "メールボックスファイルを読み込めません。\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "無効なメールボックスの形式: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "メールボックスが異常です: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "一時ファイルを開けません\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"エスケープされていない From が見つかりました:\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "%d 通のメッセージが見つかりました。\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "ロックファイル %s を開けません\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "可能であれば 'file' の代わりに 'flock' を使用してください。\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "%s を作成できません。\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "メールボックスは別のプロセスによって所有されています。待機中...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "%s をロックできません\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "無効なロックタイプです\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "%s をロック解除できません\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "メールボックスをゼロに切り詰められません。\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "メッセージを %s から %s に書き出しています...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "メッセージ %s を %s にコピーできません\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "マークファイルを開けません。\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "移動元フォルダが移動先と同一です。\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "メッセージ %s%c%d を %s にコピーしています...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"ファイル `%s' がすでに存在します。\n"
+"フォルダを作成できません。"
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+"ディレクトリ名\n"
+"'%s' は有効な UTF-8 文字列ではありません。\n"
+"ファイル名にロケールエンコーディングが使用されている可能性があります。\n"
+"その場合は、以下の環境変数を指定する必要があります\n"
+"(詳細は README を参照):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "%s:%d への NNTP の接続を確立中...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "%s:%d への NNTP の接続が切れています。再接続します...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "%d 番の記事はすでにキャッシュされています。\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "%d 番の記事を取得しています...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "%d 番の記事を読めません\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "記事をポストできません。\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "%d 番の記事を取得できません\n"
+
+#: libsylph/news.c:759
+#, c-format
+msgid "can't select group: %s\n"
+msgstr "グループを選択できません: %s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "無効な記事の範囲です: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "新着記事はありません。\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "xover %d - %d を取得中 (%s)...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "xover 情報を取得できません\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "xover 情報を取得中にエラーが発生しました。\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "無効な xover 行です: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "xhdr 情報を取得できません\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "xhdr 情報を取得中にエラーが発生しました。\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "NNTPサーバ: %s:%d に接続できません\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "プロトコルエラー: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "プロトコルエラー\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "ポスト中にエラーが発生しました\n"
+
+#: libsylph/nntp.c:363
+msgid "Error occurred while sending command\n"
+msgstr "コマンドの送信中にエラーが発生しました\n"
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "必要なAPOPタイムスタンプが応答メッセージにありません\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "応答メッセージのタイムスタンプの文法エラー\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "POP3 プロトコルエラー\n"
+
+#: libsylph/pop.c:264
+#, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "無効な UIDL 応答です: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: 期限切れのメッセージ %d を削除します\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: メッセージ %d をスキップします (%d bytes)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "メールボックスはロックされています\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "セッションがタイムアウトしました\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "TLS セッションを開始できません\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "認証中にエラーが発生しました\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "コマンドがサポートされていません\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "POP3 セッション中にエラーが発生しました\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "設定のファイルへの書き込みに失敗しました\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "%s が見つかりました\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "設定を保存しました。\n"
+
+#: libsylph/prefs_common.c:503
+msgid "Junk mail filter (manual)"
+msgstr "迷惑メールフィルタ (手動)"
+
+#: libsylph/prefs_common.c:506
+msgid "Junk mail filter"
+msgstr "迷惑メールフィルタ"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content(): コード変換に失敗しました。\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "マークファイルを開けません\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "メッセージ %d を取り込めません\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "印刷のコマンドラインが無効です: `%s'\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "データの取得中にエラーが発生しました。\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "ファイルに書き込めません。\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH が利用できません\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "不正な SMTP 応答です\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "SMTP セッション中にエラーが発生しました\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23 は利用できません\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23 は利用可能です\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1 は利用できません\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1 は利用可能です\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "SSL メソッドが利用できません\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "未知の SSL メソッド *PROGRAM BUG*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "ssl コンテキスト生成中にエラー発生\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "%s を用いて SSL 接続\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "サーバ証明書:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  Subject: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  発行者: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "ファイルモードを変更できません\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "%s への書き込みに失敗しました。\n"

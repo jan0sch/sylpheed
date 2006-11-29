@@ -1,0 +1,602 @@
+# Chinese translation of Sylpheed.
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Xiangxin Luo <benluo@etang.com>, 2000 for initial GB2312 translation
+# Updated by : Zhangtao <zhangtao@zhangtao.org>, 2002-5-14
+# Updated by : Wang Jian <lark@linux.net.cn>, 2002,2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2005-03-17 09:22+0800\n"
+"Last-Translator: Wang Jian <lark@linux.net.cn>\n"
+"Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "正在读取所有帐号的配置...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "到 %s 的 IMAP4 连接已断开。正在重新连接...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+#, fuzzy
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "IMAP4 服务器目录"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "正在创建到 %s:%d 的 IMAP4 连接...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "无法启动 TLS 会话。\n"
+
+#: libsylph/imap.c:1120
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "正在删除邮件 %d"
+
+#: libsylph/imap.c:1236
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "正在发送邮件 (%d / %d 字节)"
+
+#: libsylph/imap.c:1328
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "正在移动邮件 %s%c%d 到 %s ...\n"
+
+#: libsylph/imap.c:1334
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "正在复制邮件 %s%c%d 到 %s ...\n"
+
+#: libsylph/imap.c:1473
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "正在从 %s 获取邮件..."
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "无法设置删除标志：%s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "无法清除\n"
+
+#: libsylph/imap.c:1570
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "正在从 %s 获取邮件..."
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "无法设置删除标志：1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "无法关闭文件夹\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "根文件夹 %s 不存在\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "获取列表时发生错误。\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "无法创建“%s”\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "无法在收件箱中创建“%s”\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "无法创建邮箱：LIST 失败\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "无法创建邮箱\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "无法将邮箱 %s 重命名为 %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "无法删除邮箱\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "无法获取信封\n"
+
+#: libsylph/imap.c:2340
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "正在发送邮件 (%d / %d 字节)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "获取信封时发生错误。\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "无法解析信封：%s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "无法连接到IMAP4服务器：%s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "无法连接到IMAP4服务器：%s:%d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "无法获得名字空间\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "无法选择文件夹：%s\n"
+
+#: libsylph/imap.c:3146
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "执行IMAP命令时发生错误：CLOSE\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "IMAP4 验证失败。\n"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "IMAP4 登录失败。\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "无法把 %s 添加到 %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(正在发送文件...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "无法追加邮件到 %s\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "无法将 %s 复制到 %s\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "执行IMAP命令时发生错误：STORE %s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "执行IMAP命令时发生错误：EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "执行IMAP命令时发生错误：CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv 无法转换 UTF-7 到 %s\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv 无法转换 %s 到 UTF-7\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "无法写入临时文件\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "正在从 %s 获取邮件到 %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "无法读取 mbox 文件。\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "无效的 mbox 格式：%s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "格式不正确的 mbox：%s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "无法打开临时文件\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"找到没有转码的发件人：\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "找到 %d 封邮件。\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "无法创建锁文件 %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "如果可能，用“flock”代替“file”。\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "无法创建 %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "另一个进程拥有该邮箱，等待...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "无法锁住 %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "无效的锁类型\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "无法解锁 %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "无法将邮箱删除为空。\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "正在从 %s 导出信件到 %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "无法复制邮件 %s 到 %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "无法打开标记文件。\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "源文件夹与目的文件夹是同一个。\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "正在复制邮件 %s%c%d 到 %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"文件“%s”已存在。\n"
+"无法创建文件件。"
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "正在创建到 %s:%d 的NNTP连接...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "到 %s:%d 的NNTP连接已断开。正在重新连接...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "文章 %d 已被缓存。\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "正在下载文章 %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "无法读取文章 %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "无法发表文章。\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "无法获取文章 %d\n"
+
+#: libsylph/news.c:759
+#, c-format
+msgid "can't select group: %s\n"
+msgstr "无法选择组：%s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "无效的文章范围：%d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "没有新文章。\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "正在获取 %3$s 里的 xover %1$d - %2$d...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "无法获取 xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "获取 xover 时发生错误。\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "无效的 xover 行：%s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "无法获取 xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "获取 xhdr 时发生错误。\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "无法连接到NNTP服务器：%s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "协议错误：%s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "协议错误\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "发表文章时发生错误\n"
+
+#: libsylph/nntp.c:363
+msgid "Error occurred while sending command\n"
+msgstr "发送命令时发生错误\n"
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "在问候信息中没有发现需要的APOP时戳\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "在问候信息中时间戳语法错误\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "POP3 协议错误\n"
+
+#: libsylph/pop.c:264
+#, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "无效的 UIDL 回应：%s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: 正在删除过期邮件 %d\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3：跳过邮件 %d (%d 字节)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "信箱被锁住了\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "会话超时\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "无法启动 TLS 会话\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "验证时发生错误\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "不支持的命令\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "POP3 会话发生错误\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "无法写入配置文件\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "发现 %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "配置已经保存。\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "文件夹："
+
+#: libsylph/prefs_common.c:506
+#, fuzzy
+msgid "Junk mail filter"
+msgstr "文件夹："
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content()：代码转换失败。\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "无法打开标记文件\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "无法获取邮件 %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "打印命令行无效：“%s”\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "下载数据时发生错误。\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "无法写入文件。\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP验证不可用\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "错误的 SMTP 回应\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "SMTP 会话发生错误\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23不可用\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23可用\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1不可用\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1可用\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "SSL方法不可用\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "不知道的SSL方法 *程序错误*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "创建SSL上下文时发生错误\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "使用 %s 的SSL连接\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "服务器证书：\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  标题：%s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  签发者：%s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "无法改变文件属性\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "写入 %s 时失败。\n"

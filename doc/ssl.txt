@@ -1,0 +1,62 @@
+ssl - SSL の初期化と終了処理
+
+------------------------------------------------------------------------------
+SSLMethod
+
+typedef enum {
+	SSL_METHOD_SSLv23,
+	SSL_METHOD_TLSv1
+} SSLMethod;
+
+SSL の初期化時に使用するメソッドを表す enum です。
+
+------------------------------------------------------------------------------
+SSLType
+
+typedef enum {
+	SSL_NONE,
+	SSL_TUNNEL,
+	SSL_STARTTLS
+} SSLType;
+
+SSL の設定項目用の enum です。
+
+------------------------------------------------------------------------------
+void ssl_init				(void);
+
+SSL ライブラリを初期化します。
+このとき SSL 証明書も読み込まれます。
+
+------------------------------------------------------------------------------
+void ssl_done				(void);
+
+SSL のリソースを解放します。
+
+------------------------------------------------------------------------------
+gboolean ssl_init_socket		(SockInfo	*sockinfo);
+
+ソケット sockinfo を SSLv23 で初期化します。
+
+sockinfo: SockInfo 構造体へのポインタ
+戻り値: 初期化に成功した場合 TRUE
+        エラーの場合 FALSE
+
+------------------------------------------------------------------------------
+gboolean ssl_init_socket_with_method	(SockInfo	*sockinfo,
+					 SSLMethod	 method);
+
+ソケット sockinfo を指定したメソッドで初期化します。メソッドには
+SSLv23 と TLSv1 が指定可能です。
+
+sockinfo: SockInfo 構造体へのポインタ
+method: SSL のメソッド
+戻り値: 初期化に成功した場合 TRUE
+        エラーの場合 FALSE
+
+------------------------------------------------------------------------------
+void ssl_done_socket			(SockInfo	*sockinfo);
+
+ソケット sockinfo が SSL の場合、 SSL のリソースを解放します。
+sockinfo が SSL でない場合は何も行いません。
+
+sockinfo: SockInfo 構造体へのポインタ

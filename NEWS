@@ -1,0 +1,23 @@
+NEWS
+
+* 1.0.0beta1 (beta)
+
+    * The reference manuals were added.
+    * The sample codes were added.
+    * The new APIs were added to prefs_common, account, and folder.
+    * Several bugs were fixed.
+
+* 0.3.0 (alpha)
+
+    * The initialization and cleanup API was implemented,
+    * The two new APIs were added.
+
+* 0.2.0 (alpha)
+
+    * The initialization and cleanup APIs were added.
+    * The codes are synched with Sylpheed trunk.
+    * The sample codes are updated.
+
+* 0.1.0 (alpha)
+
+    * Initial release of LibSylph.

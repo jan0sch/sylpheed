@@ -1,0 +1,615 @@
+# Romanian translation of Sylpheed
+# Copyright (C) 2000 - 2006 Free Software Foundation, Inc.
+# Cristian Secară <cristi@secarica.ro>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2006-04-17 02:04+0200\n"
+"Last-Translator: Cristian Secară <cristi@secarica.ro>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: Romania\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "Citire configurări pentru fiecare cont...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "Conexiunea IMAP4 la %s a fost întreruptă. Reconectare...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "Serverul IMAP4 dezactivează LOGIN.\n"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "creare conexiune IMAP4 la %s:%d ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "Nu se poate lansa sesiunea TLS.\n"
+
+#: libsylph/imap.c:1120
+#, c-format
+msgid "Getting message %d"
+msgstr "Obţinere mesaj %d"
+
+#: libsylph/imap.c:1236
+#, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Adăugare mesaje la %s (%d / %d)"
+
+#: libsylph/imap.c:1328
+#, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Mutare mesaje %s la %s ..."
+
+#: libsylph/imap.c:1334
+#, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Copiere mesaje %s la %s ..."
+
+#: libsylph/imap.c:1473
+#, c-format
+msgid "Removing messages %s"
+msgstr "Ştergere mesaje %s"
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "nu se poate seta marcajul de ştergere: %s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "nu se poate elimina\n"
+
+# hm ? din sau în ?
+#: libsylph/imap.c:1570
+#, c-format
+msgid "Removing all messages in %s"
+msgstr "Ştergere mesaje din %s"
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "nu se poate seta marcajul de ştergere: 1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "nu se poate închide folderul\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "folderul root %s nu există\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "a avut loc o eroare în timpul obţineriii LIST.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "Nu se poate crea '%s'\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "Nu se poate crea '%s' în INBOX\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "nu se poate crea căsuţa poştală: LIST a eşuat.\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "nu se poate crea căsuţa poştală\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "nu se poate redenumi căsuţa poştală: %s în %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "nu se poate şterge căsuţa poştală\n"
+
+# hm ? envelope conform wikipedia
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "nu se poate obţine 'envelope' (informaţia de routing)\n"
+
+#: libsylph/imap.c:2340
+#, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Obţinere header-e mesaje (%d / %d)"
+
+# hm ? envelope conform wikipedia
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr ""
+"a avut loc o eroare în timpul obţinerii 'envelope' (informaţia de routing).\n"
+
+# hm ? envelope conform wikipedia
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "'envelope' (informaţia de routing) nu poate fi analizat: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "Nu se poate efectua conexiunea la serverul IMAP4: %s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "Nu se poate stabili sesiunea IMAP4 cu: %s:%d\n"
+
+# hm ?
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "nu se poate obţine spaţiul de nume\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "nu se poate selecta folderul: %s\n"
+
+#: libsylph/imap.c:3146
+msgid "error on imap command: STATUS\n"
+msgstr "eroare la comanda IMAP: STATUS\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "Autentificarea IMAP4 a eşuat.\n"
+
+# hm ? cu ce diferă de authentication ?
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "Autentificarea IMAP4 a eşuat.\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "nu se poate adăuga %s la %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(trimitere fişier...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "nu se poate adăuga mesajul la %s\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "nu se poate copia %s la %s\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "eroare comandă IMAP: STORE:%s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "eroare comandă IMAP: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "eroare comandă IMAP: CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv nu poate efectua conversia UTF-7 la %s\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv nu poate efectua conversia %s la UTF-7\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "fişierul temporar nu a putut fi scris\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "Obţinere mesaje de la %s în %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "nu se poate citi fişierul mbox.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "format mbox invalid: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "mbox malformat: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "nu se poate deschide fişier temporar\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"s-a găsit câmp From 'unescaped':\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "%d mesaje găsite.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "nu se poate crea fişierul lock %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "dacă este posibil, folosiţi 'flock' în loc de 'file'.\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "nu se poate crea %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "căsuţa poştală este folosită de alt proces, aşteaptaţi...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "nu se poate bloca %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "tip blocare invalid\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "nu se poate debloca %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "nu se poate reteza la zero căsuţa poştală.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "Exportare mesaje din %s în %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "nu se poate copia mesajului %s în %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "Nu se poate deschide fişierul de marcaj.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "folderul sursă este identic cu cel destinaţie.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "Copiere mesaj %s%c%d în %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"Fişierul '%s' există deja.\n"
+"Nu se poate crea folderul."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+"Numele directorului\n"
+"'%s' nu este un şir valid UTF-8.\n"
+"Este posibil ca numele să utilizeze codarea locale.\n"
+"Dacă acesta este cazul, va trebui să setaţi următoarea variabilă de mediu\n"
+"(vezi README pentru detalii):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "creare conexiune NNTP la %s:%d ...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "Conexiunea NNTP la %s:%d a fost întreruptă. Reconectare...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "Articolul %d a fost deja memorat în cache.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "obţinere articol %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "nu se poate citi articolul %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "nu se poate trimite articolul.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "nu se poate recepţiona articolul %d\n"
+
+#: libsylph/news.c:759
+#, c-format
+msgid "can't select group: %s\n"
+msgstr "nu se poate selecta grupul: %s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "interval invalid: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "nu există articole noi.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "obţinere xover %d - %d în %s...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "nu se poate obţine xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "a avut loc o eroare în timpul obţinerii xover.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "linie xover invalidă: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "nu se poate obţine xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "a avut loc o eroare în timpul obţinerii xhdr.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "Nu se poate efectua conexiunea la serverul NNTP: %s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "eroare de protocol: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "eroare de protocol\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "A avut loc o eroare în timpul trimiterii\n"
+
+#: libsylph/nntp.c:363
+msgid "Error occurred while sending command\n"
+msgstr "A avut loc o eroare în timpul trimiterii comenzii\n"
+
+# hm ? greting ?
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "Nu s-a găsit în salut marcajul de timp APOP necesar \n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "Eroare de sintaxă timestamp\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "Eroare protocol POP3\n"
+
+#: libsylph/pop.c:264
+#, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "răspuns UIDL invalid: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: Ştergere mesaje expirate %d\n"
+
+# hm ? sau săritură ?
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "PO3:  Trecere peste mesajul %d (%d bytes)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "căsuţa poştală este blocată\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "timpul sesiunii a expirat\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "nu se poate porni sesiunea TLS\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "a avut loc o eroare la autentificare\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "comandă nesuportată\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "a avut loc o eroare la sesiunea POP3\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "scrierea configuraţie în fişier a eşuat\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "Găsit %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "Configuraţia a fost salvată.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "Filtru spam"
+
+#: libsylph/prefs_common.c:506
+msgid "Junk mail filter"
+msgstr "Filtru spam"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content(): conversia codului a eşuat.\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "nu se poate deschide fişierul de marcaj\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "nu se poate verifica mesajul %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "Linia de comandă pentru imprimare este invalidă: '%s'\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "a avut loc o eroare în timpul recepţionării datelor.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "Nu se poate scrie în fişier.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH indisponibil\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "răspuns SMTP greşit\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "a avut loc o eroare la sesiunea SMTP\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23 indisponibil\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23 disponibil\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1 indisponibil\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1 disponibil\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "Metodă SSL indisponibilă\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "Metodă SSL necunoscută *PROGRAM BUG*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "Eroare creare context SSL\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "Conexiune SSL utilizând %s\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "Server de certificate:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  Subiect: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  Eliberat de: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "nu se pot schimba permisiunile fişierului\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "scrierea în %s a eşuat.\n"

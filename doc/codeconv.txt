@@ -1,0 +1,386 @@
+codeconv - 文字コードの変換
+
+------------------------------------------------------------------------------
+CharSet
+
+typedef enum
+{
+} CharSet;
+
+各種文字コードを表す enum 型です。
+
+------------------------------------------------------------------------------
+typedef gchar *(*CodeConvFunc) (const gchar *inbuf, gint *error);
+
+inbuf に入力された文字列を変換し、新たな領域を確保して出力する関数の型です。
+
+------------------------------------------------------------------------------
+CodeConverter
+
+struct _CodeConverter
+{
+	CodeConvFunc code_conv_func;
+	gchar *src_encoding;
+	gchar *dest_encoding;
+};
+
+文字コード変換をオブジェクト指向的に行うためのインタフェースを提供します。
+
+------------------------------------------------------------------------------
+CharSet conv_guess_ja_encoding		(const gchar	*str);
+
+与えられた文字列から日本語の文字コードを判定します。判定結果は
+CharSet 型の enum で返されます。
+
+str: 日本語の文字列
+戻り値: 判定された文字コード
+        C_US_ASCII   : ASCII 文字列
+        C_ISO_2022_JP: ISO-2022-JP 文字列
+        C_EUC_JP     : EUC-JP 文字列
+        C_SHIFT_JIS  : Shift_JIS 文字列
+        C_UTF_8      : UTF-8 文字列
+        C_AUTO       : 不明
+
+------------------------------------------------------------------------------
+gchar *conv_utf8todisp			(const gchar	*inbuf,
+					 gint		*error);
+
+文字列 inbuf が正しい UTF-8 文字列かどうかを判定し、 UTF-8 の場合は
+先頭に BOM が付加されている場合はそれを除去し、新たにメモリを確保して
+返します。正しい UTF-8 でない場合はすべての 8-bit コードを代替文字に
+置換して返します。
+
+返った文字列は g_free() で解放する必要があります。
+
+inbuf: 入力文字列
+error: NULL でない場合、エラーでなければ 0、エラーの場合は0以外がセットされる
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+gchar *conv_localetodisp		(const gchar	*inbuf,
+					 gint		*error);
+
+ロケール文字列 inbuf を UTF-8 に変換して返します。
+
+返った文字列は g_free() で解放する必要があります。
+
+inbuf: 入力文字列
+error: NULL でない場合、エラーでなければ 0、エラーの場合は0以外がセットされる
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+CodeConverter *conv_code_converter_new	(const gchar	*src_encoding,
+					 const gchar	*dest_encoding);
+
+文字コード変換のための CodeCoverter オブジェクトを作成します。
+
+返ったオブジェクトは conv_code_converter_destroy() で解放する必要があります。
+
+src_encoding: 変換元エンコーディング
+dest_encoding: 変換先エンコーディング
+戻り値: CodeConverter オブジェクト
+
+------------------------------------------------------------------------------
+void conv_code_converter_destroy	(CodeConverter	*conv);
+
+CodeCoverter オブジェクトを破棄します。
+
+conv: CodeConverter オブジェクト
+
+------------------------------------------------------------------------------
+gchar *conv_convert			(CodeConverter	*conv,
+					 const gchar	*inbuf);
+
+CodeCoverter オブジェクトを用いて文字コードを変換します。
+可能な場合は自前の文字コード変換ルーチンを使用します。それ以外は
+iconv() を用いて変換します。
+
+返った文字列は g_free() で解放する必要があります。
+
+conv: CodeConverter オブジェクト
+inbuf: 入力文字列
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+#define conv_codeset_strdup(inbuf, src_code, dest_code)
+
+conv_codeset_strdup_full() を簡略化したインタフェースです。
+
+------------------------------------------------------------------------------
+gchar *conv_codeset_strdup_full		(const gchar	*inbuf,
+					 const gchar	*src_encoding,
+					 const gchar	*dest_encoding,
+					 gint		*error);
+
+文字列 inbuf を変換元エンコーディング src_encoding から変換先エンコーディング
+dest_encoding に変換して返します。可能な場合は自前の文字コード変換ルーチンを
+使用します。それ以外は iconv() を用いて変換します。
+
+返った文字列は g_free() で解放する必要があります。
+
+inbuf: 入力文字列
+src_encoding: 変換元エンコーディング
+dest_encoding: 変換先エンコーディング
+error: NULL でない場合、エラーでなければ 0、エラーの場合は0以外がセットされる
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+CodeConvFunc conv_get_code_conv_func	(const gchar	*src_encoding,
+					 const gchar	*dest_encoding);
+
+変換元エンコーディング src_encoding と変換先エンコーディング dest_encoding
+から、自前の文字コード変換ルーチンの関数ポインタを返します。
+利用できるものがなければ単に文字列を複製するだけの関数(conv_noconv)を返します。
+
+src_encoding: 変換元エンコーディング
+dest_encoding: 変換先エンコーディング
+戻り値: CodeConvFunc 型の文字列変換関数へのポインタ
+
+------------------------------------------------------------------------------
+gchar *conv_iconv_strdup		(const gchar	*inbuf,
+					 const gchar	*src_encoding,
+					 const gchar	*dest_encoding,
+					 gint		*error);
+
+文字列 inbuf を iconv() を用いて変換元エンコーディング src_encoding から
+変換先エンコーディング dest_encoding に変換して返します。
+
+返った文字列は g_free() で解放する必要があります。
+
+inbuf: 入力文字列
+src_encoding: 変換元エンコーディング
+dest_encoding: 変換先エンコーディング
+error: NULL でない場合、エラーでなければ 0、エラーの場合は0以外がセットされる
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+gchar *conv_iconv_strdup_with_cd	(const gchar	*inbuf,
+					 iconv_t	 cd,
+					 gint		*error);
+
+文字列 inbuf を iconv_open() が返した変換ディスクリプタ cd を用いて、
+iconv() で変換して返します。
+
+返った文字列は g_free() で解放する必要があります。
+
+inbuf: 入力文字列
+cd: iconv_open() が返した変換ディスクリプタ
+error: NULL でない場合、エラーでなければ 0、エラーの場合は0以外がセットされる
+戻り値: 変換後の文字列
+
+------------------------------------------------------------------------------
+const gchar *conv_get_charset_str		(CharSet	 charset);
+
+charset: CharSet 型の enum から文字コードを表す文字列定数を取得します。
+
+charset: CharSet 型の enum
+戻り値: charset に対応する文字列定数
+
+------------------------------------------------------------------------------
+CharSet conv_get_charset_from_str		(const gchar	*charset);
+
+文字コードを表す文字列 charset から CharSet 型の enum を取得します。
+
+charset: 文字列
+戻り値: charset に対応する CharSet 型の enum
+
+------------------------------------------------------------------------------
+CharSet conv_get_locale_charset			(void);
+
+ロケールのエンコーディングを CharSet 型の enum で取得します。
+
+戻り値: ロケールのエンコーディング(CharSet 型の enum)
+
+------------------------------------------------------------------------------
+const gchar *conv_get_locale_charset_str	(void);
+
+ロケールのエンコーディングを文字列定数で取得します。
+戻り値: ロケールのエンコーディングを表す文字列定数
+
+------------------------------------------------------------------------------
+CharSet conv_get_internal_charset		(void);
+
+LibSylph 内部で使用しているエンコーディングを CharSet 型の enum で取得します。
+常に C_UTF_8 が返されます。
+
+戻り値: 内部エンコーディング(CharSet 型の enum)
+
+------------------------------------------------------------------------------
+const gchar *conv_get_internal_charset_str	(void);
+
+LibSylph 内部で使用しているエンコーディングを文字列定数で取得します。
+常に CS_UTF_8 ("UTF-8") が返されます。
+
+戻り値: 内部エンコーディングを表す文字列定数
+
+------------------------------------------------------------------------------
+CharSet conv_get_outgoing_charset		(void);
+
+現在のロケールエンコーディングに対応するメール送信用のエンコーディングを
+内部のテーブルから調べ、 CharSet 型の enum として返します。
+例えば、ロケールエンコーディングが "ja_JP.EUC-JP"、"ja_JP.UTF-8" 等の場合は
+C_ISO_2022_JP が返ります。
+
+戻り値: 送信用エンコーディング(CharSet 型の enum)
+
+------------------------------------------------------------------------------
+const gchar *conv_get_outgoing_charset_str	(void);
+
+現在のロケールエンコーディングに対応するメール送信用のエンコーディングを
+内部のテーブルから調べ、文字列定数として返します。
+
+戻り値: 送信用エンコーディングを表す文字列定数
+
+------------------------------------------------------------------------------
+gboolean conv_is_multibyte_encoding		(CharSet	 encoding);
+
+encoding がマルチバイトのエンコーディングである場合に、 TRUE を返します。
+
+encoding: CharSet 型の enum
+戻り値: encoding がマルチバイトのエンコーディングの場合 TRUE
+        そうでない場合 FALSE
+
+------------------------------------------------------------------------------
+const gchar *conv_get_current_locale		(void);
+
+現在のロケールエンコーディングを文字列で返します。
+
+文字列は LibSylph 内部で保持しているため、解放してはいけません。
+
+戻り値: 現在のロケールエンコーディングを表す文字列
+
+------------------------------------------------------------------------------
+gboolean conv_is_ja_locale			(void);
+
+現在のロケールエンコーディングが日本語ロケールであった場合、 TRUE を返します。
+
+戻り値: 現在のロケールエンコーディングが日本語ロケールの場合 TRUE
+        そうでない場合 FALSE
+
+------------------------------------------------------------------------------
+gchar *conv_unmime_header		(const gchar	*str,
+					 const gchar	*default_encoding);
+
+MIME エンコードされた文字列 str をデコードし、 UTF-8 文字列にして返します。
+default_encoding が指定されている場合、 str をそのエンコーディングとみなして
+UTF-8 に変換してから MIME デコードを行います。
+
+また、 default_encoding が指定されておらず、 str に8ビットコードが含まれて
+いる場合は、日本語ロケールの場合は日本語文字コードから UTF-8 への自動変換、
+それ以外のロケールの場合はロケールエンコーディングから UTF-8 への変換を
+行います。その後 MIME デコードを行います。
+
+デコードした文字列は新たなメモリ領域に確保され、返されます。
+使用後は g_free() で解放する必要があります。
+
+str: MIME エンコードされた文字列
+default_encoding: str のデフォルトのエンコーディング(NULL 可)
+戻り値: デコードした文字列
+
+------------------------------------------------------------------------------
+void conv_encode_header			(gchar		*dest,
+					 gint		 len,
+					 const gchar	*src,
+					 gint		 header_len,
+					 gboolean	 addr_field,
+					 const gchar	*out_encoding);
+
+UTF-8 文字列 src を MIME エンコードして dest に格納します。
+header_len には MIME エンコード文字列の前にあるヘッダの文字列長を指定します
+(1行が76文字を超えないようにするため)。
+addr_field が TRUE の場合は、ヘッダをアドレスフィールドとみなして、
+括弧などをエンコード文字列に含まない例外処理を行います。
+out_encoding には出力する MIME エンコード済み文字列のエンコーディングを
+指定します。
+
+dest: MIME エンコード済み文字列を格納するバッファ
+len: dest のサイズ
+src: UTF-8 文字列
+header_len: ヘッダ文字列長
+addr_field: ヘッダがアドレスフィールドの場合 TRUE
+            そうでない場合 FALSE
+out_encoding: 出力エンコーディング
+
+------------------------------------------------------------------------------
+gchar *conv_encode_filename		(const gchar	*src,
+					 const gchar	*param_name,
+					 const gchar	*out_encoding);
+
+ファイル名または任意のパラメータを RFC 2231 で規定されているファイル名
+エンコーディングでエンコードします。
+
+エンコードした文字列は新たなメモリ領域に確保され、返されます。
+使用後は g_free() で解放する必要があります。
+
+src: パラメータの値となる UTF-8 文字列
+param_name: パラメータ名
+out_encoding: 出力エンコーディング
+
+------------------------------------------------------------------------------
+gint conv_copy_file			(const gchar	*src,
+					 const gchar	*dest,
+					 const gchar	*src_encoding);
+
+ファイル src のエンコーディングを src_encoding から UTF-8 に変換し、
+dest にコピーします。
+
+src: 変換元ファイルのパス(ファイル名エンコーディング)
+dest: 変換先ファイルのパス(ファイル名エンコーディング)
+src_encoding: src のエンコーディング
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint conv_copy_dir			(const gchar	*src,
+					 const gchar	*dest,
+					 const gchar	*src_encoding);
+
+ディレクトリ src 直下のファイルをすべてディレクトリ dest 以下にコピーします。
+その際ファイルのエンコーディングを src_encoding から UTF-8 に変換します。
+dest が存在しない場合は自動的に作成します。
+
+src: 変換元ディレクトリのパス(ファイル名エンコーディング)
+dest: 変換先ディレクトリのパス(ファイル名エンコーディング)
+src_encoding: src 以下のファイルのエンコーディング
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+CharSet conv_check_file_encoding	(const gchar	*file);
+
+ファイル file のエンコーディングを調べ、 CharSet 型の enum で返します。
+判別できるのは UTF-8 またはロケールエンコーディングのみです。
+
+file: ファイルのパス(ファイル名エンコーディング)
+戻り値: file のエンコーディング(CharSet 型の enum)
+        C_UTF_8: file は UTF-8
+        ロケールエンコーディングに対応する値: file はロケールエンコーディング
+        C_AUTO: 不明
+
+------------------------------------------------------------------------------
+gchar *conv_filename_from_utf8		(const gchar	*utf8_file);
+
+UTF-8 文字列 utf8_file をファイル名エンコーディングに変換して返します。
+変換でエラーが発生した場合は、警告メッセージを出して元の文字列をそのまま
+コピーして返します。エラーを適切に処理したい場合は GLib の
+g_filename_from_utf8() を使用してください。
+
+変換した文字列は新たなメモリ領域に確保され、返されます。
+使用後は g_free() で解放する必要があります。
+
+utf8_file: UTF-8 文字列
+戻り値: ファイル名エンコーディング文字列
+
+------------------------------------------------------------------------------
+gchar *conv_filename_to_utf8		(const gchar	*fs_file);
+
+ファイル名エンコーディング文字列 fs_file を UTF-8 に変換して返します。
+変換でエラーが発生した場合は、警告メッセージを出して元の文字列をそのまま
+コピーして返します。エラーを適切に処理したい場合は GLib の
+g_filename_to_utf8() を使用してください。
+
+変換した文字列は新たなメモリ領域に確保され、返されます。
+使用後は g_free() で解放する必要があります。
+
+fs_file: ファイル名エンコーディング文字列
+戻り値: UTF-8 文字列

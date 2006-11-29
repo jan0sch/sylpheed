@@ -1,0 +1,308 @@
+procheader - メッセージヘッダの解析処理
+
+------------------------------------------------------------------------------
+HeaderEntry
+
+struct _HeaderEntry
+{
+	gchar	 *name;
+	gchar	 *body;
+	gboolean  unfold;
+};
+
+HeaderEntry は対象となるヘッダを指定し、結果を得るための構造体です。
+通常は配列として関数に渡します。
+
+name: ヘッダ名
+body: name に対応するヘッダの値を格納するメンバ
+unfold: TRUE の場合は複数行にわたるヘッダを1行にまとめる
+
+------------------------------------------------------------------------------
+Header
+
+struct _Header
+{
+	gchar *name;
+	gchar *body;
+};
+
+Header はヘッダフィールドの名前とその値を表す構造体です。
+
+name: ヘッダ名
+body: ヘッダの値
+
+------------------------------------------------------------------------------
+gint procheader_get_one_field		(gchar		*buf,
+					 size_t		 len,
+					 FILE		*fp,
+					 HeaderEntry	 hentry[]);
+
+メッセージファイルのストリーム fp から hentry で指定したヘッダ名のいずれかに
+該当するヘッダが見つかるまで読み込み、見つかった場合はそのヘッダ文字列を buf
+に格納して返します。該当するヘッダの HeaderEntry::unfold が TRUE に
+設定されていた場合は、そのヘッダが複数行で構成されている場合は1行にまとめて
+返します。
+空行が現れた場合、あるいはファイルの終わりに到達した
+場合はヘッダの終了とみなして -1 を返します。
+
+buf: ヘッダ文字列を格納するバッファ
+len: buf のサイズ
+fp: メッセージのファイルストリーム
+hentry: HeaderEntry 構造体の配列
+戻り値: 該当するヘッダの hentry におけるインデックス値
+        ヘッダの終端まで読み込んだ、またはエラーの場合 -1
+
+------------------------------------------------------------------------------
+gchar *procheader_get_unfolded_line	(gchar		*buf,
+					 size_t		 len,
+					 FILE		*fp);
+
+メッセージファイルのストリーム fp から1行読み込み、 buf に格納して返します。
+ヘッダが複数行で構成されている場合は1行にまとめて返します。
+
+buf: ヘッダ文字列を格納するバッファ
+len: buf のサイズ
+fp: メッセージの FILE ポインタ
+戻り値: 読み込みに成功した場合は buf
+        ヘッダまたはファイルの終端に達した、あるいはエラーの場合 NULL
+
+------------------------------------------------------------------------------
+GSList *procheader_get_header_list_from_file	(const gchar	*file);
+
+メッセージファイル file を読み込み、すべてのヘッダに対応する Header 構造体の
+リストを生成して返します。
+ヘッダが複数行で構成されている場合は1行にまとめられます。
+
+返ったリストは procheader_header_list_destroy() で解放する必要があります。
+
+file: メッセージファイルのパス(ファイル名エンコーディング)
+戻り値: Header 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+GSList *procheader_get_header_list		(FILE		*fp);
+
+メッセージファイルのストリーム fp を読み込み、すべてのヘッダに対応する
+Header 構造体のリストを生成して返します。
+ヘッダが複数行で構成されている場合は1行にまとめられます。
+
+返ったリストは procheader_header_list_destroy() で解放する必要があります。
+
+fp: メッセージのファイルストリーム
+戻り値: Header 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+GSList *procheader_get_header_list_from_msginfo	(MsgInfo	*msginfo);
+
+メッセージ情報 msginfo からヘッダのリストを生成して返します。
+ファイル自体は読み込まれません。
+
+返ったリストは procheader_header_list_destroy() で解放する必要があります。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: Header 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+GSList *procheader_add_header_list		(GSList		*hlist,
+						 const gchar	*header_name,
+						 const gchar	*body);
+
+Header 構造体のリストに新たなヘッダを追加します。
+
+hlist: Header 構造体へのポインタのリスト
+header_name: ヘッダ名
+body: ヘッダの内容
+
+------------------------------------------------------------------------------
+GSList *procheader_merge_header_list		(GSList		*hlist1,
+						 GSList		*hlist2);
+
+ヘッダリスト hlist2 のうち hlist1 に存在しないヘッダを hlist1 にマージ
+します。
+注意: Header 構造体は hlist1 と hlist2 で共有されます。
+
+hlist1: Header 構造体へのポインタのリスト
+hlist2: Header 構造体へのポインタのリスト
+戻り値: マージされたヘッダリスト hlist1
+
+------------------------------------------------------------------------------
+gint procheader_find_header_list		(GSList		*hlist,
+						 const gchar	*header_name);
+
+ヘッダリスト hlist からヘッダ名が header_name に一致するものを探し、
+最初に見つかったもののインデックス値を返します。大文字・小文字は区別しません。
+
+hlist: Header 構造体へのポインタのリスト
+header_name: ヘッダ名
+戻り値: 見つかった場合は hlist 上のインデックス値 (>=0)
+        見つからなかった場合は -1
+
+------------------------------------------------------------------------------
+GPtrArray *procheader_get_header_array		(FILE		*fp,
+						 const gchar	*encoding);
+
+メッセージファイルのストリーム fp を読み込み、すべてのヘッダに対応する
+Header 構造体の配列を生成して返します。
+ヘッダが複数行で構成されている場合は1行にまとめられます。
+encoding が指定されている場合は MIME ヘッダのデコード時にそれをデフォルトの
+エンコーディングとして処理します。
+
+返った配列は procheader_header_array_destroy() で解放する必要があります。
+
+fp: メッセージのファイルストリーム
+encoding: デフォルトのエンコーディング
+戻り値: Header 構造体へのポインタの配列
+
+------------------------------------------------------------------------------
+GPtrArray *procheader_get_header_array_asis	(FILE		*fp,
+						 const gchar	*encoding);
+
+メッセージファイルのストリーム fp を読み込み、すべてのヘッダに対応する
+Header 構造体の配列を生成して返します。
+ヘッダが複数行で構成されている場合は改行を含めてそのまま保持されます。
+encoding が指定されている場合は MIME ヘッダのデコード時にそれをデフォルトの
+エンコーディングとして処理します。
+
+返った配列は procheader_header_array_destroy() で解放する必要があります。
+
+fp: メッセージのファイルストリーム
+encoding: デフォルトのエンコーディング
+戻り値: Header 構造体へのポインタの配列
+
+------------------------------------------------------------------------------
+GPtrArray *procheader_get_header_array_for_display
+						(FILE		*fp,
+						 const gchar	*encoding);
+
+メッセージファイルのストリーム fp を読み込み、 PrefsCommon で表示するヘッダ
+として指定されているヘッダに対応する Header 構造体の配列を生成して返します。
+ヘッダが複数行で構成されている場合は改行を含めてそのまま保持されます。
+encoding が指定されている場合は MIME ヘッダのデコード時にそれをデフォルトの
+エンコーディングとして処理します。
+
+返った配列は procheader_header_array_destroy() で解放する必要があります。
+
+fp: メッセージのファイルストリーム
+encoding: デフォルトのエンコーディング
+戻り値: Header 構造体へのポインタの配列
+
+------------------------------------------------------------------------------
+void procheader_header_list_destroy		(GSList		*hlist);
+
+ヘッダリスト hlist を解放します。 Header 構造体自体も解放されます。
+
+hlist: Header 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void procheader_header_array_destroy		(GPtrArray	*harray);
+
+ヘッダの配列 harray を解放します。 Header 構造体自体も解放されます。
+
+hlist: Header 構造体へのポインタの配列
+
+------------------------------------------------------------------------------
+void procheader_header_free			(Header		*header);
+
+Header 構造体を解放します。
+
+header: Header 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void procheader_get_header_fields	(FILE		*fp,
+					 HeaderEntry	 hentry[]);
+
+メッセージファイルのストリーム fp から hentry で指定したヘッダをすべて
+読み込み、該当する hentry の配列の要素の body メンバに格納します。
+To または Cc ヘッダが複数存在する場合は、各ヘッダの値を "," で結合して
+一つの文字列にして格納します。それ以外の場合は最初に見つかったものが
+優先されます。
+
+fp: メッセージのファイルストリーム
+hentry: HeaderEntry 構造体の配列
+
+------------------------------------------------------------------------------
+MsgInfo *procheader_parse_file		(const gchar	*file,
+					 MsgFlags	 flags,
+					 gboolean	 full);
+
+メッセージファイル file のヘッダをパースし、 MsgInfo 構造体を生成します。
+その際 flags がデフォルトのフラグとして扱われます。
+full が TRUE の場合は一部のヘッダ(Cc, X-Face)がパース対象に追加されます。
+
+生成された MsgInfo 構造体は procmsg_msginfo_free() で解放する必要があります。
+
+file: メッセージファイルのパス(ファイル名エンコーディング)
+flags: デフォルトのメッセージフラグ
+full: TRUE の場合は Cc, X-Face をパース対象に含める
+      FALSE の場合は Cc, X-Face をパース対象に含めない
+戻り値: MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+MsgInfo *procheader_parse_str		(const gchar	*str,
+					 MsgFlags	 flags,
+					 gboolean	 full);
+
+メッセージ全体を格納した文字列 str をパースし、 MsgInfo 構造体を生成します。
+他は procheader_parse_file() と同様です。
+
+生成された MsgInfo 構造体は procmsg_msginfo_free() で解放する必要があります。
+
+str: メッセージ全体を格納する文字列
+flags: デフォルトのメッセージフラグ
+full: TRUE の場合は Cc, X-Face をパース対象に含める
+      FALSE の場合は Cc, X-Face をパース対象に含めない
+戻り値: MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+MsgInfo *procheader_parse_stream	(FILE		*fp,
+					 MsgFlags	 flags,
+					 gboolean	 full);
+
+メッセージのファイルストリーム fp をパースし、 MsgInfo 構造体を生成します。
+他は procheader_parse_file() と同様です。
+
+生成された MsgInfo 構造体は procmsg_msginfo_free() で解放する必要があります。
+
+str: メッセージのファイルストリーム
+flags: デフォルトのメッセージフラグ
+full: TRUE の場合は Cc, X-Face をパース対象に含める
+      FALSE の場合は Cc, X-Face をパース対象に含めない
+戻り値: MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gchar *procheader_get_fromname		(const gchar	*str);
+
+メールアドレス文字列から差出人の名前を抽出します。
+メールアドレス文字列は John Doe <johndoe@example.com> または
+johndoe@example.com (John Doe) の形式になります。
+
+戻り値は g_free() で解放する必要があります。
+
+str: メールアドレス文字列
+戻り値: アドレスに含まれる名前の文字列
+
+------------------------------------------------------------------------------
+time_t procheader_date_parse		(gchar		*dest,
+					 const gchar	*src,
+					 gint		 len);
+
+RFC 2822 で規定されている Date ヘッダの文字列をパースし、 time_t 型に
+変換します(UTC)。規定に違反している形式でもある程度は許容
+されます。dast が NULL でない場合は、ローカルタイムに変換してから
+PrefsCommon で設定されている日付の形式に従って文字列に変換して格納します。
+
+dest: 日付文字列を格納するバッファ
+src: RFC 2822 の Date ヘッダ文字列
+len: dest のサイズ
+戻り値: Date ヘッダ文字列から得た UTC 時間
+
+------------------------------------------------------------------------------
+void procheader_date_get_localtime	(gchar		*dest,
+					 gint		 len,
+					 const time_t	 timer);
+
+UTC 時間 timer をローカルタイムに変換し、PrefsCommon で設定されている
+日付の形式に従って文字列に変換して格納します。
+
+dest: 日付文字列を格納するバッファ
+len: dest のサイズ
+timer: UTC 時間

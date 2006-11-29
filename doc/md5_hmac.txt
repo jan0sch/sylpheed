@@ -1,0 +1,31 @@
+md5_hmac - MD5 を用いた HMAC によるハッシュ値の生成
+
+------------------------------------------------------------------------------
+void md5_hmac		(guchar *digest,
+			 const guchar* text, gint text_len,
+			 const guchar* key, gint key_len);
+
+RFC 2104 で定義されている HMAC アルゴリズムを用いて、長さ text_len のデータ
+text と長さ key_len の鍵 key からハッシュ値を生成し、バッファ digest に
+格納します。
+
+digest: 少なくとも S_GNET_MD5_HASH_LENGTH バイトのサイズのバッファ
+text: 計算対象のデータ
+text_len: text のサイズ
+key: 鍵データ
+key_len: key のサイズ
+
+------------------------------------------------------------------------------
+void md5_hex_hmac	(gchar *hexdigest,
+			 const guchar* text, gint text_len,
+			 const guchar* key, gint key_len);
+
+RFC 2104 で定義されている HMAC アルゴリズムを用いて、長さ text_len のデータ
+text と長さ key_len の鍵 key からハッシュ値を生成し、16進文字列として
+バッファ hexdigest に格納します。文字列はヌル文字で終端されます。
+
+digest: 少なくとも 2 * S_GNET_MD5_HASH_LENGTH + 1 バイトのサイズのバッファ
+text: 計算対象のデータ
+text_len: text のサイズ
+key: 鍵データ
+key_len: key のサイズ

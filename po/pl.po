@@ -1,0 +1,599 @@
+# Polish translation of Sylpheed
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed 1.9.8 \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2005-03-05 18:57+0100\n"
+"Last-Translator: Wit Wilinski <madman at linux dot bydg dot org>\n"
+"Language-Team: POLISH <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "Odczyt ustawień wszystkich kont...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr ""
+"Połączenie IMAP4 z %s zostało przerwane. Ponowne nawiązywanie połączenia...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+#, fuzzy
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "Katalog serwera IMAP4."
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "tworzenie połączenia IMAP4 do %s:%d ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "Nie można uruchomić sesji TLS\n"
+
+#: libsylph/imap.c:1120
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Usuwanie wiadomości %d"
+
+#: libsylph/imap.c:1236
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Wysyłanie wiadomości (%d / %d)"
+
+#: libsylph/imap.c:1328
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Kopiowanie wiadomości %s%c%d do %s ...\n"
+
+#: libsylph/imap.c:1334
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Kopiowanie wiadomości %s%c%d do %s ...\n"
+
+#: libsylph/imap.c:1473
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Pobieranie wiadomości z %s..."
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "nie można ustawić flag skasowany: %s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "nie można zlikwidować\n"
+
+#: libsylph/imap.c:1570
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Pobieranie wiadomości z %s..."
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "nie można ustawić flagi skasowany: 1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "nie można zamknąć katalogu\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "brak głównego katalogu %s\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "wystąpił błąd podczas przy pobieraniu LIST.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "nie można utworzyć \"%s\"\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "nie można utworzyć \"%s\" w INBOX\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "nie można utworzyć skrzynki: błąd LIST.\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "nie można utworzyć skrzynki\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "nie można zmienić nazwy skrzynki: %s na %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "nie można skasować skrzynki\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "nie można pobrać koperty\n"
+
+#: libsylph/imap.c:2340
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Wysyłanie wiadomości (%d / %d)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "wystąpił błąd podczas pobierania koperty.\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "nie można przetworzyć koperty: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "Nie można nawiązać połączenia z serwerem IMAP4: %s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "Nie można ustanowić sesji IMAP4 z: %s:%d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "nie można pobrać przestrzeni nazw\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "nie można wybrać katalogu: %s\n"
+
+#: libsylph/imap.c:3146
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "wystąpił błąd przy wykonywaniu polecenia IMAP: CLOSE\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "Błąd uwierzytelniania IMAP4.\n"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "Nie można zalogować się do serwera IMAP4.\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "nie można dołączyć %s do %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(wysyłanie pliku...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "nie można dołączyć wiadomości do %s\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "nie można skopiować %s do %s\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "wystąpił błąd przy wykonywaniu polecenia IMAP: STORE %s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "wystąpił błąd przy wykonywaniu polecenia IMAP: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "wystąpił błąd przy wykonywaniu polecenia IMAP: CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "nie można skonwertować UTF-7 do %s za pomocą programu iconv\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "nie można skonwertować %s do UTF-7 za pomocą programu iconv\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "nie można zapisać do pliku tymczasowego\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "Pobieranie wiadomości z %s do %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "nie można odczytać pliku mbox.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "niepoprawny format mbox: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "uszkodzona skrzynka: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "nie można otworzyć pliku tymczasowego\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"znaleziono \"unescaped\" From:\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "znaleziono %d wiadomości.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "nie można utworzyć pliku lock %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "jeśli to możliwe, należy użyć \"flock\" zamiast \"file\".\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "nie można utworzyć %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "skrzynka jest kontrolowana przez inny proces, oczekiwanie...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "nie można zablokować %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "nieprawidłowy typ blokady\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "nie można odblokować %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "nie można skrócić do zera.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "Eksportowanie wiadomości z %s do %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "nie można skopiować wiadomości %s do %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "Nie można otworzyć pliku zaznaczeń.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "katalog źródłowy jest taki sam jak docelowy.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "Kopiowanie wiadomości %s%c%d do %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"Plik \"%s\" już istnieje.\n"
+"Nie można utworzyć katalogu."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "tworzenie połączenia NNTP z %s:%d ...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr ""
+"Połączenie NNTP %s:%d zostało zerwane. Ponowne nawiązywanie połączenia...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "artykuł %d został już zapamiętany.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "pobieranie artykułu %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "nie można odczytać artykułu %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "nie można wysłać artykułu.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "nie można odebrać artykułu %d\n"
+
+#: libsylph/news.c:759
+#, c-format
+msgid "can't select group: %s\n"
+msgstr "nie można wybrać grupy: %s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "niepoprawny zakres artykułu: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "brak nowych artykułów.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "pobieranie xover %d - %d w %s...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "nie można pobrać xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "błąd podczas pobierania xover.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "niepoprawna linia xover: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "nie można pobrać xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "błąd podczas pobierania xhdr.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "Nie można połączyć się z serwerem NNTP: %s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "błąd protokołu: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "błąd protokołu\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "Wystąpił błąd podczas publikowania\n"
+
+#: libsylph/nntp.c:363
+msgid "Error occurred while sending command\n"
+msgstr "Błąd podczas wysyłania polecenia\n"
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "Przy powitaniu zabrakło wymaganego znacznika czasowego APOP\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "Błąd składni przy znaczniku czasowym powitania\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "Błąd protokołu POP3\n"
+
+#: libsylph/pop.c:264
+#, fuzzy, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "niepoprawna linia xover: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: Usuwanie przestarzałej wiadomości %d\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: Pomijanie wiadomości %d (%d bajtów)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "skrzynka jest zablokowana\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "przekroczenie czasu sesji\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "nie można uruchomić sesji TLS\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "wystąpił błąd podczas uwierzytelniania\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "nieobsługiwane polecenie\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "wystąpił błąd podczas sesji POP3\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "błąd podczas zapisu konfiguracji do pliku\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "Znaleziono: %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "Konfiguracja zapisana.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "Niechciana poczta"
+
+#: libsylph/prefs_common.c:506
+#, fuzzy
+msgid "Junk mail filter"
+msgstr "Niechciana poczta"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmine_get_text_content(): Błąd konwersji kodu.\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "nie można otworzyć pliku zaznaczeń\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "nie można pobrać wiadomości %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "Błędny wiersz polecenia wydruku: \"%s\"\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "błąd podczas odbierania danych.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "Nie można zapisać do pliku.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH niedostępna\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "nieprawidłowa odpowiedź SMTP\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "wystąpił błąd w sesji SMTP\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23 niedostępny\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23 dostępny\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1 niedostępny\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1 dostępny\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "Niedostępna metoda SSL\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "Nieznana metoda SSL *PROGRAM BUG*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "Błąd tworzenia kontekstu ssl\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "Połączenie SSL z użyciem %s\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "Ceryfikat serwera:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "Temat: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  Nadawca: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "nie można zmienić trybu pliku\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "błąd zapisu do %s.\n"

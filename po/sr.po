@@ -1,0 +1,610 @@
+# Serbian translation of Sylpheed.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# garret <garret@garrets.tk>, 2002.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2002-11-29 21:08+0100\n"
+"Last-Translator: garret <garret@garrets.tk>\n"
+"Language-Team: Serbian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "Čitanje konfiguracije za svaki nalog...\n"
+
+#: libsylph/imap.c:465
+#, fuzzy, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "IMAP4 veza prema %s:%d je pukla. Povezujem se ponovo...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+#, fuzzy
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "Direktorijum IMAP servera"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "ostvarujem IMAP4 vezu prema %s:%d ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "Ne mogu pokrenuti TLS sesiju.\n"
+
+#: libsylph/imap.c:1120
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Brišem poruke %d"
+
+#: libsylph/imap.c:1236
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Šaljem poruku (%d / %d bajtova)"
+
+#: libsylph/imap.c:1328
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Pomeram poruke %s%c%d u %s ...\n"
+
+#: libsylph/imap.c:1334
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Kopiram poruke %s%c%d u %s ...\n"
+
+#: libsylph/imap.c:1473
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Primam poruke sa %s u %s...\n"
+
+#: libsylph/imap.c:1479
+#, fuzzy, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "ne mogu postaviti obrisane oznake: %d\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "ne mogu obrisati\n"
+
+#: libsylph/imap.c:1570
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Primam poruke sa %s u %s...\n"
+
+#: libsylph/imap.c:1576
+#, fuzzy
+msgid "can't set deleted flags: 1:*\n"
+msgstr "ne mogu postaviti obrisane oznake: 1:%d\n"
+
+#: libsylph/imap.c:1624
+#, fuzzy
+msgid "can't close folder\n"
+msgstr "ne mogu odabrati direktorijum: %s\n"
+
+#: libsylph/imap.c:1702
+#, fuzzy, c-format
+msgid "root folder %s not exist\n"
+msgstr "Označena datoteka ne postoji.\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+#, fuzzy
+msgid "error occurred while getting LIST.\n"
+msgstr "došlo je do greške prilikom dohvatanja LISTe.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "ne mogu kreirati '%s'\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "ne mogu kreirati '%s' ispod INBOX\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "ne mogu kreirati sanduče: LIST nije uspeo\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "ne mogu kreirati sanduče\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "ne mogu promeniti ime sandučeta %s u %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "ne mogu obrisati sanduče\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "ne mogu dobiti omot\n"
+
+#: libsylph/imap.c:2340
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Šaljem poruku (%d / %d bajtova)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "došlo je do greške prilikom dobijanja omota.\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "ne mogu analizirati omot: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "Ne mogu se povezati sa IMAP4 serverom: %s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "Ne mogu se povezati s IMAP4 serverom: %s:%d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "ne mogu dobiti namespace\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "ne mogu odabrati direktorijum: %s\n"
+
+#: libsylph/imap.c:3146
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "greška prilikom imap naredbe: EXPUNGE\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+#, fuzzy
+msgid "IMAP4 authentication failed.\n"
+msgstr "Način provere identieta"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "IMAP4 login nije uspeo.\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "ne mogu dodati %s na %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(šaljem datoteku...)"
+
+#: libsylph/imap.c:3725
+#, fuzzy, c-format
+msgid "can't append message to %s\n"
+msgstr "ne mogu dodati poruku %s\n"
+
+#: libsylph/imap.c:3757
+#, fuzzy, c-format
+msgid "can't copy %s to %s\n"
+msgstr "ne mogu kopirati %d u %s\n"
+
+#: libsylph/imap.c:3781
+#, fuzzy, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "grečka prilikom imap naredbe: STORE %d:%d %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "greška prilikom imap naredbe: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+#, fuzzy
+msgid "error while imap command: CLOSE\n"
+msgstr "greška prilikom imap naredbe: EXPUNGE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv ne može prebaciti UTF-7 to %s\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv ne može prebaciti %s to UTF-7\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "ne mogu pisati u privremenu datoteku\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "Primam poruke sa %s u %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "ne mogu čitati mbox datoteku.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "pogrešan mbox format: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "pokvaren mbox: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "ne mogu otvoriti privremenu datoteku\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"neizbežan Od pronađen:\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "%d poruka pronađeno.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "ne mogu napraviti zaključanu datoteku %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "koristi 'flock' umesto 'file' ako je moguće.\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "ne mogu napraviti %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "neki drugi proces koristi sanduče, čekam...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "ne mogu zaključati %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "neispravan tip zaključavanja\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "ne mogu otključati %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "ne mogu skratiti sanduče na nulu.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "Izvozim poruke iz %s u %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "ne mogu kopirati poruku %s u %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "Ne mogu otvoriti označenu datoteku.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "izvorni direktorijum jednak je destinaciji.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "Kopiram poruke %s%c%d u %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"Datoteka `%s' već postoji.\n"
+"Ne mogu napraviti direktorijum."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "uspostavljam NNTP vezu sa %s:%d ...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "NNTP veza sa %s:%d je prekinuta. Povezujem se ponovo...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "članak %d već je pohranjen.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "primam članak %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "ne mogu pročitati članak %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "ne mogu poslati članak.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "ne mogu primiti članak %d\n"
+
+#: libsylph/news.c:759
+#, fuzzy, c-format
+msgid "can't select group: %s\n"
+msgstr "ne mogu odabrati grupu %s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "pogrešan opseg članaka: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "nema novih članaka.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "primam xover %d - %d u %s...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "ne mogu primiti xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "došlo je do greške prilikom primanja xovera.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "pogrešna xover linija: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "ne mogu dobiti xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "došlo je do greške prilikom primanja xhdra.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "Ne mogu uspostaviti vezu sa NNTP serverom: %s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "protokol greška: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "protokol greška\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "Došlo je do greške prilikom slanja\n"
+
+#: libsylph/nntp.c:363
+#, fuzzy
+msgid "Error occurred while sending command\n"
+msgstr "Došlo je do greške pri radu s poštom."
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "Potrebni APOP timestamp nije pronađen u pozdravu\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "Syntax greška u timestampu kod pozdrava\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "greška POP3 protokola \n"
+
+#: libsylph/pop.c:264
+#, fuzzy, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "pogrešna xover linija: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: Brianje pouka koje su istekle %d\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: Preskakanje poruke %d (%d byte-ova)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "sanduče je zaključano\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr ""
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "ne mogu pokrenuti TLS sesiju\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "greška prilikom provere identiteta\n"
+
+#: libsylph/pop.c:688
+#, fuzzy
+msgid "command not supported\n"
+msgstr "Naredba"
+
+#: libsylph/pop.c:692
+#, fuzzy
+msgid "error occurred on POP3 session\n"
+msgstr "greška prilikom provere identiteta\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "neuspeh pri pisanju konfiguracije u datoteku\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "Pronađeno %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "Konfiguracija je spremljena.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "Direktorijum"
+
+#: libsylph/prefs_common.c:506
+#, fuzzy
+msgid "Junk mail filter"
+msgstr "Direktorijum"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content(): Promena koda nije uspjela.\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "ne mogu otvoriti obeleženu datoteku\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "ne mogu dohvatiti poruku %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "Naredba za štampanje nije dobra: `%s'\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "došlo je do greške prilikom dohvatanja podataka.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "Ne mogu pisati u datoteku.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH nije dostupan\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr ""
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+#, fuzzy
+msgid "error occurred on SMTP session\n"
+msgstr "greška prilikom provere identiteta\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23 nije dostupan\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23 dostupan\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1 nije dostupan\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1 dostupan\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "SSL metod nije dostupna\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "Nepoznat SSL metod *BUG PROGRAMA*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "Greška pri kreiranju ssl konteksta\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "SSL veza koristeći %s\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "Sertifikat servera:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  Tema: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  Izdavač: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "ne mogu promeniti atribut datoteke\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "pisanje u %s nije uspelo.\n"

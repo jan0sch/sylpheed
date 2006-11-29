@@ -1,0 +1,119 @@
+smtp - SMTP セッションの処理
+
+------------------------------------------------------------------------------
+#define SMTP_SESSION(obj)	((SMTPSession *)obj)
+
+Session オブジェクト obj を SMTPSession にキャストします。
+
+------------------------------------------------------------------------------
+#define MSGBUFSIZE
+
+メッセージバッファのサイズです。
+
+------------------------------------------------------------------------------
+SMTPErrorValue
+
+typedef enum
+{
+	SM_OK			= 0,
+	SM_ERROR		= 128,
+	SM_UNRECOVERABLE	= 129,
+	SM_AUTHFAIL		= 130
+} SMTPErrorValue;
+
+SMTP のエラー状態を表す enum です。
+
+------------------------------------------------------------------------------
+ESMTPFlag
+
+typedef enum
+{
+	ESMTP_8BITMIME	= 1 << 0,
+	ESMTP_SIZE	= 1 << 1,
+	ESMTP_ETRN	= 1 << 2
+} ESMTPFlag;
+
+ESMTP 時に利用可能な機能を表す enum です。
+
+------------------------------------------------------------------------------
+SMTPAuthType
+
+typedef enum
+{
+	SMTPAUTH_LOGIN      = 1 << 0,
+	SMTPAUTH_CRAM_MD5   = 1 << 1,
+	SMTPAUTH_DIGEST_MD5 = 1 << 2,
+	SMTPAUTH_PLAIN      = 1 << 3
+} SMTPAuthType;
+
+SMTP AUTH 時の認証方法を表す enum です。
+
+------------------------------------------------------------------------------
+SMTPState
+
+typedef enum
+{
+	SMTP_READY,
+	SMTP_CONNECTED,
+	SMTP_HELO,
+	SMTP_EHLO,
+	SMTP_STARTTLS,
+	SMTP_FROM,
+	SMTP_AUTH,
+	SMTP_AUTH_PLAIN,
+	SMTP_AUTH_LOGIN_USER,
+	SMTP_AUTH_LOGIN_PASS,
+	SMTP_AUTH_CRAM_MD5,
+	SMTP_RCPT,
+	SMTP_DATA,
+	SMTP_SEND_DATA,
+	SMTP_EOM,
+	SMTP_RSET,
+	SMTP_QUIT,
+	SMTP_ERROR,
+	SMTP_DISCONNECTED,
+
+	N_SMTP_PHASE
+} SMTPState;
+
+SMTPSession の状態を表す enum です。
+
+------------------------------------------------------------------------------
+SMTPSession
+
+struct _SMTPSession
+{
+	Session session;
+
+	SMTPState state;
+
+	gboolean tls_init_done;
+
+	gchar *hostname;
+
+	gchar *user;
+	gchar *pass;
+
+	gchar *from;
+	GSList *to_list;
+	GSList *cur_to;
+
+	FILE *send_data_fp;
+	gint send_data_len;
+
+	SMTPAuthType avail_auth_type;
+	SMTPAuthType forced_auth_type;
+	SMTPAuthType auth_type;
+
+	SMTPErrorValue error_val;
+	gchar *error_msg;
+};
+
+SMTP セッションを表す構造体です。 Session のサブクラスになります。
+
+------------------------------------------------------------------------------
+Session *smtp_session_new	(void);
+
+SMTPSession オブジェクトを作成します。
+
+戻り値: 新しい SMTPSession オブジェクト(Session にキャスト)

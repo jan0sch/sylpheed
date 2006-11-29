@@ -1,0 +1,76 @@
+prefs_common - 全般の設定の管理
+
+------------------------------------------------------------------------------
+RecvDialogMode
+
+typedef enum {
+	RECV_DIALOG_ALWAYS,
+	RECV_DIALOG_MANUAL,
+	RECV_DIALOG_NEVER
+} RecvDialogMode;
+
+受信ダイアログのモードの指定に使用します。
+
+------------------------------------------------------------------------------
+TransferEncodingMethod
+
+typedef enum {
+	CTE_AUTO,
+	CTE_BASE64,
+	CTE_QUOTED_PRINTABLE,
+	CTE_8BIT
+} TransferEncodingMethod;
+
+Content-Transfer-Encoding の指定に使用します。
+
+------------------------------------------------------------------------------
+MIMEFilenameEncodingMethod
+
+typedef enum {
+	FENC_MIME,
+	FENC_RFC2231,
+	FENC_NONE
+} MIMEFilenameEncodingMethod;
+
+ヘッダの MIME ファイル名エンコーディングの方式の指定に使用します。
+
+------------------------------------------------------------------------------
+struct _PrefsCommon
+{
+};
+
+全般の設定を格納する構造体です。実体は prefs_common.c で宣言されています。
+
+------------------------------------------------------------------------------
+PrefsCommon *prefs_common_get		(void);
+
+prefs_common.c 内で宣言されている PrefsCommon 構造体へのポインタを返します。
+全般の設定を参照する際はこれを使用します。
+
+戻り値: PrefsCommon 構造体へのポインタ
+
+------------------------------------------------------------------------------
+PrefParam *prefs_common_get_params	(void);
+
+prefs_common.c 内で宣言されている PrefParam の構造体の配列へのポインタを
+返します。
+
+戻り値: PrefParam の構造体の配列へのポインタ
+
+------------------------------------------------------------------------------
+void prefs_common_read_config		(void);
+
+全般の設定の設定ファイルを読み込み、 PrefsCommon 構造体の各メンバを更新します。
+設定ファイルディレクトリ以下の sylpheedrc と command_history が読み込まれます。
+
+------------------------------------------------------------------------------
+void prefs_common_write_config		(void);
+
+PrefsCommon 構造体の情報を全般の設定の設定ファイルに書き出します。
+設定ファイルディレクトリ以下の sylpheedrc と command_history が書き出されます。
+
+------------------------------------------------------------------------------
+void prefs_common_junk_filter_list_set	(void);
+
+PrefsCommon 構造体内の迷惑メールフィルタのリストを初期化します。
+以前のフィルタルールは消去されます。

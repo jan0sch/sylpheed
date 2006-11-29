@@ -1,0 +1,97 @@
+mbox - Unix MBOX の操作
+
+------------------------------------------------------------------------------
+LockType
+
+typedef enum {
+	LOCK_FILE,
+	LOCK_FLOCK
+} LockType;
+
+mbox ファイルのロックに使用する方式を指定するための enum です。
+
+LOCK_FILE: ロックにファイルを使用
+LOCK_FLOCK: ロックに flock() または lockf() を使用
+
+------------------------------------------------------------------------------
+gint proc_mbox		(FolderItem	*dest,
+			 const gchar	*mbox,
+			 GHashTable	*folder_table);
+
+Unix MBOX ファイル mbox をフォルダ dest に取り込みます。
+folder_table が指定されていれば、フィルタを適用し、移動先のフォルダを
+キー(値は1)として folder_table に追加します。フィルタによって移動または
+削除が行われなければ dest に取り込まれます。
+
+dest: 取り込み先フォルダ
+mbox: 取り込み対象の Unix MBOX ファイル
+folder_table: 移動先フォルダを格納するハッシュテーブル(NULL 可)
+戻り値: 成功した場合取り込んだメッセージ数
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint lock_mbox		(const gchar	*base,
+			 LockType	 type);
+
+ファイル base を type で指定した方式でロックします。
+ロックは unlock_mbox() で解除します。
+
+type に LOCK_FILE を指定した場合は base + "." + PID というファイルを作成し、
+それに対して base + ".lock" というハードリンクを作成します。
+このロックファイルが作成できなかった場合は、一定時間再試行します。
+
+type に LOCK_FLOCK を指定した場合は環境に応じて flock() または lockf()
+を用いてロックを行います。
+
+Win32 ではこの関数は常に -1 を返します。
+
+base: ロックするファイル
+type: ロックに使用する方式
+戻り値: 成功した場合:
+        LOCK_FILE の場合 0
+        LOCK_FLOCK の場合ロックしたファイルのデスクリプタ
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint unlock_mbox	(const gchar	*base,
+			 gint		 fd,
+			 LockType	 type);
+
+lock_mbox() でロックされているファイル base のロックを解除します。
+fd と type は lock_mbox() で使用した値と対応している必要があります。
+
+base: ロックされているファイル
+fd: type が LOCK_FLOCK の場合ロックしたファイルのデスクリプタ
+type: ロックに使用した方式
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint copy_mbox		(const gchar	*src,
+			 const gchar	*dest);
+
+ファイル src を dest にコピーします。 dest が既に存在する場合は dest の
+バックアップを取ります。 copy_file(src, dest, TRUE) と同等です。
+
+src: コピー元ファイルのパス
+dest: コピー先のパス
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+void empty_mbox		(const gchar	*mbox);
+
+ファイル mbox のサイズを0に切り詰めます。
+
+mbox: 切り詰めるファイル
+
+------------------------------------------------------------------------------
+gint export_to_mbox	(FolderItem	*src,
+			 const gchar	*mbox);
+
+フォルダ src の内容を Unix MBOX 形式のファイル mbox に出力します。
+
+src: 入力フォルダ
+mbox: 出力先ファイルのパス
+戻り値: 成功した場合 0
+        エラーの場合 -1

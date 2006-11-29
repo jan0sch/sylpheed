@@ -1,0 +1,108 @@
+prefs_account - アカウントの設定の管理
+
+------------------------------------------------------------------------------
+RecvProtocol
+
+typedef enum {
+	A_POP3,
+	A_APOP,	/* deprecated */
+	A_RPOP,	/* deprecated */
+	A_IMAP4,
+	A_NNTP,
+	A_LOCAL
+} RecvProtocol;
+
+受信プロトコルの指定に使用します。
+
+------------------------------------------------------------------------------
+SigType
+
+typedef enum {
+	SIG_FILE,
+	SIG_COMMAND,
+	SIG_DIRECT
+} SigType;
+
+メッセージの署名の作成方法の指定に使用します。
+
+------------------------------------------------------------------------------
+typedef enum {
+	SIGN_KEY_DEFAULT,
+	SIGN_KEY_BY_FROM,
+	SIGN_KEY_CUSTOM
+} SignKeyType;
+
+PGP 署名の鍵の選択方法の指定に使用します。
+
+------------------------------------------------------------------------------
+struct _PrefsAccount
+{
+};
+
+アカウント毎の設定を格納する構造体です。
+
+------------------------------------------------------------------------------
+PrefsAccount *prefs_account_new		(void);
+
+PrefsAccount 構造体を作成します。作成した構造体の各メンバはデフォルトの値で
+初期化されています。また、 PrefsAccount::account_id にはユニークな ID が
+自動的にセットされます。
+
+戻り値は prefs_account_free() で解放する必要があります。
+
+戻り値: 新規に作成した PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+PrefsAccount *prefs_account_get_tmp_prefs	(void);
+
+prefs_account.c 内で宣言されている PrefsAccount の一時領域として使用する
+構造体へのポインタを返します。
+
+戻り値: PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void prefs_account_set_tmp_prefs		(PrefsAccount	*ac_prefs);
+
+ac_prefs の各メンバの値を prefs_account.c 内の PrefsAccount の一時領域に
+コピーします。文字列のコピーは行われません。
+
+ac_prefs: コピー元の PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void prefs_account_apply_tmp_prefs		(PrefsAccount	*ac_prefs);
+
+prefs_account.c 内の PrefsAccount の一時領域の各メンバの値を ac_prefs に
+コピーします。文字列のコピーは行われません。
+
+ac_prefs: コピー先の PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+PrefParam *prefs_account_get_params		(void);
+
+prefs_account.c 内で宣言されている PrefParam の構造体の配列へのポインタを
+返します。
+
+------------------------------------------------------------------------------
+void prefs_account_read_config		(PrefsAccount	*ac_prefs,
+					 const gchar	*label);
+
+アカウントの設定ファイルから label ("アカウント名: ID")に該当するグループを
+読み込み、 ac_prefs の各メンバの値を更新します。
+
+ac_prefs: PrefsAccount 構造体へのポインタ
+label: 設定グループのラベル
+
+------------------------------------------------------------------------------
+void prefs_account_write_config_all	(GList		*account_list);
+
+PrefsAccount 構造体のリストで提供されたアカウント情報をアカウント設定
+ファイル(accountrc)に書き出します。
+
+account_list: PrefsAccount 構造体のリスト
+
+------------------------------------------------------------------------------
+void prefs_account_free			(PrefsAccount	*ac_prefs);
+
+PrefsAccount 構造体を解放します。
+
+ac_prefs: PrefsAccount 構造体へのポインタ

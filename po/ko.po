@@ -1,0 +1,609 @@
+# korean po file for sylpheed mailer
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# ChiDeok, Hwang <hwang@mizi.co.kr>, 2001
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sylpheed  0.8.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2002-12-02 11:09+0900\n"
+"Last-Translator: Nam SungHyun <namsh@kldp.org>\n"
+"Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "각 계정에대한 모든 설정을 읽습니다...\n"
+
+#: libsylph/imap.c:465
+#, fuzzy, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "%s:%d에대한 IMAP4 접속이 끊어졌습니다. 다시 접속...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+#, fuzzy
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "IMAP 서버 디렉토리"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "%s:%d에대한 IMAP4 접속을 만듭니다 ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "TLS 세션을 시작할 수 없습니다.\n"
+
+#: libsylph/imap.c:1120
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "%d 메시지를 삭제하는 중"
+
+#: libsylph/imap.c:1236
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "메시지를 보내는 중 (%d / %d 바이트)"
+
+#: libsylph/imap.c:1328
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "메시지 %s%c%d를 %s로 이동합니다...\n"
+
+#: libsylph/imap.c:1334
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "메시지 %s%c%d를 %s로 복사중입니다 ...\n"
+
+#: libsylph/imap.c:1473
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "%s로부터 %s로 메시지를 가져옵니다...\n"
+
+#: libsylph/imap.c:1479
+#, fuzzy, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "삭제 플래그를 설정할 수가 없습니다: %d\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "지울 수가 없습니다\n"
+
+#: libsylph/imap.c:1570
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "%s로부터 %s로 메시지를 가져옵니다...\n"
+
+#: libsylph/imap.c:1576
+#, fuzzy
+msgid "can't set deleted flags: 1:*\n"
+msgstr "삭제 플래그를 설정할 수가 없습니다: 1:%d\n"
+
+#: libsylph/imap.c:1624
+#, fuzzy
+msgid "can't close folder\n"
+msgstr "폴더를 선택할 수가 없습니다: %s\n"
+
+#: libsylph/imap.c:1702
+#, fuzzy, c-format
+msgid "root folder %s not exist\n"
+msgstr "표시 파일이 발견되지않음.\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+#, fuzzy
+msgid "error occurred while getting LIST.\n"
+msgstr "LIST를 얻는 도중 에러가 발생.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "'%s'를 생성할 수가 없습니다\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "INBOX 아래에 '%s'를 생성할 수가 없습니다\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "우편함을 생성할 수 없습니다: LIST 실패\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "우편함을 생성할 수 없습니다\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "우편함명을 바꿀 수 없습니다: %s에서 %s로\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "우편함을 삭제할 수 없습니다\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "envelope를 얻을 수가 없습니다\n"
+
+#: libsylph/imap.c:2340
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "메시지를 보내는 중 (%d / %d 바이트)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "envelope를 얻는 중 에러 발생.\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "envelope를 파싱할 수가 없습니다: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "%s:%d IMAP4 서버에 연결할 수가 없습니다\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "IMAP4 세션을 만들 수 없습니다: %s: %d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "namespace를 얻을 수 없습니다\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "폴더를 선택할 수가 없습니다: %s\n"
+
+#: libsylph/imap.c:3146
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+#, fuzzy
+msgid "IMAP4 authentication failed.\n"
+msgstr "인증 방법"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "IMAP4 로그인을 실패했습니다.\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "%s를 %s에 붙일 수 없습니다\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(파일을 보냅니다...)"
+
+#: libsylph/imap.c:3725
+#, fuzzy, c-format
+msgid "can't append message to %s\n"
+msgstr "%s 메시지를 추가할 수가 없습니다\n"
+
+#: libsylph/imap.c:3757
+#, fuzzy, c-format
+msgid "can't copy %s to %s\n"
+msgstr "%d를 %s로 복사할 수가 없습니다\n"
+
+#: libsylph/imap.c:3781
+#, fuzzy, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "imap 명령어 실행중 에러: STORE %d:%d %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+#, fuzzy
+msgid "error while imap command: CLOSE\n"
+msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv가 UTF-7를 %s로 변환할 수 없습니다\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv가 %s를 UTF-7로 변환할 수 없습니다\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "임시 파일에 쓸 수가 없습니다\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "%s로부터 %s로 메시지를 가져옵니다...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "mbox 파일을 읽을 수가 없습니다.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "올바르지않은 mbox 포멧: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "제대로되어있지않은 mbox: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "임시파일을 열 수가 없습니다\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"메시지 본문중 From으로 시작하는 줄이 있습니다:\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "%d개의 메시지가 발견되었습니다.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "잠금 파일 %s을 만들수가 없습니다\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "가능하면 'file'대신에 'flock'를 사용하세요.\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "%s를 생성할 수가 없습니다\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "메일박스를 다른 프로세스가 읽고있습니다. 잠시 기다리세요...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "%s에 lock를 걸수가 없습니다\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "올바르지않은 잠금 타입\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "%s에 lock를 풀 수가 없습니다\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "메일박스의 크기를 0으로 만들수가 없습니다.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "메시지를 %s에서 %s로 보냅니다...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "메시지 %s을 %s로 복사할 수가 없습니다\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "표시 파일을 열 수가 없습니다.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "옮길 폴더와 옮겨질 폴더가 같습니다.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "메시지 %s%c%d를 %s로 복사중입니다 ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"파일 `%s'가 이미 존재합니다.\n"
+"폴더를 생성할 수가 없습니다."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "%s:%d로 NNTP 접속을 생성합니다...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "%s:%d로의 NNTP 연결이 끊어졌습니다. 다시 연결합니다...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "기사 %d는 이미 캐쉬되었습니다.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "기사 %d를 얻습니다...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "기사 %d를 읽을 수가 없습니다\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "기사를 올릴 수가 없습니다.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "기사 %d를 가져올 수가 없습니다\n"
+
+#: libsylph/news.c:759
+#, fuzzy, c-format
+msgid "can't select group: %s\n"
+msgstr "%s 그룹을 선택할 수가 없습니다\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "올바르지않은 기사 범위: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "새 기사가 없습니다.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "%3$s에서 %1$d - %2$d xover를 가져옴...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "xover를 가져올 수가 없습니다\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "xover를 얻는 도중 에러가 발생.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "올바르지않은 xover line: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "xhdr을 가져올 수가 없습니다\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "xhdr을 얻는 도중 에러가 발생.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "%s:%d NNTP 서버에 연결할 수가 없습니다\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "프로토콜 에러: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "프로토콜 에러\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "글을 올리는 도중 에러 발생\n"
+
+#: libsylph/nntp.c:363
+#, fuzzy
+msgid "Error occurred while sending command\n"
+msgstr "메일을 처리하는 도중 에러"
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "greeting에서 발견되지않은 APOP 타임 스탬프가 요구됨\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "greeting에서 타임 스탬프에 문법 오류\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "POP3 프로토콜 에러\n"
+
+#: libsylph/pop.c:264
+#, fuzzy, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "올바르지않은 xover line: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: 만료된 메시지 %d를 삭제합니다\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: 메시지 %d를 건너뜁니다 (%d 바이트)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "우편함이 잠겨있습니다\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr ""
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "TLS 세션을 시작할 수 없습니다\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "인증 도중 에러 발생\n"
+
+#: libsylph/pop.c:688
+#, fuzzy
+msgid "command not supported\n"
+msgstr "명령어"
+
+#: libsylph/pop.c:692
+#, fuzzy
+msgid "error occurred on POP3 session\n"
+msgstr "인증 도중 에러 발생\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "파일에 설정을 쓰기가 실패했습니다\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "%s을 발견\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "설정이 저장되었습니다.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "폴더"
+
+#: libsylph/prefs_common.c:506
+#, fuzzy
+msgid "Junk mail filter"
+msgstr "폴더"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content(): 코드 변환이 실패했습니다.\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "표시 파일을 열수가 없습니다\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "메시지 %d를 가져올 수가 없습니다\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "인쇄 명령어가 올바르지않습니다: `%s'\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "데이타를 가져오는 중 에러가 발생했습니다.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "파일에 쓸 수가 없습니다.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP 인증을 사용할 수 없습니다\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr ""
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+#, fuzzy
+msgid "error occurred on SMTP session\n"
+msgstr "인증 도중 에러 발생\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23을 사용할 수 없습니다\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23을 사용할 수 있습니다\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1을 사용할 수 없습니다\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1을 사용할 수 있습니다\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "SSL를 사용할 수 없습니다\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "모르는 SSL *프로그램 버그*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "ssl 문맥 생성 에러\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "%s 사용하여 SSL 연결\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "서버 증명:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  제목: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  발행인: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "파일 모드를 바꿀수가 없습니다\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "%s로 쓰기가 실패했습니다.\n"

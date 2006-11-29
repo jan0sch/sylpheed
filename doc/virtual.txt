@@ -1,0 +1,23 @@
+virtual - 仮想フォルダの実装と Folder インタフェース
+
+------------------------------------------------------------------------------
+#define VIRTUAL_FOLDER(obj)
+
+Folder クラスのオブジェクト obj を VirtualFolder 型にキャストします。
+
+------------------------------------------------------------------------------
+VirtualFolder
+
+struct _VirtualFolder
+{
+	LocalFolder lfolder;
+};
+
+仮想フォルダを表す構造体です。現在は未使用です。
+
+------------------------------------------------------------------------------
+FolderClass *virtual_get_class	(void);
+
+VirtualFolder の FolderClass を取得します。
+
+戻り値: FolderClass へのポインタ

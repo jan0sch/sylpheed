@@ -1,0 +1,74 @@
+customheader - ユーザ定義ヘッダの設定の管理
+
+------------------------------------------------------------------------------
+CustomHeader
+
+struct _CustomHeader
+{
+	gint account_id;
+	gchar *name;
+	gchar *value;
+};
+
+ユーザ定義ヘッダを表す構造体です。
+
+account_id: アカウント ID
+name: ヘッダ名
+value: ヘッダの値
+
+------------------------------------------------------------------------------
+void custom_header_read_config		(PrefsAccount	*ac);
+
+アカウント ac に対応するユーザ定義ヘッダを設定ファイルから読み込み、
+内部リストに格納します。
+
+ac: PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void custom_header_write_config		(PrefsAccount	*ac);
+
+ユーザ定義ヘッダの設定ファイルのうち、アカウント ac に対応するユーザ定義
+ヘッダの設定を更新します。
+
+ac: PrefsAccount 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gchar *custom_header_get_str		(CustomHeader	*ch);
+
+CustomHeader 構造体 ch からユーザ定義ヘッダの設定ファイルの形式で文字列を
+出力します。
+
+返った文字列は g_free() で解放する必要があります。
+
+ch: CustomHeader 構造体へのポインタ
+戻り値: ユーザ定義ヘッダ設定ファイル形式の文字列
+
+------------------------------------------------------------------------------
+CustomHeader *custom_header_read_str	(const gchar	*buf);
+
+ユーザ定義ヘッダの設定ファイルの形式の文字列を読み込み、 CustomHeader
+構造体を出力します。
+
+返った値は custom_header_free() で解放する必要があります。
+
+buf: ユーザ定義ヘッダ設定ファイル形式の文字列
+戻り値: 新規 CustomHeader 構造体へのポインタ
+
+------------------------------------------------------------------------------
+CustomHeader *custom_header_find	(GSList		*header_list,
+					 const gchar	*header);
+
+CustomHeader のリスト header_list からヘッダ名が header に最初に一致する
+ものを検索して返します。大小文字は区別しません。
+
+header_list: CustomHeader 構造体へのポインタのリスト
+header: ヘッダ名
+戻り値: header_list 内の見つかった CustomHeader 構造体へのポインタ
+        見つからなかった場合は NULL
+
+------------------------------------------------------------------------------
+void custom_header_free			(CustomHeader	*ch);
+
+CustomHeader 構造体を解放します。
+
+ch: CustomHeader 構造体へのポインタ

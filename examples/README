@@ -1,0 +1,13 @@
+Several sample programs are included in this directory.
+Sylpheed configuration is needed for most examples in advance.
+
+The license of these sample programs is public domain.
+
+libsylph-compose.c: compose message
+libsylph-createmailbox.c: creates mailbox
+libsylph-listfolder.c: list all folders
+libsylph-listprefs.c: list all common preferences
+libsylph-listsummary.c: list message summary of a specified folder
+libsylph-pop.c: receive messages from POP3 server
+libsylph-send.c: send message via SMTP server
+libsylph-template.c: source template

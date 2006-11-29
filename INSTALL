@@ -1,0 +1,33 @@
+Installation
+============
+
+This library requires GLib 2.4.0 or later to be compiled.
+
+Build it
+========
+
+Please make sure that and glib-devel (or similar) packages are installed
+before the compilation.
+
+To compile and install, just type:
+
+% ./configure
+% make
+% su
+Password: [Enter password]
+# make install
+
+Options for configure script
+============================
+
+  --disable-ssl       disable SSL support (requires OpenSSL)
+  --disable-ipv6      disable IPv6 support
+
+For other options, refer to ./configure --help .
+
+
+If the installation of LibSylph failed, check whether all the required
+libraries are correctly installed. If it still failed, please send bug
+report to:
+
+  Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>

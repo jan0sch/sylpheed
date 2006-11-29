@@ -1,0 +1,159 @@
+	LibSylph - 電子メールクライアントライブラリ
+
+   Copyright(C) 1999-2006 Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+   For more details see the file COPYING.
+
+
+What's Sylpheed
+===============
+
+LibSylph は Sylpheed から派生した電子メールクライアントライブラリです。
+LibSylph は軽量かつ多機能なライブラリです。多くの一般的な電子メール関連の
+機能やその他の便利な機能をもち、アプリケーションから利用することができます。
+さらに任意の UI で LibSylph をラップすることで新たな電子メールクライアントを
+作成することもできます。
+
+LibSylph は GNU LGPL に従って配布されているフリーソフトウェアです。
+
+現在実装されている主な機能
+==========================
+
+対応プロトコル
+
+	o POP3 対応
+	o IMAP4rev1 対応
+	o SMTP
+	o NNTP
+	o SSL/TLSv1 (POP3, SMTP, IMAP4rev1, NNTP)
+	o IPv6
+
+機能
+
+	o オブジェクト指向ライクなメッセージ操作
+	o 複数アカウント
+	o 強力なフィルタリング
+	o 強力な検索機能(クエリ検索、検索フォルダ)
+	o MIME 処理
+	o SMTP AUTH 対応 (PLAIN / LOGIN / CRAM-MD5)
+	o CRAM-MD5 認証 (SMTP AUTH / IMAP4rev1)
+	o APOP 認証 (POP3)
+	o 複数の MH フォルダ対応
+	o フォルダ毎の設定
+	o autoconf, automake 対応
+	o gettext によるメッセージの国際化対応
+	o m17n (multilingualization, 多言語化)対応
+
+等です。
+
+インストール方法
+================
+
+インストールの説明は INSTALL を参照してください。
+
+注意
+====
+
+現在の LibSylph はまだ開発段階であり、今後仕様が変更される可能性があります。
+
+使用方法
+========
+
+起動前の準備
+------------
+
+Unix 系 OS の場合、ファイル名に UTF-8 以外の文字コードを使用している場合は
+以下の環境変数を指定する必要があります。指定していない場合は正常に動作
+しません。
+
+(ロケール依存のエンコーディングを使用)
+% export G_FILENAME_ENCODING=@locale
+
+または
+
+(直接エンコーディングを指定)
+% export G_FILENAME_ENCODING=ISO-8859-1
+
+日本語に翻訳されたメッセージを表示したい場合、 ロケールに関連する環境変数
+を指定しなければなりません(日本語 Linux ディストリビューションの場合は
+大抵すでに設定されています)。例えば、
+
+% export LANG=ja_JP.eucJP
+
+(ja_JP.eucJP は実際のロケール名に置き換えてください。)
+
+翻訳されたメッセージが必要なければ、 LC_MESSAGES を "C" に指定して
+ください(LC_ALL が指定されていれば外してください)。
+
+使用方法
+--------
+
+最も簡単なリンク方法:
+
+gcc -o foo foo.c `pkg-config glib-2.0 --cflags --libs` -lsylph
+
+配布パッケージの examples ディレクトリ以下にサンプルプログラムがあります。
+ソースの先頭にコメントの形でコンパイル方法が記述されています。
+これらのサンプルプログラムのライセンスはパブリックドメインとします。
+詳細は examples/README.ja を参照してください。
+
+ドキュメント
+------------
+
+doc ディレクトリ以下にリファレンスマニュアルがあります(日本語)。
+詳細は doc/README.ja を参照してください。
+
+情報
+====
+
+最新バージョンや Sylpheed または LibSylph に関する情報は
+
+	http://sylpheed.sraoss.jp/
+
+でチェックできます。
+
+フィードバック
+==============
+
+意見、アイデア、バグレポート(これが一番重要)(と、特にパッチ)は
+大変歓迎します。
+
+Subversion
+==========
+
+Subversion のリポジトリから最新のソースを取得することができます。
+
+適当なディレクトリに移動し、以下のコマンド
+
+	svn checkout svn://sylpheed.sraoss.jp/sylpheed/trunk
+
+で カレントディレクトリ以下に 'trunk' というソースツリーが作成されます。
+
+sylpheed ディレクトリ以下は次のように分かれています。
+
+    * trunk/     メインのツリー
+    * branches/  各種実験用ブランチ
+    * tags/      リリースタグを付けたブランチ
+
+最新のソースツリーにアップデートするには、対象のディレクトリで、
+
+	svn update
+
+を実行して下さい。
+
+-- 
+山本 博之 / Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>

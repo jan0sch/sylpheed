@@ -1,0 +1,448 @@
+compose - メッセージの作成
+
+------------------------------------------------------------------------------
+ComposeMode
+
+typedef enum
+{
+	COMPOSE_REPLY             = 1,
+	COMPOSE_REPLY_TO_SENDER   = 2,
+	COMPOSE_REPLY_TO_ALL      = 3,
+	COMPOSE_REPLY_TO_LIST     = 4,
+	COMPOSE_FORWARD           = 5,
+	COMPOSE_FORWARD_AS_ATTACH = 6,
+	COMPOSE_NEW               = 7,
+	COMPOSE_REDIRECT          = 8,
+	COMPOSE_REEDIT            = 9,
+
+	COMPOSE_WITH_QUOTE        = 1 << 16,
+
+	COMPOSE_MODE_MASK         = 0xffff
+} ComposeMode;
+
+compose_info_new() でメッセージ作成時のモードを指定するための型です。
+
+COMPOSE_REPLY: 通常の返信
+COMPOSE_REPLY_TO_SENDER: 差出人に返信(Reply-Toを無視する)
+COMPOSE_REPLY_TO_ALL: 全員に返信
+COMPOSE_REPLY_TO_LIST: 差出人よりメーリングリストを優先して返信
+COMPOSE_FORWARD: 通常の転送
+COMPOSE_FORWARD_AS_ATTACH: 添付として転送
+COMPOSE_NEW: 新規作成
+COMPOSE_REDIRECT: 手を加えずに転送(リダイレクト)
+COMPOSE_REEDIT: 再編集
+COMPOSE_WITH_QUOTE: アプリケーションが引用を制御するためのもので、
+                    LibSylphでは使用されません。
+COMPOSE_MODE_MASK: LibSylphがメッセージ作成モードに使用するフラグのマスク
+
+------------------------------------------------------------------------------
+#define COMPOSE_MODE(mode)		((mode) & COMPOSE_MODE_MASK)
+
+LibSylphが使用するメッセージ作成モードのみを取り出します。
+
+------------------------------------------------------------------------------
+#define COMPOSE_QUOTE_MODE(mode)	((mode) & COMPOSE_WITH_QUOTE)
+
+アプリケーションが使用する引用モードを取り出します。
+
+------------------------------------------------------------------------------
+ComposeFlags
+
+typedef enum
+{
+	COMPOSE_OUT_MIME_PROLOG        = 1 << 0,
+	COMPOSE_OUT_DISPOSITION_INLINE = 1 << 1,
+	COMPOSE_PROTECT_TRAILING_SPACE = 1 << 2,
+	COMPOSE_DRAFT_MODE             = 1 << 3
+} ComposeFlags;
+
+メッセージ生成時の動作を指定するためのフラグです
+(FIXME: 現在ComposeInfo::flagsで直接指定)。
+
+COMPOSE_OUT_MIME_PROLOG: マルチパートMIMEメッセージの場合プロローグメッセージを
+                         出力するかどうかを決定します。
+COMPOSE_OUT_DISPOSITION_INLINE: マルチパートMIMEメッセージの場合本文のパートを
+                                Content-Disposition: inline として出力するか
+                                どうかを決定します。
+COMPOSE_PROTECT_TRAILING_SPACE: 行末の空白を保護するために quoted-printable
+                                または base64 を使用するかどうかを決定します。
+COMPOSE_DRAFT_MODE: 指定した場合は草稿モードになります。
+
+------------------------------------------------------------------------------
+ComposeInfo
+
+struct _ComposeInfo
+{
+	ComposeMode mode;
+	ComposeFlags flags;
+
+	/* reference of redirect or reedit */
+	MsgInfo *targetinfo;
+	/* reference of reply */
+	MsgInfo *replyinfo;
+
+	/* extra information */
+	gchar	*ref_replyto;
+	gchar	*ref_cc;
+	gchar	*ref_bcc;
+	gchar	*ref_newsgroups;
+	gchar	*ref_followup_to;
+	gchar	*ref_ml_post;
+
+	/* composing message information */
+	gchar	*to;
+	gchar	*cc;
+	gchar	*bcc;
+	gchar	*replyto;
+	gchar	*newsgroups;
+	gchar	*followup_to;
+	gchar	*subject;
+
+	gchar	*inreplyto;
+	gchar	*references;
+	gchar	*msgid;
+
+	gchar	*boundary;
+
+	gchar	*header_encoding;
+	gchar	*body_encoding;
+
+	EncodingType ctencoding;
+
+	gchar	*body_text;
+
+	GList	*attach_list;
+
+	/* actually sent address list */
+	GSList	*to_list;
+	GSList	*newsgroup_list;
+
+	PrefsAccount *account;
+
+	/* callback functions for pre/post-process */
+	ComposePreFunc preprocess_func;
+	ComposePostFunc postprocess_func;
+
+	/* user data */
+	gpointer data;
+};
+
+作成するメッセージを管理するための構造体です。 compose_info_new() で作成し、
+適切な設定を行った後 compose_write_to_file() を呼び出してメッセージを出力
+します。 compose_info_free() で解放します。
+
+------------------------------------------------------------------------------
+ComposeAttachInfo
+
+struct _ComposeAttachInfo
+{
+	gchar *file;
+	gchar *content_type;
+	EncodingType encoding;
+	gchar *name;
+	gsize size;
+};
+
+添付ファイルを表す構造体です。 compose_attach_info_new() で作成し、
+compose_attach_info_free() で解放します。
+
+------------------------------------------------------------------------------
+typedef gint (*ComposePreFunc)	(ComposeInfo	*compose,
+				 gpointer	 user_data);
+typedef gint (*ComposePostFunc)	(ComposeInfo	*compose,
+				 const gchar	*file,
+				 gpointer	 user_data);
+
+ComposeInfo *compose_info_new	(PrefsAccount	*account,
+				 ComposeMode	 mode);
+void compose_info_free		(ComposeInfo	*compose);
+
+ComposeAttachInfo *compose_attach_info_new	(const gchar	*file,
+						 const gchar	*content_type,
+						 EncodingType	 encoding,
+						 const gchar	*name,
+						 gsize		 size);
+
+void compose_attach_info_free	(ComposeAttachInfo	*ainfo);
+
+gint compose_parse_header	(ComposeInfo	*compose,
+				 MsgInfo	*msginfo);
+
+gint compose_set_headers	(ComposeInfo	*compose,
+				 const gchar	*to,
+				 const gchar	*cc,
+				 const gchar	*bcc,
+				 const gchar	*replyto,
+				 const gchar	*subject);
+gint compose_set_news_headers	(ComposeInfo	*compose,
+				 const gchar	*newsgroups,
+				 const gchar	*followup_to);
+gint compose_set_body		(ComposeInfo	*compose,
+				 const gchar	*body);
+gint compose_set_encoding	(ComposeInfo	*compose,
+				 const gchar	*header_encoding,
+				 const gchar	*body_encoding);
+gint compose_set_attachments	(ComposeInfo	*compose,
+				 GList		*attach_list);
+
+gint compose_write_to_file	(ComposeInfo	*compose,
+				 const gchar	*out_file,
+				 GError		*error);
+
+gint compose_redirect_write_to_file	(ComposeInfo	*compose,
+					 const gchar	*out_file,
+					 GError		*error);
+
+gint compose_remove_reedit_target	(ComposeInfo	*compose);
+
+gint compose_queue			(ComposeInfo	*compose,
+					 const gchar	*file);
+
+void compose_generate_msgid		(ComposeInfo	*compose,
+					 gchar		*buf,
+					 gint		 len);
+
+void compose_set_preprocess_func	(ComposeInfo		*compose,
+					 ComposePreFunc		 func);
+void compose_set_postprocess_func	(ComposeInfo		*compose,
+					 ComposePostFunc	 func);
+
+------------------------------------------------------------------------------
+ComposeInfo *compose_info_new	(PrefsAccount	*account,
+				 ComposeMode	 mode);
+
+メッセージを作成するためのComposeInfo構造体を生成します。
+生成したComposeInfo構造体は compose_info_free() で解放する必要があります。
+
+account: メッセージ作成時に使用するアカウント
+mode: メッセージ作成モード(新規、返信など)
+戻り値: 新しいComposeInfo構造体へのポインタ
+
+------------------------------------------------------------------------------
+void compose_info_free		(ComposeInfo	*compose);
+
+ComposeInfo構造体を破棄します。
+
+compose: ComposeInfo構造体へのポインタ
+
+------------------------------------------------------------------------------
+ComposeAttachInfo *compose_attach_info_new	(const gchar	*file,
+						 const gchar	*content_type,
+						 EncodingType	 encoding,
+						 const gchar	*name,
+						 gsize		 size);
+
+添付ファイルを表すComposeAttachInfo構造体を生成します。
+ComposeAttachInfo構造体はcompose_attach_info_free()で解放する必要があります。
+
+file: 添付ファイルのフルパス
+content_type: ファイルのContent-Type
+encoding: 添付ファイルのパートのContent-Transfer-Encoding
+name: ファイル名(実際のファイルとは異なっていてもよい)
+size: ファイルのサイズ
+戻り値: 新しいComposeAttachInfo構造体へのポインタ
+
+------------------------------------------------------------------------------
+void compose_attach_info_free	(ComposeAttachInfo	*ainfo);
+
+ComposeAttachInfo構造体を破棄します。
+
+ainfo: ComposeAttachInfo構造体へのポインタ
+
+------------------------------------------------------------------------------
+gint compose_parse_header	(ComposeInfo	*compose,
+				 MsgInfo	*msginfo);
+
+メッセージ作成時に参照するメッセージを設定します。
+メッセージの内容をスキャンし、ComposeInfo構造体に情報をセットします。
+compose_info_new() で指定した mode によって動作は変わります。
+
+compose: ComposeInfo構造体へのポインタ
+msginfo: 参照するメッセージ情報
+戻り値: メッセージの読み込みに成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_set_headers	(ComposeInfo	*compose,
+				 const gchar	*to,
+				 const gchar	*cc,
+				 const gchar	*bcc,
+				 const gchar	*replyto,
+				 const gchar	*subject);
+
+ComposeInfoに作成するメッセージのヘッダ情報を指定します。
+文字コードは UTF-8 である必要があります。
+
+compose: ComposeInfo構造体へのポインタ
+to: To(宛先)
+cc: Cc(カーボンコピー)
+bcc: Bcc(ブラインドカーボンコピー)
+replyto: Reply-To(返信先)
+subject: Subject(件名)
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_set_news_headers	(ComposeInfo	*compose,
+				 const gchar	*newsgroups,
+				 const gchar	*followup_to);
+
+ネットニュースのためのヘッダ情報を指定します。
+文字コードは UTF-8 である必要があります。
+
+compose: ComposeInfo構造体へのポインタ
+newsgroups: Newsgroups(投稿先のニュースグループ名)
+followup_to: Followup-To(フォロー先)
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_set_body		(ComposeInfo	*compose,
+				 const gchar	*body);
+
+ComposeInfoに作成するメッセージの本文を指定します。
+文字コードは UTF-8 である必要があります。
+
+compose: ComposeInfo構造体へのポインタ
+body: 本文(UTF-8)
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_set_encoding	(ComposeInfo	*compose,
+				 const gchar	*header_encoding,
+				 const gchar	*body_encoding);
+
+ヘッダに使用する文字エンコーディングと本文に使用する文字エンコーディングを
+指定します。
+
+compose: ComposeInfo構造体へのポインタ
+header_encoding: ヘッダに使用する文字エンコーディング
+body_encoding: 本文に使用する文字エンコーディング
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_set_attachments	(ComposeInfo	*compose,
+				 GList		*attach_list);
+
+添付ファイルのリストをComposeAttachInfo構造体のリストで指定します。
+
+compose: ComposeInfo構造体へのポインタ
+attach_list: ComposeAttachInfo構造体へのポインタのリスト
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_write_to_file	(ComposeInfo	*compose,
+				 const gchar	*out_file,
+				 GError		*error);
+
+ComposeInfo構造体に指定した情報からメッセージを生成し、
+指定したファイルに書き出します。
+
+compose: ComposeInfo構造体へのポインタ
+out_file: 出力するファイルのフルパス
+error: NULLでない場合はエラーの詳細を返します(今は無視されます)。
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_redirect_write_to_file	(ComposeInfo	*compose,
+					 const gchar	*out_file,
+					 GError		*error);
+
+ComposeInfo::targetinfo で指定したメッセージをリダイレクト(手を加えずに転送)
+します。
+リダイレクト専用のヘッダが作成されます。
+compose_set_body() による本文の指定は無視されます。
+それ以外は compose_write_to_file() と同様です。
+
+compose: ComposeInfo構造体へのポインタ
+out_file: 出力するファイルのフルパス
+error: NULLでない場合はエラーの詳細を返します(今は無視されます)。
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_remove_reedit_target	(ComposeInfo	*compose);
+
+再編集に使用したメッセージを削除します。
+具体的には Compose::targetinfo で示されるメッセージを削除します。
+
+compose: ComposeInfo構造体へのポインタ
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+gint compose_queue			(ComposeInfo	*compose,
+					 const gchar	*file);
+
+compose_write_to_file() で作成したメッセージファイルを送信待ちフォルダに
+入れます。 ComposeInfo の内容と file の内容は対応している必要があります。
+送信待ちフォルダに入れたメッセージは send_message_queue_all() などで
+送信できます(FIXME: 未実装)。
+
+compose: ComposeInfo構造体へのポインタ
+file: compose_write_to_file() で作成したメッセージファイルのフルパス
+戻り値: 成功した場合は0、失敗した場合は-1を返します。
+
+------------------------------------------------------------------------------
+void compose_generate_msgid		(ComposeInfo	*compose,
+					 gchar		*buf,
+					 gint		 len);
+
+ComposeInfo の内容から Message-Id 文字列を生成します。
+Message-Idはメッセージファイルの作成時に自動的に生成されるので、
+通常は使用する必要はありません。
+
+compose: ComposeInfo構造体へのポインタ
+buf: 文字列のバッファ
+len: バッファ buf のサイズ
+
+------------------------------------------------------------------------------
+void compose_set_preprocess_func	(ComposeInfo		*compose,
+					 ComposePreFunc		 func);
+
+メッセージ作成時に前処理として呼ばれるコールバック関数を指定します。
+func は ComposeInfo 構造体へのポインタとユーザデータが渡されて呼び出されます。
+
+func は送信エンコーディングが決定され、本文のエンコーディングを変換した後の
+タイミングで呼ばれるため、ここで送信エンコーディングや本文の内容のチェックと
+その書き換えを行うことができます。
+
+func が -1 を返せば処理を中断することができます(compose_write_to_file() は
+エラーで返ります)。
+
+compose: ComposeInfo構造体へのポインタ
+func: ComposePreFunc型の関数ポインタ
+
+------------------------------------------------------------------------------
+gint (*ComposePreFunc)		(ComposeInfo	*compose,
+				 gpointer	 user_data);
+
+compose_write_to_file() から呼ばれるコールバック関数の型です。
+
+compose: ComposeInfo構造体へのポインタ
+user_data: ComposeInfoにセットされているユーザデータ
+戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。
+
+------------------------------------------------------------------------------
+void compose_set_postprocess_func	(ComposeInfo		*compose,
+					 ComposePostFunc	 func);
+
+メッセージ作成時に後処理として呼ばれるコールバック関数を指定します。
+func は ComposeInfo 構造体へのポインタと、出力されたファイルのパス、そして
+ユーザデータが渡されて呼び出されます。
+
+func はすべての出力処理が終わり、改行コードをLFに変換する直前で呼び出される
+ため、ここで出力されたファイルの書き換えなどを行うことができます。
+
+func が -1 を返せば処理を中断することができます(compose_write_to_file() は
+エラーで返ります)。
+
+compose: ComposeInfo構造体へのポインタ
+func: ComposePostFunc型の関数ポインタ
+
+------------------------------------------------------------------------------
+gint (*ComposePostFunc)		(ComposeInfo	*compose,
+				 const gchar	*file,
+				 gpointer	 user_data);
+
+compose_write_to_file() から呼ばれるコールバック関数の型です。
+
+compose: ComposeInfo構造体へのポインタ
+file: 出力されたメッセージファイルのパス(改行コード変換前)
+user_data: ComposeInfoにセットされているユーザデータ
+戻り値: -1 を返せば compose_write_to_file() が処理を中断してエラーで返ります。

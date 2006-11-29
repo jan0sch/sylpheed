@@ -1,0 +1,487 @@
+procmime - MIME の処理
+
+------------------------------------------------------------------------------
+EncodingType
+
+typedef enum
+{
+	ENC_7BIT,
+	ENC_8BIT,
+	ENC_QUOTED_PRINTABLE,
+	ENC_BASE64,
+	ENC_X_UUENCODE,
+	ENC_UNKNOWN
+} EncodingType;
+
+Content-Transfer-Encoding のタイプを表す enum 型です。
+
+ENC_7BIT: 7bit
+ENC_8BIT: 8bit
+ENC_QUOTED_PRINTABLE: quoted-printable
+ENC_BASE64: base64
+ENC_X_UUENCODE: x-uuencode (非標準)
+ENC_UNKNOWN: 不明
+
+------------------------------------------------------------------------------
+ContentType
+
+typedef enum
+{
+	MIME_TEXT,
+	MIME_TEXT_HTML,
+	MIME_MESSAGE_RFC822,
+	MIME_APPLICATION,
+	MIME_APPLICATION_OCTET_STREAM,
+	MIME_MULTIPART,
+	MIME_IMAGE,
+	MIME_AUDIO,
+	MIME_VIDEO,
+	MIME_UNKNOWN
+} ContentType;
+
+Content-Type (MIME タイプ)でよく使われるものを表す enum 型です。
+
+MIME_TEXT: text/*
+MIME_TEXT_HTML: text/html
+MIME_MESSAGE_RFC822: message/rfc822
+MIME_APPLICATION: application/*
+MIME_APPLICATION_OCTET_STREAM: application/octet-stream
+MIME_MULTIPART: multipart/*
+MIME_IMAGE: image/*
+MIME_AUDIO: audio/*
+MIME_VIDEO: video/*
+MIME_UNKNOWN: 不明
+
+------------------------------------------------------------------------------
+MimeType
+
+struct _MimeType
+{
+	gchar *type;
+	gchar *sub_type;
+
+	gchar *extension;
+};
+
+MIME タイプを表す構造体です。
+
+type: MIME タイプ
+sub_type: サブタイプ
+extension: 拡張子
+
+------------------------------------------------------------------------------
+MailCap
+
+struct _MailCap
+{
+	gchar *mime_type;
+	gchar *cmdline_fmt;
+	gboolean needs_terminal;
+};
+
+mailcap 形式のファイルをパースするための構造体です。
+
+mime_type: MIME タイプ
+cmdline_fmt: コマンドラインフォーマット
+needs_terminal: 端末が必要かどうか(現在未使用)
+
+------------------------------------------------------------------------------
+MimeInfo
+
+/*
+ * An example of MimeInfo structure:
+ *
+ * multipart/mixed            root  <-+ parent
+ *                                    |
+ *   multipart/alternative      children <-+ parent
+ *                                         |
+ *     text/plain                 children  --+
+ *                                            |
+ *     text/html                  next      <-+
+ *
+ *   message/rfc822             next  <-+ main
+ *                                      |
+ *                                sub (capsulated message)
+ *
+ *   image/jpeg                 next
+ */
+
+struct _MimeInfo
+{
+	gchar *encoding;
+
+	EncodingType encoding_type;
+	ContentType  mime_type;
+
+	gchar *content_type;
+	gchar *charset;
+	gchar *name;
+	gchar *boundary;
+
+	gchar *content_disposition;
+	gchar *filename;
+
+	glong fpos;
+	guint size;
+	guint content_size;
+
+	MimeInfo *main;
+	MimeInfo *sub;
+
+	MimeInfo *next;
+	MimeInfo *parent;
+	MimeInfo *children;
+
+	MimeInfo *plaintext;
+	gchar *sigstatus;
+	gchar *sigstatus_full;
+
+	gint level;
+};
+
+MIME パートを表す構造体です。1つのメッセージ中の各 MIME パートはツリー構造
+としてつながります。
+
+------------------------------------------------------------------------------
+#define IS_BOUNDARY(s, bnd, len)
+
+文字列 s が MIME パートの境界であるかどうかを返します。
+
+s: 文字列
+bnd: 境界文字列
+len: bnd の長さ
+戻り値: s が MIME パートの境界であれば TRUE 、そうでなければ FALSE
+
+------------------------------------------------------------------------------
+MimeInfo *procmime_mimeinfo_new		(void);
+
+MimeInfo 構造体を作成します。
+
+作成した MimeInfo 構造体は procmime_mimeinfo_free_all() で解放する必要が
+あります。
+
+戻り値: MimeInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void procmime_mimeinfo_free_all		(MimeInfo	*mimeinfo);
+
+mimeinfo と mimeinfo 以下に接続されているすべての MimeInfo 構造体を
+解放します。 mimeinfo の親からは
+
+mimeinfo: MimeInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+MimeInfo *procmime_mimeinfo_insert	(MimeInfo	*parent,
+					 MimeInfo	*mimeinfo);
+
+mimeinfo を parent の子として接続します。 parent にすでに子が存在する
+場合は、その末尾に追加されます。
+
+parent: 親となる MimeInfo 構造体
+mimeinfo: parent の子となる MimeInfo 構造体
+戻り値: mimeinfo
+
+------------------------------------------------------------------------------
+MimeInfo *procmime_mimeinfo_next	(MimeInfo	*mimeinfo);
+
+MIME ツリー上で mimeinfo の次に位置する MimeInfo 構造体を返します。
+children, sub, next の順に優先されます。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+戻り値: mimeinfo の次の位置にある MimeInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+MimeInfo *procmime_scan_message		(MsgInfo	*msginfo);
+
+メッセージ msginfo 全体をスキャンし、 MIME ツリーを生成して返します。
+復号化のコールバックが設定されている場合は自動的に復号されます。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: MimeInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void procmime_scan_multipart_message	(MimeInfo	*mimeinfo,
+					 FILE		*fp);
+
+multipart/* または message/rfc822 の MIME パート mimeinfo 以下の MIME 構造を
+ファイルストリーム fp からスキャンし、 mimeinfo に結合します。
+fp は mimeinfo が指すメッセージファイルに対して開かれている必要があります。
+
+mimeinfo: MimeInfo 構造体へのポインタ(multipart/* または message/rfc822 のみ)
+fp: メッセージのファイルストリーム
+
+------------------------------------------------------------------------------
+void procmime_scan_encoding		(MimeInfo	*mimeinfo,
+					 const gchar	*encoding);
+
+Content-Transfer-Encoding ヘッダ文字列 encoding を EncodingType 型に変換し、
+mimeinfo->encoding_type に格納します。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+encoding: Content-Transfer-Encoding 文字列
+
+------------------------------------------------------------------------------
+void procmime_scan_content_type		(MimeInfo	*mimeinfo,
+					 const gchar	*content_type);
+
+Content-Type ヘッダ文字列 content_type をスキャンし、 mimeinfo の各メンバを
+それに合わせて適切に更新します。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+content_type: Content-Type 文字列
+
+------------------------------------------------------------------------------
+void procmime_scan_content_type_str	(const gchar	*content_type,
+					 gchar	       **mime_type,
+					 gchar	       **charset,
+					 gchar	       **name,
+					 gchar	       **boundary);
+
+Content-Type ヘッダ文字列 content_type を解析し、 MIME タイプの値と、
+charset 、 name 、 boundary 属性を得ます。
+
+返った文字列は g_free() で解放する必要があります。
+
+content_type: Content-Type 文字列
+mime_type: MIME タイプ文字列の格納先(NULL 可)
+charset: charset 属性文字列の格納先(NULL 可)
+name: name 属性文字列の格納先(NULL 可)
+boundary: boundary 属性文字列の格納先(NULL 可)
+
+------------------------------------------------------------------------------
+void procmime_scan_content_disposition	(MimeInfo	*mimeinfo,
+					 const gchar	*content_disposition);
+
+Content-Disposition ヘッダ文字列 content_disposition を解析し、
+mimeinfo の各メンバをそれに合わせて適切に更新します。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+content_disposition: Content-Disposition ヘッダ文字列
+
+------------------------------------------------------------------------------
+MimeInfo *procmime_scan_mime_header	(FILE		*fp);
+
+メッセージのファイルストリーム fp を読み込み、1パート分の各 MIME ヘッダを
+パースして MimeInfo 構造体を生成します。
+
+作成した MimeInfo 構造体は procmime_mimeinfo_free_all() で解放する必要が
+あります。
+
+fp: メッセージのファイルストリーム
+戻り値: MimeInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+FILE *procmime_decode_content		(FILE		*outfp,
+					 FILE		*infp,
+					 MimeInfo	*mimeinfo);
+
+MIME 情報 mimeinfo とそれに対応するメッセージのファイルストリーム fp
+から、 MIME パートの内容をデコードして取り出し、 outfp に書き出します。
+テキストパートの場合はプラットフォームに合わせて改行コードを正規化します。
+outfp が NULL の場合は一時ファイルを作成し、そこに書き込み、そのファイル
+ストリームを返します。一時ファイルの場合はファイルポインタの位置は先頭に
+なります。このファイルストリームをクローズすると一時ファイルは自動的に
+消去されます。
+
+outfp: 出力先ファイルストリーム
+       NULL の場合は一時ファイルを作成
+infp: 入力ファイルストリーム
+mimeinfo: デコードするパートを指す MimeInfo 構造体へのポインタ
+戻り値: outfp が NULL でない場合は outfp
+        outfp が NULL の場合は新規作成された一時ファイルのストリーム
+
+------------------------------------------------------------------------------
+gint procmime_get_part			(const gchar	*outfile,
+					 const gchar	*infile,
+					 MimeInfo	*mimeinfo);
+
+MIME 情報 mimeinfo とそれに対応するメッセージファイル infile から、
+MIME パートの内容をデコードして取り出し、 outfile に書き出します。
+テキストパートの場合はプラットフォームに合わせて改行コードを正規化します。
+
+outfile: 出力先ファイルのパス(ファイル名エンコーディング)
+infile: 入力ファイルのパス(ファイル名エンコーディング)
+mimeinfo: デコードするパートを指す MimeInfo 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint procmime_get_part_fp		(const gchar	*outfile,
+					 FILE		*infp,
+					 MimeInfo	*mimeinfo);
+
+MIME 情報 mimeinfo とそれに対応するメッセージのファイルストリーム infp から、
+MIME パートの内容をデコードして取り出し、 outfile に書き出します。
+テキストパートの場合はプラットフォームに合わせて改行コードを正規化します。
+
+outfile: 出力先ファイルのパス(ファイル名エンコーディング)
+infp: 入力ファイルストリーム
+mimeinfo: デコードするパートを指す MimeInfo 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint procmime_get_all_parts		(const gchar	*dir,
+					 const gchar	*infile,
+					 MimeInfo	*mimeinfo);
+
+mimeinfo 以下のパートを検索し、ファイル名をもつパート(添付ファイル)をすべて
+指定したディレクトリ dir に保存します。ファイル名が重複する場合は自動的に
+代替ファイル名が使用されます。
+
+dir: 出力先ディレクトリ
+infile: mimeinfo に対応するメッセージファイル(ファイル名エンコーディング)
+mimeinfo: MimeInfo 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+FILE *procmime_get_text_content		(MimeInfo	*mimeinfo,
+					 FILE		*infp,
+					 const gchar	*encoding);
+
+テキストパート mimeinfo の内容を一時ファイルに書き出して返します。
+mimeinfo のタイプは MIME_TEXT または MIME_TEXT_HTML である必要があります。
+encoding を指定した場合はその文字エンコーディングに変換して出力します。
+一時ファイルのファイルポインタの位置は先頭になります。
+一時ファイルを閉じると一時ファイルは自動的に削除されます。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+infp: 入力ファイルストリーム
+encoding: 出力文字エンコーディング
+戻り値: 新規作成された一時ファイルのストリーム
+
+------------------------------------------------------------------------------
+FILE *procmime_get_first_text_content	(MsgInfo	*msginfo,
+					 const gchar	*encoding);
+
+メッセージ msginfo の最初のテキストパートを探し、その内容を一時ファイルに
+書き出して返します。
+
+encoding を指定した場合はその文字エンコーディングに変換して出力します。
+一時ファイルのファイルポインタの位置は先頭になります。
+一時ファイルを閉じると一時ファイルは自動的に削除されます。
+
+msginfo: MsgInfo 構造体へのポインタ
+encoding: 出力文字エンコーディング
+戻り値: 新規作成された一時ファイルのストリーム
+
+------------------------------------------------------------------------------
+gboolean procmime_find_string_part	(MimeInfo	*mimeinfo,
+					 const gchar	*filename,
+					 const gchar	*str,
+					 StrFindFunc	 find_func);
+
+指定したメッセージのテキストパートに文字列 str が含まれているかどうかを
+検索関数 find_func を用いて調べ、あれば TRUE を返します。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+filename: mimeinfo に対応するメッセージファイル(ファイル名エンコーディング)
+str: 検索文字列
+find_func: 検索関数へのポインタ
+戻り値: str が指定したパート中に見つかれば TRUE 、見つからなければ FALSE
+
+------------------------------------------------------------------------------
+gboolean procmime_find_string		(MsgInfo	*msginfo,
+					 const gchar	*str,
+					 StrFindFunc	 find_func);
+
+メッセージ msginfo 中のすべてのテキストパートに、文字列 str が含まれて
+いるかどうかを検索関数 find_func を用いて調べ、あれば TRUE を返します。
+
+msginfo: MsgInfo 構造体へのポインタ
+str: 検索文字列
+find_func: 検索関数へのポインタ
+戻り値: str がテキストパート中に見つかれば TRUE 、見つからなければ FALSE
+
+------------------------------------------------------------------------------
+gchar *procmime_get_part_file_name	(MimeInfo	*mimeinfo);
+
+メッセージのパート mimeinfo に対するファイル名を生成して返します。
+添付ファイル名が指定されていればそれを使用し、なければ "mimetmp" という
+文字列が返ります。文字列はファイルシステム上で使用できるように加工され、
+ファイル名エンコーディングで返ります。
+
+戻り値は g_free() で解放する必要があります。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+戻り値: 生成されたファイル名文字列(ファイル名エンコーディング)
+
+------------------------------------------------------------------------------
+gchar *procmime_get_tmp_file_name	(MimeInfo	*mimeinfo);
+
+メッセージのパート mimeinfo に対する一時ファイル名をフルパスで生成して
+返します。ファイル名には重複しないようプレフィクスが付加されます。
+ファイルの場所は設定ファイルディレクトリ以下の mimetmp ディレクトリに
+なります。
+
+mimeinfo: MimeInfo 構造体へのポインタ
+戻り値: 生成された一時ファイル名のフルパス(ファイル名エンコーディング)
+
+------------------------------------------------------------------------------
+ContentType procmime_scan_mime_type	(const gchar	*mime_type);
+
+MIME タイプ文字列(type/subtype 形式)をスキャンし、 ContentType 型に変換して
+返します。
+
+mime_type: MIME タイプ文字列
+戻り値: ContentType 型の enum 値
+
+------------------------------------------------------------------------------
+gchar *procmime_get_mime_type		(const gchar	*filename);
+
+ファイル名の拡張子から MIME タイプ文字列(type/subtype 形式)を取得して
+返します。拡張子がない、または未知の場合は NULL が返ります。
+拡張子と MIME タイプの対応表は設定ファイルディレクトリ以下の mime.types
+ファイルが使用されます。
+
+戻り値は g_free() で解放する必要があります。
+
+filename: ファイル名
+戻り値: MIME タイプ文字列
+        取得できなかった場合は NULL
+
+------------------------------------------------------------------------------
+gint procmime_execute_open_file		(const gchar	*file,
+					 const gchar	*mime_type);
+
+ファイル file を MIME タイプ mime_type または file の拡張子に基づいて
+アプリケーションで開きます。 MIME タイプとアプリケーションの対応表は
+設定ファイルディレクトリ以下の mailcap ファイル(または ~/.mailcap)が
+使用されます。子プロセスは非同期で生成されます。
+
+file: 開くファイル名
+mime_type: MIME タイプ文字列(NULL の場合は file の拡張子から判断)
+戻り値: 成功した場合は 0
+        エラーの場合は -1
+
+------------------------------------------------------------------------------
+EncodingType procmime_get_encoding_for_charset	(const gchar	*charset);
+
+文字エンコーディング charset から最適な Content-Transfer-Encoding のタイプ
+を取得します。
+
+charset: 文字エンコーディング文字列
+戻り値: EncodingType 型の enum 値
+
+------------------------------------------------------------------------------
+EncodingType procmime_get_encoding_for_text_file(const gchar	*file);
+
+テキストファイル file に対して最適な Content-Transfer-Encoding のタイプ
+を取得します。
+
+ファイル中の 8bit 文字が全体の 20% 以上であれば ENC_BASE64 が選択されます。
+それ以下の場合は ENC_QUOTED_PRINTABLE が選択されます。
+すべての文字が 7bit の範囲に収まる場合は ENC_7BIT が選択されます。
+
+file: テキストファイルのパス(ファイル名エンコーディング)
+戻り値: EncodingType 型の enum 値
+
+------------------------------------------------------------------------------
+const gchar *procmime_get_encoding_str		(EncodingType	 encoding);
+
+EncodingType 型の値から Content-Transfer-Encoding 文字列を得ます。
+返った文字列は解放する必要はありません。
+
+encoding: EncodingType 型の enum 値
+戻り値: Content-Transfer-Encoding 文字列

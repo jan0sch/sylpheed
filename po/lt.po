@@ -1,0 +1,604 @@
+# Lithuanian translation of Sylpheed.
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Vitalijus Valantiejus <vitalijus@users.sf.net>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sylpheed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2005-06-09 13:51+0300\n"
+"Last-Translator: Vitalijus Valantiejus <vitalijus@users.sf.net>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "Skaitoma kiekvienos sąskaitos konfigūracija...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "IMAP4 prisijungimas prie %s buvo nutrauktas. Jungiamasi...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "IMAP4 serveris panaikina LOGIN.\n"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "sukuriamas IMAP4 prisijungimas prie %s:%d ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "Negaliu sukurti TLS sesijos.\n"
+
+#: libsylph/imap.c:1120
+#, c-format
+msgid "Getting message %d"
+msgstr "Gaunamas laiškas %d"
+
+#: libsylph/imap.c:1236
+#, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Pridedami laiškai į %s (%d / %d)"
+
+#: libsylph/imap.c:1328
+#, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Perkeliami laiškai %s į %s ..."
+
+#: libsylph/imap.c:1334
+#, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Kopijuojami laiškai %s į %s ..."
+
+#: libsylph/imap.c:1473
+#, c-format
+msgid "Removing messages %s"
+msgstr "Šalinami laiškai %s..."
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "negaliu nustatyti ištrynimo žymų: %s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "negaliu išbraukti\n"
+
+#: libsylph/imap.c:1570
+#, c-format
+msgid "Removing all messages in %s"
+msgstr "Trinami laiškai iš %s..."
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "negaliu nustatyti ištrynimo žymų: 1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "negaliu uždaryti katalogo\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "šakninis katalogas %s neegzistuoja\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "klaida gaunant LIST.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "Negaliu sukurti „%s“\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "negaliu sukurti „%s“ po INBOX\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "negaliu sukurti dėžutės: nepavyko LIST\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "negaliu sukurti dėžutės\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "negaliu pervadinti dėžutės: %s į %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "negaliu ištrinti dėžutės\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "nagaliu gauti voko\n"
+
+#: libsylph/imap.c:2340
+#, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Gaunamos laiškų antraštės (%d / %d)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "klaida gaunant voką.\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "negaliu išanalizuoti voko: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "Negaliu prisijungti prie IMAP4 serverio: %s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "Negaliu sukurti IMAP4 sesijos su: %s:%d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "negalių gauti vardų zonos\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "negaliu pasirinkti katalogo: %s\n"
+
+#: libsylph/imap.c:3146
+msgid "error on imap command: STATUS\n"
+msgstr "klaida vykdant imap komandą: STATUS\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "IMAP4 autentiškumo tikrinimas nepavyko.\n"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "nepavyko prisijungti prie IMAP4\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "negaliu prirašyti %s į %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(siunčiamas failas...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "negaliu pridėti laiško į %s\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "negaliu nukopijuoti %s į %s\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "klaida vykdant imap komandą: STORE %s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "klaida vykdant imap komandą: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "klaida vykdant imap komandą: CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv negali konvertuoti UTF-7 į %s\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv negali konvertuoti %s į UTF-7\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "negaliu rašyti į laikinąjį failą\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "Gaunami laiškai iš %s į %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "negaliu perskaityti „mbox“ failo.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "neteisingas „mbox“ formatas: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "pažeistas „mbox“ failas: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "negaliu atverti laikinojo failo\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+"unescaped From found:\n"
+"%s"
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "Rasta laiškų: %d.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "negaliu sukurti užrakto failo %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "naudokite „flock“ vietoj „file“ jei įmanoma.\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "negaliu sukurti %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "dėžutę turi kitas procesas, laukiu...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "negaliu užrakinti %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "blogas užrakto tipas\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "negaliu atrakinti %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "negaliu sumažinti dėžutės iki nulio.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "Eksportuojami laiškai iš %s į %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "negaliu nukopijuoti laiško %s į %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "Negaliu atidaryti žymų failo.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "pradinis katalogas identiškas paskirties katalogui.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "Kopijuoju laišką %s%c%d į %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"Failas „%s“ jau egzistuoja.\n"
+"Negaliu sukurti katalogo."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+"Katalogo pavadinimas\n"
+"'%s' nėra teisingas UTF-8 tekstas.\n"
+"Galbūt failų pavadinimams naudojama lokalės koduotė.\n"
+"Tokiu atveju jūs turite nustatyti aplinkos kintamąjį\n"
+"(detalesnės instrukcijos faile „README“):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "sukuriu NNTP prisijungimą prie %s:%d ...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "NNTP prisijungimas prie %s:%d buvo nutrauktas. Jungiuosi iš naujo...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "žinutė %d jau buvo įkelta.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "gaunama žinutė %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "negaliu perskaityti žinutės %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "negaliu paskelbti žinutės.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "negaliu gauti žinutės %d\n"
+
+#: libsylph/news.c:759
+#, c-format
+msgid "can't select group: %s\n"
+msgstr "negaliu pažymėti grupės: %s\n"
+
+#: libsylph/news.c:796
+#, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "neteisingas žinučių intervalas: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "nėra naujų žinučių.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "gaunamas xover %d - %d, %s...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "negaliu gauti xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "klaida gaunant xover.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "bloga xover eilutė: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "negaliu gauti xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "klaida gaunant xhdr.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "Negaliu prisijungti prie NNTP serverio: %s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "protokolo klaida: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "protokolo klaida\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "Klaida skelbiant žinutę\n"
+
+#: libsylph/nntp.c:363
+msgid "Error occurred while sending command\n"
+msgstr "Klaida siunčiant komandą\n"
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "Reikalinga APOP žyma nerasta pasisveikinime\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "Sintaksės klaida pasisveikinime\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "POP3 protokolo klaida\n"
+
+#: libsylph/pop.c:264
+#, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "blogas UIDL atsakymas: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: Trinamas senas laiškas %d\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: praleidžiamas laiškas %d (%d B)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "dėžutė užrakinta\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "baigėsi sesijai skirtas laikas\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "negaliu pradėti TLS sesijos\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "klaida tikrinant autentiškumą\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "komanda nepalaikoma\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "klaida POP3 sesijoje\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "nepavyko įrašyti konfigūracijos į failą\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "Rasta %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "Nustatymai išsaugoti.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "Nereikalingo pašto filtras"
+
+#: libsylph/prefs_common.c:506
+msgid "Junk mail filter"
+msgstr "Nereikalingo pašto filtras"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr "procmime_get_text_content(): Nepavyko konvertuoti kodo.\n"
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "negali atidaryti žymų failo\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "negaliu gauti laiško %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "Bloga spausdinimo komanda: „%s“\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "kalaida gaunant duomenis.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "Negaliu rašyti į failą.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH neprieinamas\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "blogas SMTP atsakymas\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "klaida SMTP sesijoje\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "SSLv23 neprieinamas\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "SSLv23 prieinamas\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "TLSv1 neprieinamas\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "TLSv1 prieinamas\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "SSL metodas neprieinamas\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "Nežinomas SSL metodas PROGRAMOS KLAIDA\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "Klaida sukuriant SSL kontekstą\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "SSL prisijungimas naudojant %s\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "Serverio sertifikatas:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  Tema: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  Leidėjas: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "negaliu pakeisti failo rėžimo\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "nepavyko įrašyti į „%s“.\n"

@@ -1,0 +1,601 @@
+# Sylpheed bulgarian translation
+# Copyright (C) 2003 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Sylpheed package.
+# Pavel Pyuter <pavel@unix-bg.org>, 2003.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sylpheed 0.9.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-11-21 15:57+0900\n"
+"PO-Revision-Date: 2004-01-09 02:06+0200\n"
+"Last-Translator: Pavel Pyuter <pavel@unix-bg.org>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: libsylph/account.c:56
+msgid "Reading all config for each account...\n"
+msgstr "Четене на конфигурация за всеки акаунт...\n"
+
+#: libsylph/imap.c:465
+#, c-format
+msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
+msgstr "IMAP4 връзката до %s се разпадна. Свързване...\n"
+
+#: libsylph/imap.c:520 libsylph/imap.c:526
+#, fuzzy
+msgid "IMAP4 server disables LOGIN.\n"
+msgstr "IMAP директория на сървъра"
+
+#: libsylph/imap.c:602
+#, c-format
+msgid "creating IMAP4 connection to %s:%d ...\n"
+msgstr "създаване на IMAP4 връзка до %s:%d ...\n"
+
+#: libsylph/imap.c:646
+msgid "Can't start TLS session.\n"
+msgstr "Не може да се стартира TLS сесия.\n"
+
+#: libsylph/imap.c:1120
+#, fuzzy, c-format
+msgid "Getting message %d"
+msgstr "Изтриване на съобщение %d"
+
+#: libsylph/imap.c:1236
+#, fuzzy, c-format
+msgid "Appending messages to %s (%d / %d)"
+msgstr "Изпращане на съобщение (%d / %d байта)"
+
+#: libsylph/imap.c:1328
+#, fuzzy, c-format
+msgid "Moving messages %s to %s ..."
+msgstr "Копиране на съобщение %s%c%d във %s ...\n"
+
+#: libsylph/imap.c:1334
+#, fuzzy, c-format
+msgid "Copying messages %s to %s ..."
+msgstr "Копиране на съобщение %s%c%d във %s ...\n"
+
+#: libsylph/imap.c:1473
+#, fuzzy, c-format
+msgid "Removing messages %s"
+msgstr "Получаване на съобщения от %s..."
+
+#: libsylph/imap.c:1479
+#, c-format
+msgid "can't set deleted flags: %s\n"
+msgstr "не могат да се установят изтрити флагове: %s\n"
+
+#: libsylph/imap.c:1487 libsylph/imap.c:1582
+msgid "can't expunge\n"
+msgstr "не може да се заличи\n"
+
+#: libsylph/imap.c:1570
+#, fuzzy, c-format
+msgid "Removing all messages in %s"
+msgstr "Получаване на съобщения от %s..."
+
+#: libsylph/imap.c:1576
+msgid "can't set deleted flags: 1:*\n"
+msgstr "не могат да се установят изтрити флагове: 1:*\n"
+
+#: libsylph/imap.c:1624
+msgid "can't close folder\n"
+msgstr "не може да затвори папка\n"
+
+#: libsylph/imap.c:1702
+#, c-format
+msgid "root folder %s not exist\n"
+msgstr "коренната папка %s не съществува\n"
+
+#: libsylph/imap.c:1891 libsylph/imap.c:1899
+msgid "error occurred while getting LIST.\n"
+msgstr "грешка при получаване на LIST.\n"
+
+#: libsylph/imap.c:2013
+#, c-format
+msgid "Can't create '%s'\n"
+msgstr "Не може да се създаде '%s'\n"
+
+#: libsylph/imap.c:2018
+#, c-format
+msgid "Can't create '%s' under INBOX\n"
+msgstr "Не може да се създаде '%s' под Входящи\n"
+
+#: libsylph/imap.c:2079
+msgid "can't create mailbox: LIST failed\n"
+msgstr "Не може да се създаде пощенска кутия: LIST се провали\n"
+
+#: libsylph/imap.c:2099
+msgid "can't create mailbox\n"
+msgstr "Не може да се създаде пощенска кутия\n"
+
+#: libsylph/imap.c:2203
+#, c-format
+msgid "can't rename mailbox: %s to %s\n"
+msgstr "Не може да се преименува пощенска кутия: %s до %s\n"
+
+#: libsylph/imap.c:2283
+msgid "can't delete mailbox\n"
+msgstr "Не може да се изтрие пощенска кутия\n"
+
+#: libsylph/imap.c:2327
+msgid "can't get envelope\n"
+msgstr "не може да се вземе envelope\n"
+
+#: libsylph/imap.c:2340
+#, fuzzy, c-format
+msgid "Getting message headers (%d / %d)"
+msgstr "Изпращане на съобщение (%d / %d байта)"
+
+#: libsylph/imap.c:2350
+msgid "error occurred while getting envelope.\n"
+msgstr "грешка при вземане на envelope.\n"
+
+#: libsylph/imap.c:2372
+#, c-format
+msgid "can't parse envelope: %s\n"
+msgstr "не може да се анализира envelope: %s\n"
+
+#: libsylph/imap.c:2496
+#, c-format
+msgid "Can't connect to IMAP4 server: %s:%d\n"
+msgstr "Не може да се установи връзка с IMAP4 сървър: %s:%d\n"
+
+#: libsylph/imap.c:2503
+#, c-format
+msgid "Can't establish IMAP4 session with: %s:%d\n"
+msgstr "Не може да се установи IMAP4 сесия с:  %s:%d\n"
+
+#: libsylph/imap.c:2578
+msgid "can't get namespace\n"
+msgstr "не може да се получи пространството от имена\n"
+
+#: libsylph/imap.c:3111
+#, c-format
+msgid "can't select folder: %s\n"
+msgstr "не може да се избере папка: %s\n"
+
+#: libsylph/imap.c:3146
+#, fuzzy
+msgid "error on imap command: STATUS\n"
+msgstr "грешка при imap команда: CLOSE\n"
+
+#: libsylph/imap.c:3269 libsylph/imap.c:3304
+msgid "IMAP4 authentication failed.\n"
+msgstr "IMAP4 удостоверяване провалено.\n"
+
+#: libsylph/imap.c:3353
+msgid "IMAP4 login failed.\n"
+msgstr "IMAP4 влизане провалено.\n"
+
+#: libsylph/imap.c:3689
+#, c-format
+msgid "can't append %s to %s\n"
+msgstr "не може да се прибави %s към %s\n"
+
+#: libsylph/imap.c:3696
+msgid "(sending file...)"
+msgstr "(изпращане на файл...)"
+
+#: libsylph/imap.c:3725
+#, c-format
+msgid "can't append message to %s\n"
+msgstr "съобщението не може да се прибави към %s\n"
+
+#: libsylph/imap.c:3757
+#, c-format
+msgid "can't copy %s to %s\n"
+msgstr "не може да се копира %s в %s\n"
+
+#: libsylph/imap.c:3781
+#, c-format
+msgid "error while imap command: STORE %s %s\n"
+msgstr "грешка при imap команда: STORE %s %s\n"
+
+#: libsylph/imap.c:3795
+msgid "error while imap command: EXPUNGE\n"
+msgstr "грешка при imap команда: EXPUNGE\n"
+
+#: libsylph/imap.c:3808
+msgid "error while imap command: CLOSE\n"
+msgstr "грешка при imap команда: CLOSE\n"
+
+#: libsylph/imap.c:4084
+#, c-format
+msgid "iconv cannot convert UTF-7 to %s\n"
+msgstr "iconv не може да преобразува UTF-7 до %s\n"
+
+#: libsylph/imap.c:4114
+#, c-format
+msgid "iconv cannot convert %s to UTF-7\n"
+msgstr "iconv не може да преобразува %s до UTF-7\n"
+
+#: libsylph/mbox.c:50 libsylph/mbox.c:196
+msgid "can't write to temporary file\n"
+msgstr "не може да се запише във временен файл\n"
+
+#: libsylph/mbox.c:69
+#, c-format
+msgid "Getting messages from %s into %s...\n"
+msgstr "Получаване на съобщения от %s във %s...\n"
+
+#: libsylph/mbox.c:79
+msgid "can't read mbox file.\n"
+msgstr "не може да се прочете mbox файл.\n"
+
+#: libsylph/mbox.c:86
+#, c-format
+msgid "invalid mbox format: %s\n"
+msgstr "невалиден mbox формат: %s\n"
+
+#: libsylph/mbox.c:93
+#, c-format
+msgid "malformed mbox: %s\n"
+msgstr "деформиран mbox: %s\n"
+
+#: libsylph/mbox.c:110
+msgid "can't open temporary file\n"
+msgstr "не може да се отвори временен файл\n"
+
+#: libsylph/mbox.c:161
+#, c-format
+msgid ""
+"unescaped From found:\n"
+"%s"
+msgstr ""
+
+#: libsylph/mbox.c:250
+#, c-format
+msgid "%d messages found.\n"
+msgstr "%d намерени съобщения.\n"
+
+#: libsylph/mbox.c:268
+#, c-format
+msgid "can't create lock file %s\n"
+msgstr "не може да се създаде заключващ файл %s\n"
+
+#: libsylph/mbox.c:269
+msgid "use 'flock' instead of 'file' if possible.\n"
+msgstr "използвайте 'flock' вместо 'file' ако е възможно.\n"
+
+#: libsylph/mbox.c:281
+#, c-format
+msgid "can't create %s\n"
+msgstr "не може да се създаде %s\n"
+
+#: libsylph/mbox.c:287
+msgid "mailbox is owned by another process, waiting...\n"
+msgstr "кутията се притежава от друг процес, изчакване...\n"
+
+#: libsylph/mbox.c:316
+#, c-format
+msgid "can't lock %s\n"
+msgstr "не може да се заключи %s\n"
+
+#: libsylph/mbox.c:323 libsylph/mbox.c:373
+msgid "invalid lock type\n"
+msgstr "невалиден тип заключване\n"
+
+#: libsylph/mbox.c:359
+#, c-format
+msgid "can't unlock %s\n"
+msgstr "не може да се отключи %s\n"
+
+#: libsylph/mbox.c:394
+msgid "can't truncate mailbox to zero.\n"
+msgstr "пощенската кутия не може да се съкрати до нула.\n"
+
+#: libsylph/mbox.c:418
+#, c-format
+msgid "Exporting messages from %s into %s...\n"
+msgstr "Изнасяне на съобщения от %s във %s...\n"
+
+#: libsylph/mh.c:427
+#, c-format
+msgid "can't copy message %s to %s\n"
+msgstr "не може да се копира съобщението %s във %s\n"
+
+#: libsylph/mh.c:502 libsylph/mh.c:625
+msgid "Can't open mark file.\n"
+msgstr "Не може да се отвори файлът с маркировките.\n"
+
+#: libsylph/mh.c:509 libsylph/mh.c:631
+msgid "the src folder is identical to the dest.\n"
+msgstr "изходната папка е еднаква с назначението.\n"
+
+#: libsylph/mh.c:634
+#, c-format
+msgid "Copying message %s%c%d to %s ...\n"
+msgstr "Копиране на съобщение %s%c%d във %s ...\n"
+
+#: libsylph/mh.c:965 libsylph/mh.c:978
+#, c-format
+msgid ""
+"File `%s' already exists.\n"
+"Can't create folder."
+msgstr ""
+"Файлът `%s' вече съществува.\n"
+"Папката не може да се създаде."
+
+#: libsylph/mh.c:1500
+#, c-format
+msgid ""
+"Directory name\n"
+"'%s' is not a valid UTF-8 string.\n"
+"Maybe the locale encoding is used for filename.\n"
+"If that is the case, you must set the following environmental variable\n"
+"(see README for detail):\n"
+"\n"
+"\tG_FILENAME_ENCODING=@locale\n"
+msgstr ""
+
+#: libsylph/news.c:207
+#, c-format
+msgid "creating NNTP connection to %s:%d ...\n"
+msgstr "създаване на NNTP връзка до %s:%d ...\n"
+
+#: libsylph/news.c:276
+#, c-format
+msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
+msgstr "NNTP връзката до %s:%d беше прекъсната. Свързване...\n"
+
+#: libsylph/news.c:377
+#, c-format
+msgid "article %d has been already cached.\n"
+msgstr "статия %d е вече кеширана.\n"
+
+#: libsylph/news.c:397
+#, c-format
+msgid "getting article %d...\n"
+msgstr "взимане на статия %d...\n"
+
+#: libsylph/news.c:401
+#, c-format
+msgid "can't read article %d\n"
+msgstr "не може да се прочете статия %d\n"
+
+#: libsylph/news.c:676
+msgid "can't post article.\n"
+msgstr "не може да се публикува статия.\n"
+
+#: libsylph/news.c:702
+#, c-format
+msgid "can't retrieve article %d\n"
+msgstr "не може да се извлече статия %d\n"
+
+#: libsylph/news.c:759
+#, fuzzy, c-format
+msgid "can't select group: %s\n"
+msgstr "не може да се избере група %s\n"
+
+#: libsylph/news.c:796
+#, fuzzy, c-format
+msgid "invalid article range: %d - %d\n"
+msgstr "Невалиден обхват на статии: %d - %d\n"
+
+#: libsylph/news.c:809
+msgid "no new articles.\n"
+msgstr "няма нови статии.\n"
+
+#: libsylph/news.c:819
+#, c-format
+msgid "getting xover %d - %d in %s...\n"
+msgstr "получаване на xover %d - %d в %s...\n"
+
+#: libsylph/news.c:823
+msgid "can't get xover\n"
+msgstr "не може да се получи xover\n"
+
+#: libsylph/news.c:833
+msgid "error occurred while getting xover.\n"
+msgstr "грешка при получаването на xover.\n"
+
+#: libsylph/news.c:843
+#, c-format
+msgid "invalid xover line: %s\n"
+msgstr "невалиден xover ред: %s\n"
+
+#: libsylph/news.c:862 libsylph/news.c:894
+msgid "can't get xhdr\n"
+msgstr "не може да се получи xhdr\n"
+
+#: libsylph/news.c:874 libsylph/news.c:906
+msgid "error occurred while getting xhdr.\n"
+msgstr "грешка при получаването на xhdr.\n"
+
+#: libsylph/nntp.c:68
+#, c-format
+msgid "Can't connect to NNTP server: %s:%d\n"
+msgstr "Не може да се установи връзка с NNTP сървър: %s:%d\n"
+
+#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#, c-format
+msgid "protocol error: %s\n"
+msgstr "протоколна грешка: %s\n"
+
+#: libsylph/nntp.c:187 libsylph/nntp.c:233
+msgid "protocol error\n"
+msgstr "протоколна грешка\n"
+
+#: libsylph/nntp.c:283
+msgid "Error occurred while posting\n"
+msgstr "Появи се грешка при публикуване\n"
+
+#: libsylph/nntp.c:363
+#, fuzzy
+msgid "Error occurred while sending command\n"
+msgstr "Появи се грешка изпращане на съобщението."
+
+#: libsylph/pop.c:155
+msgid "Required APOP timestamp not found in greeting\n"
+msgstr "Не е намерен необходим APOP времеви отпечатък в поздрава\n"
+
+#: libsylph/pop.c:162
+msgid "Timestamp syntax error in greeting\n"
+msgstr "Синтактична грешка във времевия отпечатък в поздрава\n"
+
+#: libsylph/pop.c:192 libsylph/pop.c:219
+msgid "POP3 protocol error\n"
+msgstr "POP3 протоколна грешка\n"
+
+#: libsylph/pop.c:264
+#, fuzzy, c-format
+msgid "invalid UIDL response: %s\n"
+msgstr "невалиден xover ред: %s\n"
+
+#: libsylph/pop.c:625
+#, c-format
+msgid "POP3: Deleting expired message %d\n"
+msgstr "POP3: Изтриване на съобщениe с изтекъл срок %d\n"
+
+#: libsylph/pop.c:634
+#, c-format
+msgid "POP3: Skipping message %d (%d bytes)\n"
+msgstr "POP3: Прескачане на съобщение %d (%d байта)\n"
+
+#: libsylph/pop.c:667
+msgid "mailbox is locked\n"
+msgstr "пощенската кутия е заключена\n"
+
+#: libsylph/pop.c:670
+msgid "session timeout\n"
+msgstr "сесията е просрочена\n"
+
+#: libsylph/pop.c:676 libsylph/smtp.c:561
+msgid "can't start TLS session\n"
+msgstr "не може да се стартира TLS сесия\n"
+
+#: libsylph/pop.c:683 libsylph/smtp.c:496
+msgid "error occurred on authentication\n"
+msgstr "грешка при удостоверяване\n"
+
+#: libsylph/pop.c:688
+msgid "command not supported\n"
+msgstr "командата не се поддържа\n"
+
+#: libsylph/pop.c:692
+msgid "error occurred on POP3 session\n"
+msgstr "грешка при POP3 сесията\n"
+
+#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+msgid "failed to write configuration to file\n"
+msgstr "неуспешно записване на настройките във файл\n"
+
+#: libsylph/prefs.c:239
+#, c-format
+msgid "Found %s\n"
+msgstr "Намерени %s\n"
+
+#: libsylph/prefs.c:272
+msgid "Configuration is saved.\n"
+msgstr "Настройките са запазени.\n"
+
+#: libsylph/prefs_common.c:503
+#, fuzzy
+msgid "Junk mail filter (manual)"
+msgstr "Папка"
+
+#: libsylph/prefs_common.c:506
+#, fuzzy
+msgid "Junk mail filter"
+msgstr "Папка"
+
+#: libsylph/procmime.c:1125
+msgid "procmime_get_text_content(): Code conversion failed.\n"
+msgstr ""
+
+#: libsylph/procmsg.c:655
+msgid "can't open mark file\n"
+msgstr "не може да се отвори файлът с маркировките\n"
+
+#: libsylph/procmsg.c:1107
+#, c-format
+msgid "can't fetch message %d\n"
+msgstr "не може да се вземе съобщението %d\n"
+
+#: libsylph/procmsg.c:1423
+#, c-format
+msgid "Print command line is invalid: `%s'\n"
+msgstr "Невалиден команден ред за печат: `%s'\n"
+
+#: libsylph/recv.c:140
+msgid "error occurred while retrieving data.\n"
+msgstr "възникна грешка при получаване на данни.\n"
+
+#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+msgid "Can't write to file.\n"
+msgstr "Не може да се запише във файл.\n"
+
+#: libsylph/smtp.c:157
+msgid "SMTP AUTH not available\n"
+msgstr "SMTP AUTH не е наличен\n"
+
+#: libsylph/smtp.c:466 libsylph/smtp.c:516
+msgid "bad SMTP response\n"
+msgstr "грешен SMTP отговор\n"
+
+#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
+msgid "error occurred on SMTP session\n"
+msgstr "грешка при SMTP сесията\n"
+
+#: libsylph/ssl.c:54
+msgid "SSLv23 not available\n"
+msgstr "не е наличен SSLv23\n"
+
+#: libsylph/ssl.c:56
+msgid "SSLv23 available\n"
+msgstr "наличен SSLv23\n"
+
+#: libsylph/ssl.c:65
+msgid "TLSv1 not available\n"
+msgstr "не е наличен TLSv1\n"
+
+#: libsylph/ssl.c:67
+msgid "TLSv1 available\n"
+msgstr "наличен TLSv1\n"
+
+#: libsylph/ssl.c:101 libsylph/ssl.c:108
+msgid "SSL method not available\n"
+msgstr "не е наличен SSL метода\n"
+
+#: libsylph/ssl.c:114
+msgid "Unknown SSL method *PROGRAM BUG*\n"
+msgstr "Непознат SSL метод *PROGRAM BUG*\n"
+
+#: libsylph/ssl.c:120
+msgid "Error creating ssl context\n"
+msgstr "Грешка при създаване на ssl контекст\n"
+
+#. Get the cipher
+#: libsylph/ssl.c:139
+#, c-format
+msgid "SSL connection using %s\n"
+msgstr "SSL връзка използвайки %s\n"
+
+#: libsylph/ssl.c:148
+msgid "Server certificate:\n"
+msgstr "Сертификат на сървъра:\n"
+
+#: libsylph/ssl.c:151
+#, c-format
+msgid "  Subject: %s\n"
+msgstr "  Субект: %s\n"
+
+#: libsylph/ssl.c:156
+#, c-format
+msgid "  Issuer: %s\n"
+msgstr "  Издател: %s\n"
+
+#: libsylph/utils.c:2496
+msgid "can't change file mode\n"
+msgstr "не може да се смени вида на файла\n"
+
+#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#, c-format
+msgid "writing to %s failed.\n"
+msgstr "записът в %s се провали.\n"

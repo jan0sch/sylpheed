@@ -1,0 +1,699 @@
+procmsg - メッセージの操作
+
+------------------------------------------------------------------------------
+DataOpenMode
+
+typedef enum
+{
+	DATA_READ,
+	DATA_WRITE,
+	DATA_APPEND
+} DataOpenMode;
+
+procmsg_open_data_file() 等でファイルを開く際に指定するモードです。
+
+DATA_READ: 読み込みモード
+DATA_WRITE: 書き込み(上書き)モード
+DATA_APPEND: 追加書き込みモード
+
+------------------------------------------------------------------------------
+#define MSG_NEW			(1U << 0)
+#define MSG_UNREAD		(1U << 1)
+#define MSG_MARKED		(1U << 2)
+#define MSG_DELETED		(1U << 3)
+#define MSG_REPLIED		(1U << 4)
+#define MSG_FORWARDED		(1U << 5)
+
+#define MSG_CLABEL_SBIT	(7)		/* start bit of color label */
+#define MAKE_MSG_CLABEL(h, m, l)	(((h) << (MSG_CLABEL_SBIT + 2)) | \
+					 ((m) << (MSG_CLABEL_SBIT + 1)) | \
+					 ((l) << (MSG_CLABEL_SBIT + 0)))
+
+#define MSG_CLABEL_NONE		MAKE_MSG_CLABEL(0U, 0U, 0U)
+#define MSG_CLABEL_1		MAKE_MSG_CLABEL(0U, 0U, 1U)
+#define MSG_CLABEL_2		MAKE_MSG_CLABEL(0U, 1U, 0U)
+#define MSG_CLABEL_3		MAKE_MSG_CLABEL(0U, 1U, 1U)
+#define MSG_CLABEL_4		MAKE_MSG_CLABEL(1U, 0U, 0U)
+#define MSG_CLABEL_5		MAKE_MSG_CLABEL(1U, 0U, 1U)
+#define MSG_CLABEL_6		MAKE_MSG_CLABEL(1U, 1U, 0U)
+#define MSG_CLABEL_7		MAKE_MSG_CLABEL(1U, 1U, 1U)
+
+#define MSG_CLABEL_ORANGE	MSG_CLABEL_1
+#define MSG_CLABEL_RED		MSG_CLABEL_2
+#define MSG_CLABEL_PINK		MSG_CLABEL_3
+#define MSG_CLABEL_SKYBLUE	MSG_CLABEL_4
+#define MSG_CLABEL_BLUE		MSG_CLABEL_5
+#define MSG_CLABEL_GREEN	MSG_CLABEL_6
+#define MSG_CLABEL_BROWN	MSG_CLABEL_7
+
+/* RESERVED */
+#define	MSG_RESERVED		(1U << 31)
+
+#define MSG_CLABEL_FLAG_MASK	(MSG_CLABEL_7)
+
+typedef guint32 MsgPermFlags;
+
+#define MSG_MOVE		(1U << 0)
+#define MSG_COPY		(1U << 1)
+#define MSG_QUEUED		(1U << 16)
+#define MSG_DRAFT		(1U << 17)
+#define MSG_ENCRYPTED		(1U << 18)
+#define MSG_IMAP		(1U << 19)
+#define MSG_NEWS		(1U << 20)
+#define MSG_SIGNED		(1U << 21)
+#define MSG_FLAG_CHANGED	(1U << 27)
+#define MSG_CACHED		(1U << 28)
+#define MSG_MIME		(1U << 29)
+#define MSG_INVALID		(1U << 30)
+#define MSG_RECEIVED		(1U << 31)
+
+#define MSG_CACHED_FLAG_MASK	(MSG_MIME)
+
+typedef guint32 MsgTmpFlags;
+
+#define MSG_SET_FLAGS(msg, flags)	{ (msg) |= (flags); }
+#define MSG_UNSET_FLAGS(msg, flags)	{ (msg) &= ~(flags); }
+#define MSG_SET_PERM_FLAGS(msg, flags) \
+	MSG_SET_FLAGS((msg).perm_flags, flags)
+#define MSG_SET_TMP_FLAGS(msg, flags) \
+	MSG_SET_FLAGS((msg).tmp_flags, flags)
+#define MSG_UNSET_PERM_FLAGS(msg, flags) \
+	MSG_UNSET_FLAGS((msg).perm_flags, flags)
+#define MSG_UNSET_TMP_FLAGS(msg, flags) \
+	MSG_UNSET_FLAGS((msg).tmp_flags, flags)
+
+#define MSG_IS_NEW(msg)			(((msg).perm_flags & MSG_NEW) != 0)
+#define MSG_IS_UNREAD(msg)		(((msg).perm_flags & MSG_UNREAD) != 0)
+#define MSG_IS_MARKED(msg)		(((msg).perm_flags & MSG_MARKED) != 0)
+#define MSG_IS_DELETED(msg)		(((msg).perm_flags & MSG_DELETED) != 0)
+#define MSG_IS_REPLIED(msg)		(((msg).perm_flags & MSG_REPLIED) != 0)
+#define MSG_IS_FORWARDED(msg)		(((msg).perm_flags & MSG_FORWARDED) != 0)
+
+#define MSG_GET_COLORLABEL(msg)		(((msg).perm_flags & MSG_CLABEL_FLAG_MASK))
+#define MSG_GET_COLORLABEL_VALUE(msg)	(MSG_GET_COLORLABEL(msg) >> MSG_CLABEL_SBIT)
+#define MSG_SET_COLORLABEL_VALUE(msg, val) \
+	MSG_SET_PERM_FLAGS(msg, ((((guint)(val)) & 7) << MSG_CLABEL_SBIT))
+
+#define MSG_IS_MOVE(msg)		(((msg).tmp_flags & MSG_MOVE) != 0)
+#define MSG_IS_COPY(msg)		(((msg).tmp_flags & MSG_COPY) != 0)
+
+#define MSG_IS_QUEUED(msg)		(((msg).tmp_flags & MSG_QUEUED) != 0)
+#define MSG_IS_DRAFT(msg)		(((msg).tmp_flags & MSG_DRAFT) != 0)
+#define MSG_IS_ENCRYPTED(msg)		(((msg).tmp_flags & MSG_ENCRYPTED) != 0)
+#define MSG_IS_IMAP(msg)		(((msg).tmp_flags & MSG_IMAP) != 0)
+#define MSG_IS_NEWS(msg)		(((msg).tmp_flags & MSG_NEWS) != 0)
+#define MSG_IS_SIGNED(msg)		(((msg).tmp_flags & MSG_SIGNED) != 0)
+#define MSG_IS_FLAG_CHANGED(msg)	(((msg).tmp_flags & MSG_FLAG_CHANGED) != 0)
+#define MSG_IS_CACHED(msg)		(((msg).tmp_flags & MSG_CACHED) != 0)
+#define MSG_IS_MIME(msg)		(((msg).tmp_flags & MSG_MIME) != 0)
+#define MSG_IS_INVALID(msg)		(((msg).tmp_flags & MSG_INVALID) != 0)
+#define MSG_IS_RECEIVED(msg)		(((msg).tmp_flags & MSG_RECEIVED) != 0)
+
+#define WRITE_CACHE_DATA_INT(n, fp)
+#define WRITE_CACHE_DATA(data, fp)
+
+------------------------------------------------------------------------------
+MsgFlags
+
+struct _MsgFlags
+{
+	MsgPermFlags perm_flags;
+	MsgTmpFlags  tmp_flags;
+};
+
+MsgFlags は各メッセージに対して付加されるフラグを表します。
+
+------------------------------------------------------------------------------
+MsgInfo
+
+struct _MsgInfo
+{
+	guint  msgnum;
+	gsize  size;
+	time_t mtime;
+	time_t date_t;
+
+	MsgFlags flags;
+
+	gchar *fromname;
+
+	gchar *date;
+	gchar *from;
+	gchar *to;
+	gchar *cc;
+	gchar *newsgroups;
+	gchar *subject;
+	gchar *msgid;
+	gchar *inreplyto;
+
+	GSList *references;
+
+	FolderItem *folder;
+	FolderItem *to_folder;
+
+	gchar *xface;
+
+	/* used only for temporary messages */
+	gchar *file_path;
+
+	/* used only for encrypted (and signed) messages */
+	MsgEncryptInfo *encinfo;
+};
+
+MsgInfo 構造体は各メッセージの情報を表します。
+
+------------------------------------------------------------------------------
+MsgFileInfo
+
+struct _MsgFileInfo
+{
+	gchar *file;
+	MsgFlags *flags;
+};
+
+MsgFileInfo 構造体はメッセージファイルとそのフラグ情報をひとまとめにして
+扱うためのものです。 folder_item_add_msgs() 等で使用されます。
+
+------------------------------------------------------------------------------
+MsgEncryptInfo
+
+struct _MsgEncryptInfo
+{
+	gchar *plaintext_file;
+	gchar *sigstatus;
+	gchar *sigstatus_full;
+	gboolean decryption_failed;
+};
+
+MsgEncryptInfo 構造体は電子署名・暗号化の情報を格納するためのものです。
+
+------------------------------------------------------------------------------
+typedef FILE * (*DecryptMessageFunc)		(MsgInfo	*msginfo,
+						 MimeInfo      **mimeinfo);
+
+暗号化されたメッセージを復号化する際に呼び出すコールバック関数の型です。
+procmsg_set_decrypt_message_func() で指定します。
+
+------------------------------------------------------------------------------
+GHashTable *procmsg_msg_hash_table_create	(GSList		*mlist);
+
+MsgInfo のリストから、メッセージ番号をキーにしたハッシュテーブルを作成します。
+
+返ったハッシュテーブルは g_hash_table_destroy() で解放する必要があります。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: メッセージ番号をキーにしたハッシュテーブル
+
+------------------------------------------------------------------------------
+void procmsg_msg_hash_table_append		(GHashTable	*msg_table,
+						 GSList		*mlist);
+
+既存の MsgInfo のハッシュテーブルに新たな MsgInfo を追加します。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+GHashTable *procmsg_to_folder_hash_table_create	(GSList		*mlist);
+
+(省略)
+
+------------------------------------------------------------------------------
+gint procmsg_read_cache_data_str	(FILE		*fp,
+					 gchar	       **str);
+
+キャッシュファイルから文字列を1個読み込み、新たに文字列用のメモリを確保して
+str に返します。
+
+fp: キャッシュファイルの FILE ポインタ
+str: 返す文字列を格納する変数へのポインタ
+戻り値:  0: 成功
+        -1: エラー(ファイルが読み込めない、または壊れている)
+
+------------------------------------------------------------------------------
+GSList *procmsg_read_cache		(FolderItem	*item,
+					 gboolean	 scan_file);
+
+フォルダ item に対応するキャッシュファイルを読み込み、 MsgInfo のリストを
+生成して返します。 scan_file が TRUE の場合はキャッシュデータに対応する
+メッセージファイルが変更されているかどうかを厳密にチェックします
+(パフォーマンスはその分低下します)。
+
+返ったメッセージリストは procmsg_msg_list_free() で解放する必要があります。
+
+item: FolderItem オブジェクト
+scan_file: TRUE の場合メッセージデータの変更をチェックする
+戻り値: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_set_flags		(GSList		*mlist,
+					 FolderItem	*item);
+
+フォルダ item に対応するフラグ(マーク)ファイルを読み込み、 item と mlist
+に反映させます。
+
+item: FolderItem オブジェクト
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_mark_all_read		(FolderItem	*item);
+
+フォルダ item 内のすべてのメッセージを既読にし、マークファイルを更新します。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+GSList *procmsg_sort_msg_list		(GSList		*mlist,
+					 FolderSortKey	 sort_key,
+					 FolderSortType	 sort_type);
+
+MsgInfo のリスト mlist を sort_key と sort_type に従ってソートします。
+mlist 自体を変更するため、元のリストは使用できなくなります。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+sort_key: ソートの対象となるキー
+sort_type: 昇順または降順
+戻り値: ソートしたメッセージリスト
+
+------------------------------------------------------------------------------
+gint	procmsg_get_last_num_in_msg_list(GSList		*mlist);
+
+メッセージリスト mlist 中における最大のメッセージ番号を返します。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: 最大のメッセージ番号
+
+------------------------------------------------------------------------------
+void	procmsg_msg_list_free		(GSList		*mlist);
+
+MsgInfo のリストを MsgInfo 構造体自身も含めて解放します。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_write_cache		(MsgInfo	*msginfo,
+					 FILE		*fp);
+
+メッセージ情報 msginfo をキャッシュファイル fp に追加で書き込みます。
+
+msginfo: MsgInfo 構造体へのポインタ
+fp: キャッシュファイルの FILE ポインタ
+
+------------------------------------------------------------------------------
+void	procmsg_write_flags		(MsgInfo	*msginfo,
+					 FILE		*fp);
+
+メッセージ情報 msginfo のフラグ情報をフラグ(マーク)ファイル fp に追加で
+書き込みます。
+
+msginfo: MsgInfo 構造体へのポインタ
+fp: マークファイルの FILE ポインタ
+
+------------------------------------------------------------------------------
+void	procmsg_write_cache_list	(FolderItem	*item,
+					 GSList		*mlist);
+
+フォルダ item に対応するキャッシュファイルにメッセージリスト mlist の
+各メッセージ情報を書き出します(以前のキャッシュファイルは上書きされます)。
+FolderItem::cache_dirty フラグはリセットされます。
+
+item: FolderItem オブジェクト
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_write_flags_list	(FolderItem	*item,
+					 GSList		*mlist);
+
+フォルダ item に対応するフラグ(マーク)ファイルにメッセージリスト mlist の
+各フラグ情報を書き出します(以前のマークファイルは上書きされます)。
+item にマークがキューイングされている場合はそれも書き出します。
+FolderItem::mark_dirty フラグはリセットされます。
+
+item: FolderItem オブジェクト
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_write_flags_for_multiple_folders
+					(GSList		*mlist);
+
+mlist が複数のフォルダのメッセージから構成される場合に各フォルダに
+各メッセージのフラグ情報を書き出します。フラグ情報は追加で書き込まれるため、
+以前のフラグ情報と重複する場合があります。その場合は最後に書き込んだ方が
+優先されます。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_flush_mark_queue	(FolderItem	*item,
+					 FILE		*fp);
+
+フォルダ item にマークがキューイングされている場合、それをマークファイル fp
+に追加で書き出し、マークキューをクリアします。
+
+item: FolderItem オブジェクト
+fp: マークファイルの FILE ポインタ
+
+------------------------------------------------------------------------------
+void	procmsg_add_mark_queue		(FolderItem	*item,
+					 gint		 num,
+					 MsgFlags	 flags);
+
+フォルダ item にメッセージ番号 num に対するフラグ情報 flags を
+キューイングします。キューイングしたフラグ情報は procmsg_write_flags_list()
+または procmsg_flush_mark_queue() で書き出せます。
+
+item: FolderItem オブジェクト
+num: メッセージ番号
+flags: num に対応するフラグ情報
+
+------------------------------------------------------------------------------
+void	procmsg_add_flags		(FolderItem	*item,
+					 gint		 num,
+					 MsgFlags	 flags);
+
+フォルダ item に対応するフラグ(マーク)ファイルにフラグ情報 flags を追加で
+書き込みます。
+
+item: FolderItem オブジェクト
+num: メッセージ番号
+flags: num に対応するフラグ情報
+
+------------------------------------------------------------------------------
+void	procmsg_get_mark_sum		(FolderItem	*item,
+					 gint		*new,
+					 gint		*unread,
+					 gint		*total,
+					 gint		*min,
+					 gint		*max,
+					 gint		 first);
+
+フォルダ item に対応するフラグ(マーク)ファイルのフラグ情報を読み込み、
+集計してその結果を返します。 first が1以上の場合はメッセージ番号が first
+以上のもののみ集計します。
+
+item: FolderItem オブジェクト
+new: 新着メッセージ数
+unread: 未読メッセージ数
+total: 総数
+min: 最小のメッセージ番号
+max: 最大のメッセージ番号
+first: 集計対象とする最小のメッセージ番号
+
+------------------------------------------------------------------------------
+FILE   *procmsg_open_data_file		(const gchar	*file,
+					 guint		 version,
+					 DataOpenMode	 mode,
+					 gchar		*buf,
+					 size_t		 buf_size);
+
+データファイル file をオープンし、 FILE ポインタを返します。
+mode を DATA_READ モードに指定した場合は、指定したバージョン番号
+version のチェックを行い、バージョンが異なった場合は NULL が返ります。
+DATA_WRITE モードでオープンした場合は version を先頭に書き込んで FILE
+ポインタを返します。
+DATA_APPEND モードでオープンした場合は、バージョンが一致した場合は
+追加書き込みモードで FILE ポインタを返します。バージョンが異なった場合は
+DATA_WRITE モードでオープンして FILE ポインタを返します。
+
+file: データファイルのパス
+version: データファイルのバージョン
+mode: ファイルをオープンするモード
+buf: DATA_READ 時に使用するバッファ領域を指定します。 NULL の場合は
+     デフォルトの動作になります。
+buf_size: buf のサイズ
+戻り値: FILE ポインタ
+
+------------------------------------------------------------------------------
+FILE   *procmsg_open_cache_file		(FolderItem	*item,
+					 DataOpenMode	 mode);
+
+フォルダ item に対応するキャッシュファイルをモード mode で開きます。
+
+item: FolderItem オブジェクト
+mode: ファイルをオープンするモード
+戻り値: FILE ポインタ
+
+------------------------------------------------------------------------------
+FILE   *procmsg_open_mark_file		(FolderItem	*item,
+					 DataOpenMode	 mode);
+
+フォルダ item に対応するマーク(フラグ)ファイルをモード mode で開きます。
+
+item: FolderItem オブジェクト
+mode: ファイルをオープンするモード
+戻り値: FILE ポインタ
+
+------------------------------------------------------------------------------
+void	procmsg_clear_cache		(FolderItem	*item);
+
+フォルダ item に対応するキャッシュファイルを空にします。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+void	procmsg_clear_mark		(FolderItem	*item);
+
+フォルダ item に対応するマーク(フラグ)ファイルを空にします。
+
+item: FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+GNode  *procmsg_get_thread_tree		(GSList		*mlist);
+
+MsgInfo のリストからスレッドツリーを構築して返します。
+
+注意: 返るツリーのトップのノード(root の直接の子ノード)は逆順になります。
+
+戻り値は g_node_destroy() で解放する必要があります。
+MsgInfo 自体はコピーされません。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: 逆順のスレッドツリー
+
+------------------------------------------------------------------------------
+guint	procmsg_get_thread_date		(GNode		*node);
+
+スレッドの中で最新の日付を time_t 型の秒数で返します。
+エラー等で日付が得られなかった場合は0が返ります。
+
+node: スレッドツリーのトップのノード(root の直接の子ノード)
+戻り値: スレッドの中での最新の日付
+        エラーの場合は0
+
+------------------------------------------------------------------------------
+gint	procmsg_move_messages		(GSList		*mlist);
+
+メッセージリスト mlist で指定されたメッセージを各メッセージにあらかじめ
+指定された移動先フォルダ(MsgInfo::to_folder)に移動します。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint	procmsg_copy_messages		(GSList		*mlist);
+
+メッセージリスト mlist で指定されたメッセージを各メッセージにあらかじめ
+指定されたコピー先フォルダ(MsgInfo::to_folder)にコピーします。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gchar  *procmsg_get_message_file_path	(MsgInfo	*msginfo);
+
+メッセージ msginfo のファイルの絶対パスを取得します。
+リモートメールボックスの場合はファイルのパスを返すだけで、
+実際の取得は行いません。
+
+返った文字列は g_free() で解放する必要があります。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: メッセージファイルの絶対パス
+
+------------------------------------------------------------------------------
+gchar  *procmsg_get_message_file	(MsgInfo	*msginfo);
+
+メッセージ msginfo のファイルの絶対パスを取得します。
+リモートメールボックスの場合はファイルの取得も行います。
+
+返った文字列は g_free() で解放する必要があります。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: メッセージファイルの絶対パス
+
+------------------------------------------------------------------------------
+GSList *procmsg_get_message_file_list	(GSList		*mlist);
+
+メッセージリスト mlist の各メッセージに対して procmsg_get_message_file()
+を呼び出し、ファイルのパスを取得します。取得したパスとフラグ情報から
+MsgFileInfo 構造体のリストを生成して返します。
+
+返ったリストは procmsg_message_file_list_free() で解放する必要があります。
+
+mlist: MsgInfo 構造体へのポインタのリスト
+戻り値: MsgFIleInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+void	procmsg_message_file_list_free	(GSList		*file_list);
+
+MsgFileInfo 構造体のリストを解放します。
+
+file_list: MsgFIleInfo 構造体へのポインタのリスト
+
+------------------------------------------------------------------------------
+FILE   *procmsg_open_message		(MsgInfo	*msginfo);
+
+メッセージ msginfo に対応するメッセージファイルを取得して開きます。
+msginfo が送信待ちメッセージの場合は、送信待ち用ヘッダを読み飛ばし、
+メッセージ本体のヘッダの先頭にシーク位置を移動して返します。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: メッセージファイルの FILE ポインタ
+        エラーの場合は NULL
+
+------------------------------------------------------------------------------
+void procmsg_set_decrypt_message_func	(DecryptMessageFunc	 func);
+
+メッセージが暗号化されていた場合に復号するためのコールバック関数を
+指定します。
+
+func: DecryptMessageFunc 型の関数ポインタ
+
+------------------------------------------------------------------------------
+FILE   *procmsg_open_message_decrypted	(MsgInfo	*msginfo,
+					 MimeInfo      **mimeinfo);
+
+procmsg_set_decrypt_message_func() でコールバック関数が指定されている場合は
+それを使用してファイルを復号し、開きます。また、 MIME 情報を取得して
+mimeinfo にセットします。
+コールバック関数が指定されていない場合は、 procmsg_open_message() で
+メッセージを開き、 MIME 情報を取得して mimeinfo にセットして返ります。
+
+msginfo: MsgInfo 構造体へのポインタ
+mimeinfo: メッセージの MIME 情報を返すためのポインタ
+戻り値: 復号したメッセージファイルの FILE ポインタ
+        エラーの場合は NULL
+
+------------------------------------------------------------------------------
+gboolean procmsg_msg_exist		(MsgInfo	*msginfo);
+
+メッセージ msginfo に対応するファイルが存在し、かつ変更されていない場合
+TRUE を返します。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: ファイルが存在し、かつ変更されていない場合 TRUE
+        ファイルが存在しないか、変更されている場合 FALSE
+
+------------------------------------------------------------------------------
+gboolean procmsg_trash_messages_exist	(void);
+
+すべてのごみ箱フォルダを調べ、いずれかのごみ箱フォルダにメッセージが1通以上
+含まれている場合 TRUE を返します。
+
+戻り値: メッセージが1通以上含まれるごみ箱フォルダが存在する場合 TRUE
+        すべてのごみ箱が空の場合 FALSE
+
+------------------------------------------------------------------------------
+void	procmsg_empty_trash		(FolderItem	*trash);
+
+ごみ箱フォルダ trash 内のすべてのメッセージを空にします。
+trash の特別フォルダタイプは F_TRASH でなければなりません。
+
+trash: ごみ箱フォルダを指す FolderItem オブジェクト
+
+------------------------------------------------------------------------------
+void	procmsg_empty_all_trash		(void);
+
+すべてのごみ箱フォルダを空にします。
+
+------------------------------------------------------------------------------
+void	procmsg_remove_all_cached_messages
+					(Folder		*folder);
+
+リモートメールボックス folder のすべてのメッセージのキャッシュファイルを
+削除します。
+
+folder: リモートメールボックスを指す Folder オブジェクト
+
+------------------------------------------------------------------------------
+gint	procmsg_save_to_outbox		(FolderItem	*outbox,
+					 const gchar	*file);
+
+メッセージファイル file を送信控 outbox に保存します。
+outbox が NULL の場合はデフォルトの送信控に保存します。
+
+outbox: 送信控を指す FolderItem オブジェクト
+        NULL の場合はデフォルトの送信控を指定
+file: メッセージファイルの絶対パス(ファイル名エンコーディング)
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+void	procmsg_print_message		(MsgInfo	*msginfo,
+					 const gchar	*cmdline,
+					 gboolean	 all_headers);
+
+メッセージのテキストを印刷します。
+コマンドライン cmdline が指定されている場合は、そのコマンドを実行します。
+cmdline に NULL を指定した場合、プラットフォームのデフォルトの印刷コマンドを
+使用します。
+all_headers が TRUE の場合はすべてのヘッダを印刷します。 FALSE の場合は
+現在表示するように指定されているヘッダのみを印刷します。
+
+msginfo: MsgInfo 構造体へのポインタ
+cmdline: 印刷コマンド( %s が実際のファイルのパスに置換されます)
+all_headers: TRUE : すべてのヘッダを印刷
+             FALSE: 表示ヘッダのみ印刷
+
+------------------------------------------------------------------------------
+MsgInfo *procmsg_msginfo_copy		(MsgInfo	*msginfo);
+
+MsgInfo 構造体をコピーします。 MsgInfo 構造体の各メンバ毎に新たなメモリの
+確保とコピーが行われます(ディープコピー)。
+
+返った MsgInfo 構造体は procmsg_msginfo_free() で解放する必要があります。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: コピーした MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+MsgInfo *procmsg_msginfo_get_full_info	(MsgInfo	*msginfo);
+
+メッセージ msginfo に対応するメッセージファイルをパースし、完全な情報を
+取得し、新たな MsgInfo 構造体を作成して返します。
+
+返った MsgInfo 構造体は procmsg_msginfo_free() で解放する必要があります。
+
+msginfo: MsgInfo 構造体へのポインタ
+戻り値: 新たに作成された MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gboolean procmsg_msginfo_equal		(MsgInfo	*msginfo_a,
+					 MsgInfo	*msginfo_b);
+
+msginfo_a と msginfo_b が同一のメッセージを指しているかどうかを返します。
+
+msginfo_a: MsgInfo 構造体へのポインタ
+msginfo_b: MsgInfo 構造体へのポインタ
+戻り値: TRUE : 同一のメッセージを指している
+        FALSE: 異なるメッセージを指している
+
+------------------------------------------------------------------------------
+void	 procmsg_msginfo_free		(MsgInfo	*msginfo);
+
+MsgInfo 構造体を解放します。
+
+msginfo: MsgInfo 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gint procmsg_cmp_msgnum_for_sort	(gconstpointer	 a,
+					 gconstpointer	 b);
+
+メッセージ番号によるソート用の比較関数です。
+
+a: MsgInfo 構造体へのポインタ
+b: MsgInfo 構造体へのポインタ
+戻り値: 負の値: a のメッセージ番号 < b のメッセージ番号
+        0: a のメッセージ番号 == b のメッセージ番号
+        正の値: a のメッセージ番号 > b のメッセージ番号

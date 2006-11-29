@@ -1,0 +1,44 @@
+displayheader - 表示するヘッダの設定の管理
+
+------------------------------------------------------------------------------
+DisplayHeaderProp
+
+struct _DisplayHeaderProp
+{
+	gchar *name;
+	gboolean hidden;
+};
+
+表示する(あるいは隠す)ヘッダ名を表します。
+
+name: ヘッダ名
+hidden: 隠す場合 TRUE
+        表示する場合 FALSE
+
+------------------------------------------------------------------------------
+gchar *display_header_prop_get_str		(DisplayHeaderProp *dp);
+
+DisplayHeaderProp 構造体 dp を表示ヘッダの設定ファイルの形式の文字列に
+変換して出力します。隠すヘッダの場合はヘッダ名の前に "-" が付きます。
+
+返った文字列は g_free() で解放する必要があります。
+
+dp: DisplayHeaderProp 構造体へのポインタ
+戻り値: 表示ヘッダ設定ファイル形式の文字列
+
+------------------------------------------------------------------------------
+DisplayHeaderProp *display_header_prop_read_str	(gchar		   *buf);
+
+表示ヘッダの設定ファイルの形式の文字列を DisplayHeaderProp 構造体に変換して
+出力します。
+
+返った値は display_header_prop_free() で解放する必要があります。
+
+buf: 表示ヘッダ設定ファイル形式の文字列
+
+------------------------------------------------------------------------------
+void display_header_prop_free			(DisplayHeaderProp *dp);
+
+DisplayHeaderProp 構造体を解放します。
+
+dp: DisplayHeaderProp 構造体へのポインタ

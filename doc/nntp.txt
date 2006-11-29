@@ -1,0 +1,250 @@
+nntp - NNTP セッションの処理
+
+------------------------------------------------------------------------------
+#define NNTP_SESSION(obj)
+
+Session オブジェクト obj を NNTPSession にキャストします。
+
+------------------------------------------------------------------------------
+NNTPSession
+
+struct _NNTPSession
+{
+	Session session;
+
+	gchar *group;
+
+	gchar *userid;
+	gchar *passwd;
+	gboolean auth_failed;
+};
+
+NNTP セッションを表す構造体です。 Session のサブクラスになります。
+
+------------------------------------------------------------------------------
+#define NN_SUCCESS	0
+#define NN_SOCKET	2
+#define NN_AUTHFAIL	3
+#define NN_PROTOCOL	4
+#define NN_SYNTAX	5
+#define NN_IOERR	6
+#define NN_ERROR	7
+#define NN_AUTHREQ	8
+#define NN_AUTHCONT	9
+
+NNTP のエラー状態を表す値です。
+
+------------------------------------------------------------------------------
+#define NNTPBUFSIZE
+
+NNTP の処理に使用するバッファのサイズを表します。
+
+------------------------------------------------------------------------------
+#if USE_SSL
+Session *nntp_session_new	(const gchar	*server,
+				 gushort	 port,
+				 gchar		*buf,
+				 const gchar	*userid,
+				 const gchar	*passwd,
+				 SSLType	 ssl_type);
+#else
+Session *nntp_session_new	(const gchar	*server,
+				 gushort	 port,
+				 gchar		*buf,
+				 const gchar	*userid,
+				 const gchar	*passwd);
+#endif
+
+NNTPSession オブジェクトを作成します。 SSL を有効にしてビルドされた場合は
+SSL のタイプを指定する引数が追加されます。このため、この関数を呼ぶ場合は
+適切に USE_SSL が定義されている必要があります。
+userid と passwd が両方設定されている場合は接続後認証を行います。
+
+server: NNTP サーバ
+port: NNTP サーバのポート
+buf: サーバの応答を格納するバッファ(NULL 可)
+userid: 認証が必要な場合のユーザ ID
+passwd: 認証が必要な場合のパスワード
+戻り値: NNTPSession オブジェクト(Session にキャスト)
+        エラーの場合 NULL
+
+------------------------------------------------------------------------------
+gint nntp_group			(NNTPSession	*session,
+				 const gchar	*group,
+				 gint		*num,
+				 gint		*first,
+				 gint		*last);
+
+NNTP サーバに GROUP コマンドを送信し、結果を取得します。
+
+session: NNTPSession オブジェクト
+group: GROUP コマンドの引数
+num: サーバの応答の第1引数を格納するポインタ
+first: サーバの応答の第2引数を格納するポインタ
+last: サーバの応答の第3引数を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_get_article		(NNTPSession	*session,
+				 const gchar	*cmd,
+				 gint		 num,
+				 gchar	       **msgid);
+
+NNTP サーバに ARTICLE, BODY, HEAD, STAT のいずれかのコマンドを発行し、
+結果を取得します。
+
+session: NNTPSession オブジェクト
+cmd: 発行するコマンド
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_article		(NNTPSession	*session,
+				 gint		 num,
+				 gchar	       **msgid);
+
+NNTP サーバに ARTICLE コマンドを発行し、結果を取得します。
+
+session: NNTPSession オブジェクト
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_body			(NNTPSession	*session,
+				 gint		 num,
+				 gchar	       **msgid);
+
+NNTP サーバに BODY コマンドを発行し、結果を取得します。
+
+session: NNTPSession オブジェクト
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_head			(NNTPSession	*session,
+				 gint		 num,
+				 gchar	       **msgid);
+
+NNTP サーバに HEAD コマンドを発行し、結果を取得します。
+
+session: NNTPSession オブジェクト
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_stat			(NNTPSession	*session,
+				 gint		 num,
+				 gchar	       **msgid);
+
+NNTP サーバに STAT コマンドを発行し、結果を取得します。
+
+session: NNTPSession オブジェクト
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_next			(NNTPSession	*session,
+				 gint		*num,
+				 gchar	       **msgid);
+
+NNTP サーバに NEXT コマンドを発行し、結果を取得します。
+
+session: NNTPSession オブジェクト
+num: 指定する記事番号
+msgid: 応答内のメッセージ ID を格納するポインタ
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_xover			(NNTPSession	*session,
+				 gint		 first,
+				 gint		 last);
+
+NNTP サーバに XOVER コマンドを発行します。
+
+(注: RFC 3977 では OVER コマンドに変更されています。)
+
+session: NNTPSession オブジェクト
+first: 取得する最初の記事番号
+last: 取得する最後の記事番号
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_xhdr			(NNTPSession	*session,
+				 const gchar	*header,
+				 gint		 first,
+				 gint		 last);
+
+NNTP サーバに XHDR コマンドを発行します。
+
+(注: RFC 3977 では HDR コマンドに変更されています。)
+
+session: NNTPSession オブジェクト
+header: 取得するヘッダ名
+first: 取得する最初の記事番号
+last: 取得する最後の記事番号
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_list			(NNTPSession	*session);
+
+NNTP サーバに LIST コマンドを発行します。
+
+session: NNTPSession オブジェクト
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_post			(NNTPSession	*session,
+				 FILE		*fp);
+
+NNTP サーバに POST コマンドを発行し、ファイルストリーム fp に格納されている
+メッセージデータを送信します。 fp の内容は送信前に正規化されます。
+
+session: NNTPSession オブジェクト
+fp: メッセージデータを格納するファイルストリーム
+戻り値: 成功した場合 NN_SUCCESS
+        エラーの場合 NN_SUCCESS 以外
+
+------------------------------------------------------------------------------
+gint nntp_newgroups		(NNTPSession	*session);
+
+現在実装されていません。
+
+session: NNTPSession オブジェクト
+戻り値: 常に NN_SUCCESS
+
+------------------------------------------------------------------------------
+gint nntp_newnews		(NNTPSession	*session);
+
+現在実装されていません。
+
+session: NNTPSession オブジェクト
+戻り値: 常に NN_SUCCESS
+
+------------------------------------------------------------------------------
+gint nntp_mode			(NNTPSession	*session,
+				 gboolean	 stream);
+
+NNTP サーバに MODE コマンドを発行します。 stream が TRUE の場合は
+MODE STREAM コマンドを、 stream が FALSE の場合は MODE READER コマンドを
+発行します。
+
+(注: MODE STREAM コマンドは RFC 3977 では定義されていません。)
+
+session: NNTPSession オブジェクト
+stream: STREAM モードの場合は TRUE
+        READER モードの場合は FALSE

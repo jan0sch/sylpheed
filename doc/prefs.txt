@@ -1,0 +1,180 @@
+prefs - 設定情報の管理
+
+------------------------------------------------------------------------------
+#define PREFSBUFSIZE
+
+設定ファイルの処理に使用するバッファのサイズです。
+
+------------------------------------------------------------------------------
+PrefType
+
+typedef enum
+{
+	P_STRING,
+	P_INT,
+	P_BOOL,
+	P_ENUM,
+	P_USHORT,
+	P_OTHER
+} PrefType;
+
+設定項目の変数の型を表します。
+
+P_STRING: gchar * (文字列)
+P_INT: gint (整数)
+P_BOOL: gboolean (bool 値)
+P_ENUM: DummyEnum (enum)
+P_USHORT: gushort (符号無し short)
+P_OTHER: その他(未定義)
+
+------------------------------------------------------------------------------
+typedef void (*DataSetFunc)   (PrefParam *pparam);
+
+PrefParam 構造体にデータをセットするためのコールバック関数の型です。
+
+------------------------------------------------------------------------------
+typedef void (*WidgetSetFunc) (PrefParam *pparam);
+
+PrefParam 構造体のデータから設定用 UI を更新するためのコールバック関数の
+型です。
+
+------------------------------------------------------------------------------
+PrefParam
+
+struct _PrefParam {
+	gchar	      *name;
+	gchar	      *defval;
+	gpointer       data;
+	PrefType       type;
+	gpointer       ui_data;
+};
+
+設定項目を表す構造体です。
+
+name: 設定項目名
+defval: デフォルト値
+data: 設定を格納する変数へのポインタ
+type: 変数の型
+ui_data: 設定用 UI と連携するために使用するデータ
+
+------------------------------------------------------------------------------
+PrefFile
+
+struct _PrefFile {
+	FILE *fp;
+	gchar *path;
+};
+
+設定ファイルを読み書きするときに使用する構造体です。
+
+fp: ファイルストリーム
+path: ファイルのパス
+
+------------------------------------------------------------------------------
+GHashTable *prefs_param_table_get	(PrefParam	*param);
+
+PrefParam の設定項目名から PrefParam 構造体へのポインタを取得する
+ハッシュテーブルを生成します。
+
+戻り値は prefs_param_table_destroy() で解放する必要があります。
+
+param: PrefParam 構造体の配列
+戻り値: 設定項目名をキー、 PrefParam 構造体へのポインタを値とする
+        GHashTable オブジェクト
+
+------------------------------------------------------------------------------
+void prefs_param_table_destroy		(GHashTable	*param_table);
+
+prefs_param_table_get() で生成したハッシュテーブルを破棄します。
+PrefParam 構造体自体は破棄されません。
+
+param_table: prefs_param_table_get() で生成したハッシュテーブル
+
+------------------------------------------------------------------------------
+void prefs_read_config		(PrefParam	*param,
+				 const gchar	*label,
+				 const gchar	*rcfile,
+				 const gchar	*encoding);
+
+ini ファイル形式の設定ファイル rcfile を読み込みます。
+encoding が指定されている場合はそれを rcfile のエンコーディングとみなして
+UTF-8 への変換を行います。
+
+まず "[label]" 形式の設定グループのラベルを探し、発見した行から次のラベル
+まで読み込みを行います。読み込んだ設定項目が PrefParam 構造体の配列 param
+内に該当するものがある場合、その PrefParam 構造体に読み込んだデータを
+セットします。
+
+param: PrefParam 構造体の配列
+label: 設定グループのラベル
+rcfile: ini ファイル形式の設定ファイルのパス(ファイル名エンコーディング)
+encoding: rcfile のエンコーディング(NULL の場合 UTF-8)
+
+------------------------------------------------------------------------------
+void prefs_write_config		(PrefParam	*param,
+				 const gchar	*label,
+				 const gchar	*rcfile);
+
+PrefParam 構造体の配列 param を ini ファイル形式の設定ファイル rcfile
+として書き出します。 rcfile が既に存在し、複数の設定グループから構成される
+場合は label に該当するグループのみが更新され、その他のグループは保持
+されます。
+
+param: PrefParam 構造体の配列
+label: 設定グループのラベル
+rcfile: ini ファイル形式の設定ファイルのパス(ファイル名エンコーディング)
+
+------------------------------------------------------------------------------
+PrefFile *prefs_file_open	(const gchar	*path);
+
+設定ファイル path をオープンし、 PrefFile 構造体を返します。
+この時点ではまだ元のファイル path は上書きされません。
+
+返った値は prefs_file_close() または prefs_file_close_revert() で解放する
+必要があります。
+
+------------------------------------------------------------------------------
+gint prefs_file_write_param	(PrefFile	*pfile,
+				 PrefParam	*param);
+
+prefs_file_open() でオープンした設定ファイル pfile に設定項目 param を1行
+書き出します。形式は name=value となります。
+
+pfile: PrefFile 構造体へのポインタ
+param: PrefParam 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint prefs_file_close		(PrefFile	*pfile);
+
+設定ファイル pfile をクローズし、元のファイルと置き換えます。
+
+pfile: PrefFile 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+gint prefs_file_close_revert	(PrefFile	*pfile);
+
+設定ファイル pfile をクローズし、元のファイルはそのまま保持し、
+一時ファイルを破棄します。
+
+pfile: PrefFile 構造体へのポインタ
+戻り値: 成功した場合 0
+        エラーの場合 -1
+
+------------------------------------------------------------------------------
+void prefs_set_default		(PrefParam	*param);
+
+PrefParam 構造体の配列 param の各要素をすべてデフォルト値に設定します。
+
+param: PrefParam 構造体の配列
+
+------------------------------------------------------------------------------
+void prefs_free			(PrefParam	*param);
+
+PrefParam 構造体の配列 param の各要素の data が参照している、設定項目値として
+確保されているメモリを解放します。 data の参照先は無効になります。
+
+param: PrefParam 構造体の配列

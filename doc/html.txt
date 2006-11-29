@@ -1,0 +1,103 @@
+html - 簡易 HTML パーサ
+
+------------------------------------------------------------------------------
+HTMLState
+
+typedef enum
+{
+	HTML_NORMAL,
+	HTML_PAR,
+	HTML_BR,
+	HTML_HR,
+	HTML_HREF,
+	HTML_IMG,
+	HTML_FONT,
+	HTML_PRE,
+	HTML_UNKNOWN,
+	HTML_CONV_FAILED,
+	HTML_ERR,
+	HTML_EOF
+} HTMLState;
+
+HTML パーサの現在の状態を表す enum です。
+
+------------------------------------------------------------------------------
+HTMLParser
+
+struct _HTMLParser
+{
+	FILE *fp;
+	CodeConverter *conv;
+
+	GHashTable *symbol_table;
+
+	GString *str;
+	GString *buf;
+
+	gchar *bufp;
+
+	HTMLState state;
+
+	gchar *href;
+
+	gboolean newline;
+	gboolean empty_line;
+	gboolean space;
+	gboolean pre;
+};
+
+HTML パーサの各種情報を格納する構造体です。
+
+------------------------------------------------------------------------------
+HTMLAttr
+
+struct _HTMLAttr
+{
+	gchar *name;
+	gchar *value;
+};
+
+HTML タグの各属性を表します。
+
+------------------------------------------------------------------------------
+HTMLTag
+
+struct _HTMLTag
+{
+	gchar *name;
+	GList *attr;
+};
+
+HTML タグを表します。タグ名と属性リストから構成されます。
+
+------------------------------------------------------------------------------
+HTMLParser *html_parser_new	(FILE		*fp,
+				 CodeConverter	*conv);
+
+HTML パーサオブジェクトを作成します。 HTML ファイルストリーム fp と
+HTML ファイルのエンコーディングにあわせた CodeCoverter conv を渡します。
+
+返った値は html_parser_destroy() で解放する必要があります。
+
+fp: HTML ファイルストリーム
+conv: CodeConverter 構造体へのポインタ
+戻り値: 新規 HTMLParser 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void html_parser_destroy	(HTMLParser	*parser);
+
+HTMLParser オブジェクトを解放します。
+
+parser: HTMLParser 構造体へのポインタ
+
+------------------------------------------------------------------------------
+const gchar *html_parse		(HTMLParser	*parser);
+
+HTML ファイルから必要であれば1行読み込み、パースしてプレーンテキストに
+変換した文字列を返します。
+
+返った文字列は parser が保持しているため解放できません。
+
+parser: HTMLParser 構造体へのポインタ
+戻り値: プレーンテキストに変換された文字列
+        ファイルの終端に達した場合 NULL

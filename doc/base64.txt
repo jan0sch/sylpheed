@@ -1,0 +1,72 @@
+base64 - BASE64 のエンコードとデコード処理
+
+------------------------------------------------------------------------------
+Base64Decoder
+
+struct _Base64Decoder
+{
+	gint buf_len;
+	gchar buf[4];
+};
+
+Base64Decoder は BASE64 のデコードに対してオブジェクト指向的なインタフェースを
+提供します。
+
+------------------------------------------------------------------------------
+void base64_encode	(gchar		*out,
+			 const guchar	*in,
+			 gint		 inlen);
+
+inlen バイトのバイナリデータ in を BASE64 でエンコードし、
+out に文字列として出力します。
+out の領域は少なくとも inlen * 4 / 3 + 4 以上である必要があります。
+
+out: BASE64 文字列を格納する領域
+in: 入力データ
+inlen: 入力データの長さ(バイト数)
+
+------------------------------------------------------------------------------
+gint base64_decode	(guchar		*out,
+			 const gchar	*in,
+			 gint		 inlen);
+
+BASE64 データ in を inlen の文字数デコードし、 out に出力します。
+inlen が負の数の場合、あるいは in の文字列長より大きい場合は
+'\0' に到達するまでデコードします。
+out の領域は少なくとも in の文字列長、あるいは inlen 以上である必要が
+あります。
+
+out: BASE64 文字列からデコードしたデータを格納する領域
+in: BASE64 文字列
+inlen: BASE64 文字列からデコードする文字数
+
+------------------------------------------------------------------------------
+Base64Decoder *base64_decoder_new	(void);
+
+Base64Decoder 構造体を作成します。
+
+作成した Base64Decoder 構造体は base64_decoder_free() で解放する
+必要があります。
+
+戻り値: 新規に作成した Base64Decoder 構造体へのポインタ
+
+------------------------------------------------------------------------------
+void	       base64_decoder_free	(Base64Decoder	*decoder);
+
+base64_decoder_new() で作成した Base64Decoder 構造体を解放します。
+
+decoder: Base64Decoder 構造体へのポインタ
+
+------------------------------------------------------------------------------
+gint	       base64_decoder_decode	(Base64Decoder	*decoder,
+					 const gchar	*in,
+					 guchar		*out);
+
+BASE64 文字列 in をデコードし、 out に出力します。
+out の領域は少なくとも in の文字列長以上である必要があります。
+in が4バイト境界以外の場所で切れていた場合、その余りの部分はバッファされ、
+次の呼び出し時に in に渡された文字列と結合して使用されます。
+
+decoder: Base64Decoder 構造体へのポインタ
+in: BASE64 文字列
+out: BASE64 文字列からデコードしたデータを格納する領域

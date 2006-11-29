@@ -1,0 +1,44 @@
+LibSylph リファレンスマニュアル
+
+このディレクトリには LibSylph の各モジュール毎のリファレンスマニュアルが
+含まれます。
+
+目次
+====
+
+account.txt - アカウント情報の管理
+base64.txt - BASE64 のエンコードとデコード処理
+customheader.txt - ユーザ定義ヘッダの設定の管理
+displayheader.txt - 表示するヘッダの設定の管理
+codeconv.txt - 文字コードの変換
+compose.txt - メッセージの作成
+filter.txt - フィルタリング処理
+folder.txt - フォルダ構造の管理
+html.txt - 簡易 HTML パーサ
+imap.txt - IMAP4 に対する Folder インタフェース
+mbox.txt - Unix MBOX の操作
+md5.txt - MD5 の処理
+md5_hmac.txt - MD5 を用いた HMAC によるハッシュ値の生成
+mh.txt - MH フォルダに対する Folder インタフェース
+news.txt - NNTP に対する Folder インタフェース
+nntp.txt - NNTP セッションの処理
+pop.txt - POP3 セッションの処理
+prefs.txt - 設定情報の管理
+prefs_account.txt - アカウントの設定の管理
+prefs_common.txt - 全般の設定の管理
+procheader.txt - メッセージヘッダの解析処理
+procmime.txt - MIME の処理
+procmsg.txt - メッセージの操作
+quoted-printable.txt - quoted-printable のエンコードとデコード
+recv.txt - データの受信
+session.txt - ネットワークセッションの管理
+smtp.txt - SMTP セッションの処理
+socket.txt - 抽象化されたソケット入出力
+ssl.txt - SSL の初期化と終了処理
+stringtable.txt - 文字列テーブル
+sylmain.txt - LibSylphの初期化と終了処理
+unmime.txt - MIME ヘッダのデコード
+utils.txt - ユーティリティ関数群
+uuencode.txt - UUENCODE のエンコードとデコード
+virtual.txt - 仮想フォルダの実装と Folder インタフェース
+xml.txt - 簡易 XML パーサ
