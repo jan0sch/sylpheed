@@ -1,123 +1,124 @@
-# Hellenic translation of Sylpheed
-# Copyright (C) 2001 Free Software Foundation, Inc.
-# Michalis Kabrianis <Michalis@bigfoot.com>, 2001.
+# Greek translations of libSylph
+# Copyright (C) 2005,2006 Stavros Giannouris
+# This file is distributed under the same license as the libSylph package.
+# Stavros Giannouris <stavrosg2002@freemail.gr>, 2005,2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sylpheed\n"
+"Project-Id-Version: libsylph 1.0.0beta1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 15:57+0900\n"
-"PO-Revision-Date: 2001-10-08\n"
-"Last-Translator: Michalis Kabrianis <Michalis@bigfoot.com>\n"
+"PO-Revision-Date: 2006-11-22 19:05+0200\n"
+"Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libsylph/account.c:56
 msgid "Reading all config for each account...\n"
-msgstr "Διαβάζω τις ρυθμίσεις για κάθε λογαριασμό...\n"
+msgstr "Ανάγνωση ρυθμίσεων λογαριασμών...\n"
 
 #: libsylph/imap.c:465
-#, fuzzy, c-format
+#, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
-msgstr "Η IMAP4 σύνδεση στο %s:%d διακόπηκε. Επανασύνδεση...\n"
+msgstr "Η IMAP4 σύνδεση στο %s διακόπηκε. Επανασύνδεση...\n"
 
-#: libsylph/imap.c:520 libsylph/imap.c:526
-#, fuzzy
+#: libsylph/imap.c:520
+#: libsylph/imap.c:526
 msgid "IMAP4 server disables LOGIN.\n"
-msgstr "Κατάλογος στον εξυπηρέτη IMAP4"
+msgstr "Ο διακομιστής IMAP4 απενεργοποίησε το LOGIN.\n"
 
 #: libsylph/imap.c:602
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
-msgstr "δημιουργία IMAP4 σύνδεσης στο %s:%d ...\n"
+msgstr "Δημιουργία σύνδεσης IMAP4 στο %s:%d ...\n"
 
 #: libsylph/imap.c:646
 msgid "Can't start TLS session.\n"
-msgstr ""
+msgstr "Δεν είναι δυνατό να ξεκινήσει συνεδρία TLS.\n"
 
 #: libsylph/imap.c:1120
-#, fuzzy, c-format
+#, c-format
 msgid "Getting message %d"
-msgstr "Διαγράφω το μήνυμα"
+msgstr "Λήψη μηνύματος %d"
 
 #: libsylph/imap.c:1236
-#, fuzzy, c-format
+#, c-format
 msgid "Appending messages to %s (%d / %d)"
-msgstr "Στέλνω το μήνυμα (%d / %d bytes)"
+msgstr ""
 
 #: libsylph/imap.c:1328
-#, fuzzy, c-format
+#, c-format
 msgid "Moving messages %s to %s ..."
-msgstr "Μετακινώ το μήνυμα  %s%c%d στο %s ...\n"
+msgstr "Μετακίνηση μηνυμάτων %s στο %s ..."
 
 #: libsylph/imap.c:1334
-#, fuzzy, c-format
+#, c-format
 msgid "Copying messages %s to %s ..."
-msgstr "Αντιγράφω το μήνυμα %s%c%d στο %s ...\n"
+msgstr "Αντιγραφή μηνυμάτων %s στο %s ..."
 
 #: libsylph/imap.c:1473
-#, fuzzy, c-format
+#, c-format
 msgid "Removing messages %s"
-msgstr "Λαμβάνω τα μηνύματα από το %s στο %s...\n"
+msgstr "Διαγραφή μηνυμάτων %s"
 
 #: libsylph/imap.c:1479
-#, fuzzy, c-format
+#, c-format
 msgid "can't set deleted flags: %s\n"
-msgstr "δεν μπορώ να τα σημειώσω ως διεγραμμένα: %d\n"
+msgstr ""
 
-#: libsylph/imap.c:1487 libsylph/imap.c:1582
+#: libsylph/imap.c:1487
+#: libsylph/imap.c:1582
 msgid "can't expunge\n"
 msgstr "δεν μπορώ να τα απαλείψω\n"
 
 #: libsylph/imap.c:1570
-#, fuzzy, c-format
+#, c-format
 msgid "Removing all messages in %s"
-msgstr "Λαμβάνω τα μηνύματα από το %s στο %s...\n"
+msgstr "Διαγραφή όλων των μηνυμάτων στο %s"
 
 #: libsylph/imap.c:1576
-#, fuzzy
 msgid "can't set deleted flags: 1:*\n"
-msgstr "δεν μπορώ να τα σημειώσω ως διεγραμμένα: 1:%d\n"
+msgstr ""
 
 #: libsylph/imap.c:1624
-#, fuzzy
 msgid "can't close folder\n"
-msgstr "δεν μπορώ να επιλέξω τον κατάλογο: %s\n"
+msgstr "δεν είναι δυνατό το κλείσιμο του φακέλου\n"
 
 #: libsylph/imap.c:1702
-#, fuzzy, c-format
+#, c-format
 msgid "root folder %s not exist\n"
-msgstr "Το αρχείο σημάνσεων δεν βρέθηκε.\n"
+msgstr "ο ριζικός φάκελος%s δεν υπάρχει\n"
 
-#: libsylph/imap.c:1891 libsylph/imap.c:1899
-#, fuzzy
+#: libsylph/imap.c:1891
+#: libsylph/imap.c:1899
 msgid "error occurred while getting LIST.\n"
-msgstr "συνέβη σφάλμα καθώς λάμβανα LIST.\n"
+msgstr "δημιουργήθηκε σφάλμα κατά τη λήψη της λίστας.\n"
 
 #: libsylph/imap.c:2013
-#, fuzzy, c-format
+#, c-format
 msgid "Can't create '%s'\n"
-msgstr "δεν μπορώ να δημιουργήσω %s\n"
+msgstr "Δεν είναι δυνατή η δημιουργία του '%s'\n"
 
 #: libsylph/imap.c:2018
-#, fuzzy, c-format
+#, c-format
 msgid "Can't create '%s' under INBOX\n"
-msgstr "δεν μπορώ να δημιουργήσω %s\n"
+msgstr "Δεν είναι δυνατή η δημιουργία του '%s' μέσα στα εισερχόμενα\n"
 
 #: libsylph/imap.c:2079
 msgid "can't create mailbox: LIST failed\n"
-msgstr "δεν μπορώ να δημιουργήσω το mailbox: η LIST απέτυχε\n"
+msgstr "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου: η εντολή LIST απέτυχε\n"
 
 #: libsylph/imap.c:2099
 msgid "can't create mailbox\n"
-msgstr "δεν μπορώ να δημιουργήσω το mailbox\n"
+msgstr "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου\n"
 
 #: libsylph/imap.c:2203
-#, fuzzy, c-format
+#, c-format
 msgid "can't rename mailbox: %s to %s\n"
-msgstr "δεν μπορώ να δημιουργήσω το mailbox\n"
+msgstr "Δεν είναι δυνατή η μετονομασία του γραμματοκιβωτίου: %s σε %s\n"
 
 #: libsylph/imap.c:2283
 msgid "can't delete mailbox\n"
@@ -125,31 +126,31 @@ msgstr "δεν μπορώ να διαγράψω το mailbox\n"
 
 #: libsylph/imap.c:2327
 msgid "can't get envelope\n"
-msgstr "δεν μπορώ να λάβω τον φάκελο\n"
+msgstr "δεν είναι δυνατή η λήψη του φακέλου\n"
 
 #: libsylph/imap.c:2340
-#, fuzzy, c-format
+#, c-format
 msgid "Getting message headers (%d / %d)"
-msgstr "Στέλνω το μήνυμα (%d / %d bytes)"
+msgstr "Λήψη κεφαλίδων μηνυμάτων (%d / %d)"
 
 #: libsylph/imap.c:2350
 msgid "error occurred while getting envelope.\n"
-msgstr "συνέβη σφάλμα καθώς λάμβανα τον φάκελο.\n"
+msgstr "Δημιουργήθηκε σφάλμα κατά τη λήψη του φακέλου.\n"
 
 #: libsylph/imap.c:2372
 #, c-format
 msgid "can't parse envelope: %s\n"
-msgstr "δεν μπορώ να διαβάσω τον φάκελο: %s\n"
+msgstr "δεν είναι δυνατή η ανάλυση του φακέλου: %s\n"
 
 #: libsylph/imap.c:2496
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
-msgstr "Δεν μπορώ να συνδεθώ στον IMAP4 server: %s:%d\n"
+msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
 #: libsylph/imap.c:2503
-#, fuzzy, c-format
+#, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
-msgstr "Δεν μπορώ να συνδεθώ στον IMAP4 server: %s:%d\n"
+msgstr "Δεν είναι δυνατή η δημιουργία συνεδρίας IMAP4: %s:%d\n"
 
 #: libsylph/imap.c:2578
 msgid "can't get namespace\n"
@@ -161,89 +162,87 @@ msgid "can't select folder: %s\n"
 msgstr "δεν μπορώ να επιλέξω τον κατάλογο: %s\n"
 
 #: libsylph/imap.c:3146
-#, fuzzy
 msgid "error on imap command: STATUS\n"
-msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
+msgstr "σφάλμα στην εντολή imap: STATUS\n"
 
-#: libsylph/imap.c:3269 libsylph/imap.c:3304
-#, fuzzy
+#: libsylph/imap.c:3269
+#: libsylph/imap.c:3304
 msgid "IMAP4 authentication failed.\n"
-msgstr "Πιστοποίηση"
+msgstr "Η πιστοποίηση στον IMAP4 απέτυχε.\n"
 
 #: libsylph/imap.c:3353
 msgid "IMAP4 login failed.\n"
-msgstr "Η είσοδος στο IMAP4 απέτυχε.\n"
+msgstr "Η είσοδος στον IMAP4 απέτυχε.\n"
 
 #: libsylph/imap.c:3689
 #, c-format
 msgid "can't append %s to %s\n"
-msgstr "δεν μπορώ να προσθέσω το %s στο %s\n"
+msgstr "δεν είναι δυνατή η προσάρτηση του %s στο %s\n"
 
 #: libsylph/imap.c:3696
-#, fuzzy
 msgid "(sending file...)"
-msgstr "Στέλνω DATA..."
+msgstr "(αποστολή αρχείου...)"
 
 #: libsylph/imap.c:3725
-#, fuzzy, c-format
+#, c-format
 msgid "can't append message to %s\n"
-msgstr "δεν μπορώ να προσθέσω το μήνυμα %s\n"
+msgstr ""
 
 #: libsylph/imap.c:3757
-#, fuzzy, c-format
+#, c-format
 msgid "can't copy %s to %s\n"
-msgstr "δεν μπορώ να αντιγράψω το %d στο %s\n"
+msgstr "δεν είναι δυνατή η αντιγραφή του %s στο %s\n"
 
 #: libsylph/imap.c:3781
-#, fuzzy, c-format
+#, c-format
 msgid "error while imap command: STORE %s %s\n"
-msgstr "σφάλμα κατά την εντολή imap: STORE %d:%d %s\n"
+msgstr "σφάλμα στην εντολή imap: STORE %s %s\n"
 
 #: libsylph/imap.c:3795
 msgid "error while imap command: EXPUNGE\n"
-msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
+msgstr "σφάλμα στην εντολή imap: EXPUNGE\n"
 
 #: libsylph/imap.c:3808
-#, fuzzy
 msgid "error while imap command: CLOSE\n"
-msgstr "σφάλμα κατά την εντολή imap: EXPUNGE\n"
+msgstr "σφάλμα στην εντολή imap: CLOSE\n"
 
 #: libsylph/imap.c:4084
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
-msgstr ""
+msgstr "Δεν είναι δυνατή η μετατροπή του UTF-7 σε %s από το iconv\n"
 
 #: libsylph/imap.c:4114
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
-msgstr ""
+msgstr "Δεν είναι δυνατή η μετατροπή του %s σε UTF-7 από το iconv\n"
 
-#: libsylph/mbox.c:50 libsylph/mbox.c:196
+#: libsylph/mbox.c:50
+#: libsylph/mbox.c:196
 msgid "can't write to temporary file\n"
-msgstr "δεν μπορώ να γράψω στο προσωρινό αρχείο\n"
+msgstr "δεν είναι δυνατή η εγγραφή στο προσωρινό αρχείο.\n"
 
 #: libsylph/mbox.c:69
 #, c-format
 msgid "Getting messages from %s into %s...\n"
-msgstr "Λαμβάνω τα μηνύματα από το %s στο %s...\n"
+msgstr "Λήψη μηνυμάτων από το %s στο %s...\n"
 
 #: libsylph/mbox.c:79
 msgid "can't read mbox file.\n"
-msgstr "δεν μπορώ να διαβάσω το αρχείο mbox.\n"
+msgstr "δεν είναι δυνατή η ανάγνωση από το αρχείο mbox.\n"
 
 #: libsylph/mbox.c:86
 #, c-format
 msgid "invalid mbox format: %s\n"
-msgstr "μη έγκυρη μορφοποίηση mbox: %s\n"
+msgstr "μη έγκυρη μορφή mbox: %s\n"
 
 #: libsylph/mbox.c:93
 #, c-format
 msgid "malformed mbox: %s\n"
-msgstr "κακώς μορφοποιημένο mbox: %s\n"
+msgstr "κακοσχηματισμένο mbox: %s\n"
 
 #: libsylph/mbox.c:110
 msgid "can't open temporary file\n"
-msgstr "δεν μπορώ να ανοίξω το προσωρινό αρχείο\n"
+msgstr "δεν είναι δυνατό το άνοιγμα του προσωρινού αρχείου.\n"
 
 #: libsylph/mbox.c:161
 #, c-format
@@ -260,70 +259,74 @@ msgstr "Βρέθηκαν %d μηνύματα.\n"
 #: libsylph/mbox.c:268
 #, c-format
 msgid "can't create lock file %s\n"
-msgstr "δεν μπορώ να δημιουργήσω το αρχείο lock %s\n"
+msgstr "Δεν είναι δυνατή η δημιουργία αρχείου κλειδώματος %s\n"
 
 #: libsylph/mbox.c:269
 msgid "use 'flock' instead of 'file' if possible.\n"
-msgstr "χρησιμοποιήστε την 'flock' αντί για την 'file' αν είναι δυνατόν.\n"
+msgstr "χρήση της εντολής 'flock' αντί 'file' αν είναι δυνατό.\n"
 
 #: libsylph/mbox.c:281
 #, c-format
 msgid "can't create %s\n"
-msgstr "δεν μπορώ να δημιουργήσω %s\n"
+msgstr "Δεν είναι δυνατή η δημιουργία του %s\n"
 
 #: libsylph/mbox.c:287
 msgid "mailbox is owned by another process, waiting...\n"
-msgstr "το mailbox χρησιμοποιείται από άλλη διεργασία, περιμένω...\n"
+msgstr "το γραμματοκιβώτιο ανήκει σε άλλη διεργασία, αναμονή...\n"
 
 #: libsylph/mbox.c:316
 #, c-format
 msgid "can't lock %s\n"
-msgstr "δεν μπορώ να κλειδώσω το %s\n"
+msgstr "δεν είναι δυνατό το κλείδωμα του %s\n"
 
-#: libsylph/mbox.c:323 libsylph/mbox.c:373
+#: libsylph/mbox.c:323
+#: libsylph/mbox.c:373
 msgid "invalid lock type\n"
-msgstr "απαράδεκτος τύπος κλειδώματος\n"
+msgstr "μη έκυρος τύπος κλειδώματος\n"
 
 #: libsylph/mbox.c:359
 #, c-format
 msgid "can't unlock %s\n"
-msgstr "δεν μπορώ να ξεκλειδώσω το %s\n"
+msgstr "δεν είναι δυνατό το ξεκλείδωμα του %s\n"
 
 #: libsylph/mbox.c:394
 msgid "can't truncate mailbox to zero.\n"
-msgstr "δεν μπορώ να μηδενίσω το mailbox.\n"
+msgstr "Δεν είναι δυνατή η περικοπή του γραμματοκιβωτίου σε μηδενικό.\n"
 
 #: libsylph/mbox.c:418
 #, c-format
 msgid "Exporting messages from %s into %s...\n"
-msgstr "Εξαγωγή μηνυμάτων από %s προς %s...\n"
+msgstr "Εξαγωγή μηνυμάτων από το %s στο %s...\n"
 
 #: libsylph/mh.c:427
 #, c-format
 msgid "can't copy message %s to %s\n"
 msgstr "δεν μπορώ να αντιγράψω το μήνυμα %s στο %s\n"
 
-#: libsylph/mh.c:502 libsylph/mh.c:625
+#: libsylph/mh.c:502
+#: libsylph/mh.c:625
 msgid "Can't open mark file.\n"
-msgstr "Δεν μπορώ να ανοίξω σημειωμένο αρχείο.\n"
+msgstr "Δεν είναι δυνατή η σημείωση του αρχείου.\n"
 
-#: libsylph/mh.c:509 libsylph/mh.c:631
+#: libsylph/mh.c:509
+#: libsylph/mh.c:631
 msgid "the src folder is identical to the dest.\n"
-msgstr "ο πηγαίος κατάλογος είναι ίδιος με τον κατάλογο προορισμού.\n"
+msgstr "ο πηγαίος φάκελος είναι ίδιος με το φάκελο προορισμού.\n"
 
 #: libsylph/mh.c:634
 #, c-format
 msgid "Copying message %s%c%d to %s ...\n"
-msgstr "Αντιγράφω το μήνυμα %s%c%d στο %s ...\n"
+msgstr "Αντιγραφή μηνύματος %s%c%d στο %s ...\n"
 
-#: libsylph/mh.c:965 libsylph/mh.c:978
+#: libsylph/mh.c:965
+#: libsylph/mh.c:978
 #, c-format
 msgid ""
 "File `%s' already exists.\n"
 "Can't create folder."
 msgstr ""
-"Το αρχείο `%s' υπάρχει ήδη.\n"
-"Δεν μπορώ να δημιουργήσω τον κατάλογο."
+"Το αρχείο '%s' υπάρχει ήδη.\n"
+"Δεν είναι δυνατή η δημιουργία του φακέλου."
 
 #: libsylph/mh.c:1500
 #, c-format
@@ -350,17 +353,17 @@ msgstr "Η NNTP σύνδεση στο %s:%d διακόπηκε. Επανασύν
 #: libsylph/news.c:377
 #, c-format
 msgid "article %d has been already cached.\n"
-msgstr "το άρθρο %d έχει προσπελαστεί ήδη.\n"
+msgstr "το άρθρο %d υπάρχει ήδη στην προσωρινή μνήμη.\n"
 
 #: libsylph/news.c:397
 #, c-format
 msgid "getting article %d...\n"
-msgstr "λαμβάνω το άρθρο %d...\n"
+msgstr "λήψη άρθρου %d...\n"
 
 #: libsylph/news.c:401
 #, c-format
 msgid "can't read article %d\n"
-msgstr "δεν μπορώ να διαβάσω το άρθρο %d\n"
+msgstr "δεν είναι δυνατή η ανάγνωση του άρθρου %d\n"
 
 #: libsylph/news.c:676
 msgid "can't post article.\n"
@@ -372,9 +375,9 @@ msgid "can't retrieve article %d\n"
 msgstr "δεν μπορώ να λάβω το άρθρο %d\n"
 
 #: libsylph/news.c:759
-#, fuzzy, c-format
+#, c-format
 msgid "can't select group: %s\n"
-msgstr "δεν μπορώ να επιλέξω την ομάδα %s\n"
+msgstr "δεν είναι δυνατή η επιλογή της ομάδας: %s\n"
 
 #: libsylph/news.c:796
 #, c-format
@@ -403,11 +406,13 @@ msgstr "συνέβη σφάλμα καθώς λάμβανα xover.\n"
 msgid "invalid xover line: %s\n"
 msgstr "μη έγκυρη γραμμή xover: %s\n"
 
-#: libsylph/news.c:862 libsylph/news.c:894
+#: libsylph/news.c:862
+#: libsylph/news.c:894
 msgid "can't get xhdr\n"
 msgstr "δεν μπορώ να λάβω xhdr\n"
 
-#: libsylph/news.c:874 libsylph/news.c:906
+#: libsylph/news.c:874
+#: libsylph/news.c:906
 msgid "error occurred while getting xhdr.\n"
 msgstr "συνέβη σφάλμα καθώς λάμβανα xhdr.\n"
 
@@ -416,12 +421,14 @@ msgstr "συνέβη σφάλμα καθώς λάμβανα xhdr.\n"
 msgid "Can't connect to NNTP server: %s:%d\n"
 msgstr "Δεν μπορώ να συνδεθώ στον NNTP server: %s:%d\n"
 
-#: libsylph/nntp.c:164 libsylph/nntp.c:227
+#: libsylph/nntp.c:164
+#: libsylph/nntp.c:227
 #, c-format
 msgid "protocol error: %s\n"
 msgstr "σφάλμα πρωτοκόλλου: %s\n"
 
-#: libsylph/nntp.c:187 libsylph/nntp.c:233
+#: libsylph/nntp.c:187
+#: libsylph/nntp.c:233
 msgid "protocol error\n"
 msgstr "σφάλμα πρωτοκόλλου\n"
 
@@ -430,9 +437,8 @@ msgid "Error occurred while posting\n"
 msgstr "Προέκυψε σφάλμα κατά την αποστολή\n"
 
 #: libsylph/nntp.c:363
-#, fuzzy
 msgid "Error occurred while sending command\n"
-msgstr "Ένα σφάλμα συνέβη καθώς επεξεργάζομαι το mail."
+msgstr "Προέκυψε σφάλμα κατά την αποστολή της εντολής\n"
 
 #: libsylph/pop.c:155
 msgid "Required APOP timestamp not found in greeting\n"
@@ -442,117 +448,119 @@ msgstr "Προαπαιτούμενη timestamp APOP δεν βρέθηκε στο
 msgid "Timestamp syntax error in greeting\n"
 msgstr "Συντακτικό σφάλμα timestamp στο χαιρετισμό\n"
 
-#: libsylph/pop.c:192 libsylph/pop.c:219
+#: libsylph/pop.c:192
+#: libsylph/pop.c:219
 msgid "POP3 protocol error\n"
 msgstr "Σφάλμα πρωτοκόλλου POP3\n"
 
 #: libsylph/pop.c:264
-#, fuzzy, c-format
+#, c-format
 msgid "invalid UIDL response: %s\n"
-msgstr "μη έγκυρη γραμμή xover: %s\n"
+msgstr "Μη έγκυρη απάντηση UIDL: %s\n"
 
 #: libsylph/pop.c:625
-#, fuzzy, c-format
+#, c-format
 msgid "POP3: Deleting expired message %d\n"
-msgstr "διαγράφω το μήνυμα %d...\n"
+msgstr "POP3: Διαγραφή ληγμένου μηνύματος %d\n"
 
 #: libsylph/pop.c:634
-#, fuzzy, c-format
+#, c-format
 msgid "POP3: Skipping message %d (%d bytes)\n"
-msgstr "Στέλνω το μήνυμα (%d / %d bytes)"
+msgstr "POP3: Προσπέραση μηνύματος (%d / %d bytes)\n"
 
 #: libsylph/pop.c:667
-#, fuzzy
 msgid "mailbox is locked\n"
-msgstr "Ρυθμίσεις Mailbox"
+msgstr "το γραμματοκιβώτιο είναι κλειδωμένο\n"
 
 #: libsylph/pop.c:670
 msgid "session timeout\n"
-msgstr ""
+msgstr "λήξη ορίου χρόνου συνεδρίας\n"
 
-#: libsylph/pop.c:676 libsylph/smtp.c:561
-#, fuzzy
+#: libsylph/pop.c:676
+#: libsylph/smtp.c:561
 msgid "can't start TLS session\n"
-msgstr "Χρήση εντολής STARTTLS για την έναρξη ασφαλούς (SSL) συνόδου"
+msgstr "δεν είναι δυνατό να ξεκινήσει συνεδρία TLS\n"
 
-#: libsylph/pop.c:683 libsylph/smtp.c:496
+#: libsylph/pop.c:683
+#: libsylph/smtp.c:496
 msgid "error occurred on authentication\n"
-msgstr "Προέκυψε σφάλμα στην εξακρίβωση\n"
+msgstr "προέκυψε σφάλμα κατά την πιστοποίηση\n"
 
 #: libsylph/pop.c:688
-#, fuzzy
 msgid "command not supported\n"
-msgstr "Εντολή"
+msgstr "η εντολή δεν υποστηρίζεται\n"
 
 #: libsylph/pop.c:692
-#, fuzzy
 msgid "error occurred on POP3 session\n"
-msgstr "Προέκυψε σφάλμα στην εξακρίβωση\n"
+msgstr "Προέκυψε σφάλμα στη συνεδρία POP3\n"
 
-#: libsylph/prefs.c:196 libsylph/prefs.c:224 libsylph/prefs.c:269
-#: libsylph/prefs_account.c:217 libsylph/prefs_account.c:231
+#: libsylph/prefs.c:196
+#: libsylph/prefs.c:224
+#: libsylph/prefs.c:269
+#: libsylph/prefs_account.c:217
+#: libsylph/prefs_account.c:231
 msgid "failed to write configuration to file\n"
-msgstr "απέτυχα να γράψω τις ρυθμίσεις στο αρχείο\n"
+msgstr "Η εγγραφή στο αρχείο ρυθμίσεων απέτυχε\n"
 
 #: libsylph/prefs.c:239
 #, c-format
 msgid "Found %s\n"
-msgstr "Βρέθηκε %s\n"
+msgstr "Βρέθηκαν %s\n"
 
 #: libsylph/prefs.c:272
 msgid "Configuration is saved.\n"
 msgstr "Οι ρυθμίσεις αποθηκεύτηκαν.\n"
 
 #: libsylph/prefs_common.c:503
-#, fuzzy
 msgid "Junk mail filter (manual)"
-msgstr "Κατάλογος"
+msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας (χειροκίνητο)"
 
 #: libsylph/prefs_common.c:506
-#, fuzzy
 msgid "Junk mail filter"
-msgstr "Κατάλογος"
+msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας"
 
 #: libsylph/procmime.c:1125
-#, fuzzy
 msgid "procmime_get_text_content(): Code conversion failed.\n"
-msgstr "Η μετατροπή του κώδικα απέτυχε.\n"
+msgstr ""
 
 #: libsylph/procmsg.c:655
 msgid "can't open mark file\n"
-msgstr "δεν μπορώ να ανοίξω το αρχείο mark\n"
+msgstr ""
 
 #: libsylph/procmsg.c:1107
 #, c-format
 msgid "can't fetch message %d\n"
-msgstr "δεν μπορώ να λάβω το μήνυμα %d\n"
+msgstr "δεν είναι δυνατή η λήψη του μηνύματος %d\n"
 
 #: libsylph/procmsg.c:1423
 #, c-format
 msgid "Print command line is invalid: `%s'\n"
-msgstr "Η εντολή εκτύπωσης είναι άκυρη: `%s'\n"
+msgstr "Η εντολή εκτύπωσης είναι άκυρη: '%s'\n"
 
 #: libsylph/recv.c:140
 msgid "error occurred while retrieving data.\n"
-msgstr "προέκυψε σφάλμα κατά την λήψη δεδομένων.\n"
+msgstr "σφάλμα κατά τη λήψη των δεδομένων.\n"
 
-#: libsylph/recv.c:182 libsylph/recv.c:214 libsylph/recv.c:229
+#: libsylph/recv.c:182
+#: libsylph/recv.c:214
+#: libsylph/recv.c:229
 msgid "Can't write to file.\n"
-msgstr "Δεν μπορώ να γράψω σε αρχείο.\n"
+msgstr "Δεν είναι δυνατή η εγγραφή στο αρχείο.\n"
 
 #: libsylph/smtp.c:157
-#, fuzzy
 msgid "SMTP AUTH not available\n"
-msgstr "Το TLSv1 δεν είναι διαθέσιμο\n"
+msgstr "Το SMTP AUTH δεν είναι διαθέσιμο\n"
 
-#: libsylph/smtp.c:466 libsylph/smtp.c:516
+#: libsylph/smtp.c:466
+#: libsylph/smtp.c:516
 msgid "bad SMTP response\n"
-msgstr ""
+msgstr "εσφαλμένη απάντηση SMTP\n"
 
-#: libsylph/smtp.c:487 libsylph/smtp.c:505 libsylph/smtp.c:602
-#, fuzzy
+#: libsylph/smtp.c:487
+#: libsylph/smtp.c:505
+#: libsylph/smtp.c:602
 msgid "error occurred on SMTP session\n"
-msgstr "Προέκυψε σφάλμα στην εξακρίβωση\n"
+msgstr "προέκυψε σφάλμα στη σύνοδο SMTP\n"
 
 #: libsylph/ssl.c:54
 msgid "SSLv23 not available\n"
@@ -570,13 +578,14 @@ msgstr "Το TLSv1 δεν είναι διαθέσιμο\n"
 msgid "TLSv1 available\n"
 msgstr "Το TLSv1 είναι διαθέσιμο\n"
 
-#: libsylph/ssl.c:101 libsylph/ssl.c:108
+#: libsylph/ssl.c:101
+#: libsylph/ssl.c:108
 msgid "SSL method not available\n"
-msgstr "Ασφαλής (SSL) μέθοδος δεν είναι διαθέσιμη\n"
+msgstr "Η μέθοδος SSL δεν είναι διαθέσιμη\n"
 
 #: libsylph/ssl.c:114
 msgid "Unknown SSL method *PROGRAM BUG*\n"
-msgstr "Άγνωστη μέθοδος SSL *PROGRAM BUG*\n"
+msgstr "Άγνωστη μέθοδος SSL *ΣΦΑΛΜΑ ΣΤΟ ΠΡΟΓΡΑΜΜΑ*\n"
 
 #: libsylph/ssl.c:120
 msgid "Error creating ssl context\n"
@@ -586,16 +595,16 @@ msgstr ""
 #: libsylph/ssl.c:139
 #, c-format
 msgid "SSL connection using %s\n"
-msgstr "Ασφαλής (SSL) σύνδεση χρησιμοποιώντας %s\n"
+msgstr "Σύνδεση SSL με χρήση %s\n"
 
 #: libsylph/ssl.c:148
 msgid "Server certificate:\n"
-msgstr "Πιστοποιητικό εξυπηρέτη:\n"
+msgstr "Πιστοποιητικό διακομιστή:\n"
 
 #: libsylph/ssl.c:151
 #, c-format
 msgid "  Subject: %s\n"
-msgstr "Θέμα: %s\n"
+msgstr "  Θέμα: %s\n"
 
 #: libsylph/ssl.c:156
 #, c-format
@@ -604,9 +613,10 @@ msgstr "  Εκδότης: %s\n"
 
 #: libsylph/utils.c:2496
 msgid "can't change file mode\n"
-msgstr "δεν μπορώ να αλλάξω το mode του αρχείου\n"
+msgstr "δεν είναι δυνατή η αλλαγή της κατάστασης του αρχείου\n"
 
-#: libsylph/utils.c:2503 libsylph/utils.c:2627
+#: libsylph/utils.c:2503
+#: libsylph/utils.c:2627
 #, c-format
 msgid "writing to %s failed.\n"
-msgstr "απέτυχε το γράψιμο στο %s.\n"
+msgstr "η εγγραφή στο %s απέτυχε.\n"
