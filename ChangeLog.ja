@@ -1,3 +1,16 @@
+2008-04-11
+
+	* version 2.5.0beta2
+
+2008-04-11
+
+	* src/summaryview.c: 検索バーが表示されていない場合はクイック検索
+	  条件をリセットするようにした。
+
+2008-04-11
+
+	* src/gtkutils.h: include が抜けていたのを追加。
+
 2008-04-10
 
 	* src/quick_search.c
