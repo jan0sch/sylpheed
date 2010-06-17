@@ -668,13 +668,15 @@ static gboolean execute_actions(gchar *action, GSList *msg_list,
 	g_free(user_hidden_str);
 
 	if (!children_list) {
-		 /* If not waiting for children, return */
+		/* If not waiting for children, return */
 		free_children(children);
 	} else {
 		GSList *cur;
 
 		children->list	      = children_list;
 		children->nb	      = g_slist_length(children_list);
+
+		create_io_dialog(children);
 
 		for (cur = children_list; cur; cur = cur->next) {
 			child_info = (ChildInfo *) cur->data;
@@ -683,8 +685,6 @@ static gboolean execute_actions(gchar *action, GSList *msg_list,
 					      GDK_INPUT_READ,
 					      catch_status, child_info);
 		}
-
-		create_io_dialog(children);
 	}
 
 	return is_ok;
@@ -724,13 +724,24 @@ static ChildInfo *fork_child(gchar *cmd, const gchar *msg_str,
 		}
 	}
 
-	debug_print("Forking child and grandchild.\n");
+	debug_print("Forking child and grandchild in %s mode.\n", sync ? "sync" : "async");
 	debug_print("Executing: /bin/sh -c %s\n", cmd);
 
 	pid = fork();
 	if (pid == 0) { /* Child */
+		struct sigaction sa;
+
 		if (setpgid(0, 0))
 			perror("setpgid");
+
+		/* reset signal handlers */
+		memset(&sa, 0, sizeof(sa));
+		sa.sa_handler = SIG_DFL;
+		sigaction(SIGHUP, &sa, NULL);
+		sigaction(SIGINT, &sa, NULL);
+		sigaction(SIGTERM, &sa, NULL);
+		sigaction(SIGQUIT, &sa, NULL);
+		sigaction(SIGPIPE, &sa, NULL);
 
 #ifdef GDK_WINDOWING_X11
 		close(ConnectionNumber(gdk_display));
@@ -787,9 +798,9 @@ static ChildInfo *fork_child(gchar *cmd, const gchar *msg_str,
 				close(chld_err[1]);
 				close(chld_status[0]);
 
-				debug_print("Child: Waiting for grandchild\n");
+				debug_print("Child: Waiting for grandchild (PID: %d)\n", gch_pid);
 				waitpid(gch_pid, NULL, 0);
-				debug_print("Child: grandchild ended\n");
+				debug_print("Child: grandchild ended (PID: %d)\n", gch_pid);
 				write(chld_status[1], "0\n", 2);
 				close(chld_status[1]);
 			}
@@ -838,6 +849,8 @@ static ChildInfo *fork_child(gchar *cmd, const gchar *msg_str,
 	child_info->tag_err     = gdk_input_add(chld_err[0], GDK_INPUT_READ,
 						catch_output, child_info);
 
+	debug_print("Monitoring child (PID: %d)\n", pid);
+
 	if (!(children->action_type &
 	      (ACTION_PIPE_IN | ACTION_PIPE_OUT | ACTION_INSERT)))
 		return child_info;
@@ -879,6 +892,8 @@ static gint wait_for_children(Children *children)
 	GSList *cur;
 	gint nb = children->nb;
 
+	debug_print("wait_for_children (%p)\n", children);
+
 	children->nb = 0;
 
 	cur = children->list;
@@ -900,9 +915,10 @@ static gint wait_for_children(Children *children)
 		return FALSE;
 
 	if (!children->dialog) {
-		free_children(children);
+		/* free_children(children); */
 	} else if (!children->output) {
 		gtk_widget_destroy(children->dialog);
+		children->dialog = NULL;
 	}
 
 	return FALSE;
@@ -983,6 +999,7 @@ static void free_children(Children *children)
 		child_info = (ChildInfo *)children->list->data;
 #ifdef G_OS_UNIX
 		if (child_info->pid != 0) {
+			debug_print("free_children: waiting PID %d\n", child_info->pid);
 			if (waitpid(child_info->pid, NULL, 0)
 			    != child_info->pid) {
 				perror("waitpid (free_children)");
@@ -1170,10 +1187,17 @@ static void catch_status(gpointer data, gint source, GdkInputCondition cond)
 	gchar buf;
 	gint c;
 
+	debug_print("Catching child status (child PID: %d).\n", child_info->pid);
+
+	gdk_threads_enter();
+
 	gdk_input_remove(child_info->tag_status);
 
 	c = read(source, &buf, 1);
-	debug_print("Child returned %c\n", buf);
+	if (c == 1)
+		debug_print("Child (PID: %d) returned %c\n", child_info->pid, buf);
+	else
+		debug_print("Could not get child (PID: %d) status\n", child_info->pid);
 
 #ifdef G_OS_UNIX
 	waitpid(child_info->pid, NULL, 0);
@@ -1182,6 +1206,8 @@ static void catch_status(gpointer data, gint source, GdkInputCondition cond)
 	child_info->pid = 0;
 
 	wait_for_children(child_info->children);
+
+	gdk_threads_leave();
 }
 	
 static void catch_input(gpointer data, gint source, GdkInputCondition cond)
@@ -1194,6 +1220,8 @@ static void catch_input(gpointer data, gint source, GdkInputCondition cond)
 	debug_print("Sending input to grand child.\n");
 	if (!(cond && GDK_INPUT_WRITE))
 		return;
+
+	gdk_threads_enter();
 
 	gdk_input_remove(child_info->tag_in);
 	child_info->tag_in = -1;
@@ -1219,6 +1247,8 @@ static void catch_input(gpointer data, gint source, GdkInputCondition cond)
 	close(child_info->chld_in);
 	child_info->chld_in = -1;
 	debug_print("Input to grand child sent.\n");
+
+	gdk_threads_leave();
 }
 
 static void catch_output(gpointer data, gint source, GdkInputCondition cond)
@@ -1227,7 +1257,9 @@ static void catch_output(gpointer data, gint source, GdkInputCondition cond)
 	gint c;
 	gchar buf[BUFFSIZE];
 
-	debug_print("Catching grand child's output.\n");
+	gdk_threads_enter();
+
+	debug_print("Catching grand child's output (child PID: %d).\n", child_info->pid);
 	if (child_info->children->action_type &
 	    (ACTION_PIPE_OUT | ACTION_INSERT)
 	    && source == child_info->chld_out) {
@@ -1302,6 +1334,8 @@ static void catch_output(gpointer data, gint source, GdkInputCondition cond)
 	}
 	
 	wait_for_children(child_info->children);
+
+	gdk_threads_leave();
 }
 
 static gchar *get_user_string(const gchar *action, ActionType type)

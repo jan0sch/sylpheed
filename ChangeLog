@@ -1,3 +1,43 @@
+2010-06-11
+
+	* src/action.c: reset signal handlers of child process to prevent
+	  app_will_exit() called on SIGTERM.
+	  Added debug output.
+
+2010-06-09
+
+	* src/action.c: prevent double free when using %f.
+	  Obtain thread lock in gdk_input_add() callbacks.
+
+2010-05-24
+
+	* src/inc.c: fixed crash when clicking tray icon menu
+	  'Get from current account' with no account.
+
+2010-05-21
+
+	* libsylph/filter.c: filter_apply(): fixed a bug that MIME flag was
+	  not set to filtered messages. This occurred to filtered sent
+	  messages.
+
+2010-05-21
+
+	* src/prefs_common_dialog.c
+	  src/prefs_filter_edit.c
+	  src/prefs_account_dialog.c
+	  src/editldap.c: removed warnings 'GtkSpinButton: setting an
+	  adjustment with non-zero page size is deprecated'.
+	  The last value of gtk_adjustment_new() must be 0 for GtkSpinButton.
+
+2010-05-21
+
+	* libsylph/socket.c: sock_kill_process(): prevent redundant error
+	  messages when waitpid() is interrupted by EINTR.
+
+2010-05-20
+
+	* attach_button_pressed(): modify sensitivity of attach context menu.
+
 2010-05-11
 
 	* src/syldap.c: allow deprecated LDAP API calls (debian BTS #463366).
