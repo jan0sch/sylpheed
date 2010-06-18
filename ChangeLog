@@ -22,6 +22,10 @@
 
 2010-05-24
 
+	* src/compose.c: compose_attach_open(): fixed compilation on win32.
+
+2010-05-24
+
 	* src/inc.c: fixed crash when clicking tray icon menu
 	  'Get from current account' with no account.
 
@@ -47,7 +51,8 @@
 
 2010-05-20
 
-	* attach_button_pressed(): modify sensitivity of attach context menu.
+	* src/compose.c: added "Open" menu in the attach context menu.
+	  attach_button_pressed(): modify sensitivity of attach context menu.
 
 2010-05-11
 
