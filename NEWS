@@ -1,5 +1,12 @@
 Changes of Sylpheed
 
+* 3.1.2 (stable)
+
+    * The text color of quick search on dark themes was fixed.
+    * Fixed a memory leak.
+    * Win32: the updater executables were not included in the zip version
+      anymore to prevent incorrect update.
+
 * 3.1.1 (stable)
 
     * The column width of the address book will be saved now.
