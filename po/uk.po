@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-23 16:56+0900\n"
+"POT-Creation-Date: 2011-09-07 14:04+0900\n"
 "PO-Revision-Date: 2011-01-28 01:43+0300\n"
 "Last-Translator: Vladimir Smolyar <v_2e@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -1033,7 +1033,7 @@ msgstr " Теки "
 msgid "E-Mail address"
 msgstr "Адреса e-mail"
 
-#: src/addressbook.c:866 src/quick_search.c:128
+#: src/addressbook.c:866 src/quick_search.c:126
 msgid "Search:"
 msgstr "Пошук:"
 
@@ -2425,7 +2425,7 @@ msgstr "Нові"
 #. S_COL_MARK
 #: src/folderview.c:441 src/prefs_common_dialog.c:1613
 #: src/prefs_filter_edit.c:512 src/prefs_summary_column.c:67
-#: src/quick_search.c:110
+#: src/quick_search.c:108
 msgid "Unread"
 msgstr "Непрочитано"
 
@@ -6032,7 +6032,7 @@ msgstr "Результат команди"
 msgid "Age"
 msgstr "Давність"
 
-#: src/prefs_filter_edit.c:513 src/quick_search.c:111
+#: src/prefs_filter_edit.c:513 src/quick_search.c:109
 msgid "Marked"
 msgstr "Відзначено"
 
@@ -6618,44 +6618,44 @@ msgstr "Розташування:"
 msgid "Folder name:"
 msgstr "Назва теки:"
 
-#: src/quick_search.c:109
+#: src/quick_search.c:107
 msgid "All"
 msgstr "Всі"
 
-#: src/quick_search.c:112
+#: src/quick_search.c:110
 msgid "Have color label"
 msgstr "Мають кольорову позначку"
 
-#: src/quick_search.c:113
+#: src/quick_search.c:111
 msgid "Have attachment"
 msgstr "Мають вкладення"
 
-#: src/quick_search.c:115
+#: src/quick_search.c:113
 msgid "Within 1 day"
 msgstr "Протягом одного дня"
 
-#: src/quick_search.c:116
+#: src/quick_search.c:114
 msgid "Last 5 days"
 msgstr "За останні 5 днів"
 
-#: src/quick_search.c:117
+#: src/quick_search.c:115
 msgid "Last 7 days"
 msgstr "За останні 7 днів"
 
-#: src/quick_search.c:119
+#: src/quick_search.c:117
 msgid "In addressbook"
 msgstr "В адресній книзі"
 
-#: src/quick_search.c:150 src/quick_search.c:383
+#: src/quick_search.c:148 src/quick_search.c:373
 msgid "Search for Subject or From"
 msgstr "Пошук за полем \"Тема\" або \"Від\""
 
-#: src/quick_search.c:338
+#: src/quick_search.c:334
 #, c-format
 msgid "%1$d in %2$d matched"
 msgstr "%1$d з %2$d підійшло"
 
-#: src/quick_search.c:341
+#: src/quick_search.c:337
 #, c-format
 msgid "No messages matched"
 msgstr "Немає відповідних листів"
@@ -7738,7 +7738,7 @@ msgstr "Вихід"
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: src/update_check.c:264 src/update_check.c:269 src/update_check.c:274
+#: src/update_check.c:263 src/update_check.c:268 src/update_check.c:273
 msgid ""
 "A newer version of Sylpheed has been found.\n"
 "Upgrade now?"
@@ -7746,23 +7746,23 @@ msgstr ""
 "Існує новіша версія Sylpheed.\n"
 "Оновити зараз?"
 
-#: src/update_check.c:277 src/update_check.c:572
+#: src/update_check.c:276 src/update_check.c:571
 msgid "New version found"
 msgstr "Знайдено нову версію"
 
-#: src/update_check.c:399 src/update_check.c:684
+#: src/update_check.c:398 src/update_check.c:683
 msgid "Information"
 msgstr "Інформація"
 
-#: src/update_check.c:400
+#: src/update_check.c:399
 msgid "Sylpheed is already the latest version."
 msgstr "Sylpheed вже останньої версії."
 
-#: src/update_check.c:403
+#: src/update_check.c:402
 msgid "Couldn't get the version information."
 msgstr "Не вдалося отримати інформацію про версію."
 
-#: src/update_check.c:625
+#: src/update_check.c:624
 msgid ""
 "Newer version of plug-ins have been found.\n"
 "Upgrade now?\n"
@@ -7770,11 +7770,11 @@ msgstr ""
 "Існує новіша версія плагінів.\n"
 "Оновити зараз?\n"
 
-#: src/update_check.c:685
+#: src/update_check.c:684
 msgid "All Sylpheed plug-ins are already the latest version."
 msgstr "Усі плагіни Sylpheed вже останньої версії."
 
-#: src/update_check.c:688
+#: src/update_check.c:687
 msgid "Couldn't get the version information of plug-ins."
 msgstr "Не вдалося отримати інформацію про версію плагінів."
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-23 16:56+0900\n"
+"POT-Creation-Date: 2011-09-07 14:04+0900\n"
 "PO-Revision-Date: 2011-03-07 23:37+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <foo@bar.example>\n"
@@ -1008,7 +1008,7 @@ msgstr "Kansio"
 msgid "E-Mail address"
 msgstr "Sähköpostiosoite"
 
-#: src/addressbook.c:866 src/quick_search.c:128
+#: src/addressbook.c:866 src/quick_search.c:126
 msgid "Search:"
 msgstr "Etsi:"
 
@@ -2401,7 +2401,7 @@ msgstr "Uusi"
 #. S_COL_MARK
 #: src/folderview.c:441 src/prefs_common_dialog.c:1613
 #: src/prefs_filter_edit.c:512 src/prefs_summary_column.c:67
-#: src/quick_search.c:110
+#: src/quick_search.c:108
 msgid "Unread"
 msgstr "Lukematon"
 
@@ -6006,7 +6006,7 @@ msgstr "Komennon tulos"
 msgid "Age"
 msgstr "Ikä"
 
-#: src/prefs_filter_edit.c:513 src/quick_search.c:111
+#: src/prefs_filter_edit.c:513 src/quick_search.c:109
 msgid "Marked"
 msgstr "Merkitse"
 
@@ -6593,44 +6593,44 @@ msgstr "Sijainti:"
 msgid "Folder name:"
 msgstr "Kansion nimi:"
 
-#: src/quick_search.c:109
+#: src/quick_search.c:107
 msgid "All"
 msgstr "Kaikki"
 
-#: src/quick_search.c:112
+#: src/quick_search.c:110
 msgid "Have color label"
 msgstr "On värikoodattu"
 
-#: src/quick_search.c:113
+#: src/quick_search.c:111
 msgid "Have attachment"
 msgstr "SIsältävät liitteen"
 
-#: src/quick_search.c:115
+#: src/quick_search.c:113
 msgid "Within 1 day"
 msgstr "Vuorokauden kuluessa"
 
-#: src/quick_search.c:116
+#: src/quick_search.c:114
 msgid "Last 5 days"
 msgstr "Viiden vuorokauden aikana"
 
-#: src/quick_search.c:117
+#: src/quick_search.c:115
 msgid "Last 7 days"
 msgstr "Seitsemän vuorokauden aikana"
 
-#: src/quick_search.c:119
+#: src/quick_search.c:117
 msgid "In addressbook"
 msgstr "Osoitekirjassa"
 
-#: src/quick_search.c:150 src/quick_search.c:383
+#: src/quick_search.c:148 src/quick_search.c:373
 msgid "Search for Subject or From"
 msgstr "Etsi aihetta tai lähettäjää"
 
-#: src/quick_search.c:338
+#: src/quick_search.c:334
 #, c-format
 msgid "%1$d in %2$d matched"
 msgstr "%1$d kohteessa %2$d täsmää"
 
-#: src/quick_search.c:341
+#: src/quick_search.c:337
 #, c-format
 msgid "No messages matched"
 msgstr "Yksikään viesti ei täsmännyt"
@@ -7714,7 +7714,7 @@ msgstr "_Lopeta"
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: src/update_check.c:264 src/update_check.c:269 src/update_check.c:274
+#: src/update_check.c:263 src/update_check.c:268 src/update_check.c:273
 msgid ""
 "A newer version of Sylpheed has been found.\n"
 "Upgrade now?"
@@ -7722,23 +7722,23 @@ msgstr ""
 "Sylpheedistä löytyi uudempi versio.\n"
 "Päivitetäänkö nyt?"
 
-#: src/update_check.c:277 src/update_check.c:572
+#: src/update_check.c:276 src/update_check.c:571
 msgid "New version found"
 msgstr "Löytyi uusi versio"
 
-#: src/update_check.c:399 src/update_check.c:684
+#: src/update_check.c:398 src/update_check.c:683
 msgid "Information"
 msgstr "Tietoja"
 
-#: src/update_check.c:400
+#: src/update_check.c:399
 msgid "Sylpheed is already the latest version."
 msgstr "Sylpheed on jo viimeisin versio."
 
-#: src/update_check.c:403
+#: src/update_check.c:402
 msgid "Couldn't get the version information."
 msgstr "Versiotietoa ei saada luetuksi."
 
-#: src/update_check.c:625
+#: src/update_check.c:624
 msgid ""
 "Newer version of plug-ins have been found.\n"
 "Upgrade now?\n"
@@ -7746,11 +7746,11 @@ msgstr ""
 "Liitännäisistä on löytynyt uudempia versioita.\n"
 "Päivitetäänkö nyt?\n"
 
-#: src/update_check.c:685
+#: src/update_check.c:684
 msgid "All Sylpheed plug-ins are already the latest version."
 msgstr "Kaikki Sylpheedin liitännäistä ovat jo viimeisimpiä versioita."
 
-#: src/update_check.c:688
+#: src/update_check.c:687
 msgid "Couldn't get the version information of plug-ins."
 msgstr "Liitännäisten versiotietoa ei saatu luetuksi."
 
