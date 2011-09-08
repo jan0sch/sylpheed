@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-23 16:56+0900\n"
+"POT-Creation-Date: 2011-09-07 14:04+0900\n"
 "PO-Revision-Date: 2002-11-29 21:08+0100\n"
 "Last-Translator: garret <garret@garrets.tk>\n"
 "Language-Team: Serbian\n"
@@ -1045,7 +1045,7 @@ msgstr "Direktorijum"
 msgid "E-Mail address"
 msgstr "Adresa e-pošte"
 
-#: src/addressbook.c:866 src/quick_search.c:128
+#: src/addressbook.c:866 src/quick_search.c:126
 #, fuzzy
 msgid "Search:"
 msgstr "Pretraga"
@@ -2510,7 +2510,7 @@ msgstr "Novo"
 #. S_COL_MARK
 #: src/folderview.c:441 src/prefs_common_dialog.c:1613
 #: src/prefs_filter_edit.c:512 src/prefs_summary_column.c:67
-#: src/quick_search.c:110
+#: src/quick_search.c:108
 msgid "Unread"
 msgstr "Nepročitano"
 
@@ -6248,7 +6248,7 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-#: src/prefs_filter_edit.c:513 src/quick_search.c:111
+#: src/prefs_filter_edit.c:513 src/quick_search.c:109
 #, fuzzy
 msgid "Marked"
 msgstr "Oznaka"
@@ -6888,49 +6888,49 @@ msgstr "Citat"
 msgid "Folder name:"
 msgstr "Ime datoteke"
 
-#: src/quick_search.c:109
+#: src/quick_search.c:107
 msgid "All"
 msgstr ""
 
-#: src/quick_search.c:112
+#: src/quick_search.c:110
 #, fuzzy
 msgid "Have color label"
 msgstr "/Oznaka _boje"
 
-#: src/quick_search.c:113
+#: src/quick_search.c:111
 #, fuzzy
 msgid "Have attachment"
 msgstr "Dodatak"
 
-#: src/quick_search.c:115
+#: src/quick_search.c:113
 msgid "Within 1 day"
 msgstr ""
 
-#: src/quick_search.c:116
+#: src/quick_search.c:114
 #, fuzzy
 msgid "Last 5 days"
 msgstr "Prezime"
 
-#: src/quick_search.c:117
+#: src/quick_search.c:115
 #, fuzzy
 msgid "Last 7 days"
 msgstr "Prezime"
 
-#: src/quick_search.c:119
+#: src/quick_search.c:117
 #, fuzzy
 msgid "In addressbook"
 msgstr "Adresar"
 
-#: src/quick_search.c:150 src/quick_search.c:383
+#: src/quick_search.c:148 src/quick_search.c:373
 msgid "Search for Subject or From"
 msgstr ""
 
-#: src/quick_search.c:338
+#: src/quick_search.c:334
 #, c-format
 msgid "%1$d in %2$d matched"
 msgstr ""
 
-#: src/quick_search.c:341
+#: src/quick_search.c:337
 #, fuzzy, c-format
 msgid "No messages matched"
 msgstr "Nijedan deo poruke nije odabran."
@@ -8044,43 +8044,43 @@ msgstr "Izlaz"
 msgid "Sylpheed"
 msgstr "Stari Sylpheed"
 
-#: src/update_check.c:264 src/update_check.c:269 src/update_check.c:274
+#: src/update_check.c:263 src/update_check.c:268 src/update_check.c:273
 msgid ""
 "A newer version of Sylpheed has been found.\n"
 "Upgrade now?"
 msgstr ""
 
-#: src/update_check.c:277 src/update_check.c:572
+#: src/update_check.c:276 src/update_check.c:571
 #, fuzzy
 msgid "New version found"
 msgstr "Nema potpisa"
 
-#: src/update_check.c:399 src/update_check.c:684
+#: src/update_check.c:398 src/update_check.c:683
 #, fuzzy
 msgid "Information"
 msgstr "Informacije o serveru"
 
-#: src/update_check.c:400
+#: src/update_check.c:399
 #, fuzzy
 msgid "Sylpheed is already the latest version."
 msgstr "drugi Sylpheed već radi.\n"
 
-#: src/update_check.c:403
+#: src/update_check.c:402
 msgid "Couldn't get the version information."
 msgstr ""
 
-#: src/update_check.c:625
+#: src/update_check.c:624
 msgid ""
 "Newer version of plug-ins have been found.\n"
 "Upgrade now?\n"
 msgstr ""
 
-#: src/update_check.c:685
+#: src/update_check.c:684
 #, fuzzy
 msgid "All Sylpheed plug-ins are already the latest version."
 msgstr "drugi Sylpheed već radi.\n"
 
-#: src/update_check.c:688
+#: src/update_check.c:687
 msgid "Couldn't get the version information of plug-ins."
 msgstr ""
 

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-23 16:56+0900\n"
+"POT-Creation-Date: 2011-09-07 14:04+0900\n"
 "PO-Revision-Date: 2011-01-21 07:33-0200\n"
 "Last-Translator: Alexandre Erwin Ittner <alexandre@ittner.com.br>\n"
 "Language-Team: Portuguese/Brazil <(none)>\n"
@@ -1037,7 +1037,7 @@ msgstr "Pasta"
 msgid "E-Mail address"
 msgstr "Endereço de e-mail"
 
-#: src/addressbook.c:866 src/quick_search.c:128
+#: src/addressbook.c:866 src/quick_search.c:126
 msgid "Search:"
 msgstr "Procurar:"
 
@@ -2442,7 +2442,7 @@ msgstr "Nova"
 #. S_COL_MARK
 #: src/folderview.c:441 src/prefs_common_dialog.c:1613
 #: src/prefs_filter_edit.c:512 src/prefs_summary_column.c:67
-#: src/quick_search.c:110
+#: src/quick_search.c:108
 msgid "Unread"
 msgstr "Não lido"
 
@@ -6060,7 +6060,7 @@ msgstr "Resultado de comando"
 msgid "Age"
 msgstr "Idade"
 
-#: src/prefs_filter_edit.c:513 src/quick_search.c:111
+#: src/prefs_filter_edit.c:513 src/quick_search.c:109
 msgid "Marked"
 msgstr "Marcada"
 
@@ -6646,44 +6646,44 @@ msgstr "Local:"
 msgid "Folder name:"
 msgstr "Nome da pasta:"
 
-#: src/quick_search.c:109
+#: src/quick_search.c:107
 msgid "All"
 msgstr "Todos"
 
-#: src/quick_search.c:112
+#: src/quick_search.c:110
 msgid "Have color label"
 msgstr "Com etiqueta"
 
-#: src/quick_search.c:113
+#: src/quick_search.c:111
 msgid "Have attachment"
 msgstr "Com anexo"
 
-#: src/quick_search.c:115
+#: src/quick_search.c:113
 msgid "Within 1 day"
 msgstr "Último dia"
 
-#: src/quick_search.c:116
+#: src/quick_search.c:114
 msgid "Last 5 days"
 msgstr "Últimos 5 dias"
 
-#: src/quick_search.c:117
+#: src/quick_search.c:115
 msgid "Last 7 days"
 msgstr "Últimos 7 dias"
 
-#: src/quick_search.c:119
+#: src/quick_search.c:117
 msgid "In addressbook"
 msgstr "No catálogo de endereços"
 
-#: src/quick_search.c:150 src/quick_search.c:383
+#: src/quick_search.c:148 src/quick_search.c:373
 msgid "Search for Subject or From"
 msgstr "Procurar por Assunto ou Remetente"
 
-#: src/quick_search.c:338
+#: src/quick_search.c:334
 #, c-format
 msgid "%1$d in %2$d matched"
 msgstr "%1$d em %2$d coincidem"
 
-#: src/quick_search.c:341
+#: src/quick_search.c:337
 #, c-format
 msgid "No messages matched"
 msgstr "Nenhuma mensagem encontrada"
@@ -7763,7 +7763,7 @@ msgstr "Sai_r"
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: src/update_check.c:264 src/update_check.c:269 src/update_check.c:274
+#: src/update_check.c:263 src/update_check.c:268 src/update_check.c:273
 msgid ""
 "A newer version of Sylpheed has been found.\n"
 "Upgrade now?"
@@ -7771,23 +7771,23 @@ msgstr ""
 "Uma nova versão do Sylpheed foi localizada.\n"
 "Você deseja atualizar agora?"
 
-#: src/update_check.c:277 src/update_check.c:572
+#: src/update_check.c:276 src/update_check.c:571
 msgid "New version found"
 msgstr "Nova versão encontrada"
 
-#: src/update_check.c:399 src/update_check.c:684
+#: src/update_check.c:398 src/update_check.c:683
 msgid "Information"
 msgstr "Informação"
 
-#: src/update_check.c:400
+#: src/update_check.c:399
 msgid "Sylpheed is already the latest version."
 msgstr "Sylpheed está devidamente atualizado."
 
-#: src/update_check.c:403
+#: src/update_check.c:402
 msgid "Couldn't get the version information."
 msgstr "Não foi possível obter a informações de versão."
 
-#: src/update_check.c:625
+#: src/update_check.c:624
 msgid ""
 "Newer version of plug-ins have been found.\n"
 "Upgrade now?\n"
@@ -7795,11 +7795,11 @@ msgstr ""
 "Novas versões dos plugins foram encontradas.\n"
 "Você deseja atualizar agora?\n"
 
-#: src/update_check.c:685
+#: src/update_check.c:684
 msgid "All Sylpheed plug-ins are already the latest version."
 msgstr "Todos os plugins do Sylpheed já estão atualizados."
 
-#: src/update_check.c:688
+#: src/update_check.c:687
 msgid "Couldn't get the version information of plug-ins."
 msgstr "Não foi possível obter a informações de versão dos plugins."
 
