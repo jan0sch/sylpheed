@@ -70,6 +70,9 @@ static struct FilterRuleListWindow {
 	GHashTable *msg_hdr_table;
 
 	GtkWidget *close_btn;
+
+	gboolean on_init;
+	gboolean modified;
 } rule_list_window;
 
 enum {
@@ -130,6 +133,8 @@ void prefs_filter_open(MsgInfo *msginfo, const gchar *header, const gchar *key)
 {
 	inc_lock();
 
+	rule_list_window.on_init = TRUE;
+
 	if (!rule_list_window.window)
 		prefs_filter_create();
 
@@ -143,6 +148,8 @@ void prefs_filter_open(MsgInfo *msginfo, const gchar *header, const gchar *key)
 	gtk_widget_show(rule_list_window.window);
 	manage_window_focus_in(rule_list_window.window, NULL, NULL);
 
+	rule_list_window.modified = FALSE;
+
 	if (msginfo) {
 		FilterRule *rule;
 
@@ -154,6 +161,8 @@ void prefs_filter_open(MsgInfo *msginfo, const gchar *header, const gchar *key)
 			prefs_filter_set_list();
 		}
 	}
+
+	rule_list_window.on_init = FALSE;
 }
 
 static void prefs_filter_create(void)
@@ -421,6 +430,8 @@ static void prefs_filter_set_list_row(GtkTreeIter *iter, FilterRule *rule,
 			 path, NULL, TRUE, 0.5, 0.0);
 		gtk_tree_path_free(path);
 	}
+
+	rule_list_window.modified = TRUE;
 }
 
 #define APPEND_HDR_LIST(hdr_list)					  \
@@ -696,6 +707,8 @@ static void prefs_filter_delete_cb(void)
 
 	prefs_common.fltlist = g_slist_remove(prefs_common.fltlist, rule);
 	filter_rule_free(rule);
+
+	rule_list_window.modified = TRUE;
 }
 
 static void prefs_filter_top(void)
@@ -777,6 +790,7 @@ static void prefs_filter_enable_toggled(GtkCellRenderer *cell, gchar *path_str,
 
 	gtk_list_store_set(rule_list_window.store, &iter,
 			   COL_ENABLED, rule->enabled, -1);
+	rule_list_window.modified = TRUE;
 }
 
 static void prefs_filter_row_activated(GtkTreeView *treeview, GtkTreePath *path,
@@ -801,6 +815,7 @@ static void prefs_filter_row_reordered(GtkTreeModel *model,
 	gtk_tree_view_scroll_to_cell(GTK_TREE_VIEW(rule_list_window.treeview),
 				     path_, NULL, FALSE, 0.0, 0.0);
 	gtk_tree_path_free(path_);
+	rule_list_window.modified = TRUE;
 }
 
 static gint prefs_filter_deleted(GtkWidget *widget, GdkEventAny *event,
@@ -813,6 +828,9 @@ static gint prefs_filter_deleted(GtkWidget *widget, GdkEventAny *event,
 static gboolean prefs_filter_key_pressed(GtkWidget *widget, GdkEventKey *event,
 					 gpointer data)
 {
+	if (rule_list_window.on_init)
+		return TRUE;
+
 	if (event && event->keyval == GDK_Escape)
 		prefs_filter_close();
 	return FALSE;
@@ -820,9 +838,14 @@ static gboolean prefs_filter_key_pressed(GtkWidget *widget, GdkEventKey *event,
 
 static void prefs_filter_close(void)
 {
+	if (rule_list_window.on_init)
+		return;
+
 	prefs_filter_set_msg_header_list(NULL);
-	prefs_filter_set_list();
-	filter_write_config();
+	if (rule_list_window.modified) {
+		prefs_filter_set_list();
+		filter_write_config();
+	}
 	gtk_widget_hide(rule_list_window.window);
 	gtk_list_store_clear(rule_list_window.store);
 	main_window_popup(main_window_get());

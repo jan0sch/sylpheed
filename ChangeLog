@@ -1,5 +1,12 @@
 2012-02-22
 
+	* merged -r 3017:3018 from trunk.
+	* src/prefs_filter.c: fixed a bug that filter settings are removed
+	  if Escape key is pressed quickly on auto filter rule creation.
+	  Also made it update filter.xml file only when the list is modified.
+
+2012-02-22
+
 	* merged -r 2991:2992 from trunk.
 	* libsylph/imap.c:
 	  imap_session_get()
