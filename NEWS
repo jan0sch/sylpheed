@@ -1,5 +1,18 @@
 Changes of Sylpheed
 
+* 3.1.3 (stable)
+
+    * On browsing IMAP folder, the error "imap_cmd_gen_send: cannot send
+      command because another command is already running." was fixed.
+    * The crash bug that occurred when IMAP message fetching and new
+      message checking happened at the same time was fixed.
+    * The crash bug that was caused by offline switch while IMAP session was
+      active was fixed.
+    * A bug that filter settings were lost if Escape key was pressed
+      quickly on auto filter creation was fixed.
+    * Win32: OpenSSL was updated to 0.9.8t (security fix).
+    * Win32: included libpng library was updated to 1.2.47 (security fix).
+
 * 3.1.2 (stable)
 
     * The text color of quick search on dark themes was fixed.
