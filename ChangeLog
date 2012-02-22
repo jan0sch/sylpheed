@@ -1,5 +1,24 @@
 2012-02-22
 
+	* merged -r 2991:2992 from trunk.
+	* libsylph/imap.c:
+	  imap_session_get()
+	  imap_cmd_noop(): check the activity of session, and return NULL
+	  if busy. This fixes crashes when message fetch and new message
+	  checking happen at the same time.
+
+2012-02-22
+
+	* merged -r 2880:2881 from trunk.
+	* libsylph/folder.[ch]
+	  libsylph/imap.[ch]
+	  src/mainwindow.c: cancel online mode switch if active sessions
+	  exist.
+	* merged -r 2892:2893 from trunk.
+	* libsylph/libsylph-0.def: updated.
+
+2012-02-22
+
 	* merged -r 2967:2968 from trunk.
 	* src/summaryview.c
 	  src/folderview.c
