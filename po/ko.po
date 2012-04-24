@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed  0.8.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-07 14:04+0900\n"
+"POT-Creation-Date: 2012-02-24 11:51+0900\n"
 "PO-Revision-Date: 2002-12-02 11:09+0900\n"
 "Last-Translator: Nam SungHyun <namsh@kldp.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
@@ -28,210 +28,210 @@ msgstr "폴더"
 msgid "Junk mail filter"
 msgstr "폴더"
 
-#: libsylph/imap.c:537
+#: libsylph/imap.c:548
 #, fuzzy, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "%s:%d에대한 IMAP4 접속이 끊어졌습니다. 다시 접속...\n"
 
-#: libsylph/imap.c:594 libsylph/imap.c:600
+#: libsylph/imap.c:605 libsylph/imap.c:611
 #, fuzzy
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP 서버 디렉토리"
 
-#: libsylph/imap.c:659
+#: libsylph/imap.c:670
 #, fuzzy
 msgid "Could not establish IMAP connection.\n"
 msgstr "IMAP4 세션을 만들 수 없습니다: %s: %d\n"
 
-#: libsylph/imap.c:678
+#: libsylph/imap.c:689
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "%s:%d에대한 IMAP4 접속을 만듭니다 ...\n"
 
-#: libsylph/imap.c:731
+#: libsylph/imap.c:742
 msgid "Can't start TLS session.\n"
 msgstr "TLS 세션을 시작할 수 없습니다.\n"
 
-#: libsylph/imap.c:878
+#: libsylph/imap.c:889
 msgid "(retrieving FLAGS...)"
 msgstr ""
 
-#: libsylph/imap.c:1269
+#: libsylph/imap.c:1280
 #, fuzzy, c-format
 msgid "Getting message %u"
 msgstr "%d 메시지를 삭제하는 중"
 
-#: libsylph/imap.c:1391
+#: libsylph/imap.c:1402
 #, fuzzy, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "메시지를 보내는 중 (%d / %d 바이트)"
 
-#: libsylph/imap.c:1514
+#: libsylph/imap.c:1525
 #, fuzzy, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "메시지 %s%c%d를 %s로 이동합니다...\n"
 
-#: libsylph/imap.c:1519
+#: libsylph/imap.c:1530
 #, fuzzy, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "메시지 %s%c%d를 %s로 복사중입니다 ...\n"
 
-#: libsylph/imap.c:1657
+#: libsylph/imap.c:1668
 #, fuzzy, c-format
 msgid "Removing messages %s"
 msgstr "%s로부터 %s로 메시지를 가져옵니다...\n"
 
-#: libsylph/imap.c:1663
+#: libsylph/imap.c:1674
 #, fuzzy, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "삭제 플래그를 설정할 수가 없습니다: %d\n"
 
-#: libsylph/imap.c:1671 libsylph/imap.c:1770
+#: libsylph/imap.c:1682 libsylph/imap.c:1781
 msgid "can't expunge\n"
 msgstr "지울 수가 없습니다\n"
 
-#: libsylph/imap.c:1754
+#: libsylph/imap.c:1765
 #, fuzzy, c-format
 msgid "Removing all messages in %s"
 msgstr "%s로부터 %s로 메시지를 가져옵니다...\n"
 
-#: libsylph/imap.c:1759 libsylph/imap.c:1764
+#: libsylph/imap.c:1770 libsylph/imap.c:1775
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "삭제 플래그를 설정할 수가 없습니다: 1:%d\n"
 
-#: libsylph/imap.c:1812
+#: libsylph/imap.c:1823
 #, fuzzy
 msgid "can't close folder\n"
 msgstr "폴더를 선택할 수가 없습니다: %s\n"
 
-#: libsylph/imap.c:1891
+#: libsylph/imap.c:1902
 #, fuzzy, c-format
 msgid "root folder %s not exist\n"
 msgstr "표시 파일이 발견되지않음.\n"
 
-#: libsylph/imap.c:2091 libsylph/imap.c:2099
+#: libsylph/imap.c:2102 libsylph/imap.c:2110
 #, fuzzy
 msgid "error occurred while getting LIST.\n"
 msgstr "LIST를 얻는 도중 에러가 발생.\n"
 
-#: libsylph/imap.c:2331
+#: libsylph/imap.c:2342
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "'%s'를 생성할 수가 없습니다\n"
 
-#: libsylph/imap.c:2336
+#: libsylph/imap.c:2347
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "INBOX 아래에 '%s'를 생성할 수가 없습니다\n"
 
-#: libsylph/imap.c:2398
+#: libsylph/imap.c:2409
 msgid "can't create mailbox: LIST failed\n"
 msgstr "우편함을 생성할 수 없습니다: LIST 실패\n"
 
-#: libsylph/imap.c:2421
+#: libsylph/imap.c:2432
 msgid "can't create mailbox\n"
 msgstr "우편함을 생성할 수 없습니다\n"
 
-#: libsylph/imap.c:2549
+#: libsylph/imap.c:2560
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "우편함명을 바꿀 수 없습니다: %s에서 %s로\n"
 
-#: libsylph/imap.c:2629
+#: libsylph/imap.c:2640
 msgid "can't delete mailbox\n"
 msgstr "우편함을 삭제할 수 없습니다\n"
 
-#: libsylph/imap.c:2656
+#: libsylph/imap.c:2667
 #, fuzzy, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "메시지를 보내는 중 (%d / %d 바이트)"
 
-#: libsylph/imap.c:2708
+#: libsylph/imap.c:2719
 msgid "error occurred while getting envelope.\n"
 msgstr "envelope를 얻는 중 에러 발생.\n"
 
-#: libsylph/imap.c:2729
+#: libsylph/imap.c:2740
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "envelope를 파싱할 수가 없습니다: %s\n"
 
-#: libsylph/imap.c:2786
+#: libsylph/imap.c:2797
 msgid "can't get envelope\n"
 msgstr "envelope를 얻을 수가 없습니다\n"
 
-#: libsylph/imap.c:2905 libsylph/imap.c:2911
+#: libsylph/imap.c:2916 libsylph/imap.c:2922
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "%s:%d IMAP4 서버에 연결할 수가 없습니다\n"
 
-#: libsylph/imap.c:2927
+#: libsylph/imap.c:2938
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "IMAP4 세션을 만들 수 없습니다: %s: %d\n"
 
-#: libsylph/imap.c:3002
+#: libsylph/imap.c:3013
 msgid "can't get namespace\n"
 msgstr "namespace를 얻을 수 없습니다\n"
 
-#: libsylph/imap.c:3626
+#: libsylph/imap.c:3637
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "폴더를 선택할 수가 없습니다: %s\n"
 
-#: libsylph/imap.c:3664
+#: libsylph/imap.c:3675
 #, fuzzy
 msgid "error on imap command: STATUS\n"
 msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
 
-#: libsylph/imap.c:3788 libsylph/imap.c:3823
+#: libsylph/imap.c:3799 libsylph/imap.c:3834
 #, fuzzy
 msgid "IMAP4 authentication failed.\n"
 msgstr "인증 방법"
 
-#: libsylph/imap.c:3876
+#: libsylph/imap.c:3887
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 로그인을 실패했습니다.\n"
 
-#: libsylph/imap.c:4280 libsylph/imap.c:4287
+#: libsylph/imap.c:4294 libsylph/imap.c:4301
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s를 %s에 붙일 수 없습니다\n"
 
-#: libsylph/imap.c:4294
+#: libsylph/imap.c:4308
 msgid "(sending file...)"
 msgstr "(파일을 보냅니다...)"
 
-#: libsylph/imap.c:4323
+#: libsylph/imap.c:4337
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "%s 메시지를 추가할 수가 없습니다\n"
 
-#: libsylph/imap.c:4355
+#: libsylph/imap.c:4369
 #, fuzzy, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%d를 %s로 복사할 수가 없습니다\n"
 
-#: libsylph/imap.c:4378
+#: libsylph/imap.c:4392
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap 명령어 실행중 에러: STORE %d:%d %s\n"
 
-#: libsylph/imap.c:4394
+#: libsylph/imap.c:4408
 msgid "error while imap command: EXPUNGE\n"
 msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
 
-#: libsylph/imap.c:4409
+#: libsylph/imap.c:4423
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "imap 명령어 실행중 에러: EXPUNGE\n"
 
-#: libsylph/imap.c:4730
+#: libsylph/imap.c:4744
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv가 UTF-7를 %s로 변환할 수 없습니다\n"
 
-#: libsylph/imap.c:4760
+#: libsylph/imap.c:4774
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv가 %s를 UTF-7로 변환할 수 없습니다\n"
@@ -647,7 +647,7 @@ msgid ""
 "Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
 
-#: src/account_dialog.c:139 src/mainwindow.c:3973
+#: src/account_dialog.c:139 src/mainwindow.c:3989
 msgid ""
 "Some composing windows are open.\n"
 "Please close all the composing windows before editing the accounts."
@@ -689,7 +689,7 @@ msgstr ""
 #: src/compose.c:5329 src/editaddress.c:777 src/editaddress.c:826
 #: src/editbook.c:198 src/editgroup.c:266 src/editjpilot.c:270
 #: src/editldap.c:307 src/editvcard.c:183 src/mimeview.c:226
-#: src/prefs_filter.c:257 src/prefs_folder_item.c:171 src/select-keys.c:311
+#: src/prefs_filter.c:266 src/prefs_folder_item.c:171 src/select-keys.c:311
 msgid "Name"
 msgstr "이름"
 
@@ -701,7 +701,7 @@ msgstr "프로토콜"
 msgid "Server"
 msgstr "서버"
 
-#: src/account_dialog.c:409 src/prefs_filter.c:322
+#: src/account_dialog.c:409 src/prefs_filter.c:331
 msgid "Edit"
 msgstr "편집"
 
@@ -715,7 +715,7 @@ msgstr " 기본 계정으로 설정 "
 msgid "Do you really want to delete the account '%s'?"
 msgstr "정말로 이 계정을 삭제하시겠습니까?"
 
-#: src/account_dialog.c:525 src/prefs_filter.c:687
+#: src/account_dialog.c:525 src/prefs_filter.c:698
 #, fuzzy
 msgid "(Untitled)"
 msgstr "제목 없슴"
@@ -1307,7 +1307,7 @@ msgstr "갈색"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5254
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5288
 msgid "None"
 msgstr "없음"
 
@@ -1689,7 +1689,7 @@ msgid "Can't get the part of multipart message."
 msgstr "multipart 메시지의 부분을 얻을 수가 없습니다."
 
 #: src/compose.c:2868 src/headerview.c:233 src/query_search.c:791
-#: src/rpop3.c:675 src/summaryview.c:2494
+#: src/rpop3.c:675 src/summaryview.c:2510
 msgid "(No Subject)"
 msgstr "(제목 없음)"
 
@@ -1881,7 +1881,7 @@ msgstr "날짜"
 #. S_COL_DATE
 #: src/compose.c:5319 src/mimeview.c:217 src/prefs_filter_edit.c:508
 #: src/prefs_summary_column.c:72 src/rpop3.c:425 src/select-keys.c:309
-#: src/summaryview.c:5403
+#: src/summaryview.c:5437
 msgid "Size"
 msgstr "크기"
 
@@ -2512,12 +2512,12 @@ msgstr "폴더 정보를 설정합니다...\n"
 msgid "Setting folder info..."
 msgstr "폴더 정보를 설정합니다..."
 
-#: src/folderview.c:911 src/mainwindow.c:4176 src/setup.c:305
+#: src/folderview.c:911 src/mainwindow.c:4192 src/setup.c:305
 #, c-format
 msgid "Scanning folder %s%c%s ..."
 msgstr "%s%c%s를 스캔합니다..."
 
-#: src/folderview.c:915 src/mainwindow.c:4181 src/setup.c:310
+#: src/folderview.c:915 src/mainwindow.c:4197 src/setup.c:310
 #, c-format
 msgid "Scanning folder %s ..."
 msgstr "%s 폴더를 스캔합니다..."
@@ -2627,26 +2627,26 @@ msgstr ""
 msgid "Can't remove the folder '%s'."
 msgstr "`%s' 폴더를 제거할 수가 없습니다."
 
-#: src/folderview.c:2766
+#: src/folderview.c:2770
 msgid "Empty trash"
 msgstr "지운 편지함 비우기"
 
-#: src/folderview.c:2767
+#: src/folderview.c:2771
 #, fuzzy
 msgid "Delete all messages in the trash folder?"
 msgstr "지운 편지함에있는 모든 메시지를 비울까요?"
 
-#: src/folderview.c:2773
+#: src/folderview.c:2778
 #, fuzzy
 msgid "Empty junk"
 msgstr "제목"
 
-#: src/folderview.c:2774
+#: src/folderview.c:2779
 #, fuzzy
 msgid "Delete all messages in the junk folder?"
 msgstr "지운 편지함에있는 모든 메시지를 비울까요?"
 
-#: src/folderview.c:2816
+#: src/folderview.c:2826
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -2655,34 +2655,34 @@ msgstr ""
 "`%s' 메일박스를 정말로 삭제하시겠습니까?\n"
 "(메시지가 디스크로부터 삭제되는것은 아닙니다)"
 
-#: src/folderview.c:2818
+#: src/folderview.c:2828
 msgid "Remove mailbox"
 msgstr "메일박스를 제거합니다"
 
-#: src/folderview.c:2868
+#: src/folderview.c:2878
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "정말로 `%s' IMAP4 계정을 삭제하시겠습니까?"
 
-#: src/folderview.c:2869
+#: src/folderview.c:2879
 msgid "Delete IMAP4 account"
 msgstr "IMAP4 계정 삭제"
 
-#: src/folderview.c:3022
+#: src/folderview.c:3032
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "정말로 `%s' 뉴스그룹을 삭제하시겠습니까?"
 
-#: src/folderview.c:3023
+#: src/folderview.c:3033
 msgid "Delete newsgroup"
 msgstr "뉴스그룹 삭제"
 
-#: src/folderview.c:3073
+#: src/folderview.c:3083
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "정말로 `%s' 뉴스그룹 계정을 삭제하시겠습니까?"
 
-#: src/folderview.c:3074
+#: src/folderview.c:3084
 msgid "Delete news account"
 msgstr "뉴스그룹 계정 삭제"
 
@@ -2695,7 +2695,7 @@ msgid "Creating header view...\n"
 msgstr "헤더 뷰를 생성합니다...\n"
 
 #: src/headerview.c:212 src/query_search.c:792 src/rpop3.c:676
-#: src/summaryview.c:2497
+#: src/summaryview.c:2513
 msgid "(No From)"
 msgstr "(???)"
 
@@ -3086,8 +3086,8 @@ msgstr "끝마치는 중"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "메시지 (%d / %d) 를 가져오는 중 (%s / %s)"
 
-#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4747 src/summaryview.c:4937
-#: src/summaryview.c:4988
+#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4775 src/summaryview.c:4965
+#: src/summaryview.c:5016
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -4007,8 +4007,8 @@ msgstr "새 창을 만듭니다...\n"
 msgid "MainWindow: color allocation %d failed\n"
 msgstr "메인 창: 색 할당 %d 실패\n"
 
-#: src/mainwindow.c:1219 src/summaryview.c:2654 src/summaryview.c:2741
-#: src/summaryview.c:4311 src/summaryview.c:4440 src/summaryview.c:4829
+#: src/mainwindow.c:1219 src/summaryview.c:2670 src/summaryview.c:2757
+#: src/summaryview.c:4339 src/summaryview.c:4468 src/summaryview.c:4857
 msgid "done.\n"
 msgstr "마침.\n"
 
@@ -4133,42 +4133,42 @@ msgstr "텍스트"
 msgid "_None"
 msgstr "없음"
 
-#: src/mainwindow.c:3087
+#: src/mainwindow.c:3095
 msgid "You are offline. Click the icon to go online."
 msgstr ""
 
-#: src/mainwindow.c:3099
+#: src/mainwindow.c:3107
 msgid "You are online. Click the icon to go offline."
 msgstr ""
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit"
 msgstr "끝내기"
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit this program?"
 msgstr "이 프로그램을 끝내시겠습니까?"
 
-#: src/mainwindow.c:3776
+#: src/mainwindow.c:3792
 msgid "The selected messages could not be combined."
 msgstr ""
 
-#: src/mainwindow.c:3886
+#: src/mainwindow.c:3902
 #, fuzzy
 msgid "Select folder to open"
 msgstr "폴더 선택"
 
-#: src/mainwindow.c:4056
+#: src/mainwindow.c:4072
 #, fuzzy
 msgid "Command line options"
 msgstr "명령이 지정되지않음"
 
-#: src/mainwindow.c:4069
+#: src/mainwindow.c:4085
 #, fuzzy
 msgid "Usage: sylpheed [OPTION]..."
 msgstr "사용법: %s [옵션]...\n"
 
-#: src/mainwindow.c:4077
+#: src/mainwindow.c:4093
 msgid ""
 "--compose [address]\n"
 "--attach file1 [file2]...\n"
@@ -4185,7 +4185,7 @@ msgid ""
 "--version"
 msgstr ""
 
-#: src/mainwindow.c:4094
+#: src/mainwindow.c:4110
 msgid ""
 "open composition window\n"
 "open composition window with specified files attached\n"
@@ -4202,15 +4202,15 @@ msgid ""
 "output version information and exit"
 msgstr ""
 
-#: src/mainwindow.c:4112
+#: src/mainwindow.c:4128
 msgid "Windows-only option:"
 msgstr ""
 
-#: src/mainwindow.c:4120
+#: src/mainwindow.c:4136
 msgid "--ipcport portnum"
 msgstr ""
 
-#: src/mainwindow.c:4125
+#: src/mainwindow.c:4141
 msgid "specify port for IPC remote commands"
 msgstr ""
 
@@ -4267,7 +4267,7 @@ msgstr "첨부"
 msgid "Message View - Sylpheed"
 msgstr ""
 
-#: src/messageview.c:765 src/summaryview.c:3866
+#: src/messageview.c:765 src/summaryview.c:3894
 #, c-format
 msgid "Can't save the file `%s'."
 msgstr "`%s' 파일을 저장할 수가 없습니다."
@@ -6146,21 +6146,21 @@ msgstr "표시될 항목"
 msgid " Revert to default "
 msgstr " 기본값으로 원상복구 "
 
-#: src/prefs_filter.c:208
+#: src/prefs_filter.c:217
 #, fuzzy
 msgid "Filter settings"
 msgstr "거르개 설정"
 
-#: src/prefs_filter.c:252
+#: src/prefs_filter.c:261
 msgid "Enabled"
 msgstr ""
 
-#: src/prefs_filter.c:686
+#: src/prefs_filter.c:697
 #, fuzzy, c-format
 msgid "Do you really want to delete the rule '%s'?"
 msgstr "정말로 이 규칙을 삭제하시겠습니까?"
 
-#: src/prefs_filter.c:688
+#: src/prefs_filter.c:699
 msgid "Delete rule"
 msgstr "규칙 삭제"
 
@@ -6481,19 +6481,19 @@ msgstr "첨부"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:422
-#: src/summaryview.c:5396
+#: src/summaryview.c:5430
 msgid "Subject"
 msgstr "제목"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:423
-#: src/summaryview.c:5399
+#: src/summaryview.c:5433
 msgid "From"
 msgstr "보낸 사람"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:424
-#: src/summaryview.c:5401
+#: src/summaryview.c:5435
 msgid "Date"
 msgstr "날짜"
 
@@ -6503,7 +6503,7 @@ msgid "Number"
 msgstr "숫자"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5407
+#: src/prefs_summary_column.c:74 src/summaryview.c:5441
 #, fuzzy
 msgid "To"
 msgstr "받는 사람:"
@@ -6821,7 +6821,7 @@ msgstr "필터링..."
 msgid "Searching %s ..."
 msgstr "%s 폴더를 스캔합니다..."
 
-#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2418
+#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2434
 msgid "(No Date)"
 msgstr "(날짜 없슴)"
 
@@ -6929,7 +6929,7 @@ msgstr "이 프로그램은"
 msgid "%s - POP3 Remote mailbox"
 msgstr "메일박스를 제거합니다"
 
-#: src/rpop3.c:421 src/summaryview.c:5405
+#: src/rpop3.c:421 src/summaryview.c:5439
 msgid "No."
 msgstr "번호"
 
@@ -7532,7 +7532,7 @@ msgstr "뉴스그룹 목록을 얻을 수가 없습니다."
 msgid "Can't retrieve newsgroup list."
 msgstr "뉴스그룹 목록을 얻을 수가 없습니다."
 
-#: src/subscribedialog.c:526 src/summaryview.c:950
+#: src/subscribedialog.c:526 src/summaryview.c:951
 msgid "Done."
 msgstr "완료."
 
@@ -7665,229 +7665,229 @@ msgstr "표시가 여전히 남아있습니다. 그것들을 처리할까요?"
 msgid "Scanning folder (%s)..."
 msgstr "폴더(%s)를 스캔..."
 
-#: src/summaryview.c:957
+#: src/summaryview.c:958
 #, fuzzy
 msgid "Could not establish a connection to the server."
 msgstr "IMAP4 세션을 만들 수 없습니다: %s: %d\n"
 
-#: src/summaryview.c:1610
+#: src/summaryview.c:1613
 #, fuzzy
 msgid "_Search again"
 msgstr "다시 찾기"
 
-#: src/summaryview.c:1632 src/summaryview.c:1641
+#: src/summaryview.c:1635 src/summaryview.c:1644
 msgid "No more unread messages"
 msgstr "안 읽은 메시지가 없슴 "
 
-#: src/summaryview.c:1633
+#: src/summaryview.c:1636
 msgid "No unread message found. Search from the end?"
 msgstr "안 읽은 메시지가 없습니다. 끝에서 부터 찾을까요?"
 
-#: src/summaryview.c:1635
+#: src/summaryview.c:1638
 msgid "No unread messages."
 msgstr "안 읽은 메시지가 없습니다."
 
-#: src/summaryview.c:1642
+#: src/summaryview.c:1645
 #, fuzzy
 msgid "No unread message found. Go to next unread folder?"
 msgstr "안 읽은 메시지가 없습니다. 다음 폴더로 갈까요?"
 
-#: src/summaryview.c:1650 src/summaryview.c:1659
+#: src/summaryview.c:1653 src/summaryview.c:1662
 msgid "No more new messages"
 msgstr "새 메시지가 없습니다."
 
-#: src/summaryview.c:1651
+#: src/summaryview.c:1654
 msgid "No new message found. Search from the end?"
 msgstr "새 메시지가 없습니다. 끝에서 부터 찾을까요?"
 
-#: src/summaryview.c:1653
+#: src/summaryview.c:1656
 msgid "No new messages."
 msgstr "새 메시지가 없습니다."
 
-#: src/summaryview.c:1660
+#: src/summaryview.c:1663
 #, fuzzy
 msgid "No new message found. Go to next folder which has new messages?"
 msgstr "새 메시지가 없습니다. 다음 폴더로 갈까요?"
 
-#: src/summaryview.c:1668 src/summaryview.c:1677
+#: src/summaryview.c:1671 src/summaryview.c:1680
 msgid "No more marked messages"
 msgstr "표시된 메시지가 없습니다"
 
-#: src/summaryview.c:1669
+#: src/summaryview.c:1672
 msgid "No marked message found. Search from the end?"
 msgstr "표시된 메시지가 없습니다. 끝에서 부터 찾을까요?"
 
-#: src/summaryview.c:1671 src/summaryview.c:1680
+#: src/summaryview.c:1674 src/summaryview.c:1683
 msgid "No marked messages."
 msgstr "표시된 메시지가 없습니다."
 
-#: src/summaryview.c:1678
+#: src/summaryview.c:1681
 msgid "No marked message found. Search from the beginning?"
 msgstr "표시된 메시지가 없습니다. 다음 폴더로 갈까요?"
 
-#: src/summaryview.c:1686 src/summaryview.c:1695
+#: src/summaryview.c:1689 src/summaryview.c:1698
 msgid "No more labeled messages"
 msgstr "꼬리표있는 메시지가 없습니다"
 
-#: src/summaryview.c:1687
+#: src/summaryview.c:1690
 msgid "No labeled message found. Search from the end?"
 msgstr "꼬리표있는 메시지가 없습니다. 끝에서 부터 찾을까요?"
 
-#: src/summaryview.c:1689 src/summaryview.c:1698
+#: src/summaryview.c:1692 src/summaryview.c:1701
 msgid "No labeled messages."
 msgstr "꼬리표있는 메시지가 없습니다."
 
-#: src/summaryview.c:1696
+#: src/summaryview.c:1699
 msgid "No labeled message found. Search from the beginning?"
 msgstr "꼬리표있는 메시지가 없습니다. 처음부터 찾을까요?"
 
-#: src/summaryview.c:2043
+#: src/summaryview.c:2059
 msgid "Attracting messages by subject..."
 msgstr ""
 
-#: src/summaryview.c:2239
+#: src/summaryview.c:2255
 #, c-format
 msgid "%d deleted"
 msgstr "%d개 삭제됨"
 
-#: src/summaryview.c:2243
+#: src/summaryview.c:2259
 #, c-format
 msgid "%s%d moved"
 msgstr "%s%d개 이동"
 
-#: src/summaryview.c:2244 src/summaryview.c:2249
+#: src/summaryview.c:2260 src/summaryview.c:2265
 msgid ", "
 msgstr ", "
 
-#: src/summaryview.c:2248
+#: src/summaryview.c:2264
 #, c-format
 msgid "%s%d copied"
 msgstr ""
 
-#: src/summaryview.c:2263
+#: src/summaryview.c:2279
 msgid " item(s) selected"
 msgstr " 아이템 선택"
 
-#: src/summaryview.c:2285
+#: src/summaryview.c:2301
 #, c-format
 msgid "%d new, %d unread, %d total (%s)"
 msgstr "%d 새 메시지, %d 안 읽음, %d개 메시지(%s)"
 
-#: src/summaryview.c:2289
+#: src/summaryview.c:2305
 #, c-format
 msgid "%d new, %d unread, %d total"
 msgstr "%d 새 메시지, %d 안 읽음, %d개 메시지"
 
-#: src/summaryview.c:2325
+#: src/summaryview.c:2341
 msgid "Sorting summary..."
 msgstr "요약을 정렬합니다..."
 
-#: src/summaryview.c:2581
+#: src/summaryview.c:2597
 msgid "\tSetting summary from message data..."
 msgstr "\t메시지 데이타로부터 요약을 만듭니다..."
 
-#: src/summaryview.c:2583
+#: src/summaryview.c:2599
 msgid "Setting summary from message data..."
 msgstr "메시지 데이타로부터 요약을 만듭니다..."
 
-#: src/summaryview.c:2698
+#: src/summaryview.c:2714
 #, c-format
 msgid "Writing summary cache (%s)..."
 msgstr "요약 캐쉬 (%s)를 씁니다..."
 
-#: src/summaryview.c:3036
+#: src/summaryview.c:3052
 #, c-format
 msgid "Message %d is marked\n"
 msgstr "메시지 %d가 표시되었습니다\n"
 
-#: src/summaryview.c:3108
+#: src/summaryview.c:3126
 #, c-format
 msgid "Message %d is marked as being read\n"
 msgstr "메시지 %d가 읽은 것으로 표시되었습니다\n"
 
-#: src/summaryview.c:3321
+#: src/summaryview.c:3345
 #, c-format
 msgid "Message %d is marked as unread\n"
 msgstr "메시지 %d가 읽지않은 것으로 표시되었습니다\n"
 
-#: src/summaryview.c:3386
+#: src/summaryview.c:3412
 #, c-format
 msgid "Message %s/%d is set to delete\n"
 msgstr "메시지 %s/%d가 지울것으로 표시되었습니다\n"
 
-#: src/summaryview.c:3414
+#: src/summaryview.c:3440
 msgid "Delete message(s)"
 msgstr "메시지를 지웁니다"
 
-#: src/summaryview.c:3415
+#: src/summaryview.c:3441
 msgid "Do you really want to delete message(s) from the trash?"
 msgstr "정말로 이 메시지를 휴지통에서 삭제하시겠습니까?"
 
-#: src/summaryview.c:3491
+#: src/summaryview.c:3517
 msgid "Deleting duplicated messages..."
 msgstr "중복된 메시지를 지웁니다..."
 
-#: src/summaryview.c:3529
+#: src/summaryview.c:3555
 #, c-format
 msgid "Message %s/%d is unmarked\n"
 msgstr "메시지 %s/%d의 표시를 지웠습니다\n"
 
-#: src/summaryview.c:3593
+#: src/summaryview.c:3621
 #, c-format
 msgid "Message %d is set to move to %s\n"
 msgstr "메시지 %d가 %s로 이동하도록 했습니다\n"
 
-#: src/summaryview.c:3625
+#: src/summaryview.c:3653
 msgid "Destination is same as current folder."
 msgstr "도착지가 현재 폴더와 같습니다"
 
-#: src/summaryview.c:3662
+#: src/summaryview.c:3690
 #, fuzzy
 msgid "Select folder to move"
 msgstr "폴더 선택"
 
-#: src/summaryview.c:3692
+#: src/summaryview.c:3720
 #, c-format
 msgid "Message %d is set to copy to %s\n"
 msgstr ""
 
-#: src/summaryview.c:3723
+#: src/summaryview.c:3751
 #, fuzzy
 msgid "Destination for copy is same as current folder."
 msgstr "복사할 대상이 현재 폴더와 같습니다."
 
-#: src/summaryview.c:3759
+#: src/summaryview.c:3787
 #, fuzzy
 msgid "Select folder to copy"
 msgstr "폴더 선택"
 
-#: src/summaryview.c:3909
+#: src/summaryview.c:3937
 #, fuzzy
 msgid "Error occurred while processing messages."
 msgstr "메일을 처리하는 도중 에러"
 
-#: src/summaryview.c:4218 src/summaryview.c:4219
+#: src/summaryview.c:4246 src/summaryview.c:4247
 msgid "Building threads..."
 msgstr "쓰레드를 만듭니다..."
 
-#: src/summaryview.c:4369 src/summaryview.c:4370
+#: src/summaryview.c:4397 src/summaryview.c:4398
 msgid "Unthreading..."
 msgstr "쓰레드를 없앱니다..."
 
-#: src/summaryview.c:4663 src/summaryview.c:4724
+#: src/summaryview.c:4691 src/summaryview.c:4752
 #, fuzzy, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "필터링..."
 
-#: src/summaryview.c:4790
+#: src/summaryview.c:4818
 msgid "filtering..."
 msgstr "필터링..."
 
-#: src/summaryview.c:4791
+#: src/summaryview.c:4819
 msgid "Filtering..."
 msgstr "필터링..."
 
-#: src/summaryview.c:4836
+#: src/summaryview.c:4864
 #, fuzzy, c-format
 msgid "%d message(s) have been filtered."
 msgstr "메시지 %d는 이미 캐쉬되었습니다.\n"

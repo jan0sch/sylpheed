@@ -12,6 +12,7 @@ Changes of Sylpheed
       quickly on auto filter creation was fixed.
     * Win32: OpenSSL was updated to 0.9.8t (security fix).
     * Win32: included libpng library was updated to 1.2.47 (security fix).
+    * Win32: included curl executable was updated to 7.24.0.
 
 * 3.1.2 (stable)
 

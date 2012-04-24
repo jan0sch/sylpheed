@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 2.4.0beta5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-07 14:04+0900\n"
+"POT-Creation-Date: 2012-02-24 11:51+0900\n"
 "PO-Revision-Date: 2007-03-17 00:57+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -29,208 +29,208 @@ msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας (χει
 msgid "Junk mail filter"
 msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας"
 
-#: libsylph/imap.c:537
+#: libsylph/imap.c:548
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "Η IMAP4 σύνδεση στο %s διακόπηκε. Επανασύνδεση...\n"
 
-#: libsylph/imap.c:594 libsylph/imap.c:600
+#: libsylph/imap.c:605 libsylph/imap.c:611
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Ο διακομιστής IMAP4 απενεργοποίησε το LOGIN.\n"
 
-#: libsylph/imap.c:659
+#: libsylph/imap.c:670
 #, fuzzy
 msgid "Could not establish IMAP connection.\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:678
+#: libsylph/imap.c:689
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "Δημιουργία σύνδεσης IMAP4 στο %s:%d ...\n"
 
-#: libsylph/imap.c:731
+#: libsylph/imap.c:742
 msgid "Can't start TLS session.\n"
 msgstr "Δεν είναι δυνατό να ξεκινήσει συνεδρία TLS.\n"
 
-#: libsylph/imap.c:878
+#: libsylph/imap.c:889
 msgid "(retrieving FLAGS...)"
 msgstr ""
 
-#: libsylph/imap.c:1269
+#: libsylph/imap.c:1280
 #, fuzzy, c-format
 msgid "Getting message %u"
 msgstr "Λήψη μηνύματος %d"
 
-#: libsylph/imap.c:1391
+#: libsylph/imap.c:1402
 #, fuzzy, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Μετακίνηση μηνυμάτων στο %s"
 
-#: libsylph/imap.c:1514
+#: libsylph/imap.c:1525
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Μετακίνηση μηνυμάτων %s στο %s ..."
 
-#: libsylph/imap.c:1519
+#: libsylph/imap.c:1530
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Αντιγραφή μηνυμάτων %s στο %s ..."
 
-#: libsylph/imap.c:1657
+#: libsylph/imap.c:1668
 #, c-format
 msgid "Removing messages %s"
 msgstr "Διαγραφή μηνυμάτων %s"
 
-#: libsylph/imap.c:1663
+#: libsylph/imap.c:1674
 #, fuzzy, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "Αποτυχία ορίσματος του PAM_TTY=%s"
 
-#: libsylph/imap.c:1671 libsylph/imap.c:1770
+#: libsylph/imap.c:1682 libsylph/imap.c:1781
 msgid "can't expunge\n"
 msgstr "δεν μπορώ να τα απαλείψω\n"
 
-#: libsylph/imap.c:1754
+#: libsylph/imap.c:1765
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Διαγραφή όλων των μηνυμάτων στο %s"
 
-#: libsylph/imap.c:1759 libsylph/imap.c:1764
+#: libsylph/imap.c:1770 libsylph/imap.c:1775
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "Αποτυχία ορίσματος του PAM_TTY=%s"
 
-#: libsylph/imap.c:1812
+#: libsylph/imap.c:1823
 msgid "can't close folder\n"
 msgstr "δεν είναι δυνατό το κλείσιμο του φακέλου\n"
 
-#: libsylph/imap.c:1891
+#: libsylph/imap.c:1902
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "Ο ριζικός φάκελος %s δεν υπάρχει.\n"
 
-#: libsylph/imap.c:2091 libsylph/imap.c:2099
+#: libsylph/imap.c:2102 libsylph/imap.c:2110
 msgid "error occurred while getting LIST.\n"
 msgstr "προέκυψε σφάλμα κατά τη λήψη της λίστας.\n"
 
-#: libsylph/imap.c:2331
+#: libsylph/imap.c:2342
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Δεν είναι δυνατή η δημιουργία του '%s'\n"
 
-#: libsylph/imap.c:2336
+#: libsylph/imap.c:2347
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Δεν είναι δυνατή η δημιουργία του '%s' μέσα στο INBOX\n"
 
-#: libsylph/imap.c:2398
+#: libsylph/imap.c:2409
 msgid "can't create mailbox: LIST failed\n"
 msgstr ""
 "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου: η εντολή LIST απέτυχε\n"
 
-#: libsylph/imap.c:2421
+#: libsylph/imap.c:2432
 msgid "can't create mailbox\n"
 msgstr "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου\n"
 
-#: libsylph/imap.c:2549
+#: libsylph/imap.c:2560
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "Δεν είναι δυνατή η μετονομασία του γραμματοκιβωτίου: %s σε %s\n"
 
-#: libsylph/imap.c:2629
+#: libsylph/imap.c:2640
 msgid "can't delete mailbox\n"
 msgstr "δεν μπορώ να διαγράψω το mailbox\n"
 
-#: libsylph/imap.c:2656
+#: libsylph/imap.c:2667
 #, fuzzy, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Εμφάνιση Όλων των _Κεφαλίδων"
 
-#: libsylph/imap.c:2708
+#: libsylph/imap.c:2719
 msgid "error occurred while getting envelope.\n"
 msgstr "δημιουργήθηκε σφάλμα κατά τη λήψη του φακέλου.\n"
 
-#: libsylph/imap.c:2729
+#: libsylph/imap.c:2740
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "δεν είναι δυνατή η ανάλυση του φακέλου: %s\n"
 
-#: libsylph/imap.c:2786
+#: libsylph/imap.c:2797
 msgid "can't get envelope\n"
 msgstr "δεν είναι δυνατή η λήψη του φακέλου\n"
 
-#: libsylph/imap.c:2905 libsylph/imap.c:2911
+#: libsylph/imap.c:2916 libsylph/imap.c:2922
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:2927
+#: libsylph/imap.c:2938
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:3002
+#: libsylph/imap.c:3013
 #, fuzzy
 msgid "can't get namespace\n"
 msgstr "Αδυναμία λήψης όνοματος χρήστη"
 
-#: libsylph/imap.c:3626
+#: libsylph/imap.c:3637
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "δεν μπορώ να επιλέξω τον κατάλογο: %s\n"
 
-#: libsylph/imap.c:3664
+#: libsylph/imap.c:3675
 msgid "error on imap command: STATUS\n"
 msgstr "σφάλμα στην εντολή imap: STATUS\n"
 
-#: libsylph/imap.c:3788 libsylph/imap.c:3823
+#: libsylph/imap.c:3799 libsylph/imap.c:3834
 msgid "IMAP4 authentication failed.\n"
 msgstr "Η πιστοποίηση στον IMAP4 απέτυχε.\n"
 
-#: libsylph/imap.c:3876
+#: libsylph/imap.c:3887
 msgid "IMAP4 login failed.\n"
 msgstr "Η είσοδος στον IMAP4 απέτυχε.\n"
 
-#: libsylph/imap.c:4280 libsylph/imap.c:4287
+#: libsylph/imap.c:4294 libsylph/imap.c:4301
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "δεν είναι δυνατή η προσάρτηση του %s στο %s\n"
 
-#: libsylph/imap.c:4294
+#: libsylph/imap.c:4308
 msgid "(sending file...)"
 msgstr "(αποστολή αρχείου...)"
 
-#: libsylph/imap.c:4323
+#: libsylph/imap.c:4337
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "Δεν είναι δυνατή η προσθήκη μηνύματος στον φάκελο `%s': %s"
 
-#: libsylph/imap.c:4355
+#: libsylph/imap.c:4369
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "δεν είναι δυνατή η αντιγραφή του %s στο %s\n"
 
-#: libsylph/imap.c:4378
+#: libsylph/imap.c:4392
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4394
+#: libsylph/imap.c:4408
 #, fuzzy
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4409
+#: libsylph/imap.c:4423
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4730
+#: libsylph/imap.c:4744
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "Δεν είναι δυνατή η μετατροπή του UTF-7 σε %s από το iconv\n"
 
-#: libsylph/imap.c:4760
+#: libsylph/imap.c:4774
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "Δεν είναι δυνατή η μετατροπή του %s σε UTF-7 από το iconv\n"
@@ -665,7 +665,7 @@ msgstr ""
 "(Free Software Foundation) στη διεύθυνση Free Software Foundation, Inc., 59 "
 "Temple Place - Suite 330, Boston, MA 02110-1301, USA."
 
-#: src/account_dialog.c:139 src/mainwindow.c:3973
+#: src/account_dialog.c:139 src/mainwindow.c:3989
 msgid ""
 "Some composing windows are open.\n"
 "Please close all the composing windows before editing the accounts."
@@ -709,7 +709,7 @@ msgstr ""
 #: src/compose.c:5329 src/editaddress.c:777 src/editaddress.c:826
 #: src/editbook.c:198 src/editgroup.c:266 src/editjpilot.c:270
 #: src/editldap.c:307 src/editvcard.c:183 src/mimeview.c:226
-#: src/prefs_filter.c:257 src/prefs_folder_item.c:171 src/select-keys.c:311
+#: src/prefs_filter.c:266 src/prefs_folder_item.c:171 src/select-keys.c:311
 msgid "Name"
 msgstr "Όνομα"
 
@@ -721,7 +721,7 @@ msgstr "Πρωτόκολλο"
 msgid "Server"
 msgstr "Διακομιστής"
 
-#: src/account_dialog.c:409 src/prefs_filter.c:322
+#: src/account_dialog.c:409 src/prefs_filter.c:331
 msgid "Edit"
 msgstr "Επεξεργασία"
 
@@ -734,7 +734,7 @@ msgstr " Ορι_σμός ως προεπιλεγμένου λογαριασμο�
 msgid "Do you really want to delete the account '%s'?"
 msgstr "Θέλετε σίγουρα να διαγράψετε το λογαριασμό '%s';"
 
-#: src/account_dialog.c:525 src/prefs_filter.c:687
+#: src/account_dialog.c:525 src/prefs_filter.c:698
 msgid "(Untitled)"
 msgstr "(Χωρίς τίτλο)"
 
@@ -1337,7 +1337,7 @@ msgstr "Καφέ"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5254
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5288
 msgid "None"
 msgstr "Κανένα"
 
@@ -1679,7 +1679,7 @@ msgid "Can't get the part of multipart message."
 msgstr "Δεν είναι δυνατή η λήψη μέρους του πολυτμηματικού μηνύματος."
 
 #: src/compose.c:2868 src/headerview.c:233 src/query_search.c:791
-#: src/rpop3.c:675 src/summaryview.c:2494
+#: src/rpop3.c:675 src/summaryview.c:2510
 msgid "(No Subject)"
 msgstr "(Χωρίς θέμα)"
 
@@ -1881,7 +1881,7 @@ msgstr "Ημερομηνία"
 #. S_COL_DATE
 #: src/compose.c:5319 src/mimeview.c:217 src/prefs_filter_edit.c:508
 #: src/prefs_summary_column.c:72 src/rpop3.c:425 src/select-keys.c:309
-#: src/summaryview.c:5403
+#: src/summaryview.c:5437
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -2508,12 +2508,12 @@ msgstr "Ορισμός πληροφοριών φακέλου...\n"
 msgid "Setting folder info..."
 msgstr "Θέτω τις πληροφορίες φακέλων..."
 
-#: src/folderview.c:911 src/mainwindow.c:4176 src/setup.c:305
+#: src/folderview.c:911 src/mainwindow.c:4192 src/setup.c:305
 #, c-format
 msgid "Scanning folder %s%c%s ..."
 msgstr "Σάρωση φακέλων %s%c%s ..."
 
-#: src/folderview.c:915 src/mainwindow.c:4181 src/setup.c:310
+#: src/folderview.c:915 src/mainwindow.c:4197 src/setup.c:310
 #, c-format
 msgid "Scanning folder %s ..."
 msgstr "Σάρωση φακέλου %s ..."
@@ -2623,25 +2623,25 @@ msgstr ""
 msgid "Can't remove the folder '%s'."
 msgstr "Δεν είναι δυνατή η διαγραφή του φακέλου '%s'."
 
-#: src/folderview.c:2766
+#: src/folderview.c:2770
 msgid "Empty trash"
 msgstr "Άδειασμα απορριμμάτων"
 
-#: src/folderview.c:2767
+#: src/folderview.c:2771
 msgid "Delete all messages in the trash folder?"
 msgstr "Διαγραφή όλων των μηνυμάτων στο φάκελο απορριμμάτων;"
 
-#: src/folderview.c:2773
+#: src/folderview.c:2778
 #, fuzzy
 msgid "Empty junk"
 msgstr "Επιθυμητή αλληλογραφία"
 
-#: src/folderview.c:2774
+#: src/folderview.c:2779
 #, fuzzy
 msgid "Delete all messages in the junk folder?"
 msgstr "Διαγραφή όλων των μηνυμάτων στο φάκελο απορριμμάτων;"
 
-#: src/folderview.c:2816
+#: src/folderview.c:2826
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -2650,34 +2650,34 @@ msgstr ""
 "Σίγουρα να διαγραφεί το γραμματοκιβώτιο `%s' ;\n"
 "(Τα μηνύματα ΔΕΝ σβήνονται από τον δίσκο)"
 
-#: src/folderview.c:2818
+#: src/folderview.c:2828
 msgid "Remove mailbox"
 msgstr "Αφαίρεση γραμματοκιβωτίου"
 
-#: src/folderview.c:2868
+#: src/folderview.c:2878
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "Να διαγραφεί ο λογαριασμός IMAP4 `%s';"
 
-#: src/folderview.c:2869
+#: src/folderview.c:2879
 msgid "Delete IMAP4 account"
 msgstr "Διαγραφή λογαριασμού IMAP4"
 
-#: src/folderview.c:3022
+#: src/folderview.c:3032
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "Να διαγραφεί η ομάδα νέων `%s';"
 
-#: src/folderview.c:3023
+#: src/folderview.c:3033
 msgid "Delete newsgroup"
 msgstr "Διαγραφή ομάδας νέων"
 
-#: src/folderview.c:3073
+#: src/folderview.c:3083
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "Να διαγραφεί ο λογαριασμός νέων `%s';"
 
-#: src/folderview.c:3074
+#: src/folderview.c:3084
 msgid "Delete news account"
 msgstr "Διαγραφή λογαριασμού νέων"
 
@@ -2690,7 +2690,7 @@ msgid "Creating header view...\n"
 msgstr "Δημιουργία προβολής κεφαλίδων...\n"
 
 #: src/headerview.c:212 src/query_search.c:792 src/rpop3.c:676
-#: src/summaryview.c:2497
+#: src/summaryview.c:2513
 msgid "(No From)"
 msgstr "(Χωρίς αποστολέα)"
 
@@ -3082,8 +3082,8 @@ msgstr "Κλείνω τη σύνδεση"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Λαμβάνεται το μήνυμα (%d / %d) (%s / %s)"
 
-#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4747 src/summaryview.c:4937
-#: src/summaryview.c:4988
+#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4775 src/summaryview.c:4965
+#: src/summaryview.c:5016
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3986,8 +3986,8 @@ msgstr "Δημιουργία κύριου παραθύρου...\n"
 msgid "MainWindow: color allocation %d failed\n"
 msgstr ""
 
-#: src/mainwindow.c:1219 src/summaryview.c:2654 src/summaryview.c:2741
-#: src/summaryview.c:4311 src/summaryview.c:4440 src/summaryview.c:4829
+#: src/mainwindow.c:1219 src/summaryview.c:2670 src/summaryview.c:2757
+#: src/summaryview.c:4339 src/summaryview.c:4468 src/summaryview.c:4857
 msgid "done.\n"
 msgstr "έγινε.\n"
 
@@ -4107,40 +4107,40 @@ msgstr "Κείμενο"
 msgid "_None"
 msgstr "Κανένα"
 
-#: src/mainwindow.c:3087
+#: src/mainwindow.c:3095
 msgid "You are offline. Click the icon to go online."
 msgstr "Είστε συνδεδεμένος. Κάντε κλικ στο εικονίδιο για να αποσυνδεθείτε."
 
-#: src/mainwindow.c:3099
+#: src/mainwindow.c:3107
 msgid "You are online. Click the icon to go offline."
 msgstr "Είστε συνδεδεμένος. Κάντε κλικ στο εικονίδιο για να αποσυνδεθείτε."
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit"
 msgstr "Έξοδος"
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit this program?"
 msgstr "Έξοδος από το πρόγραμμα;"
 
-#: src/mainwindow.c:3776
+#: src/mainwindow.c:3792
 msgid "The selected messages could not be combined."
 msgstr ""
 
-#: src/mainwindow.c:3886
+#: src/mainwindow.c:3902
 #, fuzzy
 msgid "Select folder to open"
 msgstr "Επιλογή φακέλου"
 
-#: src/mainwindow.c:4056
+#: src/mainwindow.c:4072
 msgid "Command line options"
 msgstr "Επιλογές γραμμής εντολών"
 
-#: src/mainwindow.c:4069
+#: src/mainwindow.c:4085
 msgid "Usage: sylpheed [OPTION]..."
 msgstr "Χρήση: sylpheed [ΕΠΙΛΟΓΗ]..."
 
-#: src/mainwindow.c:4077
+#: src/mainwindow.c:4093
 #, fuzzy
 msgid ""
 "--compose [address]\n"
@@ -4170,7 +4170,7 @@ msgstr ""
 "--help\n"
 "--version"
 
-#: src/mainwindow.c:4094
+#: src/mainwindow.c:4110
 #, fuzzy
 msgid ""
 "open composition window\n"
@@ -4200,15 +4200,15 @@ msgstr ""
 "εμφάνιση αυτής της βοήθειας\n"
 "εμφάνιση πληροφοριών έκδοσης"
 
-#: src/mainwindow.c:4112
+#: src/mainwindow.c:4128
 msgid "Windows-only option:"
 msgstr ""
 
-#: src/mainwindow.c:4120
+#: src/mainwindow.c:4136
 msgid "--ipcport portnum"
 msgstr ""
 
-#: src/mainwindow.c:4125
+#: src/mainwindow.c:4141
 msgid "specify port for IPC remote commands"
 msgstr ""
 
@@ -4265,7 +4265,7 @@ msgstr "Συνημμένα"
 msgid "Message View - Sylpheed"
 msgstr "Προβολή μηνύματος - Sylpheed"
 
-#: src/messageview.c:765 src/summaryview.c:3866
+#: src/messageview.c:765 src/summaryview.c:3894
 #, c-format
 msgid "Can't save the file `%s'."
 msgstr "Δεν είναι δυνατή η αποθήκευση του αρχείου '%s'."
@@ -6123,21 +6123,21 @@ msgstr "Εμφανιζόμενα αντικείμενα"
 msgid " Revert to default "
 msgstr "Επαναφορά στις προεπιλογές"
 
-#: src/prefs_filter.c:208
+#: src/prefs_filter.c:217
 #, fuzzy
 msgid "Filter settings"
 msgstr "Ορισμός φίλτρου"
 
-#: src/prefs_filter.c:252
+#: src/prefs_filter.c:261
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
 
-#: src/prefs_filter.c:686
+#: src/prefs_filter.c:697
 #, c-format
 msgid "Do you really want to delete the rule '%s'?"
 msgstr "Θέλετε σίγουρα να διαγράψετε τον κανόνα '%s';"
 
-#: src/prefs_filter.c:688
+#: src/prefs_filter.c:699
 msgid "Delete rule"
 msgstr "Διαγραφή κανόνα"
 
@@ -6425,19 +6425,19 @@ msgstr "Συνημμένο"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:422
-#: src/summaryview.c:5396
+#: src/summaryview.c:5430
 msgid "Subject"
 msgstr "Θέμα"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:423
-#: src/summaryview.c:5399
+#: src/summaryview.c:5433
 msgid "From"
 msgstr "Από"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:424
-#: src/summaryview.c:5401
+#: src/summaryview.c:5435
 msgid "Date"
 msgstr "Ημερομηνία"
 
@@ -6447,7 +6447,7 @@ msgid "Number"
 msgstr "Αριθμός"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5407
+#: src/prefs_summary_column.c:74 src/summaryview.c:5441
 #, fuzzy
 msgid "To"
 msgstr "Προς:"
@@ -6760,7 +6760,7 @@ msgstr "Αναζήτηση για %s (%d / %d)..."
 msgid "Searching %s ..."
 msgstr "Αναζήτηση για %s..."
 
-#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2418
+#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2434
 msgid "(No Date)"
 msgstr "(Χωρίς ημερομηνία)"
 
@@ -6865,7 +6865,7 @@ msgstr "_Σχετικά"
 msgid "%s - POP3 Remote mailbox"
 msgstr "Αφαίρεση γραμματοκιβωτίου"
 
-#: src/rpop3.c:421 src/summaryview.c:5405
+#: src/rpop3.c:421 src/summaryview.c:5439
 msgid "No."
 msgstr "Όχι."
 
@@ -7473,7 +7473,7 @@ msgstr "Λήψη της λίστας ομάδων νέων..."
 msgid "Can't retrieve newsgroup list."
 msgstr "Δεν είναι δυνατή η λήψη της λίστας ομάδων συζητήσεων."
 
-#: src/subscribedialog.c:526 src/summaryview.c:950
+#: src/subscribedialog.c:526 src/summaryview.c:951
 msgid "Done."
 msgstr "Έγινε."
 
@@ -7606,230 +7606,230 @@ msgstr "Έχουν απομείνει μερικές σημάνσεις. Να ε
 msgid "Scanning folder (%s)..."
 msgstr "Σάρωση φακέλου (%s)..."
 
-#: src/summaryview.c:957
+#: src/summaryview.c:958
 #, fuzzy
 msgid "Could not establish a connection to the server."
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: src/summaryview.c:1610
+#: src/summaryview.c:1613
 msgid "_Search again"
 msgstr "Εύρεση _ξανά"
 
-#: src/summaryview.c:1632 src/summaryview.c:1641
+#: src/summaryview.c:1635 src/summaryview.c:1644
 msgid "No more unread messages"
 msgstr "Δεν υπάρχουν άλλα μη αναγνωσμένα μηνύματα"
 
-#: src/summaryview.c:1633
+#: src/summaryview.c:1636
 msgid "No unread message found. Search from the end?"
 msgstr "Δεν βρέθηκαν μη αναγνωσμένα μηνύματα. Να γίνει αναζήτηση από το τέλος;"
 
-#: src/summaryview.c:1635
+#: src/summaryview.c:1638
 msgid "No unread messages."
 msgstr "Δεν υπάρχουν μη αναγνωσμένα μηνύματα."
 
-#: src/summaryview.c:1642
+#: src/summaryview.c:1645
 #, fuzzy
 msgid "No unread message found. Go to next unread folder?"
 msgstr "Δεν βρέθηκαν αδιάβαστα μηνύματα. Να πάω στον επόμενο κατάλογο;"
 
-#: src/summaryview.c:1650 src/summaryview.c:1659
+#: src/summaryview.c:1653 src/summaryview.c:1662
 msgid "No more new messages"
 msgstr "Δεν υπάρχουν άλλα νέα μηνύματα"
 
-#: src/summaryview.c:1651
+#: src/summaryview.c:1654
 msgid "No new message found. Search from the end?"
 msgstr "Δεν βρέθηκαν νέα μηνύματα. Να γίνει αναζήτηση από το τέλος;"
 
-#: src/summaryview.c:1653
+#: src/summaryview.c:1656
 msgid "No new messages."
 msgstr "Δεν υπάρχουν νέα μηνύματα."
 
-#: src/summaryview.c:1660
+#: src/summaryview.c:1663
 #, fuzzy
 msgid "No new message found. Go to next folder which has new messages?"
 msgstr "Δεν βρέθηκαν νέα μηνύματα. Μετάβαση στον επόμενο φάκελο;"
 
-#: src/summaryview.c:1668 src/summaryview.c:1677
+#: src/summaryview.c:1671 src/summaryview.c:1680
 msgid "No more marked messages"
 msgstr "Δεν υπάρχουν άλλα σημειωμένα μηνύματα"
 
-#: src/summaryview.c:1669
+#: src/summaryview.c:1672
 msgid "No marked message found. Search from the end?"
 msgstr "Δεν βρέθηκαν σημειωμένα μηνύματα. Να γίνει αναζήτηση από το τέλος;"
 
-#: src/summaryview.c:1671 src/summaryview.c:1680
+#: src/summaryview.c:1674 src/summaryview.c:1683
 msgid "No marked messages."
 msgstr "Δεν υπάρχουν σημειωμένα μηνύματα."
 
-#: src/summaryview.c:1678
+#: src/summaryview.c:1681
 #, fuzzy
 msgid "No marked message found. Search from the beginning?"
 msgstr "Δεν βρέθηκαν σημειωμένα μηνύματα. Να γίνει αναζήτηση από την αρχή;"
 
-#: src/summaryview.c:1686 src/summaryview.c:1695
+#: src/summaryview.c:1689 src/summaryview.c:1698
 msgid "No more labeled messages"
 msgstr "Δεν υπάρχουν άλλα σημειωμένα μηνύματα"
 
-#: src/summaryview.c:1687
+#: src/summaryview.c:1690
 #, fuzzy
 msgid "No labeled message found. Search from the end?"
 msgstr "Δεν βρέθηκαν μη αναγνωσμένα μηνύματα. Να γίνει αναζήτηση από το τέλος;"
 
-#: src/summaryview.c:1689 src/summaryview.c:1698
+#: src/summaryview.c:1692 src/summaryview.c:1701
 #, fuzzy
 msgid "No labeled messages."
 msgstr "Δεν υπάρχουν άλλα σημειωμένα μηνύματα"
 
-#: src/summaryview.c:1696
+#: src/summaryview.c:1699
 #, fuzzy
 msgid "No labeled message found. Search from the beginning?"
 msgstr "Δεν βρέθηκαν σημειωμένα μηνύματα. Να γίνει αναζήτηση από την αρχή;"
 
-#: src/summaryview.c:2043
+#: src/summaryview.c:2059
 msgid "Attracting messages by subject..."
 msgstr ""
 
-#: src/summaryview.c:2239
+#: src/summaryview.c:2255
 #, c-format
 msgid "%d deleted"
 msgstr "%d διαγράφηκαν"
 
-#: src/summaryview.c:2243
+#: src/summaryview.c:2259
 #, c-format
 msgid "%s%d moved"
 msgstr "%s%d μετακινήθηκαν"
 
-#: src/summaryview.c:2244 src/summaryview.c:2249
+#: src/summaryview.c:2260 src/summaryview.c:2265
 msgid ", "
 msgstr ", "
 
-#: src/summaryview.c:2248
+#: src/summaryview.c:2264
 #, c-format
 msgid "%s%d copied"
 msgstr "%s%d αντιγράφηκαν"
 
-#: src/summaryview.c:2263
+#: src/summaryview.c:2279
 msgid " item(s) selected"
 msgstr " επιλεγμένα αντικείμενα"
 
-#: src/summaryview.c:2285
+#: src/summaryview.c:2301
 #, c-format
 msgid "%d new, %d unread, %d total (%s)"
 msgstr "%d νέα, %d αδιάβαστα, %d συνολικά (%s)"
 
-#: src/summaryview.c:2289
+#: src/summaryview.c:2305
 #, c-format
 msgid "%d new, %d unread, %d total"
 msgstr "%d νέα, %d αδιάβαστα, %d συνολικά"
 
-#: src/summaryview.c:2325
+#: src/summaryview.c:2341
 msgid "Sorting summary..."
 msgstr "Περίληψη ταξινόμησης..."
 
-#: src/summaryview.c:2581
+#: src/summaryview.c:2597
 msgid "\tSetting summary from message data..."
 msgstr "\tΟρισμός περίληψης από τα δεδομένα του μηνύματος..."
 
-#: src/summaryview.c:2583
+#: src/summaryview.c:2599
 msgid "Setting summary from message data..."
 msgstr "Ορισμός περίληψης από τα δεδομένα του μηνύματος..."
 
-#: src/summaryview.c:2698
+#: src/summaryview.c:2714
 #, c-format
 msgid "Writing summary cache (%s)..."
 msgstr "Εγγραφή προσωρινής μνήμης περιλήψεων (%s)..."
 
-#: src/summaryview.c:3036
+#: src/summaryview.c:3052
 #, c-format
 msgid "Message %d is marked\n"
 msgstr "Το μήνυμα %d είναι σημειωμένο\n"
 
-#: src/summaryview.c:3108
+#: src/summaryview.c:3126
 #, c-format
 msgid "Message %d is marked as being read\n"
 msgstr "Το μήνυμα %d είναι σημειωμένο ως αναγνωσμένο\n"
 
-#: src/summaryview.c:3321
+#: src/summaryview.c:3345
 #, c-format
 msgid "Message %d is marked as unread\n"
 msgstr "Το μήνυμα %d είναι σημειωμένο ως μη αναγνωσμένο\n"
 
-#: src/summaryview.c:3386
+#: src/summaryview.c:3412
 #, c-format
 msgid "Message %s/%d is set to delete\n"
 msgstr "Το μήνυμα %s/%d είναι προς διαγραφή\n"
 
-#: src/summaryview.c:3414
+#: src/summaryview.c:3440
 msgid "Delete message(s)"
 msgstr "Διαγραφή μηνύματος(ων)"
 
-#: src/summaryview.c:3415
+#: src/summaryview.c:3441
 msgid "Do you really want to delete message(s) from the trash?"
 msgstr "Θέλετε σίγουρα να διαγράψετε τα μηνύματα από τα απορρίμματα;"
 
-#: src/summaryview.c:3491
+#: src/summaryview.c:3517
 msgid "Deleting duplicated messages..."
 msgstr "Διαγράφω τα διπλά μηνύματα..."
 
-#: src/summaryview.c:3529
+#: src/summaryview.c:3555
 #, fuzzy, c-format
 msgid "Message %s/%d is unmarked\n"
 msgstr "Το μήνυμα είναι ανεπιθύμητο"
 
-#: src/summaryview.c:3593
+#: src/summaryview.c:3621
 #, fuzzy, c-format
 msgid "Message %d is set to move to %s\n"
 msgstr "Αποτυχία ορισμού μετακίνησης ποντικιού: %d."
 
-#: src/summaryview.c:3625
+#: src/summaryview.c:3653
 msgid "Destination is same as current folder."
 msgstr "Ο προορισμός είναι ίδιος με τον τρέχοντα κατάλογο."
 
-#: src/summaryview.c:3662
+#: src/summaryview.c:3690
 #, fuzzy
 msgid "Select folder to move"
 msgstr "Επιλογή φακέλου"
 
-#: src/summaryview.c:3692
+#: src/summaryview.c:3720
 #, fuzzy, c-format
 msgid "Message %d is set to copy to %s\n"
 msgstr "Αντιγραφή επιλεγμένων μηνυμάτων στο πρόχειρο"
 
-#: src/summaryview.c:3723
+#: src/summaryview.c:3751
 msgid "Destination for copy is same as current folder."
 msgstr "Ο προορισμός αντιγραφής είναι ίδιος με τον τρέχοντα κατάλογο."
 
-#: src/summaryview.c:3759
+#: src/summaryview.c:3787
 #, fuzzy
 msgid "Select folder to copy"
 msgstr "Επιλογή φακέλου"
 
-#: src/summaryview.c:3909
+#: src/summaryview.c:3937
 msgid "Error occurred while processing messages."
 msgstr "Συνέβη ένα σφάλμα κατά την επεξεργασία του μηνύματος."
 
-#: src/summaryview.c:4218 src/summaryview.c:4219
+#: src/summaryview.c:4246 src/summaryview.c:4247
 msgid "Building threads..."
 msgstr "Δημιουργώ τα νήματα..."
 
-#: src/summaryview.c:4369 src/summaryview.c:4370
+#: src/summaryview.c:4397 src/summaryview.c:4398
 msgid "Unthreading..."
 msgstr ""
 
-#: src/summaryview.c:4663 src/summaryview.c:4724
+#: src/summaryview.c:4691 src/summaryview.c:4752
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Εφαρμογή φίλτρων (%d / %d)..."
 
-#: src/summaryview.c:4790
+#: src/summaryview.c:4818
 msgid "filtering..."
 msgstr "Εφαρμογή φίλτρων..."
 
-#: src/summaryview.c:4791
+#: src/summaryview.c:4819
 msgid "Filtering..."
 msgstr "Φιλτράρω..."
 
-#: src/summaryview.c:4836
+#: src/summaryview.c:4864
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "Φιλτραρίστηκαν %d μηνύματα."

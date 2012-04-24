@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-07 14:04+0900\n"
+"POT-Creation-Date: 2012-02-24 11:51+0900\n"
 "PO-Revision-Date: 1999-10-12\n"
 "Last-Translator: Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -26,202 +26,202 @@ msgstr "迷惑メールフィルタ (手動)"
 msgid "Junk mail filter"
 msgstr "迷惑メールフィルタ"
 
-#: libsylph/imap.c:537
+#: libsylph/imap.c:548
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "%s へのIMAP4の接続が切れています。再接続します...\n"
 
-#: libsylph/imap.c:594 libsylph/imap.c:600
+#: libsylph/imap.c:605 libsylph/imap.c:611
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAPサーバは LOGIN を無効にしています。\n"
 
-#: libsylph/imap.c:659
+#: libsylph/imap.c:670
 msgid "Could not establish IMAP connection.\n"
 msgstr "IMAP の接続を確立できませんでした。\n"
 
-#: libsylph/imap.c:678
+#: libsylph/imap.c:689
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "%s:%d へのIMAP4の接続を確立中...\n"
 
-#: libsylph/imap.c:731
+#: libsylph/imap.c:742
 msgid "Can't start TLS session.\n"
 msgstr "TLS セッションを開始できません。\n"
 
-#: libsylph/imap.c:878
+#: libsylph/imap.c:889
 msgid "(retrieving FLAGS...)"
 msgstr "(FLAGS を取得中...)"
 
-#: libsylph/imap.c:1269
+#: libsylph/imap.c:1280
 #, c-format
 msgid "Getting message %u"
 msgstr "メッセージ %u を取得中"
 
-#: libsylph/imap.c:1391
+#: libsylph/imap.c:1402
 #, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "メッセージを %s に追加しています (%d / %d)"
 
-#: libsylph/imap.c:1514
+#: libsylph/imap.c:1525
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "メッセージ %s を %s に移動しています..."
 
-#: libsylph/imap.c:1519
+#: libsylph/imap.c:1530
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "メッセージ %s を %s にコピーしています..."
 
-#: libsylph/imap.c:1657
+#: libsylph/imap.c:1668
 #, c-format
 msgid "Removing messages %s"
 msgstr "メッセージ %s を削除しています"
 
-#: libsylph/imap.c:1663
+#: libsylph/imap.c:1674
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "deleted フラグをセットできません: %s\n"
 
-#: libsylph/imap.c:1671 libsylph/imap.c:1770
+#: libsylph/imap.c:1682 libsylph/imap.c:1781
 msgid "can't expunge\n"
 msgstr "expunge できません\n"
 
-#: libsylph/imap.c:1754
+#: libsylph/imap.c:1765
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "%s のすべてのメッセージを削除しています"
 
-#: libsylph/imap.c:1759 libsylph/imap.c:1764
+#: libsylph/imap.c:1770 libsylph/imap.c:1775
 msgid "can't set deleted flags: 1:*\n"
 msgstr "deleted フラグをセットできません: 1:*\n"
 
-#: libsylph/imap.c:1812
+#: libsylph/imap.c:1823
 msgid "can't close folder\n"
 msgstr "フォルダをクローズできません\n"
 
-#: libsylph/imap.c:1891
+#: libsylph/imap.c:1902
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "ルートフォルダ %s が存在しません\n"
 
-#: libsylph/imap.c:2091 libsylph/imap.c:2099
+#: libsylph/imap.c:2102 libsylph/imap.c:2110
 msgid "error occurred while getting LIST.\n"
 msgstr "LIST の取得中にエラーが発生しました。\n"
 
-#: libsylph/imap.c:2331
+#: libsylph/imap.c:2342
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "'%s' を作成できません。\n"
 
-#: libsylph/imap.c:2336
+#: libsylph/imap.c:2347
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "INBOX の下に '%s' を作成できません。\n"
 
-#: libsylph/imap.c:2398
+#: libsylph/imap.c:2409
 msgid "can't create mailbox: LIST failed\n"
 msgstr "メールボックスを作成できません: LIST に失敗\n"
 
-#: libsylph/imap.c:2421
+#: libsylph/imap.c:2432
 msgid "can't create mailbox\n"
 msgstr "メールボックスを作成できません\n"
 
-#: libsylph/imap.c:2549
+#: libsylph/imap.c:2560
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "メールボックスを名称変更できません: %s -> %s\n"
 
-#: libsylph/imap.c:2629
+#: libsylph/imap.c:2640
 msgid "can't delete mailbox\n"
 msgstr "メールボックスを削除できません\n"
 
-#: libsylph/imap.c:2656
+#: libsylph/imap.c:2667
 #, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "メッセージのヘッダを取得中 (%d / %d)"
 
-#: libsylph/imap.c:2708
+#: libsylph/imap.c:2719
 msgid "error occurred while getting envelope.\n"
 msgstr "エンベロープを取得中にエラーが発生しました。\n"
 
-#: libsylph/imap.c:2729
+#: libsylph/imap.c:2740
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "エンベロープを解析できません: %s\n"
 
-#: libsylph/imap.c:2786
+#: libsylph/imap.c:2797
 msgid "can't get envelope\n"
 msgstr "エンベロープを取得できません\n"
 
-#: libsylph/imap.c:2905 libsylph/imap.c:2911
+#: libsylph/imap.c:2916 libsylph/imap.c:2922
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "IMAP4 サーバ: %s:%d に接続できません\n"
 
-#: libsylph/imap.c:2927
+#: libsylph/imap.c:2938
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "%s:%d との IMAP4 セッションを確立できません\n"
 
-#: libsylph/imap.c:3002
+#: libsylph/imap.c:3013
 msgid "can't get namespace\n"
 msgstr "namespace を取得できません\n"
 
-#: libsylph/imap.c:3626
+#: libsylph/imap.c:3637
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "フォルダ %s を選択できません\n"
 
-#: libsylph/imap.c:3664
+#: libsylph/imap.c:3675
 msgid "error on imap command: STATUS\n"
 msgstr "imap コマンド中のエラー: STATUS\n"
 
-#: libsylph/imap.c:3788 libsylph/imap.c:3823
+#: libsylph/imap.c:3799 libsylph/imap.c:3834
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4 の認証に失敗しました。\n"
 
-#: libsylph/imap.c:3876
+#: libsylph/imap.c:3887
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4のログインに失敗しました。\n"
 
-#: libsylph/imap.c:4280 libsylph/imap.c:4287
+#: libsylph/imap.c:4294 libsylph/imap.c:4301
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s を %s に追加できません\n"
 
-#: libsylph/imap.c:4294
+#: libsylph/imap.c:4308
 msgid "(sending file...)"
 msgstr "(ファイルを送信中...)"
 
-#: libsylph/imap.c:4323
+#: libsylph/imap.c:4337
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "メッセージを %s に追加できません\n"
 
-#: libsylph/imap.c:4355
+#: libsylph/imap.c:4369
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%s を %s にコピーできません\n"
 
-#: libsylph/imap.c:4378
+#: libsylph/imap.c:4392
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "imap コマンド中のエラー: STORE %s %s\n"
 
-#: libsylph/imap.c:4394
+#: libsylph/imap.c:4408
 msgid "error while imap command: EXPUNGE\n"
 msgstr "imap コマンド中のエラー: EXPUNGE\n"
 
-#: libsylph/imap.c:4409
+#: libsylph/imap.c:4423
 msgid "error while imap command: CLOSE\n"
 msgstr "imap コマンド中のエラー: CLOSE\n"
 
-#: libsylph/imap.c:4730
+#: libsylph/imap.c:4744
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv が UTF-7 を %s に変換できません\n"
 
-#: libsylph/imap.c:4760
+#: libsylph/imap.c:4774
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv が %s を UTF-7 に変換できません\n"
@@ -652,7 +652,7 @@ msgstr ""
 "this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
 "Place - Suite 330, Boston, MA 02111-1307, USA."
 
-#: src/account_dialog.c:139 src/mainwindow.c:3973
+#: src/account_dialog.c:139 src/mainwindow.c:3989
 msgid ""
 "Some composing windows are open.\n"
 "Please close all the composing windows before editing the accounts."
@@ -692,7 +692,7 @@ msgstr ""
 #: src/compose.c:5329 src/editaddress.c:777 src/editaddress.c:826
 #: src/editbook.c:198 src/editgroup.c:266 src/editjpilot.c:270
 #: src/editldap.c:307 src/editvcard.c:183 src/mimeview.c:226
-#: src/prefs_filter.c:257 src/prefs_folder_item.c:171 src/select-keys.c:311
+#: src/prefs_filter.c:266 src/prefs_folder_item.c:171 src/select-keys.c:311
 msgid "Name"
 msgstr "名前"
 
@@ -704,7 +704,7 @@ msgstr "プロトコル"
 msgid "Server"
 msgstr "サーバ"
 
-#: src/account_dialog.c:409 src/prefs_filter.c:322
+#: src/account_dialog.c:409 src/prefs_filter.c:331
 msgid "Edit"
 msgstr "編集"
 
@@ -717,7 +717,7 @@ msgstr " 通常使用するアカウントに指定(_S) "
 msgid "Do you really want to delete the account '%s'?"
 msgstr "本当にアカウント '%s' を削除してもいいですか?"
 
-#: src/account_dialog.c:525 src/prefs_filter.c:687
+#: src/account_dialog.c:525 src/prefs_filter.c:698
 msgid "(Untitled)"
 msgstr "(名称未設定)"
 
@@ -1300,7 +1300,7 @@ msgstr "茶"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5254
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5288
 msgid "None"
 msgstr "なし"
 
@@ -1640,7 +1640,7 @@ msgid "Can't get the part of multipart message."
 msgstr "マルチパートメッセージのパートを取得できません。"
 
 #: src/compose.c:2868 src/headerview.c:233 src/query_search.c:791
-#: src/rpop3.c:675 src/summaryview.c:2494
+#: src/rpop3.c:675 src/summaryview.c:2510
 msgid "(No Subject)"
 msgstr "(件名なし)"
 
@@ -1831,7 +1831,7 @@ msgstr "データ形式"
 #. S_COL_DATE
 #: src/compose.c:5319 src/mimeview.c:217 src/prefs_filter_edit.c:508
 #: src/prefs_summary_column.c:72 src/rpop3.c:425 src/select-keys.c:309
-#: src/summaryview.c:5403
+#: src/summaryview.c:5437
 msgid "Size"
 msgstr "サイズ"
 
@@ -2439,12 +2439,12 @@ msgstr "フォルダ情報を設定中...\n"
 msgid "Setting folder info..."
 msgstr "フォルダ情報を設定中..."
 
-#: src/folderview.c:911 src/mainwindow.c:4176 src/setup.c:305
+#: src/folderview.c:911 src/mainwindow.c:4192 src/setup.c:305
 #, c-format
 msgid "Scanning folder %s%c%s ..."
 msgstr "フォルダをスキャン中 (%s%c%s) ..."
 
-#: src/folderview.c:915 src/mainwindow.c:4181 src/setup.c:310
+#: src/folderview.c:915 src/mainwindow.c:4197 src/setup.c:310
 #, c-format
 msgid "Scanning folder %s ..."
 msgstr "フォルダをスキャン中 (%s)..."
@@ -2553,23 +2553,23 @@ msgstr ""
 msgid "Can't remove the folder '%s'."
 msgstr "フォルダ '%s' を削除できません。"
 
-#: src/folderview.c:2766
+#: src/folderview.c:2770
 msgid "Empty trash"
 msgstr "ごみ箱を空にする"
 
-#: src/folderview.c:2767
+#: src/folderview.c:2771
 msgid "Delete all messages in the trash folder?"
 msgstr "ごみ箱の中のメッセージをすべて削除しますか?"
 
-#: src/folderview.c:2773
+#: src/folderview.c:2778
 msgid "Empty junk"
 msgstr "迷惑メールを空にする"
 
-#: src/folderview.c:2774
+#: src/folderview.c:2779
 msgid "Delete all messages in the junk folder?"
 msgstr "迷惑メールフォルダの中のメッセージをすべて削除しますか?"
 
-#: src/folderview.c:2816
+#: src/folderview.c:2826
 #, c-format
 msgid ""
 "Really remove the mailbox `%s' ?\n"
@@ -2578,34 +2578,34 @@ msgstr ""
 "本当にメールボックス `%s' を削除しますか?\n"
 "(メッセージはディスクからは削除されません)"
 
-#: src/folderview.c:2818
+#: src/folderview.c:2828
 msgid "Remove mailbox"
 msgstr "メールボックスの削除"
 
-#: src/folderview.c:2868
+#: src/folderview.c:2878
 #, c-format
 msgid "Really delete IMAP4 account `%s'?"
 msgstr "本当にIMAP4アカウント `%s' を削除しますか?"
 
-#: src/folderview.c:2869
+#: src/folderview.c:2879
 msgid "Delete IMAP4 account"
 msgstr "IMAP4アカウントの削除"
 
-#: src/folderview.c:3022
+#: src/folderview.c:3032
 #, c-format
 msgid "Really delete newsgroup `%s'?"
 msgstr "本当にニュースグループ `%s' を削除しますか?"
 
-#: src/folderview.c:3023
+#: src/folderview.c:3033
 msgid "Delete newsgroup"
 msgstr "ニュースグループの削除"
 
-#: src/folderview.c:3073
+#: src/folderview.c:3083
 #, c-format
 msgid "Really delete news account `%s'?"
 msgstr "本当にニュースアカウント `%s' を削除しますか?"
 
-#: src/folderview.c:3074
+#: src/folderview.c:3084
 msgid "Delete news account"
 msgstr "ニュースアカウントの削除"
 
@@ -2618,7 +2618,7 @@ msgid "Creating header view...\n"
 msgstr "ヘッダビューを作成中...\n"
 
 #: src/headerview.c:212 src/query_search.c:792 src/rpop3.c:676
-#: src/summaryview.c:2497
+#: src/summaryview.c:2513
 msgid "(No From)"
 msgstr "(差出人不明)"
 
@@ -2989,8 +2989,8 @@ msgstr "切断中"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "メッセージを受信中 (%d / %d) (%s / %s)"
 
-#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4747 src/summaryview.c:4937
-#: src/summaryview.c:4988
+#: src/inc.c:1321 src/inc.c:1348 src/summaryview.c:4775 src/summaryview.c:4965
+#: src/summaryview.c:5016
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3874,8 +3874,8 @@ msgstr "メインウィンドウを作成中...\n"
 msgid "MainWindow: color allocation %d failed\n"
 msgstr "MainWindow: 色の割り当て %d に失敗しました\n"
 
-#: src/mainwindow.c:1219 src/summaryview.c:2654 src/summaryview.c:2741
-#: src/summaryview.c:4311 src/summaryview.c:4440 src/summaryview.c:4829
+#: src/mainwindow.c:1219 src/summaryview.c:2670 src/summaryview.c:2757
+#: src/summaryview.c:4339 src/summaryview.c:4468 src/summaryview.c:4857
 msgid "done.\n"
 msgstr "完了。\n"
 
@@ -3990,39 +3990,39 @@ msgstr "文字(_T)"
 msgid "_None"
 msgstr "非表示(_N)"
 
-#: src/mainwindow.c:3087
+#: src/mainwindow.c:3095
 msgid "You are offline. Click the icon to go online."
 msgstr "現在オフラインです。アイコンをクリックするとオンラインになります。"
 
-#: src/mainwindow.c:3099
+#: src/mainwindow.c:3107
 msgid "You are online. Click the icon to go offline."
 msgstr "現在オンラインです。アイコンをクリックするとオフラインになります。"
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit"
 msgstr "終了"
 
-#: src/mainwindow.c:3373
+#: src/mainwindow.c:3389
 msgid "Exit this program?"
 msgstr "このプログラムを終了しますか?"
 
-#: src/mainwindow.c:3776
+#: src/mainwindow.c:3792
 msgid "The selected messages could not be combined."
 msgstr "選択したメッセージを結合できませんでした。"
 
-#: src/mainwindow.c:3886
+#: src/mainwindow.c:3902
 msgid "Select folder to open"
 msgstr "開くフォルダを選択してください"
 
-#: src/mainwindow.c:4056
+#: src/mainwindow.c:4072
 msgid "Command line options"
 msgstr "コマンドラインオプション"
 
-#: src/mainwindow.c:4069
+#: src/mainwindow.c:4085
 msgid "Usage: sylpheed [OPTION]..."
 msgstr "使用法: sylpheed [オプション]..."
 
-#: src/mainwindow.c:4077
+#: src/mainwindow.c:4093
 msgid ""
 "--compose [address]\n"
 "--attach file1 [file2]...\n"
@@ -4052,7 +4052,7 @@ msgstr ""
 "--help\n"
 "--version"
 
-#: src/mainwindow.c:4094
+#: src/mainwindow.c:4110
 msgid ""
 "open composition window\n"
 "open composition window with specified files attached\n"
@@ -4082,15 +4082,15 @@ msgstr ""
 "このヘルプを表示して終了する\n"
 "バージョン情報を出力して終了する"
 
-#: src/mainwindow.c:4112
+#: src/mainwindow.c:4128
 msgid "Windows-only option:"
 msgstr "Windows 専用オプション:"
 
-#: src/mainwindow.c:4120
+#: src/mainwindow.c:4136
 msgid "--ipcport portnum"
 msgstr "--ipcport portnum"
 
-#: src/mainwindow.c:4125
+#: src/mainwindow.c:4141
 msgid "specify port for IPC remote commands"
 msgstr "IPC リモートコマンド用のポートを指定する"
 
@@ -4147,7 +4147,7 @@ msgstr "添付"
 msgid "Message View - Sylpheed"
 msgstr "メッセージビュー - Sylpheed"
 
-#: src/messageview.c:765 src/summaryview.c:3866
+#: src/messageview.c:765 src/summaryview.c:3894
 #, c-format
 msgid "Can't save the file `%s'."
 msgstr "ファイル `%s' を保存できません。"
@@ -5970,20 +5970,20 @@ msgstr "表示する項目"
 msgid " Revert to default "
 msgstr " 初期設定に戻す "
 
-#: src/prefs_filter.c:208
+#: src/prefs_filter.c:217
 msgid "Filter settings"
 msgstr "振り分けの設定"
 
-#: src/prefs_filter.c:252
+#: src/prefs_filter.c:261
 msgid "Enabled"
 msgstr "有効"
 
-#: src/prefs_filter.c:686
+#: src/prefs_filter.c:697
 #, c-format
 msgid "Do you really want to delete the rule '%s'?"
 msgstr "本当にルール '%s' を削除してもいいですか?"
 
-#: src/prefs_filter.c:688
+#: src/prefs_filter.c:699
 msgid "Delete rule"
 msgstr "ルールの削除"
 
@@ -6269,19 +6269,19 @@ msgstr "添付"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:422
-#: src/summaryview.c:5396
+#: src/summaryview.c:5430
 msgid "Subject"
 msgstr "件名"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:423
-#: src/summaryview.c:5399
+#: src/summaryview.c:5433
 msgid "From"
 msgstr "差出人"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:424
-#: src/summaryview.c:5401
+#: src/summaryview.c:5435
 msgid "Date"
 msgstr "日付"
 
@@ -6291,7 +6291,7 @@ msgid "Number"
 msgstr "番号"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5407
+#: src/prefs_summary_column.c:74 src/summaryview.c:5441
 msgid "To"
 msgstr "宛先"
 
@@ -6597,7 +6597,7 @@ msgstr "%s を検索中 (%d / %d)..."
 msgid "Searching %s ..."
 msgstr "%s を検索中..."
 
-#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2418
+#: src/query_search.c:800 src/rpop3.c:684 src/summaryview.c:2434
 msgid "(No Date)"
 msgstr "(日付なし)"
 
@@ -6694,7 +6694,7 @@ msgstr "このプログラムについて(_A)"
 msgid "%s - POP3 Remote mailbox"
 msgstr "%s - POP3 リモートメールボックス"
 
-#: src/rpop3.c:421 src/summaryview.c:5405
+#: src/rpop3.c:421 src/summaryview.c:5439
 msgid "No."
 msgstr "番号"
 
@@ -7289,7 +7289,7 @@ msgstr "ニュースグループリストを取得中..."
 msgid "Can't retrieve newsgroup list."
 msgstr "ニュースグループリストを取得できません。"
 
-#: src/subscribedialog.c:526 src/summaryview.c:950
+#: src/subscribedialog.c:526 src/summaryview.c:951
 msgid "Done."
 msgstr "完了."
 
@@ -7416,222 +7416,222 @@ msgstr "マークが残っています。処理しますか?"
 msgid "Scanning folder (%s)..."
 msgstr "フォルダをスキャン中 (%s)..."
 
-#: src/summaryview.c:957
+#: src/summaryview.c:958
 msgid "Could not establish a connection to the server."
 msgstr "サーバに接続できませんでした。"
 
-#: src/summaryview.c:1610
+#: src/summaryview.c:1613
 msgid "_Search again"
 msgstr "再検索(_S)"
 
-#: src/summaryview.c:1632 src/summaryview.c:1641
+#: src/summaryview.c:1635 src/summaryview.c:1644
 msgid "No more unread messages"
 msgstr "未読メッセージなし"
 
-#: src/summaryview.c:1633
+#: src/summaryview.c:1636
 msgid "No unread message found. Search from the end?"
 msgstr "未読メッセージがありません。最後から検索しますか?"
 
-#: src/summaryview.c:1635
+#: src/summaryview.c:1638
 msgid "No unread messages."
 msgstr "未読メッセージがありません。"
 
-#: src/summaryview.c:1642
+#: src/summaryview.c:1645
 msgid "No unread message found. Go to next unread folder?"
 msgstr "未読メッセージがありません。次の未読フォルダに移動しますか?"
 
-#: src/summaryview.c:1650 src/summaryview.c:1659
+#: src/summaryview.c:1653 src/summaryview.c:1662
 msgid "No more new messages"
 msgstr "新着メッセージなし"
 
-#: src/summaryview.c:1651
+#: src/summaryview.c:1654
 msgid "No new message found. Search from the end?"
 msgstr "新着メッセージがありません。最後から検索しますか?"
 
-#: src/summaryview.c:1653
+#: src/summaryview.c:1656
 msgid "No new messages."
 msgstr "新着メッセージがありません。"
 
-#: src/summaryview.c:1660
+#: src/summaryview.c:1663
 msgid "No new message found. Go to next folder which has new messages?"
 msgstr ""
 "新着メッセージがありません。次の新着メッセージありフォルダに移動しますか?"
 
-#: src/summaryview.c:1668 src/summaryview.c:1677
+#: src/summaryview.c:1671 src/summaryview.c:1680
 msgid "No more marked messages"
 msgstr "マーク付きメッセージなし"
 
-#: src/summaryview.c:1669
+#: src/summaryview.c:1672
 msgid "No marked message found. Search from the end?"
 msgstr "マーク付きメッセージがありません。最後から検索しますか?"
 
-#: src/summaryview.c:1671 src/summaryview.c:1680
+#: src/summaryview.c:1674 src/summaryview.c:1683
 msgid "No marked messages."
 msgstr "マーク付きメッセージがありません。"
 
-#: src/summaryview.c:1678
+#: src/summaryview.c:1681
 msgid "No marked message found. Search from the beginning?"
 msgstr "マーク付きメッセージがありません。最初から検索しますか?"
 
-#: src/summaryview.c:1686 src/summaryview.c:1695
+#: src/summaryview.c:1689 src/summaryview.c:1698
 msgid "No more labeled messages"
 msgstr "ラベル付きメッセージなし"
 
-#: src/summaryview.c:1687
+#: src/summaryview.c:1690
 msgid "No labeled message found. Search from the end?"
 msgstr "ラベル付きメッセージがありません。最後から検索しますか?"
 
-#: src/summaryview.c:1689 src/summaryview.c:1698
+#: src/summaryview.c:1692 src/summaryview.c:1701
 msgid "No labeled messages."
 msgstr "ラベル付きメッセージがありません。"
 
-#: src/summaryview.c:1696
+#: src/summaryview.c:1699
 msgid "No labeled message found. Search from the beginning?"
 msgstr "ラベル付きメッセージがありません。最初から検索しますか?"
 
-#: src/summaryview.c:2043
+#: src/summaryview.c:2059
 msgid "Attracting messages by subject..."
 msgstr "メッセージを件名でまとめています..."
 
-#: src/summaryview.c:2239
+#: src/summaryview.c:2255
 #, c-format
 msgid "%d deleted"
 msgstr "%d 通削除"
 
-#: src/summaryview.c:2243
+#: src/summaryview.c:2259
 #, c-format
 msgid "%s%d moved"
 msgstr "%s%d 通移動"
 
-#: src/summaryview.c:2244 src/summaryview.c:2249
+#: src/summaryview.c:2260 src/summaryview.c:2265
 msgid ", "
 msgstr ", "
 
-#: src/summaryview.c:2248
+#: src/summaryview.c:2264
 #, c-format
 msgid "%s%d copied"
 msgstr "%s%d 通コピー"
 
-#: src/summaryview.c:2263
+#: src/summaryview.c:2279
 msgid " item(s) selected"
 msgstr " 通選択"
 
-#: src/summaryview.c:2285
+#: src/summaryview.c:2301
 #, c-format
 msgid "%d new, %d unread, %d total (%s)"
 msgstr "新着 %d 通, 未読 %d 通, 総数 %d 通 (%s)"
 
-#: src/summaryview.c:2289
+#: src/summaryview.c:2305
 #, c-format
 msgid "%d new, %d unread, %d total"
 msgstr "新着 %d 通, 未読 %d 通, 総数 %d 通"
 
-#: src/summaryview.c:2325
+#: src/summaryview.c:2341
 msgid "Sorting summary..."
 msgstr "サマリをソート中..."
 
-#: src/summaryview.c:2581
+#: src/summaryview.c:2597
 msgid "\tSetting summary from message data..."
 msgstr "\tメッセージデータからサマリを作成中..."
 
-#: src/summaryview.c:2583
+#: src/summaryview.c:2599
 msgid "Setting summary from message data..."
 msgstr "メッセージデータからサマリを作成中..."
 
-#: src/summaryview.c:2698
+#: src/summaryview.c:2714
 #, c-format
 msgid "Writing summary cache (%s)..."
 msgstr "サマリキャッシュを書き込み中 (%s)..."
 
-#: src/summaryview.c:3036
+#: src/summaryview.c:3052
 #, c-format
 msgid "Message %d is marked\n"
 msgstr "メッセージ %d をマークしました\n"
 
-#: src/summaryview.c:3108
+#: src/summaryview.c:3126
 #, c-format
 msgid "Message %d is marked as being read\n"
 msgstr "メッセージ %d を既読としてマークしました\n"
 
-#: src/summaryview.c:3321
+#: src/summaryview.c:3345
 #, c-format
 msgid "Message %d is marked as unread\n"
 msgstr "メッセージ %d を未読としてマークしました\n"
 
-#: src/summaryview.c:3386
+#: src/summaryview.c:3412
 #, c-format
 msgid "Message %s/%d is set to delete\n"
 msgstr "メッセージ %s/%d を削除するようにセットしました\n"
 
-#: src/summaryview.c:3414
+#: src/summaryview.c:3440
 msgid "Delete message(s)"
 msgstr "メッセージの削除"
 
-#: src/summaryview.c:3415
+#: src/summaryview.c:3441
 msgid "Do you really want to delete message(s) from the trash?"
 msgstr "本当にごみ箱からメッセージを削除してもいいですか?"
 
-#: src/summaryview.c:3491
+#: src/summaryview.c:3517
 msgid "Deleting duplicated messages..."
 msgstr "重複メッセージを削除しています..."
 
-#: src/summaryview.c:3529
+#: src/summaryview.c:3555
 #, c-format
 msgid "Message %s/%d is unmarked\n"
 msgstr "メッセージ %s/%d をマーク解除しました\n"
 
-#: src/summaryview.c:3593
+#: src/summaryview.c:3621
 #, c-format
 msgid "Message %d is set to move to %s\n"
 msgstr "メッセージ %d を %s に移動するようにセットしました\n"
 
-#: src/summaryview.c:3625
+#: src/summaryview.c:3653
 msgid "Destination is same as current folder."
 msgstr "移動先が現在のフォルダと同じです。"
 
-#: src/summaryview.c:3662
+#: src/summaryview.c:3690
 msgid "Select folder to move"
 msgstr "移動先のフォルダを選択してください"
 
-#: src/summaryview.c:3692
+#: src/summaryview.c:3720
 #, c-format
 msgid "Message %d is set to copy to %s\n"
 msgstr "メッセージ %d を %s にコピーするようにセットしました\n"
 
-#: src/summaryview.c:3723
+#: src/summaryview.c:3751
 msgid "Destination for copy is same as current folder."
 msgstr "コピー先が現在のフォルダと同じです。"
 
-#: src/summaryview.c:3759
+#: src/summaryview.c:3787
 msgid "Select folder to copy"
 msgstr "コピー先のフォルダを選択してください"
 
-#: src/summaryview.c:3909
+#: src/summaryview.c:3937
 msgid "Error occurred while processing messages."
 msgstr "メッセージの処理中にエラーが発生しました。"
 
-#: src/summaryview.c:4218 src/summaryview.c:4219
+#: src/summaryview.c:4246 src/summaryview.c:4247
 msgid "Building threads..."
 msgstr "スレッドを構築中..."
 
-#: src/summaryview.c:4369 src/summaryview.c:4370
+#: src/summaryview.c:4397 src/summaryview.c:4398
 msgid "Unthreading..."
 msgstr "スレッドを解除中..."
 
-#: src/summaryview.c:4663 src/summaryview.c:4724
+#: src/summaryview.c:4691 src/summaryview.c:4752
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "振り分け中 (%d / %d)..."
 
-#: src/summaryview.c:4790
+#: src/summaryview.c:4818
 msgid "filtering..."
 msgstr "振り分け中..."
 
-#: src/summaryview.c:4791
+#: src/summaryview.c:4819
 msgid "Filtering..."
 msgstr "振り分け中..."
 
-#: src/summaryview.c:4836
+#: src/summaryview.c:4864
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "%d 通のメッセージが振り分けられました。"
