@@ -1,6 +1,30 @@
 Changes of Sylpheed
 
-* 3.3.0
+* 3.3.1 (stable)
+
+    * IMAP: "INBOX" folder became case insensitive as specified in RFC 3501.
+    * IMAP: server name for cache directory is escaped now
+      (fixes cache creation when using IPv6 address for server name on Windows).
+    * IMAP: the bug that double-quote (") and backslash (\) in
+      folder/username/password were not escaped and could not be used on IMAP4
+      was fixed.
+    * IMAP: parsing of folder names that contain brackets was fixed.
+    * Config.guess and config.sub included in the tarball were updated to the
+      latest version.
+    * The bug that 'File - Folder - Move folder...' menu didn't work was
+      fixed.
+    * The bug that MIME nest level restriction was not working was fixed.
+    * Many defects discovered by Coverity Scan were fixed:
+      - FILE handle resource leaks
+      - memory leaks
+      - possible buffer overrun
+      - strict error checks
+      - correct null pointer checks
+    * Win32: the tray icon is recreated when explorer.exe crashes now.
+    * Win32: the included SSL certificates were updated
+      (based on ca-certificates_20111211_all.deb in Ubuntu 12.04.4 LTS).
+
+* 3.3.0 (stable)
 
 * 3.3.0rc (release candidate)
 
