@@ -4428,6 +4428,9 @@ void summary_unthread(SummaryView *summaryview)
 	FolderSortType sort_type = SORT_ASCENDING;
 	MsgInfo *selected_msg, *displayed_msg;
 
+	if (!summaryview->folder_item)
+		return;
+
 	summary_lock(summaryview);
 
 	debug_print(_("Unthreading..."));
@@ -4442,8 +4445,7 @@ void summary_unthread(SummaryView *summaryview)
 	displayed_msg = summary_get_msginfo
 		(summaryview, summaryview->displayed);
 
-	if (summaryview->folder_item)
-		summaryview->folder_item->threaded = FALSE;
+	summaryview->folder_item->threaded = FALSE;
 
 	if (summaryview->folder_item->sort_key != SORT_BY_NONE) {
 		sort_key = summaryview->folder_item->sort_key;

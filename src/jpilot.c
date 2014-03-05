@@ -849,6 +849,7 @@ static gint jpilot_read_db_files( JPilotFile *pilotFile, GList **records ) {
 			return MGU_ERROR_READ;
 		}
 		if (feof(in)) {
+			fclose(in);
 			return MGU_EOF;
 		}
 	}
@@ -866,6 +867,8 @@ static gint jpilot_read_db_files( JPilotFile *pilotFile, GList **records ) {
 				break;
 			}
 			if (feof(in)) {
+				free_mem_rec_header(&mem_rh);
+				fclose(in);
 				return MGU_EOF;
 			}
 		}
@@ -896,9 +899,11 @@ static gint jpilot_read_db_files( JPilotFile *pilotFile, GList **records ) {
 	temp_mem_rh = mem_rh;
 
 	if (num_records) {
+		attrib = unique_id = 0;
 		if (out_of_order) {
 			find_next_offset(mem_rh, 0, &next_offset, &attrib, &unique_id);
 		} else {
+			next_offset = 0xFFFFFF;
 			if (mem_rh) {
 				next_offset = mem_rh->offset;
 				attrib = mem_rh->attrib;
@@ -934,6 +939,7 @@ static gint jpilot_read_db_files( JPilotFile *pilotFile, GList **records ) {
 
 			temp_br = malloc(sizeof(buf_rec));
 			if (!temp_br) {
+				free(buf);
 				break;
 			}
 			temp_br->rt = PALM_REC;
@@ -990,6 +996,7 @@ static gint jpilot_read_db_files( JPilotFile *pilotFile, GList **records ) {
 				}
 			}
 		}
+		free(temp_br);
 	}
 	fclose(pc_in);
 

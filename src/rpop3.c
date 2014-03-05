@@ -795,6 +795,11 @@ static gint rpop3_retr_recv(Pop3Session *session, FILE *fp, guint len)
 	}
 
 	msginfo = procheader_parse_file(file, flags, FALSE);
+	if (!msginfo) {
+		session->error_val = PS_IOERR;
+		return -1;
+	}
+
 	msginfo->file_path = g_strdup(file);
 
 	msgview = messageview_create_with_new_window();
@@ -1298,7 +1303,7 @@ static void rpop3_close(GtkButton *button, gpointer data)
 		rpop3_status_label_set(_("Quitting..."));
 		rpop3_idle(FALSE);
 		pop3_logout_send(rpop3_window.session);
-	} else if (rpop3_window.session->state != POP3_DONE ||
+	} else if (rpop3_window.session->state != POP3_DONE &&
 		   rpop3_window.session->state != POP3_ERROR)
 		rpop3_window.cancelled = TRUE;
 }

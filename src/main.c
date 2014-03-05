@@ -1121,6 +1121,11 @@ static void set_log_handlers(gboolean enable)
 }
 
 #ifdef G_OS_WIN32
+
+#if !GTK_CHECK_VERSION(2, 14, 0)
+static UINT taskbar_created_msg;
+#endif
+
 static BOOL WINAPI
 ctrl_handler(DWORD dwctrltype)
 {
@@ -1153,6 +1158,21 @@ wndproc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam)
 		}
 		break;
 	default:
+#if !GTK_CHECK_VERSION(2, 14, 0)
+		if (message == taskbar_created_msg) {
+			debug_print("TaskbarCreated received\n");
+
+			/* recreate tray icon */
+			{
+				MainWindow *mainwin = main_window_get();
+				if (mainwin && mainwin->tray_icon &&
+				    gtk_status_icon_get_visible(mainwin->tray_icon->status_icon)) {
+					trayicon_hide(mainwin->tray_icon);
+					trayicon_show(mainwin->tray_icon);
+				}
+			}
+		}
+#endif
 		break;
 	}
 
@@ -1176,6 +1196,10 @@ static void register_system_events(void)
 
 	if (hwnd)
 		return;
+
+#if !GTK_CHECK_VERSION(2, 14, 0)
+	taskbar_created_msg = RegisterWindowMessage("TaskbarCreated");
+#endif
 
 	debug_print("register_system_events(): RegisterClass\n");
 
@@ -1496,7 +1520,7 @@ static gint prohibit_duplicate_launch(void)
 		}
 		fd_write_all(sock, ".\n", 2);
 		for (;;) {
-			fd_gets(sock, buf, sizeof(buf));
+			if (fd_gets(sock, buf, sizeof(buf)) <= 0) break;
 			if (!strncmp(buf, ".\n", 2)) break;
 			fputs(buf, stdout);
 		}
@@ -1556,7 +1580,7 @@ static GPtrArray *get_folder_item_list(gint sock)
 	GPtrArray *folders = NULL;
 
 	for (;;) {
-		fd_gets(sock, buf, sizeof(buf));
+		if (fd_gets(sock, buf, sizeof(buf)) <= 0) break;
 		if (!strncmp(buf, ".\n", 2)) break;
 		strretchomp(buf);
 		if (!folders) folders = g_ptr_array_new();
@@ -1583,7 +1607,13 @@ static gboolean lock_socket_input_cb(GIOChannel *source, GIOCondition condition,
 
 	fd = g_io_channel_unix_get_fd(source);
 	sock = fd_accept(fd);
-	fd_gets(sock, buf, sizeof(buf));
+	if (fd_gets(sock, buf, sizeof(buf)) <= 0) {
+		fd_close(sock);
+#if USE_THREADS
+		gdk_threads_leave();
+#endif
+		return TRUE;
+	}
 
 	if (!strncmp(buf, "popup", 5)) {
 #ifdef G_OS_WIN32

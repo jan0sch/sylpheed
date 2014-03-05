@@ -1,3 +1,82 @@
+2013-11-28
+
+	* libsylph/md5.c: MD5Final(): zero-clear the whole MD5Context struct
+	  as intended.
+
+2013-11-28
+
+	* src/syldap.c:
+	  syldap_test_connect():
+	  syldap_read_basedn():
+	  NULL check argument first.
+	* src/vcard.c: vcard_build_items(): dereference nodeRemarks only if
+	  it's non-null.
+
+2013-11-28
+
+	* src/rpop3.c: rpop3_retr_recv(): check error of
+	  procheader_parse_file().
+
+2013-11-28
+
+	* libsylph/procmime.c: procmime_scan_multipart_message(): fixed MIME
+	  nest level restriction not working.
+
+2013-11-28
+
+	* libsylph/ssl.c: ssl_done(): check if fp != NULL.
+	* src/textview.c:
+	  textview_popup_menu_activate_open_uri_cb():
+	  textview_event_after():
+	  prevent null dereference of msginfo.
+	* src/summaryview.c: summary_unthread(): first check if
+	  summaryview->folder_item is non-null.
+
+2013-11-28
+
+	* src/colorlabel.c: colorlabel_recreate_label(): added missing
+	  parentheses.
+
+2013-11-27
+
+	* src/main.c: check the return value of fd_gets().
+
+2013-11-27
+
+	* src/jpilot.c: jpilot_read_db_files(): fixed uninitialized variable
+	  "attrib", "unique_id" and "next_offset".
+
+2013-11-27
+
+	* src/template.c: template_load(): fixed fp leak on error.
+	* plugin/attachment_tool/attachment_tool.c: remove_attachment():
+	  fixed fp leak on error.
+	* libsylph/procmsg.c: procmsg_concat_partial_messages(): fixed fp
+	  leaks on error.
+	* libsylph/procmime.c: procmime_parse_mailcap(): fixed fp leak.
+	* src/jpilot.c: jpilot_read_db_files(): fixed fp leak and memory leaks.
+
+2013-11-26
+
+	* src/headerview.c: headerview_show_xface(): make sure xface is nul
+	  terminated.
+	* src/rfc2015.c: rfc2015_msg_is_encrypted(): fixed fp resource leak.
+	  (unused function)
+	* src/jpilot.c: jpilot_read_db_files(): fixed memory leaks.
+
+2013-11-25
+
+	* src/main.c: win32: check for the TaskbarCreated message and reshow
+	  icon when explorer.exe crashes.
+
+2013-10-30
+
+	* src/vcard.c
+	  src/rpop3.c
+	  src/folderview.c: fixed logical bugs (#134).
+	  This fixes a bug that 'File - Folder - Move folder...' menu didn't
+	  work.
+
 2013-08-16
 
 	* libsylph/imap.c: imap_status(): fixed the parse failure of STATUS response
