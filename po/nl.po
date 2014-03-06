@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 3.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-27 17:59+0900\n"
+"POT-Creation-Date: 2014-03-06 17:10+0900\n"
 "PO-Revision-Date: 2012-05-07 03:15+0200\n"
 "Last-Translator: Ward De Ridder <ward@warddr.eu>\n"
 "Language-Team: \n"
@@ -30,205 +30,205 @@ msgstr "Spamfilter (handmatig)"
 msgid "Junk mail filter"
 msgstr "Spamfilter"
 
-#: libsylph/imap.c:549
+#: libsylph/imap.c:564
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr ""
 "IMAP4 verbinding naar %s is verbroken. Contact wordt opnieuw gelegd...\n"
 
-#: libsylph/imap.c:606 libsylph/imap.c:612
+#: libsylph/imap.c:621 libsylph/imap.c:627
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP4 server schakelt LOGIN uit.\n"
 
-#: libsylph/imap.c:671
+#: libsylph/imap.c:686
 msgid "Could not establish IMAP connection.\n"
 msgstr "Kan IMAP verbinding niet tot stand brengen.\n"
 
-#: libsylph/imap.c:690
+#: libsylph/imap.c:705
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "IMAP4 verbinding naar %s:%d wordt opgezet...\n"
 
-#: libsylph/imap.c:743
+#: libsylph/imap.c:758
 msgid "Can't start TLS session.\n"
 msgstr "Kan geen TLS sessie starten.\n"
 
-#: libsylph/imap.c:890
+#: libsylph/imap.c:905
 msgid "(retrieving FLAGS...)"
 msgstr "(ontvangen van FLAGS...)"
 
-#: libsylph/imap.c:1281
+#: libsylph/imap.c:1296
 #, c-format
 msgid "Getting message %u"
 msgstr "Ophalen van bericht %u"
 
-#: libsylph/imap.c:1403
+#: libsylph/imap.c:1418
 #, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Berichten toevoegen aan %s (%d / %d)"
 
-#: libsylph/imap.c:1529
+#: libsylph/imap.c:1544
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Berichten %s worden verplaatst naar %s ..."
 
-#: libsylph/imap.c:1534
+#: libsylph/imap.c:1549
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Berichten %s worden gekopieerd naar %s..."
 
-#: libsylph/imap.c:1676
+#: libsylph/imap.c:1691
 #, c-format
 msgid "Removing messages %s"
 msgstr "Berichten %s worden verwijderd"
 
-#: libsylph/imap.c:1682
+#: libsylph/imap.c:1697
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "kan verwijderd-vlaggen niet instellen: %s\n"
 
-#: libsylph/imap.c:1690 libsylph/imap.c:1796
+#: libsylph/imap.c:1705 libsylph/imap.c:1811
 msgid "can't expunge\n"
 msgstr "kan niet wissen\n"
 
-#: libsylph/imap.c:1780
+#: libsylph/imap.c:1795
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Alle berichten in %s worden verwijderd"
 
-#: libsylph/imap.c:1785 libsylph/imap.c:1790
+#: libsylph/imap.c:1800 libsylph/imap.c:1805
 msgid "can't set deleted flags: 1:*\n"
 msgstr "kan de verwijderd-vlaggen niet instellen: 1:*\n"
 
-#: libsylph/imap.c:1841
+#: libsylph/imap.c:1856
 msgid "can't close folder\n"
 msgstr "kan map niet sluiten\n"
 
-#: libsylph/imap.c:1920
+#: libsylph/imap.c:1935
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "De beginmap %s bestaat niet\n"
 
-#: libsylph/imap.c:2120 libsylph/imap.c:2128
+#: libsylph/imap.c:2135 libsylph/imap.c:2143
 msgid "error occurred while getting LIST.\n"
 msgstr "er is een fout opgetreden bij het ophalen van de lijst.\n"
 
-#: libsylph/imap.c:2360
+#: libsylph/imap.c:2375
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr ""
 "kan %s niet aanmaken\n"
 "\n"
 
-#: libsylph/imap.c:2365
+#: libsylph/imap.c:2380
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "kan %s niet aanmaken onder INBOX\n"
 
-#: libsylph/imap.c:2427
+#: libsylph/imap.c:2442
 msgid "can't create mailbox: LIST failed\n"
 msgstr "kan geen mailbox maken: LIST mislukt\n"
 
-#: libsylph/imap.c:2450
+#: libsylph/imap.c:2465
 msgid "can't create mailbox\n"
 msgstr "kan geen mailbox maken\n"
 
-#: libsylph/imap.c:2579
+#: libsylph/imap.c:2594
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "kan de mailbox niet hernoemen van %s naar %s\n"
 
-#: libsylph/imap.c:2668
+#: libsylph/imap.c:2683
 msgid "can't delete mailbox\n"
 msgstr "kan de mailbox niet verwijderen\n"
 
-#: libsylph/imap.c:2698
+#: libsylph/imap.c:2713
 #, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Ophalen van berichtkoppen (%d / %d)"
 
-#: libsylph/imap.c:2750
+#: libsylph/imap.c:2765
 msgid "error occurred while getting envelope.\n"
 msgstr "Er is een fout opgetreden bij het verkrijgen van de envelop.\n"
 
-#: libsylph/imap.c:2771
+#: libsylph/imap.c:2786
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "kan de envelop niet verwerken: %s\n"
 
-#: libsylph/imap.c:2828
+#: libsylph/imap.c:2843
 msgid "can't get envelope\n"
 msgstr "kan de envelop niet verkrijgen\n"
 
-#: libsylph/imap.c:2947 libsylph/imap.c:2953
+#: libsylph/imap.c:2963 libsylph/imap.c:2969
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Kan niet verbinden met de IMAP4 server: %s:%d\n"
 
-#: libsylph/imap.c:2970
+#: libsylph/imap.c:2986
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Kan gaan sessie opzetten met de IMAP4 server: %s:%d\n"
 
-#: libsylph/imap.c:3045
+#: libsylph/imap.c:3061
 msgid "can't get namespace\n"
 msgstr "kan de NAMESPACE niet vinden\n"
 
-#: libsylph/imap.c:3669
+#: libsylph/imap.c:3685
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "kan map niet selecteren: %s\n"
 
-#: libsylph/imap.c:3707
+#: libsylph/imap.c:3723
 msgid "error on imap command: STATUS\n"
 msgstr "Fout bij IMAP-opdracht: STATUS\n"
 
-#: libsylph/imap.c:3831 libsylph/imap.c:3866
+#: libsylph/imap.c:3847 libsylph/imap.c:3882
 msgid "IMAP4 authentication failed.\n"
 msgstr "IMAP4-identificatie mislukt.\n"
 
-#: libsylph/imap.c:3919
+#: libsylph/imap.c:3935
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 login mislukt.\n"
 
-#: libsylph/imap.c:4327 libsylph/imap.c:4334
+#: libsylph/imap.c:4343 libsylph/imap.c:4350
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kan %s niet toevoegen aan %s\n"
 
-#: libsylph/imap.c:4341
+#: libsylph/imap.c:4357
 msgid "(sending file...)"
 msgstr "(bestand wordt verzonden...)"
 
-#: libsylph/imap.c:4370
+#: libsylph/imap.c:4386
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "kan bericht niet toevoegen aan %s\n"
 
-#: libsylph/imap.c:4402
+#: libsylph/imap.c:4418
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kan %s niet naar %s kopiëren\n"
 
-#: libsylph/imap.c:4425
+#: libsylph/imap.c:4441
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Fout bij IMAP-opdracht: STORE %s %s\n"
 
-#: libsylph/imap.c:4441
+#: libsylph/imap.c:4457
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Fout tijdens IMAP opdracht: EXPUNGE\n"
 
-#: libsylph/imap.c:4456
+#: libsylph/imap.c:4472
 msgid "error while imap command: CLOSE\n"
 msgstr "Fout bij IMAP-opdracht: CLOSE\n"
 
-#: libsylph/imap.c:4777
+#: libsylph/imap.c:4793
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kan UTF-7 niet naar %s omzetten\n"
 
-#: libsylph/imap.c:4809
+#: libsylph/imap.c:4825
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv kan %s niet naar UTF-7 omzetten\n"
@@ -352,79 +352,79 @@ msgstr ""
 "\n"
 "\tG_FILENAME_ENCODING=@locale\n"
 
-#: libsylph/news.c:223
+#: libsylph/news.c:226
 #, c-format
 msgid "creating NNTP connection to %s:%d ...\n"
 msgstr "verbinding met nieuwsserver (NNTP) %s%d wordt opgezet...\n"
 
-#: libsylph/news.c:301
+#: libsylph/news.c:304
 #, c-format
 msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
 msgstr ""
 "De NNTP-verbinding met %s:%d is verbroken. Opnieuw contact aan het "
 "leggen...\n"
 
-#: libsylph/news.c:404
+#: libsylph/news.c:407
 #, c-format
 msgid "article %d has been already cached.\n"
 msgstr "artikel %d is al gebufferd.\n"
 
-#: libsylph/news.c:424
+#: libsylph/news.c:427
 #, c-format
 msgid "getting article %d...\n"
 msgstr "artikel %d wordt opgehaald...\n"
 
-#: libsylph/news.c:428
+#: libsylph/news.c:431
 #, c-format
 msgid "can't read article %d\n"
 msgstr "kan artikel %d niet lezen\n"
 
-#: libsylph/news.c:703
+#: libsylph/news.c:706
 msgid "can't post article.\n"
 msgstr "kan het ertikel niet versturen.\n"
 
-#: libsylph/news.c:729
+#: libsylph/news.c:732
 #, c-format
 msgid "can't retrieve article %d\n"
 msgstr "kan het artikel %d niet ophalen\n"
 
-#: libsylph/news.c:786
+#: libsylph/news.c:789
 #, c-format
 msgid "can't select group: %s\n"
 msgstr "kan de groep niet selecteren: %s\n"
 
-#: libsylph/news.c:823
+#: libsylph/news.c:826
 #, c-format
 msgid "invalid article range: %d - %d\n"
 msgstr "ongeldig artikelbereik: %d - %d\n"
 
-#: libsylph/news.c:836
+#: libsylph/news.c:839
 msgid "no new articles.\n"
 msgstr "geen nieuwe artikelen.\n"
 
-#: libsylph/news.c:846
+#: libsylph/news.c:849
 #, c-format
 msgid "getting xover %d - %d in %s...\n"
 msgstr "xover %d - %d uit %s wordt opgehaald...\n"
 
-#: libsylph/news.c:850
+#: libsylph/news.c:853
 msgid "can't get xover\n"
 msgstr "Kan xover niet ophalen\n"
 
-#: libsylph/news.c:860
+#: libsylph/news.c:863
 msgid "error occurred while getting xover.\n"
 msgstr "er is een fout opgetreden tijdens het ophalen van de xover.\n"
 
-#: libsylph/news.c:870
+#: libsylph/news.c:873
 #, c-format
 msgid "invalid xover line: %s\n"
 msgstr "Ongeldige xover regel: %s\n"
 
-#: libsylph/news.c:889 libsylph/news.c:921
+#: libsylph/news.c:892 libsylph/news.c:924
 msgid "can't get xhdr\n"
 msgstr "Kan xhdr niet ophalen\n"
 
-#: libsylph/news.c:901 libsylph/news.c:933
+#: libsylph/news.c:904 libsylph/news.c:936
 msgid "error occurred while getting xhdr.\n"
 msgstr "er is een fout opgetreden tijdens het ophalen van de xhdr.\n"
 
@@ -520,7 +520,7 @@ msgstr "%s gevonden\n"
 msgid "Configuration is saved.\n"
 msgstr "Configuratie is opgeslagen.\n"
 
-#: libsylph/procmime.c:1307
+#: libsylph/procmime.c:1308
 msgid "procmime_get_text_content(): Code conversion failed.\n"
 msgstr "procmime_get_text_content(): Codeconversie mislukt\n"
 
@@ -574,34 +574,34 @@ msgstr "TLSv1 niet beschikbaar\n"
 msgid "TLSv1 available\n"
 msgstr "TLSv1 beschikbaar\n"
 
-#: libsylph/ssl.c:231 libsylph/ssl.c:238
+#: libsylph/ssl.c:232 libsylph/ssl.c:239
 msgid "SSL method not available\n"
 msgstr "SSL methode niet beschikbaar\n"
 
-#: libsylph/ssl.c:244
+#: libsylph/ssl.c:245
 msgid "Unknown SSL method *PROGRAM BUG*\n"
 msgstr "Onbekende SSL methode *PROGRAM BUG*\n"
 
-#: libsylph/ssl.c:250
+#: libsylph/ssl.c:251
 msgid "Error creating ssl context\n"
 msgstr "Fout bij het maken van de ssl context\n"
 
 #. Get the cipher
-#: libsylph/ssl.c:269
+#: libsylph/ssl.c:270
 #, c-format
 msgid "SSL connection using %s\n"
 msgstr "SSL verbinding met %s\n"
 
-#: libsylph/ssl.c:285
+#: libsylph/ssl.c:286
 msgid "Server certificate:\n"
 msgstr "Server-certificaat:\n"
 
-#: libsylph/ssl.c:288
+#: libsylph/ssl.c:289
 #, c-format
 msgid "  Subject: %s\n"
 msgstr "  Onderwerp: %s\n"
 
-#: libsylph/ssl.c:293
+#: libsylph/ssl.c:294
 #, c-format
 msgid "  Issuer: %s\n"
 msgstr "  Uitgever: %s\n"
@@ -1270,7 +1270,7 @@ msgid "Warning"
 msgstr "Waarschuwing"
 
 #: src/alertpanel.c:168 src/inc.c:894
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "Error"
 msgstr "Fout"
 
@@ -1313,7 +1313,7 @@ msgstr "Bruin"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5326
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5328
 msgid "None"
 msgstr "Geen"
 
@@ -1851,7 +1851,7 @@ msgstr "Datumtype"
 #. S_COL_DATE
 #: src/compose.c:5401 src/mimeview.c:217 src/prefs_filter_edit.c:512
 #: src/prefs_summary_column.c:72 src/rpop3.c:437 src/select-keys.c:309
-#: src/summaryview.c:5475
+#: src/summaryview.c:5477
 msgid "Size"
 msgstr "Grootte"
 
@@ -2990,7 +2990,7 @@ msgstr "Verbinden met POP3-server: %s ..."
 msgid "Can't connect to POP3 server: %s:%d\n"
 msgstr "Kan niet verbinden met POP3 server: %s:%d\n"
 
-#: src/inc.c:1111 src/rpop3.c:862 src/send_message.c:846
+#: src/inc.c:1111 src/rpop3.c:867 src/send_message.c:846
 #, c-format
 msgid "Authenticating..."
 msgstr "Bezig met identificatie..."
@@ -3030,8 +3030,8 @@ msgstr "Bezig met afsluiten"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Bericht wordt opgehaald (%d / %d) (%s / %s)"
 
-#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4811 src/summaryview.c:5001
-#: src/summaryview.c:5052
+#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4813 src/summaryview.c:5003
+#: src/summaryview.c:5054
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3279,20 +3279,20 @@ msgstr ""
 "GnuPG is niet goed geïnstalleerd of is te oud.\n"
 "OpenPGP ondersteuning wordt uitgeschakeld."
 
-#: src/main.c:1245
+#: src/main.c:1269
 msgid "Loading plug-ins..."
 msgstr "Laden van plug-ins..."
 
 #. remote command mode
-#: src/main.c:1441
+#: src/main.c:1465
 msgid "another Sylpheed is already running.\n"
 msgstr "er draait al een Sylpheed.\n"
 
-#: src/main.c:1729
+#: src/main.c:1759
 msgid "Migration of configuration"
 msgstr "Configuratie omzetten"
 
-#: src/main.c:1730
+#: src/main.c:1760
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -3943,7 +3943,7 @@ msgid "MainWindow: color allocation %d failed\n"
 msgstr "HoofdVenster: kleur %d kon niet gealloceerd worden\n"
 
 #: src/mainwindow.c:1224 src/summaryview.c:2668 src/summaryview.c:2755
-#: src/summaryview.c:4375 src/summaryview.c:4504 src/summaryview.c:4893
+#: src/summaryview.c:4375 src/summaryview.c:4506 src/summaryview.c:4895
 msgid "done.\n"
 msgstr "klaar.\n"
 
@@ -4286,7 +4286,7 @@ msgstr "Selecteer \"Verifieer handtekening\" om te controleren"
 msgid "Select an action for the attached file:\n"
 msgstr "Kies een actie voor het bijgevoegde bestand:\n"
 
-#: src/mimeview.c:670 src/textview.c:842
+#: src/mimeview.c:670 src/textview.c:849
 msgid "Open _with..."
 msgstr "Openen _met..."
 
@@ -4294,7 +4294,7 @@ msgstr "Openen _met..."
 msgid "_Display as text"
 msgstr "_Als tekst weergeven"
 
-#: src/mimeview.c:678 src/textview.c:845
+#: src/mimeview.c:678 src/textview.c:852
 msgid "_Save as..."
 msgstr "Opslaan _als..."
 
@@ -6397,19 +6397,19 @@ msgstr "Gemarkeerd"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:434
-#: src/summaryview.c:5468
+#: src/summaryview.c:5470
 msgid "Subject"
 msgstr "Onderwerp"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:435
-#: src/summaryview.c:5471
+#: src/summaryview.c:5473
 msgid "From"
 msgstr "Afzender"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:436
-#: src/summaryview.c:5473
+#: src/summaryview.c:5475
 msgid "Date"
 msgstr "Datum"
 
@@ -6419,7 +6419,7 @@ msgid "Number"
 msgstr "Nummer"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5479
+#: src/prefs_summary_column.c:74 src/summaryview.c:5481
 msgid "To"
 msgstr "Aan"
 
@@ -6824,7 +6824,7 @@ msgstr "_Info"
 msgid "%s - POP3 Remote mailbox"
 msgstr "%s - POP3 mailbox op andere computer"
 
-#: src/rpop3.c:433 src/summaryview.c:5477
+#: src/rpop3.c:433 src/summaryview.c:5479
 msgid "No."
 msgstr "Nr."
 
@@ -6856,55 +6856,55 @@ msgstr ""
 msgid "Retrieving message headers (%d / %d) ..."
 msgstr "Ophalen van berichtkoppen (%d / %d) ..."
 
-#: src/rpop3.c:888
+#: src/rpop3.c:893
 msgid "Getting the number of messages..."
 msgstr "Opvragen van het aantal berichten..."
 
-#: src/rpop3.c:897 src/rpop3.c:910
+#: src/rpop3.c:902 src/rpop3.c:915
 msgid "No message"
 msgstr "Geen bericht"
 
-#: src/rpop3.c:943
+#: src/rpop3.c:948
 #, c-format
 msgid "Deleted %d messages"
 msgstr "%d berichten verwijderd"
 
-#: src/rpop3.c:986 src/rpop3.c:998 src/rpop3.c:1059 src/rpop3.c:1298
+#: src/rpop3.c:991 src/rpop3.c:1003 src/rpop3.c:1064 src/rpop3.c:1303
 #: src/send_message.c:863
 #, c-format
 msgid "Quitting..."
 msgstr "Bezig met afsluiten..."
 
-#: src/rpop3.c:1044
+#: src/rpop3.c:1049
 #, c-format
 msgid "Retrieved %d messages"
 msgstr "%d berichten ontvangen"
 
-#: src/rpop3.c:1051
+#: src/rpop3.c:1056
 #, c-format
 msgid "Opened message %d"
 msgstr "Bericht %d geopend"
 
-#: src/rpop3.c:1068
+#: src/rpop3.c:1073
 #, c-format
 msgid "Retrieved %d (of %d) message headers"
 msgstr "%d (van %d) headers opgehaald"
 
-#: src/rpop3.c:1072
+#: src/rpop3.c:1077
 #, c-format
 msgid "Retrieved %d message headers"
 msgstr "%d headers opgehaald"
 
-#: src/rpop3.c:1193
+#: src/rpop3.c:1198
 #, c-format
 msgid "Retrieving message %d ..."
 msgstr "Ophalen van bericht %d ..."
 
-#: src/rpop3.c:1219
+#: src/rpop3.c:1224
 msgid "Delete messages"
 msgstr "Verwijder bericht(en)"
 
-#: src/rpop3.c:1220
+#: src/rpop3.c:1225
 msgid ""
 "Really delete selected messages from server?\n"
 "This operation cannot be reverted."
@@ -7261,7 +7261,7 @@ msgstr "Geen hadtekening gevonden"
 msgid "Good signature from \"%s\""
 msgstr "Goedgekeurde handtekening van \"%s\""
 
-#: src/sigstatus.c:244 src/textview.c:1105
+#: src/sigstatus.c:244 src/textview.c:1116
 msgid "Good signature"
 msgstr "Correcte handtekening"
 
@@ -7270,7 +7270,7 @@ msgstr "Correcte handtekening"
 msgid "Valid signature but the key for \"%s\" is not trusted"
 msgstr "Geldige ondertekening maar de sleutel voor \"%s\" wordt niet vertrouwd"
 
-#: src/sigstatus.c:249 src/textview.c:1107
+#: src/sigstatus.c:249 src/textview.c:1118
 msgid "Valid signature (untrusted key)"
 msgstr "Geldige ondertekening (onbetrouwbare sleutel)"
 
@@ -7306,7 +7306,7 @@ msgstr "Geldige ondertekening maar de sleutel is verlopen"
 msgid "BAD signature from \"%s\""
 msgstr "FOUTIEVE handtekening van \"%s\""
 
-#: src/sigstatus.c:267 src/textview.c:1109
+#: src/sigstatus.c:267 src/textview.c:1120
 msgid "BAD signature"
 msgstr "FOUTIEVE handtekening"
 
@@ -7770,50 +7770,50 @@ msgstr "Fout bij het verwerken van de berichten."
 msgid "Building threads..."
 msgstr "Discussies worden bij elkaar gevoegd..."
 
-#: src/summaryview.c:4433 src/summaryview.c:4434
+#: src/summaryview.c:4436 src/summaryview.c:4437
 msgid "Unthreading..."
 msgstr "Discussies worden uit elkaar gehaald..."
 
-#: src/summaryview.c:4727 src/summaryview.c:4788
+#: src/summaryview.c:4729 src/summaryview.c:4790
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Bezig met filteren (%d / %d)..."
 
-#: src/summaryview.c:4854
+#: src/summaryview.c:4856
 msgid "filtering..."
 msgstr "Bezig met filteren..."
 
-#: src/summaryview.c:4855
+#: src/summaryview.c:4857
 msgid "Filtering..."
 msgstr "Bezig met filteren..."
 
-#: src/summaryview.c:4900
+#: src/summaryview.c:4902
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "Er zijn %d berichten gefilterd."
 
-#: src/template.c:171
+#: src/template.c:173
 #, c-format
 msgid "file %s already exists\n"
 msgstr "bestand %s bestaat al\n"
 
-#: src/textview.c:263
+#: src/textview.c:266
 msgid "Creating text view...\n"
 msgstr "Tekstvenster wordt aangemaakt...\n"
 
-#: src/textview.c:525
+#: src/textview.c:530
 msgid "This message is encrypted, but its decryption failed.\n"
 msgstr "Dit bericht is gecodeerd, maar het decoderen is mislukt.\n"
 
-#: src/textview.c:854
+#: src/textview.c:861
 msgid "_Copy file name"
 msgstr "Bestandsnaam voor kopie"
 
-#: src/textview.c:1161
+#: src/textview.c:1172
 msgid "This message can't be displayed.\n"
 msgstr "Dit bericht kan niet worden weergegeven.\n"
 
-#: src/textview.c:1185
+#: src/textview.c:1196
 msgid ""
 "The body text couldn't be displayed because writing to temporary file "
 "failed.\n"
@@ -7821,35 +7821,35 @@ msgstr ""
 "Het bericht kon niet worden weergegeven omdat het schrijven naar een "
 "tijdelijk bestand mislukt is.\n"
 
-#: src/textview.c:2431
+#: src/textview.c:2445
 msgid "Sa_ve this image as..."
 msgstr "Afbeelding opslaan _als..."
 
-#: src/textview.c:2451 src/trayicon.c:160
+#: src/textview.c:2465 src/trayicon.c:160
 msgid "Compose _new message"
 msgstr "_Nieuw bericht opstellen"
 
-#: src/textview.c:2453
+#: src/textview.c:2467
 msgid "R_eply to this address"
 msgstr "Antwoord naar dit adres"
 
-#: src/textview.c:2456
+#: src/textview.c:2470
 msgid "Add to address _book..."
 msgstr "Toevoegen aan _adresboek"
 
-#: src/textview.c:2458
+#: src/textview.c:2472
 msgid "Copy this add_ress"
 msgstr "_Adres kopiëren"
 
-#: src/textview.c:2461
+#: src/textview.c:2475
 msgid "_Open with Web browser"
 msgstr "Openen met webbrowser"
 
-#: src/textview.c:2463
+#: src/textview.c:2477
 msgid "Copy this _link"
 msgstr "_Link kopiëren"
 
-#: src/textview.c:2669
+#: src/textview.c:2684
 #, c-format
 msgid ""
 "The real URL (%s) is different from\n"
@@ -7862,7 +7862,7 @@ msgstr ""
 "\n"
 "Wilt u het toch openen?"
 
-#: src/textview.c:2674
+#: src/textview.c:2689
 msgid "Fake URL warning"
 msgstr "Waarschuwing! Misleidende link"
 
@@ -7931,15 +7931,15 @@ msgid "Couldn't get the version information of plug-ins."
 msgstr "Kan versieinformatie van de plug-ins niet vaststellen."
 
 #: plugin/attachment_tool/attachment_tool.c:50
-#: plugin/attachment_tool/attachment_tool.c:271
+#: plugin/attachment_tool/attachment_tool.c:272
 msgid "Remove attachments"
 msgstr "Verwijder bijlagen"
 
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "This tool is available on local folders only."
 msgstr "Dit gereedschap is alleen beschikvoor voor lokale mappen."
 
-#: plugin/attachment_tool/attachment_tool.c:272
+#: plugin/attachment_tool/attachment_tool.c:273
 msgid "Do you really remove attached files from the selected messages?"
 msgstr "Bijlagen echt verwijderren?"
 

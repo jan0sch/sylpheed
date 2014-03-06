@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 2.4.0beta5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-27 17:59+0900\n"
+"POT-Creation-Date: 2014-03-06 17:10+0900\n"
 "PO-Revision-Date: 2007-03-17 00:57+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -29,208 +29,208 @@ msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας (χει
 msgid "Junk mail filter"
 msgstr "Φίλτρο ανεπιθύμητης αλληλογραφίας"
 
-#: libsylph/imap.c:549
+#: libsylph/imap.c:564
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "Η IMAP4 σύνδεση στο %s διακόπηκε. Επανασύνδεση...\n"
 
-#: libsylph/imap.c:606 libsylph/imap.c:612
+#: libsylph/imap.c:621 libsylph/imap.c:627
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Ο διακομιστής IMAP4 απενεργοποίησε το LOGIN.\n"
 
-#: libsylph/imap.c:671
+#: libsylph/imap.c:686
 #, fuzzy
 msgid "Could not establish IMAP connection.\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:690
+#: libsylph/imap.c:705
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "Δημιουργία σύνδεσης IMAP4 στο %s:%d ...\n"
 
-#: libsylph/imap.c:743
+#: libsylph/imap.c:758
 msgid "Can't start TLS session.\n"
 msgstr "Δεν είναι δυνατό να ξεκινήσει συνεδρία TLS.\n"
 
-#: libsylph/imap.c:890
+#: libsylph/imap.c:905
 msgid "(retrieving FLAGS...)"
 msgstr ""
 
-#: libsylph/imap.c:1281
+#: libsylph/imap.c:1296
 #, fuzzy, c-format
 msgid "Getting message %u"
 msgstr "Λήψη μηνύματος %d"
 
-#: libsylph/imap.c:1403
+#: libsylph/imap.c:1418
 #, fuzzy, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Μετακίνηση μηνυμάτων στο %s"
 
-#: libsylph/imap.c:1529
+#: libsylph/imap.c:1544
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Μετακίνηση μηνυμάτων %s στο %s ..."
 
-#: libsylph/imap.c:1534
+#: libsylph/imap.c:1549
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Αντιγραφή μηνυμάτων %s στο %s ..."
 
-#: libsylph/imap.c:1676
+#: libsylph/imap.c:1691
 #, c-format
 msgid "Removing messages %s"
 msgstr "Διαγραφή μηνυμάτων %s"
 
-#: libsylph/imap.c:1682
+#: libsylph/imap.c:1697
 #, fuzzy, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "Αποτυχία ορίσματος του PAM_TTY=%s"
 
-#: libsylph/imap.c:1690 libsylph/imap.c:1796
+#: libsylph/imap.c:1705 libsylph/imap.c:1811
 msgid "can't expunge\n"
 msgstr "δεν μπορώ να τα απαλείψω\n"
 
-#: libsylph/imap.c:1780
+#: libsylph/imap.c:1795
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Διαγραφή όλων των μηνυμάτων στο %s"
 
-#: libsylph/imap.c:1785 libsylph/imap.c:1790
+#: libsylph/imap.c:1800 libsylph/imap.c:1805
 #, fuzzy
 msgid "can't set deleted flags: 1:*\n"
 msgstr "Αποτυχία ορίσματος του PAM_TTY=%s"
 
-#: libsylph/imap.c:1841
+#: libsylph/imap.c:1856
 msgid "can't close folder\n"
 msgstr "δεν είναι δυνατό το κλείσιμο του φακέλου\n"
 
-#: libsylph/imap.c:1920
+#: libsylph/imap.c:1935
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "Ο ριζικός φάκελος %s δεν υπάρχει.\n"
 
-#: libsylph/imap.c:2120 libsylph/imap.c:2128
+#: libsylph/imap.c:2135 libsylph/imap.c:2143
 msgid "error occurred while getting LIST.\n"
 msgstr "προέκυψε σφάλμα κατά τη λήψη της λίστας.\n"
 
-#: libsylph/imap.c:2360
+#: libsylph/imap.c:2375
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Δεν είναι δυνατή η δημιουργία του '%s'\n"
 
-#: libsylph/imap.c:2365
+#: libsylph/imap.c:2380
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Δεν είναι δυνατή η δημιουργία του '%s' μέσα στο INBOX\n"
 
-#: libsylph/imap.c:2427
+#: libsylph/imap.c:2442
 msgid "can't create mailbox: LIST failed\n"
 msgstr ""
 "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου: η εντολή LIST απέτυχε\n"
 
-#: libsylph/imap.c:2450
+#: libsylph/imap.c:2465
 msgid "can't create mailbox\n"
 msgstr "δεν είναι δυνατή η δημιουργία γραμματοκιβωτίου\n"
 
-#: libsylph/imap.c:2579
+#: libsylph/imap.c:2594
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "Δεν είναι δυνατή η μετονομασία του γραμματοκιβωτίου: %s σε %s\n"
 
-#: libsylph/imap.c:2668
+#: libsylph/imap.c:2683
 msgid "can't delete mailbox\n"
 msgstr "δεν μπορώ να διαγράψω το mailbox\n"
 
-#: libsylph/imap.c:2698
+#: libsylph/imap.c:2713
 #, fuzzy, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Εμφάνιση Όλων των _Κεφαλίδων"
 
-#: libsylph/imap.c:2750
+#: libsylph/imap.c:2765
 msgid "error occurred while getting envelope.\n"
 msgstr "δημιουργήθηκε σφάλμα κατά τη λήψη του φακέλου.\n"
 
-#: libsylph/imap.c:2771
+#: libsylph/imap.c:2786
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "δεν είναι δυνατή η ανάλυση του φακέλου: %s\n"
 
-#: libsylph/imap.c:2828
+#: libsylph/imap.c:2843
 msgid "can't get envelope\n"
 msgstr "δεν είναι δυνατή η λήψη του φακέλου\n"
 
-#: libsylph/imap.c:2947 libsylph/imap.c:2953
+#: libsylph/imap.c:2963 libsylph/imap.c:2969
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:2970
+#: libsylph/imap.c:2986
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Δεν είναι δυνατή η σύνδεση στον διακομιστή IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:3045
+#: libsylph/imap.c:3061
 #, fuzzy
 msgid "can't get namespace\n"
 msgstr "Αδυναμία λήψης όνοματος χρήστη"
 
-#: libsylph/imap.c:3669
+#: libsylph/imap.c:3685
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "δεν μπορώ να επιλέξω τον κατάλογο: %s\n"
 
-#: libsylph/imap.c:3707
+#: libsylph/imap.c:3723
 msgid "error on imap command: STATUS\n"
 msgstr "σφάλμα στην εντολή imap: STATUS\n"
 
-#: libsylph/imap.c:3831 libsylph/imap.c:3866
+#: libsylph/imap.c:3847 libsylph/imap.c:3882
 msgid "IMAP4 authentication failed.\n"
 msgstr "Η πιστοποίηση στον IMAP4 απέτυχε.\n"
 
-#: libsylph/imap.c:3919
+#: libsylph/imap.c:3935
 msgid "IMAP4 login failed.\n"
 msgstr "Η είσοδος στον IMAP4 απέτυχε.\n"
 
-#: libsylph/imap.c:4327 libsylph/imap.c:4334
+#: libsylph/imap.c:4343 libsylph/imap.c:4350
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "δεν είναι δυνατή η προσάρτηση του %s στο %s\n"
 
-#: libsylph/imap.c:4341
+#: libsylph/imap.c:4357
 msgid "(sending file...)"
 msgstr "(αποστολή αρχείου...)"
 
-#: libsylph/imap.c:4370
+#: libsylph/imap.c:4386
 #, fuzzy, c-format
 msgid "can't append message to %s\n"
 msgstr "Δεν είναι δυνατή η προσθήκη μηνύματος στον φάκελο `%s': %s"
 
-#: libsylph/imap.c:4402
+#: libsylph/imap.c:4418
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "δεν είναι δυνατή η αντιγραφή του %s στο %s\n"
 
-#: libsylph/imap.c:4425
+#: libsylph/imap.c:4441
 #, fuzzy, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4441
+#: libsylph/imap.c:4457
 #, fuzzy
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4456
+#: libsylph/imap.c:4472
 #, fuzzy
 msgid "error while imap command: CLOSE\n"
 msgstr "Error while spawning the mbadblocks command: %s."
 
-#: libsylph/imap.c:4777
+#: libsylph/imap.c:4793
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "Δεν είναι δυνατή η μετατροπή του UTF-7 σε %s από το iconv\n"
 
-#: libsylph/imap.c:4809
+#: libsylph/imap.c:4825
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "Δεν είναι δυνατή η μετατροπή του %s σε UTF-7 από το iconv\n"
@@ -352,77 +352,77 @@ msgstr ""
 "\n"
 "\tG_FILENAME_ENCODING=@locale\n"
 
-#: libsylph/news.c:223
+#: libsylph/news.c:226
 #, c-format
 msgid "creating NNTP connection to %s:%d ...\n"
 msgstr "δημιουργώ NNTP σύνδεση στο %s:%d ...\n"
 
-#: libsylph/news.c:301
+#: libsylph/news.c:304
 #, c-format
 msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
 msgstr "Η NNTP σύνδεση στο %s:%d διακόπηκε. Επανασύνδεση...\n"
 
-#: libsylph/news.c:404
+#: libsylph/news.c:407
 #, c-format
 msgid "article %d has been already cached.\n"
 msgstr "το άρθρο %d υπάρχει ήδη στην προσωρινή μνήμη.\n"
 
-#: libsylph/news.c:424
+#: libsylph/news.c:427
 #, c-format
 msgid "getting article %d...\n"
 msgstr "λήψη άρθρου %d...\n"
 
-#: libsylph/news.c:428
+#: libsylph/news.c:431
 #, c-format
 msgid "can't read article %d\n"
 msgstr "δεν είναι δυνατή η ανάγνωση του άρθρου %d\n"
 
-#: libsylph/news.c:703
+#: libsylph/news.c:706
 msgid "can't post article.\n"
 msgstr "δεν μπορώ να στείλω το άρθρο.\n"
 
-#: libsylph/news.c:729
+#: libsylph/news.c:732
 #, c-format
 msgid "can't retrieve article %d\n"
 msgstr "δεν μπορώ να λάβω το άρθρο %d\n"
 
-#: libsylph/news.c:786
+#: libsylph/news.c:789
 #, c-format
 msgid "can't select group: %s\n"
 msgstr "δεν είναι δυνατή η επιλογή της ομάδας: %s\n"
 
-#: libsylph/news.c:823
+#: libsylph/news.c:826
 #, c-format
 msgid "invalid article range: %d - %d\n"
 msgstr "μη έγκυρη ακολουθία άρθρων: %d - %d\n"
 
-#: libsylph/news.c:836
+#: libsylph/news.c:839
 msgid "no new articles.\n"
 msgstr "δεν υπάρχουν νέα άρθρα.\n"
 
-#: libsylph/news.c:846
+#: libsylph/news.c:849
 #, c-format
 msgid "getting xover %d - %d in %s...\n"
 msgstr "λαμβάνω xover %d - %d στο %s...\n"
 
-#: libsylph/news.c:850
+#: libsylph/news.c:853
 msgid "can't get xover\n"
 msgstr "δεν μπορώ να λάβω xover\n"
 
-#: libsylph/news.c:860
+#: libsylph/news.c:863
 msgid "error occurred while getting xover.\n"
 msgstr "συνέβη σφάλμα καθώς λάμβανα xover.\n"
 
-#: libsylph/news.c:870
+#: libsylph/news.c:873
 #, c-format
 msgid "invalid xover line: %s\n"
 msgstr "μη έγκυρη γραμμή xover: %s\n"
 
-#: libsylph/news.c:889 libsylph/news.c:921
+#: libsylph/news.c:892 libsylph/news.c:924
 msgid "can't get xhdr\n"
 msgstr "δεν μπορώ να λάβω xhdr\n"
 
-#: libsylph/news.c:901 libsylph/news.c:933
+#: libsylph/news.c:904 libsylph/news.c:936
 msgid "error occurred while getting xhdr.\n"
 msgstr "συνέβη σφάλμα καθώς λάμβανα xhdr.\n"
 
@@ -519,7 +519,7 @@ msgstr "Βρέθηκαν %s\n"
 msgid "Configuration is saved.\n"
 msgstr "Οι ρυθμίσεις αποθηκεύτηκαν.\n"
 
-#: libsylph/procmime.c:1307
+#: libsylph/procmime.c:1308
 msgid "procmime_get_text_content(): Code conversion failed.\n"
 msgstr "procmime_get_text_content(): Η μετατροπή του κώδικα απέτυχε.\n"
 
@@ -577,35 +577,35 @@ msgstr "Το TLSv1 δεν είναι διαθέσιμο\n"
 msgid "TLSv1 available\n"
 msgstr "Το TLSv1 είναι διαθέσιμο\n"
 
-#: libsylph/ssl.c:231 libsylph/ssl.c:238
+#: libsylph/ssl.c:232 libsylph/ssl.c:239
 msgid "SSL method not available\n"
 msgstr "Η μέθοδος SSL δεν είναι διαθέσιμη\n"
 
-#: libsylph/ssl.c:244
+#: libsylph/ssl.c:245
 msgid "Unknown SSL method *PROGRAM BUG*\n"
 msgstr "Άγνωστη μέθοδος SSL *ΣΦΑΛΜΑ ΣΤΟ ΠΡΟΓΡΑΜΜΑ*\n"
 
-#: libsylph/ssl.c:250
+#: libsylph/ssl.c:251
 #, fuzzy
 msgid "Error creating ssl context\n"
 msgstr "Σφάλμα δημιουργίας signal pipe."
 
 #. Get the cipher
-#: libsylph/ssl.c:269
+#: libsylph/ssl.c:270
 #, c-format
 msgid "SSL connection using %s\n"
 msgstr "Σύνδεση SSL με χρήση %s\n"
 
-#: libsylph/ssl.c:285
+#: libsylph/ssl.c:286
 msgid "Server certificate:\n"
 msgstr "Πιστοποιητικό διακομιστή:\n"
 
-#: libsylph/ssl.c:288
+#: libsylph/ssl.c:289
 #, c-format
 msgid "  Subject: %s\n"
 msgstr "  Θέμα: %s\n"
 
-#: libsylph/ssl.c:293
+#: libsylph/ssl.c:294
 #, c-format
 msgid "  Issuer: %s\n"
 msgstr "  Εκδότης: %s\n"
@@ -1293,7 +1293,7 @@ msgid "Warning"
 msgstr "Προειδοποίηση"
 
 #: src/alertpanel.c:168 src/inc.c:894
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -1337,7 +1337,7 @@ msgstr "Καφέ"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5326
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5328
 msgid "None"
 msgstr "Κανένα"
 
@@ -1885,7 +1885,7 @@ msgstr "Ημερομηνία"
 #. S_COL_DATE
 #: src/compose.c:5401 src/mimeview.c:217 src/prefs_filter_edit.c:512
 #: src/prefs_summary_column.c:72 src/rpop3.c:437 src/select-keys.c:309
-#: src/summaryview.c:5475
+#: src/summaryview.c:5477
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -3066,7 +3066,7 @@ msgstr "Σύνδεση με το διακομιστή POP3: %s..."
 msgid "Can't connect to POP3 server: %s:%d\n"
 msgstr "Δεν μπορώ να συνδεθώ στον POP3 server: %s:%d\n"
 
-#: src/inc.c:1111 src/rpop3.c:862 src/send_message.c:846
+#: src/inc.c:1111 src/rpop3.c:867 src/send_message.c:846
 #, c-format
 msgid "Authenticating..."
 msgstr "Πιστοποίηση..."
@@ -3106,8 +3106,8 @@ msgstr "Κλείνω τη σύνδεση"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Λαμβάνεται το μήνυμα (%d / %d) (%s / %s)"
 
-#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4811 src/summaryview.c:5001
-#: src/summaryview.c:5052
+#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4813 src/summaryview.c:5003
+#: src/summaryview.c:5054
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3348,20 +3348,20 @@ msgstr ""
 "Το GnuPG δεν έχει εγκατασταθεί σωστά, ή χρειάζεται αναβάθμιση.\n"
 "Η υποστήριξη OpenPGP απενεργοποιήθηκε."
 
-#: src/main.c:1245
+#: src/main.c:1269
 msgid "Loading plug-ins..."
 msgstr ""
 
 #. remote command mode
-#: src/main.c:1441
+#: src/main.c:1465
 msgid "another Sylpheed is already running.\n"
 msgstr "Τρέχει ήδη ένα Sylpheed.\n"
 
-#: src/main.c:1729
+#: src/main.c:1759
 msgid "Migration of configuration"
 msgstr "Μεταφορά ρυθμίσεων"
 
-#: src/main.c:1730
+#: src/main.c:1760
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -4031,7 +4031,7 @@ msgid "MainWindow: color allocation %d failed\n"
 msgstr ""
 
 #: src/mainwindow.c:1224 src/summaryview.c:2668 src/summaryview.c:2755
-#: src/summaryview.c:4375 src/summaryview.c:4504 src/summaryview.c:4893
+#: src/summaryview.c:4375 src/summaryview.c:4506 src/summaryview.c:4895
 msgid "done.\n"
 msgstr "έγινε.\n"
 
@@ -4379,7 +4379,7 @@ msgstr "Επιλέξτε \"Έλεγχο υπογραφής\" για έλεγχο
 msgid "Select an action for the attached file:\n"
 msgstr "Επιλέξτε μια ενέργεια για το συνημμένο αρχείο:\n"
 
-#: src/mimeview.c:670 src/textview.c:842
+#: src/mimeview.c:670 src/textview.c:849
 msgid "Open _with..."
 msgstr "Άνοιγμα _με..."
 
@@ -4387,7 +4387,7 @@ msgstr "Άνοιγμα _με..."
 msgid "_Display as text"
 msgstr "_Προβολή ως κείμενο"
 
-#: src/mimeview.c:678 src/textview.c:845
+#: src/mimeview.c:678 src/textview.c:852
 msgid "_Save as..."
 msgstr "_Αποθήκευση ως..."
 
@@ -6516,19 +6516,19 @@ msgstr "Σημείωση"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:434
-#: src/summaryview.c:5468
+#: src/summaryview.c:5470
 msgid "Subject"
 msgstr "Θέμα"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:435
-#: src/summaryview.c:5471
+#: src/summaryview.c:5473
 msgid "From"
 msgstr "Από"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:436
-#: src/summaryview.c:5473
+#: src/summaryview.c:5475
 msgid "Date"
 msgstr "Ημερομηνία"
 
@@ -6538,7 +6538,7 @@ msgid "Number"
 msgstr "Αριθμός"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5479
+#: src/prefs_summary_column.c:74 src/summaryview.c:5481
 #, fuzzy
 msgid "To"
 msgstr "Προς:"
@@ -6956,7 +6956,7 @@ msgstr "_Σχετικά"
 msgid "%s - POP3 Remote mailbox"
 msgstr "Αφαίρεση γραμματοκιβωτίου"
 
-#: src/rpop3.c:433 src/summaryview.c:5477
+#: src/rpop3.c:433 src/summaryview.c:5479
 msgid "No."
 msgstr "Όχι."
 
@@ -6987,58 +6987,58 @@ msgstr "Προέκυψε σφάλμα στη συνεδρία POP3\n"
 msgid "Retrieving message headers (%d / %d) ..."
 msgstr "Εμφάνιση Όλων των _Κεφαλίδων"
 
-#: src/rpop3.c:888
+#: src/rpop3.c:893
 #, fuzzy
 msgid "Getting the number of messages..."
 msgstr "Λήψη αριθμού νέων μηνυμάτων (STAT)..."
 
-#: src/rpop3.c:897 src/rpop3.c:910
+#: src/rpop3.c:902 src/rpop3.c:915
 #, fuzzy
 msgid "No message"
 msgstr "Δεν υπάρχουν νέα μηνύματα."
 
-#: src/rpop3.c:943
+#: src/rpop3.c:948
 #, fuzzy, c-format
 msgid "Deleted %d messages"
 msgstr "Διαγραφή μηνύματος(ων)"
 
-#: src/rpop3.c:986 src/rpop3.c:998 src/rpop3.c:1059 src/rpop3.c:1298
+#: src/rpop3.c:991 src/rpop3.c:1003 src/rpop3.c:1064 src/rpop3.c:1303
 #: src/send_message.c:863
 #, c-format
 msgid "Quitting..."
 msgstr "Εγκατάλειψη..."
 
-#: src/rpop3.c:1044
+#: src/rpop3.c:1049
 #, fuzzy, c-format
 msgid "Retrieved %d messages"
 msgstr "Λήψη νέων μηνυμάτων"
 
-#: src/rpop3.c:1051
+#: src/rpop3.c:1056
 #, fuzzy, c-format
 msgid "Opened message %d"
 msgstr "Αποστολή μηνύματος"
 
-#: src/rpop3.c:1068
+#: src/rpop3.c:1073
 #, fuzzy, c-format
 msgid "Retrieved %d (of %d) message headers"
 msgstr "Λήψη νέων μηνυμάτων"
 
-#: src/rpop3.c:1072
+#: src/rpop3.c:1077
 #, fuzzy, c-format
 msgid "Retrieved %d message headers"
 msgstr "Λήψη νέων μηνυμάτων"
 
-#: src/rpop3.c:1193
+#: src/rpop3.c:1198
 #, fuzzy, c-format
 msgid "Retrieving message %d ..."
 msgstr "Λήψη μηνυμάτων από %s..."
 
-#: src/rpop3.c:1219
+#: src/rpop3.c:1224
 #, fuzzy
 msgid "Delete messages"
 msgstr "Διαγραφή μηνύματος(ων)"
 
-#: src/rpop3.c:1220
+#: src/rpop3.c:1225
 msgid ""
 "Really delete selected messages from server?\n"
 "This operation cannot be reverted."
@@ -7402,7 +7402,7 @@ msgstr "Δεν βρέθηκε υπογραφή"
 msgid "Good signature from \"%s\""
 msgstr "Έγκυρη υπογραφή από τον/την \"%s\""
 
-#: src/sigstatus.c:244 src/textview.c:1105
+#: src/sigstatus.c:244 src/textview.c:1116
 msgid "Good signature"
 msgstr "Έγκυρη υπογραφή"
 
@@ -7411,7 +7411,7 @@ msgstr "Έγκυρη υπογραφή"
 msgid "Valid signature but the key for \"%s\" is not trusted"
 msgstr "Έγκυρη υπογραφή αλλά το κλειδί για το \"%s\" δεν είναι έμπιστο"
 
-#: src/sigstatus.c:249 src/textview.c:1107
+#: src/sigstatus.c:249 src/textview.c:1118
 msgid "Valid signature (untrusted key)"
 msgstr "Έγκυρη υπογραφή (όχι έμπιστη)"
 
@@ -7447,7 +7447,7 @@ msgstr "Η υπογραφή είναι έγκυρη αλλά το κλειδί �
 msgid "BAD signature from \"%s\""
 msgstr "Εσφαλμένη υπογραφή από τον/την \"%s\""
 
-#: src/sigstatus.c:267 src/textview.c:1109
+#: src/sigstatus.c:267 src/textview.c:1120
 msgid "BAD signature"
 msgstr "Εσφαλμένη υπογραφή"
 
@@ -7923,86 +7923,86 @@ msgstr "Συνέβη ένα σφάλμα κατά την επεξεργασία 
 msgid "Building threads..."
 msgstr "Δημιουργώ τα νήματα..."
 
-#: src/summaryview.c:4433 src/summaryview.c:4434
+#: src/summaryview.c:4436 src/summaryview.c:4437
 msgid "Unthreading..."
 msgstr ""
 
-#: src/summaryview.c:4727 src/summaryview.c:4788
+#: src/summaryview.c:4729 src/summaryview.c:4790
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Εφαρμογή φίλτρων (%d / %d)..."
 
-#: src/summaryview.c:4854
+#: src/summaryview.c:4856
 msgid "filtering..."
 msgstr "Εφαρμογή φίλτρων..."
 
-#: src/summaryview.c:4855
+#: src/summaryview.c:4857
 msgid "Filtering..."
 msgstr "Φιλτράρω..."
 
-#: src/summaryview.c:4900
+#: src/summaryview.c:4902
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "Φιλτραρίστηκαν %d μηνύματα."
 
-#: src/template.c:171
+#: src/template.c:173
 #, c-format
 msgid "file %s already exists\n"
 msgstr "Το αρχείο \"%s\" υπάρχει ήδη\n"
 
-#: src/textview.c:263
+#: src/textview.c:266
 msgid "Creating text view...\n"
 msgstr "Δημιουργία προβολής κειμένου...\n"
 
-#: src/textview.c:525
+#: src/textview.c:530
 msgid "This message is encrypted, but its decryption failed.\n"
 msgstr ""
 
-#: src/textview.c:854
+#: src/textview.c:861
 #, fuzzy
 msgid "_Copy file name"
 msgstr "Όνομα αρχείου"
 
-#: src/textview.c:1161
+#: src/textview.c:1172
 msgid "This message can't be displayed.\n"
 msgstr "Δεν είναι δυνατή η προβολή αυτού του μηνύματος.\n"
 
-#: src/textview.c:1185
+#: src/textview.c:1196
 msgid ""
 "The body text couldn't be displayed because writing to temporary file "
 "failed.\n"
 msgstr ""
 
-#: src/textview.c:2431
+#: src/textview.c:2445
 msgid "Sa_ve this image as..."
 msgstr "Α_ποθήκευση εικόνας ως..."
 
-#: src/textview.c:2451 src/trayicon.c:160
+#: src/textview.c:2465 src/trayicon.c:160
 msgid "Compose _new message"
 msgstr "Σύνθεση _νέου μηνύματος"
 
-#: src/textview.c:2453
+#: src/textview.c:2467
 #, fuzzy
 msgid "R_eply to this address"
 msgstr "Αντιγραφή _διεύθυνσης"
 
-#: src/textview.c:2456
+#: src/textview.c:2470
 msgid "Add to address _book..."
 msgstr "Προσθήκη στο _ευρετήριο διευθύνσεων..."
 
-#: src/textview.c:2458
+#: src/textview.c:2472
 msgid "Copy this add_ress"
 msgstr "Αντιγραφή _διεύθυνσης"
 
-#: src/textview.c:2461
+#: src/textview.c:2475
 msgid "_Open with Web browser"
 msgstr "_Άνοιγμα με τον περιηγητή ιστοσελίδων"
 
-#: src/textview.c:2463
+#: src/textview.c:2477
 msgid "Copy this _link"
 msgstr "Αντιγραφή _συνδέσμου"
 
-#: src/textview.c:2669
+#: src/textview.c:2684
 #, c-format
 msgid ""
 "The real URL (%s) is different from\n"
@@ -8015,7 +8015,7 @@ msgstr ""
 "\n"
 "Θέλετε σίγουρα να την ανοίξετε;"
 
-#: src/textview.c:2674
+#: src/textview.c:2689
 msgid "Fake URL warning"
 msgstr "Προειδοποίηση για μη έγκυρο URL"
 
@@ -8084,16 +8084,16 @@ msgid "Couldn't get the version information of plug-ins."
 msgstr ""
 
 #: plugin/attachment_tool/attachment_tool.c:50
-#: plugin/attachment_tool/attachment_tool.c:271
+#: plugin/attachment_tool/attachment_tool.c:272
 #, fuzzy
 msgid "Remove attachments"
 msgstr "Έχει συνημμένο"
 
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "This tool is available on local folders only."
 msgstr ""
 
-#: plugin/attachment_tool/attachment_tool.c:272
+#: plugin/attachment_tool/attachment_tool.c:273
 msgid "Do you really remove attached files from the selected messages?"
 msgstr ""
 

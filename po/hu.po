@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed-3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-27 17:59+0900\n"
+"POT-Creation-Date: 2014-03-06 17:10+0900\n"
 "PO-Revision-Date: 2012-05-18 17:41+0100\n"
 "Last-Translator: Németh Tamás <ntomasz@uhuklub.hu>\n"
 "Language-Team: Hungarian <NONE>\n"
@@ -28,202 +28,202 @@ msgstr "Levélszemét szűrés (kézi)"
 msgid "Junk mail filter"
 msgstr "Levélszemét szűrés"
 
-#: libsylph/imap.c:549
+#: libsylph/imap.c:564
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "Az IMAP4 kapcsolat %s felé megszakadt. Újrakapcsolódás...\n"
 
-#: libsylph/imap.c:606 libsylph/imap.c:612
+#: libsylph/imap.c:621 libsylph/imap.c:627
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Az IMAP4 szerveren LOGIN kikapcsolva.\n"
 
-#: libsylph/imap.c:671
+#: libsylph/imap.c:686
 msgid "Could not establish IMAP connection.\n"
 msgstr "Nem lehet IMAP kapcsolatot létesíteni.\n"
 
-#: libsylph/imap.c:690
+#: libsylph/imap.c:705
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "%s:%d IMAP4 kapcsolat létrehozása ...\n"
 
-#: libsylph/imap.c:743
+#: libsylph/imap.c:758
 msgid "Can't start TLS session.\n"
 msgstr "Nem lehet TLS menetet indítani.\n"
 
-#: libsylph/imap.c:890
+#: libsylph/imap.c:905
 msgid "(retrieving FLAGS...)"
 msgstr "(FLAG-ek letöltése...)"
 
-#: libsylph/imap.c:1281
+#: libsylph/imap.c:1296
 #, c-format
 msgid "Getting message %u"
 msgstr "%u levél letöltése"
 
-#: libsylph/imap.c:1403
+#: libsylph/imap.c:1418
 #, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Levelek hozzáfűzése ide: %s (%d / %d)"
 
-#: libsylph/imap.c:1529
+#: libsylph/imap.c:1544
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "%s levél áthelyezése ide: %s ..."
 
-#: libsylph/imap.c:1534
+#: libsylph/imap.c:1549
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "%s levél másolása ide: %s ..."
 
-#: libsylph/imap.c:1676
+#: libsylph/imap.c:1691
 #, c-format
 msgid "Removing messages %s"
 msgstr "%s levél eltávolítása"
 
-#: libsylph/imap.c:1682
+#: libsylph/imap.c:1697
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "nem lehet beállítani a törölt jelzést: %s\n"
 
-#: libsylph/imap.c:1690 libsylph/imap.c:1796
+#: libsylph/imap.c:1705 libsylph/imap.c:1811
 msgid "can't expunge\n"
 msgstr "nem lehet törölni\n"
 
-#: libsylph/imap.c:1780
+#: libsylph/imap.c:1795
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Minden levél törlése ebből: %s?"
 
-#: libsylph/imap.c:1785 libsylph/imap.c:1790
+#: libsylph/imap.c:1800 libsylph/imap.c:1805
 msgid "can't set deleted flags: 1:*\n"
 msgstr "nem lehet beállítani a törölt jelzést: 1:*\n"
 
-#: libsylph/imap.c:1841
+#: libsylph/imap.c:1856
 msgid "can't close folder\n"
 msgstr "mappa bezárása nem sikerült\n"
 
-#: libsylph/imap.c:1920
+#: libsylph/imap.c:1935
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "%s gyökérmappa nem létezik\n"
 
-#: libsylph/imap.c:2120 libsylph/imap.c:2128
+#: libsylph/imap.c:2135 libsylph/imap.c:2143
 msgid "error occurred while getting LIST.\n"
 msgstr "hiba történt a LIST lekérdezése közben.\n"
 
-#: libsylph/imap.c:2360
+#: libsylph/imap.c:2375
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "'%s' nem hozható létre\n"
 
-#: libsylph/imap.c:2365
+#: libsylph/imap.c:2380
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "'%s' nem hozható létre a BEJÖVŐ mappában\n"
 
-#: libsylph/imap.c:2427
+#: libsylph/imap.c:2442
 msgid "can't create mailbox: LIST failed\n"
 msgstr "nem lehet létrehozni postaládát: LIST sikertelen\n"
 
-#: libsylph/imap.c:2450
+#: libsylph/imap.c:2465
 msgid "can't create mailbox\n"
 msgstr "nem lehet létrehozni postaládát\n"
 
-#: libsylph/imap.c:2579
+#: libsylph/imap.c:2594
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "nem lehet a postaládát átnevezni: %s -> %s\n"
 
-#: libsylph/imap.c:2668
+#: libsylph/imap.c:2683
 msgid "can't delete mailbox\n"
 msgstr "nem lehet törölni a postaládát\n"
 
-#: libsylph/imap.c:2698
+#: libsylph/imap.c:2713
 #, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Levélfejlécek letöltése (%d / %d)"
 
-#: libsylph/imap.c:2750
+#: libsylph/imap.c:2765
 msgid "error occurred while getting envelope.\n"
 msgstr "hiba történt a boríték fogadása közben.\n"
 
-#: libsylph/imap.c:2771
+#: libsylph/imap.c:2786
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "nem lehet értelmezni a borítékot: %s\n"
 
-#: libsylph/imap.c:2828
+#: libsylph/imap.c:2843
 msgid "can't get envelope\n"
 msgstr "a borítékot nem lehet megszerezni\n"
 
-#: libsylph/imap.c:2947 libsylph/imap.c:2953
+#: libsylph/imap.c:2963 libsylph/imap.c:2969
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "%s:%d IMAP4 szerverhez nem lehet kapcsolódni\n"
 
-#: libsylph/imap.c:2970
+#: libsylph/imap.c:2986
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "IMAP4 szerverhez nem sikerült kapcsolódni: %s:%d\n"
 
-#: libsylph/imap.c:3045
+#: libsylph/imap.c:3061
 msgid "can't get namespace\n"
 msgstr "névtér nem elérhető\n"
 
-#: libsylph/imap.c:3669
+#: libsylph/imap.c:3685
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "%s mappát nem lehet kiválasztani\n"
 
-#: libsylph/imap.c:3707
+#: libsylph/imap.c:3723
 msgid "error on imap command: STATUS\n"
 msgstr "hiba az IMAP parancs közben: STATUS\n"
 
-#: libsylph/imap.c:3831 libsylph/imap.c:3866
+#: libsylph/imap.c:3847 libsylph/imap.c:3882
 msgid "IMAP4 authentication failed.\n"
 msgstr "Az IMAP4 azonosítás nem sikerült.\n"
 
-#: libsylph/imap.c:3919
+#: libsylph/imap.c:3935
 msgid "IMAP4 login failed.\n"
 msgstr "IMAP4 bejelentkezés sikertelen.\n"
 
-#: libsylph/imap.c:4327 libsylph/imap.c:4334
+#: libsylph/imap.c:4343 libsylph/imap.c:4350
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "%s nem fűzhető hozzá ehhez: %s\n"
 
-#: libsylph/imap.c:4341
+#: libsylph/imap.c:4357
 msgid "(sending file...)"
 msgstr "(fájl küldése...)"
 
-#: libsylph/imap.c:4370
+#: libsylph/imap.c:4386
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "levél nem fűzhető hozzá ehhez: %s\n"
 
-#: libsylph/imap.c:4402
+#: libsylph/imap.c:4418
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "%s nem másolható ide: %s\n"
 
-#: libsylph/imap.c:4425
+#: libsylph/imap.c:4441
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "hiba az IMAP parancs közben: STORE %s %s\n"
 
-#: libsylph/imap.c:4441
+#: libsylph/imap.c:4457
 msgid "error while imap command: EXPUNGE\n"
 msgstr "hiba az IMAP parancs közben: EXPUNGE\n"
 
-#: libsylph/imap.c:4456
+#: libsylph/imap.c:4472
 msgid "error while imap command: CLOSE\n"
 msgstr "hiba az IMAP parancs közben: CLOSE\n"
 
-#: libsylph/imap.c:4777
+#: libsylph/imap.c:4793
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "az iconv nem tud UTF-7-ből konvertálni ebbe: %s\n"
 
-#: libsylph/imap.c:4809
+#: libsylph/imap.c:4825
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "az iconv nem tudja UTF-7-re konvertálni ezt: %s\n"
@@ -347,77 +347,77 @@ msgstr ""
 "\n"
 "\tG_FILENAME_ENCODING=@locale\n"
 
-#: libsylph/news.c:223
+#: libsylph/news.c:226
 #, c-format
 msgid "creating NNTP connection to %s:%d ...\n"
 msgstr "NNTP kapcsolat létesítése %s:%d ...\n"
 
-#: libsylph/news.c:301
+#: libsylph/news.c:304
 #, c-format
 msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
 msgstr "Az NNTP kapcsolat %s:%d megszakadt. Újrakapcsolódás...\n"
 
-#: libsylph/news.c:404
+#: libsylph/news.c:407
 #, c-format
 msgid "article %d has been already cached.\n"
 msgstr "%d cikk már a gyorstárban van.\n"
 
-#: libsylph/news.c:424
+#: libsylph/news.c:427
 #, c-format
 msgid "getting article %d...\n"
 msgstr "%d cikk fogadása...\n"
 
-#: libsylph/news.c:428
+#: libsylph/news.c:431
 #, c-format
 msgid "can't read article %d\n"
 msgstr "%d cikk nem olvasható\n"
 
-#: libsylph/news.c:703
+#: libsylph/news.c:706
 msgid "can't post article.\n"
 msgstr "A cikk nem küldhető el.\n"
 
-#: libsylph/news.c:729
+#: libsylph/news.c:732
 #, c-format
 msgid "can't retrieve article %d\n"
 msgstr "%d cikket nem lehet fogadni\n"
 
-#: libsylph/news.c:786
+#: libsylph/news.c:789
 #, c-format
 msgid "can't select group: %s\n"
 msgstr "%s csoport nem választható ki\n"
 
-#: libsylph/news.c:823
+#: libsylph/news.c:826
 #, c-format
 msgid "invalid article range: %d - %d\n"
 msgstr "érvénytelen cikk tartomány: %d - %d\n"
 
-#: libsylph/news.c:836
+#: libsylph/news.c:839
 msgid "no new articles.\n"
 msgstr "Nincsenek új cikkek.\n"
 
-#: libsylph/news.c:846
+#: libsylph/news.c:849
 #, c-format
 msgid "getting xover %d - %d in %s...\n"
 msgstr "%d - %d hírjegyzék fogadása ide: %s...\n"
 
-#: libsylph/news.c:850
+#: libsylph/news.c:853
 msgid "can't get xover\n"
 msgstr "A hírjegyzék nem elérhető\n"
 
-#: libsylph/news.c:860
+#: libsylph/news.c:863
 msgid "error occurred while getting xover.\n"
 msgstr "Hiba a hírjegyzék fogadása közben.\n"
 
-#: libsylph/news.c:870
+#: libsylph/news.c:873
 #, c-format
 msgid "invalid xover line: %s\n"
 msgstr "érvénytelen hírjegyzék sor: %s\n"
 
-#: libsylph/news.c:889 libsylph/news.c:921
+#: libsylph/news.c:892 libsylph/news.c:924
 msgid "can't get xhdr\n"
 msgstr "xhdr nem elérhető\n"
 
-#: libsylph/news.c:901 libsylph/news.c:933
+#: libsylph/news.c:904 libsylph/news.c:936
 msgid "error occurred while getting xhdr.\n"
 msgstr "Hiba történt xhdr letöltése közben.\n"
 
@@ -513,7 +513,7 @@ msgstr "Találat %s\n"
 msgid "Configuration is saved.\n"
 msgstr "Beállítások tárolva.\n"
 
-#: libsylph/procmime.c:1307
+#: libsylph/procmime.c:1308
 msgid "procmime_get_text_content(): Code conversion failed.\n"
 msgstr "procmime_get_text_content(): Kód konverziós hiba.\n"
 
@@ -567,34 +567,34 @@ msgstr "TLSv1 nem elérhető\n"
 msgid "TLSv1 available\n"
 msgstr "TLSv1 elérhető\n"
 
-#: libsylph/ssl.c:231 libsylph/ssl.c:238
+#: libsylph/ssl.c:232 libsylph/ssl.c:239
 msgid "SSL method not available\n"
 msgstr "SSL eljárás nem elérhető\n"
 
-#: libsylph/ssl.c:244
+#: libsylph/ssl.c:245
 msgid "Unknown SSL method *PROGRAM BUG*\n"
 msgstr "Ismeretlen SSL eljárás *PROGRAM HIBA*\n"
 
-#: libsylph/ssl.c:250
+#: libsylph/ssl.c:251
 msgid "Error creating ssl context\n"
 msgstr "Hiba az ssl környezet létrehozása közben\n"
 
 #. Get the cipher
-#: libsylph/ssl.c:269
+#: libsylph/ssl.c:270
 #, c-format
 msgid "SSL connection using %s\n"
 msgstr "SSL kapcsolat %s használatával\n"
 
-#: libsylph/ssl.c:285
+#: libsylph/ssl.c:286
 msgid "Server certificate:\n"
 msgstr "Szerver igazolvány:\n"
 
-#: libsylph/ssl.c:288
+#: libsylph/ssl.c:289
 #, c-format
 msgid "  Subject: %s\n"
 msgstr "  Tárgy: %s\n"
 
-#: libsylph/ssl.c:293
+#: libsylph/ssl.c:294
 #, c-format
 msgid "  Issuer: %s\n"
 msgstr "  Szerző: %s\n"
@@ -1260,7 +1260,7 @@ msgid "Warning"
 msgstr "Figyelmeztetés"
 
 #: src/alertpanel.c:168 src/inc.c:894
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "Error"
 msgstr "Hiba"
 
@@ -1303,7 +1303,7 @@ msgstr "Barna"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5326
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5328
 msgid "None"
 msgstr "Semmi"
 
@@ -1843,7 +1843,7 @@ msgstr "Dátum típusa"
 #. S_COL_DATE
 #: src/compose.c:5401 src/mimeview.c:217 src/prefs_filter_edit.c:512
 #: src/prefs_summary_column.c:72 src/rpop3.c:437 src/select-keys.c:309
-#: src/summaryview.c:5475
+#: src/summaryview.c:5477
 msgid "Size"
 msgstr "Méret"
 
@@ -2979,7 +2979,7 @@ msgstr "Kapcsolódás a(z) %s POP3 szerverhez ..."
 msgid "Can't connect to POP3 server: %s:%d\n"
 msgstr "Nem sikerült kapcsolódni a POP3 szerverhez: %s:%d\n"
 
-#: src/inc.c:1111 src/rpop3.c:862 src/send_message.c:846
+#: src/inc.c:1111 src/rpop3.c:867 src/send_message.c:846
 #, c-format
 msgid "Authenticating..."
 msgstr "Azonosítás..."
@@ -3019,8 +3019,8 @@ msgstr "Kilépés"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Levél letöltése (%d / %d) (%s / %s)"
 
-#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4811 src/summaryview.c:5001
-#: src/summaryview.c:5052
+#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4813 src/summaryview.c:5003
+#: src/summaryview.c:5054
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3263,20 +3263,20 @@ msgstr ""
 "A GnuPG nincs megfelelően telepítve, vagy túl régi a verziója.\n"
 "OpenPGP támogatás kikapcsolva."
 
-#: src/main.c:1245
+#: src/main.c:1269
 msgid "Loading plug-ins..."
 msgstr "Kiegészítések betöltése..."
 
 #. remote command mode
-#: src/main.c:1441
+#: src/main.c:1465
 msgid "another Sylpheed is already running.\n"
 msgstr "egy másik Sylpheed már fut.\n"
 
-#: src/main.c:1729
+#: src/main.c:1759
 msgid "Migration of configuration"
 msgstr "Beállítások migrálása"
 
-#: src/main.c:1730
+#: src/main.c:1760
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -3927,7 +3927,7 @@ msgid "MainWindow: color allocation %d failed\n"
 msgstr "Főablak: %d szín foglalása nem sikerült\n"
 
 #: src/mainwindow.c:1224 src/summaryview.c:2668 src/summaryview.c:2755
-#: src/summaryview.c:4375 src/summaryview.c:4504 src/summaryview.c:4893
+#: src/summaryview.c:4375 src/summaryview.c:4506 src/summaryview.c:4895
 msgid "done.\n"
 msgstr "kész.\n"
 
@@ -4268,7 +4268,7 @@ msgstr ""
 msgid "Select an action for the attached file:\n"
 msgstr "Válasszon egy műveletet a csatolt fájlnak:\n"
 
-#: src/mimeview.c:670 src/textview.c:842
+#: src/mimeview.c:670 src/textview.c:849
 msgid "Open _with..."
 msgstr "Megnyitás máss_al..."
 
@@ -4276,7 +4276,7 @@ msgstr "Megnyitás máss_al..."
 msgid "_Display as text"
 msgstr "Megjelenítés _szövegként"
 
-#: src/mimeview.c:678 src/textview.c:845
+#: src/mimeview.c:678 src/textview.c:852
 msgid "_Save as..."
 msgstr "Menté_s másként..."
 
@@ -6375,19 +6375,19 @@ msgstr "Kijelölt"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:434
-#: src/summaryview.c:5468
+#: src/summaryview.c:5470
 msgid "Subject"
 msgstr "Tárgy"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:435
-#: src/summaryview.c:5471
+#: src/summaryview.c:5473
 msgid "From"
 msgstr "Feladó"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:436
-#: src/summaryview.c:5473
+#: src/summaryview.c:5475
 msgid "Date"
 msgstr "Dátum"
 
@@ -6397,7 +6397,7 @@ msgid "Number"
 msgstr "Sorszám"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5479
+#: src/prefs_summary_column.c:74 src/summaryview.c:5481
 msgid "To"
 msgstr "Címzett"
 
@@ -6801,7 +6801,7 @@ msgstr "_Névjegy"
 msgid "%s - POP3 Remote mailbox"
 msgstr "%s - POP3 Távoli postaláda"
 
-#: src/rpop3.c:433 src/summaryview.c:5477
+#: src/rpop3.c:433 src/summaryview.c:5479
 msgid "No."
 msgstr "Ssz."
 
@@ -6833,55 +6833,55 @@ msgstr ""
 msgid "Retrieving message headers (%d / %d) ..."
 msgstr "Levélfejlécek letöltése (%d / %d) ..."
 
-#: src/rpop3.c:888
+#: src/rpop3.c:893
 msgid "Getting the number of messages..."
 msgstr "Új levelek számának megszerzése..."
 
-#: src/rpop3.c:897 src/rpop3.c:910
+#: src/rpop3.c:902 src/rpop3.c:915
 msgid "No message"
 msgstr "Nincs levél"
 
-#: src/rpop3.c:943
+#: src/rpop3.c:948
 #, c-format
 msgid "Deleted %d messages"
 msgstr "%d levél törölve"
 
-#: src/rpop3.c:986 src/rpop3.c:998 src/rpop3.c:1059 src/rpop3.c:1298
+#: src/rpop3.c:991 src/rpop3.c:1003 src/rpop3.c:1064 src/rpop3.c:1303
 #: src/send_message.c:863
 #, c-format
 msgid "Quitting..."
 msgstr "Kilépés..."
 
-#: src/rpop3.c:1044
+#: src/rpop3.c:1049
 #, c-format
 msgid "Retrieved %d messages"
 msgstr "%d levél fogadva"
 
-#: src/rpop3.c:1051
+#: src/rpop3.c:1056
 #, c-format
 msgid "Opened message %d"
 msgstr "%d levél megnyitva"
 
-#: src/rpop3.c:1068
+#: src/rpop3.c:1073
 #, c-format
 msgid "Retrieved %d (of %d) message headers"
 msgstr "%d / %d levélfejléc fogadva"
 
-#: src/rpop3.c:1072
+#: src/rpop3.c:1077
 #, c-format
 msgid "Retrieved %d message headers"
 msgstr "%d levélfejléc fogadva"
 
-#: src/rpop3.c:1193
+#: src/rpop3.c:1198
 #, c-format
 msgid "Retrieving message %d ..."
 msgstr "%d levél fogadása ..."
 
-#: src/rpop3.c:1219
+#: src/rpop3.c:1224
 msgid "Delete messages"
 msgstr "Levelek törlése"
 
-#: src/rpop3.c:1220
+#: src/rpop3.c:1225
 msgid ""
 "Really delete selected messages from server?\n"
 "This operation cannot be reverted."
@@ -7236,7 +7236,7 @@ msgstr "Nem található digitális aláírás"
 msgid "Good signature from \"%s\""
 msgstr "Jó digitális aláírás \"%s\"-tól/től"
 
-#: src/sigstatus.c:244 src/textview.c:1105
+#: src/sigstatus.c:244 src/textview.c:1116
 msgid "Good signature"
 msgstr "Jó digitális aláírás"
 
@@ -7245,7 +7245,7 @@ msgstr "Jó digitális aláírás"
 msgid "Valid signature but the key for \"%s\" is not trusted"
 msgstr "Érvényes aláírás, de a(z) \"%s\" kulcs nem megbízható"
 
-#: src/sigstatus.c:249 src/textview.c:1107
+#: src/sigstatus.c:249 src/textview.c:1118
 msgid "Valid signature (untrusted key)"
 msgstr "Érvényes aláírás (megbízhatatlan kulcs)"
 
@@ -7281,7 +7281,7 @@ msgstr "Érvényes aláírás, de az aláíró kulcs vissza lett vonva"
 msgid "BAD signature from \"%s\""
 msgstr "\"%s\" digitális aláírás ROSSZ"
 
-#: src/sigstatus.c:267 src/textview.c:1109
+#: src/sigstatus.c:267 src/textview.c:1120
 msgid "BAD signature"
 msgstr "ROSSZ digitális aláírás"
 
@@ -7740,50 +7740,50 @@ msgstr "Hiba a levelek feldolgozása közben."
 msgid "Building threads..."
 msgstr "Szálak felépítése..."
 
-#: src/summaryview.c:4433 src/summaryview.c:4434
+#: src/summaryview.c:4436 src/summaryview.c:4437
 msgid "Unthreading..."
 msgstr "Szál lebontása..."
 
-#: src/summaryview.c:4727 src/summaryview.c:4788
+#: src/summaryview.c:4729 src/summaryview.c:4790
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Szűrés (%d / %d)..."
 
-#: src/summaryview.c:4854
+#: src/summaryview.c:4856
 msgid "filtering..."
 msgstr "szűrés..."
 
-#: src/summaryview.c:4855
+#: src/summaryview.c:4857
 msgid "Filtering..."
 msgstr "Szűrés..."
 
-#: src/summaryview.c:4900
+#: src/summaryview.c:4902
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "%d levél szűrése megtörtént."
 
-#: src/template.c:171
+#: src/template.c:173
 #, c-format
 msgid "file %s already exists\n"
 msgstr "%s fájl már létezik\n"
 
-#: src/textview.c:263
+#: src/textview.c:266
 msgid "Creating text view...\n"
 msgstr "Szövegnézet létrehozása...\n"
 
-#: src/textview.c:525
+#: src/textview.c:530
 msgid "This message is encrypted, but its decryption failed.\n"
 msgstr "A levél titkosított, és nem sikerült visszafejteni.\n"
 
-#: src/textview.c:854
+#: src/textview.c:861
 msgid "_Copy file name"
 msgstr "Fájlnév _másolása"
 
-#: src/textview.c:1161
+#: src/textview.c:1172
 msgid "This message can't be displayed.\n"
 msgstr "Ez a levél nem jeleníthető meg.\n"
 
-#: src/textview.c:1185
+#: src/textview.c:1196
 msgid ""
 "The body text couldn't be displayed because writing to temporary file "
 "failed.\n"
@@ -7791,35 +7791,35 @@ msgstr ""
 "A szövegtest nem jeleníthető meg, mert az ideiglenes fájl írása nem "
 "sikerült.\n"
 
-#: src/textview.c:2431
+#: src/textview.c:2445
 msgid "Sa_ve this image as..."
 msgstr "A kép me_ntése mint..."
 
-#: src/textview.c:2451 src/trayicon.c:160
+#: src/textview.c:2465 src/trayicon.c:160
 msgid "Compose _new message"
 msgstr "Ú_j levél írása"
 
-#: src/textview.c:2453
+#: src/textview.c:2467
 msgid "R_eply to this address"
 msgstr "Vá_lasz erre a címre"
 
-#: src/textview.c:2456
+#: src/textview.c:2470
 msgid "Add to address _book..."
 msgstr "Hozzáadás a _címjegyzékhez..."
 
-#: src/textview.c:2458
+#: src/textview.c:2472
 msgid "Copy this add_ress"
 msgstr "A cí_m másolása"
 
-#: src/textview.c:2461
+#: src/textview.c:2475
 msgid "_Open with Web browser"
 msgstr "M_egnyitás webböngészővel"
 
-#: src/textview.c:2463
+#: src/textview.c:2477
 msgid "Copy this _link"
 msgstr "A _hivatkozás másolása"
 
-#: src/textview.c:2669
+#: src/textview.c:2684
 #, c-format
 msgid ""
 "The real URL (%s) is different from\n"
@@ -7831,7 +7831,7 @@ msgstr ""
 "látható URL-től (%s).\n"
 "Ennek ellenére megnyitja?"
 
-#: src/textview.c:2674
+#: src/textview.c:2689
 msgid "Fake URL warning"
 msgstr "Hamis URL figyelmeztetés"
 
@@ -7900,15 +7900,15 @@ msgid "Couldn't get the version information of plug-ins."
 msgstr "A beépülők verzió adatai nem szerezhetők meg."
 
 #: plugin/attachment_tool/attachment_tool.c:50
-#: plugin/attachment_tool/attachment_tool.c:271
+#: plugin/attachment_tool/attachment_tool.c:272
 msgid "Remove attachments"
 msgstr "Csatolmány eltávolítása"
 
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "This tool is available on local folders only."
 msgstr "Ez az eszköz csak a helyi mappákhoz elérhető."
 
-#: plugin/attachment_tool/attachment_tool.c:272
+#: plugin/attachment_tool/attachment_tool.c:273
 msgid "Do you really remove attached files from the selected messages?"
 msgstr "Tényleg eltávolítja a csatolt fájlokat a kiválasztott levelekből?"
 

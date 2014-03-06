@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sylpheed 3.3.0beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-27 17:59+0900\n"
+"POT-Creation-Date: 2014-03-06 17:10+0900\n"
 "PO-Revision-Date: 2012-10-03 11:14+0300\n"
 "Last-Translator: Oleh Nykyforchyn <oleh.nyk@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -33,202 +33,202 @@ msgstr "Фільтр мотлоху (вручну)"
 msgid "Junk mail filter"
 msgstr "фільтр мотлоху"
 
-#: libsylph/imap.c:549
+#: libsylph/imap.c:564
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "З'єднання IMAP4 до %s втрачено. Відновлюємо...\n"
 
-#: libsylph/imap.c:606 libsylph/imap.c:612
+#: libsylph/imap.c:621 libsylph/imap.c:627
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "Сервер IMAP4 відключив LOGIN.\n"
 
-#: libsylph/imap.c:671
+#: libsylph/imap.c:686
 msgid "Could not establish IMAP connection.\n"
 msgstr "Не вдалось встановити з'єднання IMAP.\n"
 
-#: libsylph/imap.c:690
+#: libsylph/imap.c:705
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "створення з'єднання IMAP4 до %s:%d ...\n"
 
-#: libsylph/imap.c:743
+#: libsylph/imap.c:758
 msgid "Can't start TLS session.\n"
 msgstr "Не вдалось почати сесію TLS.\n"
 
-#: libsylph/imap.c:890
+#: libsylph/imap.c:905
 msgid "(retrieving FLAGS...)"
 msgstr "(отримуємо FLAGS...)"
 
-#: libsylph/imap.c:1281
+#: libsylph/imap.c:1296
 #, c-format
 msgid "Getting message %u"
 msgstr "Отримуємо лист %u"
 
-#: libsylph/imap.c:1403
+#: libsylph/imap.c:1418
 #, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Приєднуємо листи до %s (%d / %d)"
 
-#: libsylph/imap.c:1529
+#: libsylph/imap.c:1544
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Переносимо листи %s в %s ..."
 
-#: libsylph/imap.c:1534
+#: libsylph/imap.c:1549
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Копіюємо листи %s в %s ..."
 
-#: libsylph/imap.c:1676
+#: libsylph/imap.c:1691
 #, c-format
 msgid "Removing messages %s"
 msgstr "Видаляємо листи від %s"
 
-#: libsylph/imap.c:1682
+#: libsylph/imap.c:1697
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "не вдалось встановити прапорець видалення: %s\n"
 
-#: libsylph/imap.c:1690 libsylph/imap.c:1796
+#: libsylph/imap.c:1705 libsylph/imap.c:1811
 msgid "can't expunge\n"
 msgstr "не вдалось очистити папку від видалених листів\n"
 
-#: libsylph/imap.c:1780
+#: libsylph/imap.c:1795
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Видаляємо всі листи у %s"
 
-#: libsylph/imap.c:1785 libsylph/imap.c:1790
+#: libsylph/imap.c:1800 libsylph/imap.c:1805
 msgid "can't set deleted flags: 1:*\n"
 msgstr "не вдалось встановити прапорець видалення: 1:*\n"
 
-#: libsylph/imap.c:1841
+#: libsylph/imap.c:1856
 msgid "can't close folder\n"
 msgstr "не вдалось закрити папку\n"
 
-#: libsylph/imap.c:1920
+#: libsylph/imap.c:1935
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "коренева папка %s не існує\n"
 
-#: libsylph/imap.c:2120 libsylph/imap.c:2128
+#: libsylph/imap.c:2135 libsylph/imap.c:2143
 msgid "error occurred while getting LIST.\n"
 msgstr "помилка при отриманні LIST'а.\n"
 
-#: libsylph/imap.c:2360
+#: libsylph/imap.c:2375
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Не вдалось створити '%s'\n"
 
-#: libsylph/imap.c:2365
+#: libsylph/imap.c:2380
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Не вдалось створити '%s' всередині INBOX\n"
 
-#: libsylph/imap.c:2427
+#: libsylph/imap.c:2442
 msgid "can't create mailbox: LIST failed\n"
 msgstr "не вдалось створити скриньку: невдача LIST\n"
 
-#: libsylph/imap.c:2450
+#: libsylph/imap.c:2465
 msgid "can't create mailbox\n"
 msgstr "не вдалось створити скриньку\n"
 
-#: libsylph/imap.c:2579
+#: libsylph/imap.c:2594
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "не вдалось перейменувати скриньку: %s на %s\n"
 
-#: libsylph/imap.c:2668
+#: libsylph/imap.c:2683
 msgid "can't delete mailbox\n"
 msgstr "не вдалось видалити скриньку\n"
 
-#: libsylph/imap.c:2698
+#: libsylph/imap.c:2713
 #, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Отримуємо заголовки листів (%d / %d)"
 
-#: libsylph/imap.c:2750
+#: libsylph/imap.c:2765
 msgid "error occurred while getting envelope.\n"
 msgstr "трапилась помилка при отриманні конверта.\n"
 
-#: libsylph/imap.c:2771
+#: libsylph/imap.c:2786
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "не вдалось розібрати конверт: %s\n"
 
-#: libsylph/imap.c:2828
+#: libsylph/imap.c:2843
 msgid "can't get envelope\n"
 msgstr "не вдалось отримати конверт\n"
 
-#: libsylph/imap.c:2947 libsylph/imap.c:2953
+#: libsylph/imap.c:2963 libsylph/imap.c:2969
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Не вдалось з'єднатись з сервером IMAP4: %s:%d\n"
 
-#: libsylph/imap.c:2970
+#: libsylph/imap.c:2986
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Не вдалось встановити сесію IMAP4 з: %s:%d\n"
 
-#: libsylph/imap.c:3045
+#: libsylph/imap.c:3061
 msgid "can't get namespace\n"
 msgstr "не вдалось отримати простір імен\n"
 
-#: libsylph/imap.c:3669
+#: libsylph/imap.c:3685
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "не вдалось отримати папку: %s\n"
 
-#: libsylph/imap.c:3707
+#: libsylph/imap.c:3723
 msgid "error on imap command: STATUS\n"
 msgstr "помилка при виконанні команди imap: STATUS\n"
 
-#: libsylph/imap.c:3831 libsylph/imap.c:3866
+#: libsylph/imap.c:3847 libsylph/imap.c:3882
 msgid "IMAP4 authentication failed.\n"
 msgstr "Невдача авторизації IMAP4.\n"
 
-#: libsylph/imap.c:3919
+#: libsylph/imap.c:3935
 msgid "IMAP4 login failed.\n"
 msgstr "Невдача авторизації IMAP4.\n"
 
-#: libsylph/imap.c:4327 libsylph/imap.c:4334
+#: libsylph/imap.c:4343 libsylph/imap.c:4350
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "не вдалось додати %s до %s\n"
 
-#: libsylph/imap.c:4341
+#: libsylph/imap.c:4357
 msgid "(sending file...)"
 msgstr "(посилаємо файл...)"
 
-#: libsylph/imap.c:4370
+#: libsylph/imap.c:4386
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "не вдалось приєднати лист до %s\n"
 
-#: libsylph/imap.c:4402
+#: libsylph/imap.c:4418
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "не вдалось скопіювати %s в %s\n"
 
-#: libsylph/imap.c:4425
+#: libsylph/imap.c:4441
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "помилка при виконанні команди imap:  STORE %s %s\n"
 
-#: libsylph/imap.c:4441
+#: libsylph/imap.c:4457
 msgid "error while imap command: EXPUNGE\n"
 msgstr "помилка при виконанні команди imap: EXPUNGE\n"
 
-#: libsylph/imap.c:4456
+#: libsylph/imap.c:4472
 msgid "error while imap command: CLOSE\n"
 msgstr "помилка при виконанні команди imap: CLOSE\n"
 
-#: libsylph/imap.c:4777
+#: libsylph/imap.c:4793
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv не може конвертувати UTF-7 в %s\n"
 
-#: libsylph/imap.c:4809
+#: libsylph/imap.c:4825
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv не може конвертувати %s в UTF-7\n"
@@ -354,77 +354,77 @@ msgstr ""
 "\n"
 "\tG_FILENAME_ENCODING=@locale\n"
 
-#: libsylph/news.c:223
+#: libsylph/news.c:226
 #, c-format
 msgid "creating NNTP connection to %s:%d ...\n"
 msgstr "створюємо з'єднання NNTP до %s:%d ...\n"
 
-#: libsylph/news.c:301
+#: libsylph/news.c:304
 #, c-format
 msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
 msgstr "З'єднання NNTP до %s:%d було розірвано. Відновлюємо...\n"
 
-#: libsylph/news.c:404
+#: libsylph/news.c:407
 #, c-format
 msgid "article %d has been already cached.\n"
 msgstr "статтю %d вже кешовано.\n"
 
-#: libsylph/news.c:424
+#: libsylph/news.c:427
 #, c-format
 msgid "getting article %d...\n"
 msgstr "отримуємо статтю %d...\n"
 
-#: libsylph/news.c:428
+#: libsylph/news.c:431
 #, c-format
 msgid "can't read article %d\n"
 msgstr "не вдалось прочитати статтю %d\n"
 
-#: libsylph/news.c:703
+#: libsylph/news.c:706
 msgid "can't post article.\n"
 msgstr "не вдалось послати статтю.\n"
 
-#: libsylph/news.c:729
+#: libsylph/news.c:732
 #, c-format
 msgid "can't retrieve article %d\n"
 msgstr "не вдалось отримати статтю %d\n"
 
-#: libsylph/news.c:786
+#: libsylph/news.c:789
 #, c-format
 msgid "can't select group: %s\n"
 msgstr "не вдалось обрати конференцію: %s\n"
 
-#: libsylph/news.c:823
+#: libsylph/news.c:826
 #, c-format
 msgid "invalid article range: %d - %d\n"
 msgstr "хибний діапазон статей: %d - %d\n"
 
-#: libsylph/news.c:836
+#: libsylph/news.c:839
 msgid "no new articles.\n"
 msgstr "нових статтей нема.\n"
 
-#: libsylph/news.c:846
+#: libsylph/news.c:849
 #, c-format
 msgid "getting xover %d - %d in %s...\n"
 msgstr "отримуємо xover %d - %d в %s...\n"
 
-#: libsylph/news.c:850
+#: libsylph/news.c:853
 msgid "can't get xover\n"
 msgstr "не вдалось отримати xover\n"
 
-#: libsylph/news.c:860
+#: libsylph/news.c:863
 msgid "error occurred while getting xover.\n"
 msgstr "трапилась помилка при отриманні xover.\n"
 
-#: libsylph/news.c:870
+#: libsylph/news.c:873
 #, c-format
 msgid "invalid xover line: %s\n"
 msgstr "хибний рядок xover: %s\n"
 
-#: libsylph/news.c:889 libsylph/news.c:921
+#: libsylph/news.c:892 libsylph/news.c:924
 msgid "can't get xhdr\n"
 msgstr "не вдалось отримати xhdr\n"
 
-#: libsylph/news.c:901 libsylph/news.c:933
+#: libsylph/news.c:904 libsylph/news.c:936
 msgid "error occurred while getting xhdr.\n"
 msgstr "трапилась помилка при отриманні xhdr.\n"
 
@@ -520,7 +520,7 @@ msgstr "Знайдено %s\n"
 msgid "Configuration is saved.\n"
 msgstr "Конфігурацію збережено.\n"
 
-#: libsylph/procmime.c:1307
+#: libsylph/procmime.c:1308
 msgid "procmime_get_text_content(): Code conversion failed.\n"
 msgstr "procmime_get_text_content(): Перетворення кодів не вдалось.\n"
 
@@ -574,34 +574,34 @@ msgstr "TLSv1 недоступний\n"
 msgid "TLSv1 available\n"
 msgstr "TLSv1 доступний\n"
 
-#: libsylph/ssl.c:231 libsylph/ssl.c:238
+#: libsylph/ssl.c:232 libsylph/ssl.c:239
 msgid "SSL method not available\n"
 msgstr "Метод SSL недоступний\n"
 
-#: libsylph/ssl.c:244
+#: libsylph/ssl.c:245
 msgid "Unknown SSL method *PROGRAM BUG*\n"
 msgstr "Невідомий метод SSL *ПОМИЛКА В ПРОГРАМІ*\n"
 
-#: libsylph/ssl.c:250
+#: libsylph/ssl.c:251
 msgid "Error creating ssl context\n"
 msgstr "Помилка у створенні контексту ssl\n"
 
 #. Get the cipher
-#: libsylph/ssl.c:269
+#: libsylph/ssl.c:270
 #, c-format
 msgid "SSL connection using %s\n"
 msgstr "З'єднання SSL з вживанням %s\n"
 
-#: libsylph/ssl.c:285
+#: libsylph/ssl.c:286
 msgid "Server certificate:\n"
 msgstr "Сертифікат сервера:\n"
 
-#: libsylph/ssl.c:288
+#: libsylph/ssl.c:289
 #, c-format
 msgid "  Subject: %s\n"
 msgstr "  Суб'єкт:  %s\n"
 
-#: libsylph/ssl.c:293
+#: libsylph/ssl.c:294
 #, c-format
 msgid "  Issuer: %s\n"
 msgstr "  Видав: %s\n"
@@ -1260,7 +1260,7 @@ msgid "Warning"
 msgstr "Попередження"
 
 #: src/alertpanel.c:168 src/inc.c:894
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "Error"
 msgstr "Помилка"
 
@@ -1303,7 +1303,7 @@ msgstr "Коричневий"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5326
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5328
 msgid "None"
 msgstr "Ніякий"
 
@@ -1841,7 +1841,7 @@ msgstr "Тип даних"
 #. S_COL_DATE
 #: src/compose.c:5401 src/mimeview.c:217 src/prefs_filter_edit.c:512
 #: src/prefs_summary_column.c:72 src/rpop3.c:437 src/select-keys.c:309
-#: src/summaryview.c:5475
+#: src/summaryview.c:5477
 msgid "Size"
 msgstr "Розмір"
 
@@ -2974,7 +2974,7 @@ msgstr "З'єднуємось з сервером POP3: %s ..."
 msgid "Can't connect to POP3 server: %s:%d\n"
 msgstr "Не вдалось з'єднатись з сервером POP3: %s:%d\n"
 
-#: src/inc.c:1111 src/rpop3.c:862 src/send_message.c:846
+#: src/inc.c:1111 src/rpop3.c:867 src/send_message.c:846
 #, c-format
 msgid "Authenticating..."
 msgstr "Автентифікація..."
@@ -3014,8 +3014,8 @@ msgstr "Виходимо"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Отримуємо лист (%d / %d) (%s / %s)"
 
-#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4811 src/summaryview.c:5001
-#: src/summaryview.c:5052
+#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4813 src/summaryview.c:5003
+#: src/summaryview.c:5054
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3254,20 +3254,20 @@ msgstr ""
 "GnuPG не встановлено належно, або надто стара версія.\n"
 "Відключено підтримку OpenPGP."
 
-#: src/main.c:1245
+#: src/main.c:1269
 msgid "Loading plug-ins..."
 msgstr "Завантажуємо плагіни..."
 
 #. remote command mode
-#: src/main.c:1441
+#: src/main.c:1465
 msgid "another Sylpheed is already running.\n"
 msgstr "вже запущено інший Sylpheed.\n"
 
-#: src/main.c:1729
+#: src/main.c:1759
 msgid "Migration of configuration"
 msgstr "Перенесення налаштувань"
 
-#: src/main.c:1730
+#: src/main.c:1760
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -3918,7 +3918,7 @@ msgid "MainWindow: color allocation %d failed\n"
 msgstr "Головне Вікно: невдача розміщення кольору %d\n"
 
 #: src/mainwindow.c:1224 src/summaryview.c:2668 src/summaryview.c:2755
-#: src/summaryview.c:4375 src/summaryview.c:4504 src/summaryview.c:4893
+#: src/summaryview.c:4375 src/summaryview.c:4506 src/summaryview.c:4895
 msgid "done.\n"
 msgstr "виконано.\n"
 
@@ -4257,7 +4257,7 @@ msgstr "Оберіть \"Перевірити підпис\", щоб зроби�
 msgid "Select an action for the attached file:\n"
 msgstr "Оберіть дію для приєднаного файла:\n"
 
-#: src/mimeview.c:670 src/textview.c:842
+#: src/mimeview.c:670 src/textview.c:849
 msgid "Open _with..."
 msgstr "Відкрити з"
 
@@ -4265,7 +4265,7 @@ msgstr "Відкрити з"
 msgid "_Display as text"
 msgstr "Показати як текст"
 
-#: src/mimeview.c:678 src/textview.c:845
+#: src/mimeview.c:678 src/textview.c:852
 msgid "_Save as..."
 msgstr "Зберегти як..."
 
@@ -6359,19 +6359,19 @@ msgstr "Позначка"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:434
-#: src/summaryview.c:5468
+#: src/summaryview.c:5470
 msgid "Subject"
 msgstr "Тема"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:435
-#: src/summaryview.c:5471
+#: src/summaryview.c:5473
 msgid "From"
 msgstr "Від"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:436
-#: src/summaryview.c:5473
+#: src/summaryview.c:5475
 msgid "Date"
 msgstr "Дата"
 
@@ -6381,7 +6381,7 @@ msgid "Number"
 msgstr "Номер"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5479
+#: src/prefs_summary_column.c:74 src/summaryview.c:5481
 msgid "To"
 msgstr "Кому:"
 
@@ -6784,7 +6784,7 @@ msgstr "Про програму"
 msgid "%s - POP3 Remote mailbox"
 msgstr "%s - віддалена POP3-скринька"
 
-#: src/rpop3.c:433 src/summaryview.c:5477
+#: src/rpop3.c:433 src/summaryview.c:5479
 msgid "No."
 msgstr "Номер"
 
@@ -6816,55 +6816,55 @@ msgstr ""
 msgid "Retrieving message headers (%d / %d) ..."
 msgstr "Отримуємо заголовки листів (%d / %d) ..."
 
-#: src/rpop3.c:888
+#: src/rpop3.c:893
 msgid "Getting the number of messages..."
 msgstr "Отримуємо кількість листів..."
 
-#: src/rpop3.c:897 src/rpop3.c:910
+#: src/rpop3.c:902 src/rpop3.c:915
 msgid "No message"
 msgstr "Немає листа"
 
-#: src/rpop3.c:943
+#: src/rpop3.c:948
 #, c-format
 msgid "Deleted %d messages"
 msgstr "Видалено %d листів"
 
-#: src/rpop3.c:986 src/rpop3.c:998 src/rpop3.c:1059 src/rpop3.c:1298
+#: src/rpop3.c:991 src/rpop3.c:1003 src/rpop3.c:1064 src/rpop3.c:1303
 #: src/send_message.c:863
 #, c-format
 msgid "Quitting..."
 msgstr "Виходимо..."
 
-#: src/rpop3.c:1044
+#: src/rpop3.c:1049
 #, c-format
 msgid "Retrieved %d messages"
 msgstr "Отримано %d листів"
 
-#: src/rpop3.c:1051
+#: src/rpop3.c:1056
 #, c-format
 msgid "Opened message %d"
 msgstr "Відкрито лист %d"
 
-#: src/rpop3.c:1068
+#: src/rpop3.c:1073
 #, c-format
 msgid "Retrieved %d (of %d) message headers"
 msgstr "Отримано %d (з %d) заголовків листів"
 
-#: src/rpop3.c:1072
+#: src/rpop3.c:1077
 #, c-format
 msgid "Retrieved %d message headers"
 msgstr "Отримано %d заголовків листів"
 
-#: src/rpop3.c:1193
+#: src/rpop3.c:1198
 #, c-format
 msgid "Retrieving message %d ..."
 msgstr "Отримуємо лист %d..."
 
-#: src/rpop3.c:1219
+#: src/rpop3.c:1224
 msgid "Delete messages"
 msgstr "Видалити листи"
 
-#: src/rpop3.c:1220
+#: src/rpop3.c:1225
 msgid ""
 "Really delete selected messages from server?\n"
 "This operation cannot be reverted."
@@ -7220,7 +7220,7 @@ msgstr "Підпису не знайдено"
 msgid "Good signature from \"%s\""
 msgstr "Гарний підпис від \"%s\""
 
-#: src/sigstatus.c:244 src/textview.c:1105
+#: src/sigstatus.c:244 src/textview.c:1116
 msgid "Good signature"
 msgstr "Гарний підпис"
 
@@ -7229,7 +7229,7 @@ msgstr "Гарний підпис"
 msgid "Valid signature but the key for \"%s\" is not trusted"
 msgstr "Належний підпис, але ключ для  \"%s\"  не перевірений"
 
-#: src/sigstatus.c:249 src/textview.c:1107
+#: src/sigstatus.c:249 src/textview.c:1118
 msgid "Valid signature (untrusted key)"
 msgstr "Належний підпис (неперевірений ключ)"
 
@@ -7265,7 +7265,7 @@ msgstr "Належний підпис, але ключ відкликано"
 msgid "BAD signature from \"%s\""
 msgstr "ПОГАНИЙ підпис від \"%s\""
 
-#: src/sigstatus.c:267 src/textview.c:1109
+#: src/sigstatus.c:267 src/textview.c:1120
 msgid "BAD signature"
 msgstr "ПОГАНИЙ підпис"
 
@@ -7724,85 +7724,85 @@ msgstr "При обробці пошти трапилась помилка."
 msgid "Building threads..."
 msgstr "Будуємо нитки обговорення..."
 
-#: src/summaryview.c:4433 src/summaryview.c:4434
+#: src/summaryview.c:4436 src/summaryview.c:4437
 msgid "Unthreading..."
 msgstr "Скасування ниток обговорення..."
 
-#: src/summaryview.c:4727 src/summaryview.c:4788
+#: src/summaryview.c:4729 src/summaryview.c:4790
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Фільтрування (%d / %d)..."
 
-#: src/summaryview.c:4854
+#: src/summaryview.c:4856
 msgid "filtering..."
 msgstr "фільтрування..."
 
-#: src/summaryview.c:4855
+#: src/summaryview.c:4857
 msgid "Filtering..."
 msgstr "Фільтрування..."
 
-#: src/summaryview.c:4900
+#: src/summaryview.c:4902
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "%d листів відфільтровано."
 
-#: src/template.c:171
+#: src/template.c:173
 #, c-format
 msgid "file %s already exists\n"
 msgstr "файл %s вже існує\n"
 
-#: src/textview.c:263
+#: src/textview.c:266
 msgid "Creating text view...\n"
 msgstr "Створюємо область перегляду тексту...\n"
 
-#: src/textview.c:525
+#: src/textview.c:530
 msgid "This message is encrypted, but its decryption failed.\n"
 msgstr "Цей лист зашифровано і не вдалось розшифрувати.\n"
 
-#: src/textview.c:854
+#: src/textview.c:861
 msgid "_Copy file name"
 msgstr "Копіювати ім'я файлу"
 
-#: src/textview.c:1161
+#: src/textview.c:1172
 msgid "This message can't be displayed.\n"
 msgstr "Цей лист неможливо відобразити.\n"
 
-#: src/textview.c:1185
+#: src/textview.c:1196
 msgid ""
 "The body text couldn't be displayed because writing to temporary file "
 "failed.\n"
 msgstr ""
 "Неможливо показати тіло листа через невдачу запису у тимчасовий файл.\n"
 
-#: src/textview.c:2431
+#: src/textview.c:2445
 msgid "Sa_ve this image as..."
 msgstr "Зберегти зображення як..."
 
-#: src/textview.c:2451 src/trayicon.c:160
+#: src/textview.c:2465 src/trayicon.c:160
 msgid "Compose _new message"
 msgstr "Створити новий лист"
 
-#: src/textview.c:2453
+#: src/textview.c:2467
 msgid "R_eply to this address"
 msgstr "Відповідати на цю адресу"
 
-#: src/textview.c:2456
+#: src/textview.c:2470
 msgid "Add to address _book..."
 msgstr "Додати до адресної книги"
 
-#: src/textview.c:2458
+#: src/textview.c:2472
 msgid "Copy this add_ress"
 msgstr "Копіювати цю адресу"
 
-#: src/textview.c:2461
+#: src/textview.c:2475
 msgid "_Open with Web browser"
 msgstr "Відкрити Web-браузером"
 
-#: src/textview.c:2463
+#: src/textview.c:2477
 msgid "Copy this _link"
 msgstr "Скопіювати посилання"
 
-#: src/textview.c:2669
+#: src/textview.c:2684
 #, c-format
 msgid ""
 "The real URL (%s) is different from\n"
@@ -7815,7 +7815,7 @@ msgstr ""
 "\n"
 "Все ж відкрити?"
 
-#: src/textview.c:2674
+#: src/textview.c:2689
 msgid "Fake URL warning"
 msgstr "Попередження: підміна URL"
 
@@ -7884,15 +7884,15 @@ msgid "Couldn't get the version information of plug-ins."
 msgstr "Не вдалось отримати інформацію про версію плагінів."
 
 #: plugin/attachment_tool/attachment_tool.c:50
-#: plugin/attachment_tool/attachment_tool.c:271
+#: plugin/attachment_tool/attachment_tool.c:272
 msgid "Remove attachments"
 msgstr "Видалити приєднання"
 
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "This tool is available on local folders only."
 msgstr "Цей інструмент доступний тільки у локальних папках."
 
-#: plugin/attachment_tool/attachment_tool.c:272
+#: plugin/attachment_tool/attachment_tool.c:273
 msgid "Do you really remove attached files from the selected messages?"
 msgstr "Дійсно хочете видалити приєднані файли з обраних листів?"
 

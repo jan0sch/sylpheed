@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sylpheed 3.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-27 17:59+0900\n"
+"POT-Creation-Date: 2014-03-06 17:10+0900\n"
 "PO-Revision-Date: 2011-08-17 10:15+0100\n"
 "Last-Translator: Volker Ribbert <volker.nospam@netcologne.de>\n"
 "Language-Team: de\n"
@@ -29,202 +29,202 @@ msgstr "Spam-Filter (manuell)"
 msgid "Junk mail filter"
 msgstr "Spam-Filter"
 
-#: libsylph/imap.c:549
+#: libsylph/imap.c:564
 #, c-format
 msgid "IMAP4 connection to %s has been disconnected. Reconnecting...\n"
 msgstr "IMAP4-Verbindung zu %s wurde getrennt. Verbinde erneut...\n"
 
-#: libsylph/imap.c:606 libsylph/imap.c:612
+#: libsylph/imap.c:621 libsylph/imap.c:627
 msgid "IMAP4 server disables LOGIN.\n"
 msgstr "IMAP4-Server verhindert LOGIN.\n"
 
-#: libsylph/imap.c:671
+#: libsylph/imap.c:686
 msgid "Could not establish IMAP connection.\n"
 msgstr "Konnte keine IMAP-Verbindung herstellen.\n"
 
-#: libsylph/imap.c:690
+#: libsylph/imap.c:705
 #, c-format
 msgid "creating IMAP4 connection to %s:%d ...\n"
 msgstr "erstelle IMAP4-Verbindung zu %s:%d ...\n"
 
-#: libsylph/imap.c:743
+#: libsylph/imap.c:758
 msgid "Can't start TLS session.\n"
 msgstr "Kann TLS-Sitzung nicht beginnen.\n"
 
-#: libsylph/imap.c:890
+#: libsylph/imap.c:905
 msgid "(retrieving FLAGS...)"
 msgstr "(FLAGS werden geladen...)"
 
-#: libsylph/imap.c:1281
+#: libsylph/imap.c:1296
 #, c-format
 msgid "Getting message %u"
 msgstr "Nachricht %u wird geladen"
 
-#: libsylph/imap.c:1403
+#: libsylph/imap.c:1418
 #, c-format
 msgid "Appending messages to %s (%d / %d)"
 msgstr "Hänge Nachricht an %s (%d / %d)"
 
-#: libsylph/imap.c:1529
+#: libsylph/imap.c:1544
 #, c-format
 msgid "Moving messages %s to %s ..."
 msgstr "Verschiebe Nachrichten %s nach %s ..."
 
-#: libsylph/imap.c:1534
+#: libsylph/imap.c:1549
 #, c-format
 msgid "Copying messages %s to %s ..."
 msgstr "Kopiere Nachrichten %s nach %s ..."
 
-#: libsylph/imap.c:1676
+#: libsylph/imap.c:1691
 #, c-format
 msgid "Removing messages %s"
 msgstr "Entferne Nachrichten von %s..."
 
-#: libsylph/imap.c:1682
+#: libsylph/imap.c:1697
 #, c-format
 msgid "can't set deleted flags: %s\n"
 msgstr "kann gelöschte Flags nicht setzen: %s\n"
 
-#: libsylph/imap.c:1690 libsylph/imap.c:1796
+#: libsylph/imap.c:1705 libsylph/imap.c:1811
 msgid "can't expunge\n"
 msgstr "löschen nicht möglich\n"
 
-#: libsylph/imap.c:1780
+#: libsylph/imap.c:1795
 #, c-format
 msgid "Removing all messages in %s"
 msgstr "Entferne alle Nachrichten in %s..."
 
-#: libsylph/imap.c:1785 libsylph/imap.c:1790
+#: libsylph/imap.c:1800 libsylph/imap.c:1805
 msgid "can't set deleted flags: 1:*\n"
 msgstr "kann gelöschte Flags nicht setzen: 1:*\n"
 
-#: libsylph/imap.c:1841
+#: libsylph/imap.c:1856
 msgid "can't close folder\n"
 msgstr "kann Ordner nicht schließen\n"
 
-#: libsylph/imap.c:1920
+#: libsylph/imap.c:1935
 #, c-format
 msgid "root folder %s not exist\n"
 msgstr "Wurzelverzeichnis %s existiert nicht\n"
 
-#: libsylph/imap.c:2120 libsylph/imap.c:2128
+#: libsylph/imap.c:2135 libsylph/imap.c:2143
 msgid "error occurred while getting LIST.\n"
 msgstr "Fehler beim Empfang von LIST.\n"
 
-#: libsylph/imap.c:2360
+#: libsylph/imap.c:2375
 #, c-format
 msgid "Can't create '%s'\n"
 msgstr "Kann '%s' nicht erstellen\n"
 
-#: libsylph/imap.c:2365
+#: libsylph/imap.c:2380
 #, c-format
 msgid "Can't create '%s' under INBOX\n"
 msgstr "Kann '%s' in INBOX nicht erstellen\n"
 
-#: libsylph/imap.c:2427
+#: libsylph/imap.c:2442
 msgid "can't create mailbox: LIST failed\n"
 msgstr "kann Mailbox nicht erstellen: LIST fehlgeschlagen\n"
 
-#: libsylph/imap.c:2450
+#: libsylph/imap.c:2465
 msgid "can't create mailbox\n"
 msgstr "kann Mailbox nicht erstellen\n"
 
-#: libsylph/imap.c:2579
+#: libsylph/imap.c:2594
 #, c-format
 msgid "can't rename mailbox: %s to %s\n"
 msgstr "kann Mailbox nicht umbenennen: %s in %s\n"
 
-#: libsylph/imap.c:2668
+#: libsylph/imap.c:2683
 msgid "can't delete mailbox\n"
 msgstr "kann Mailbox nicht löschen\n"
 
-#: libsylph/imap.c:2698
+#: libsylph/imap.c:2713
 #, c-format
 msgid "Getting message headers (%d / %d)"
 msgstr "Lade Nachrichtenkopfzeilen (%d / %d bytes)"
 
-#: libsylph/imap.c:2750
+#: libsylph/imap.c:2765
 msgid "error occurred while getting envelope.\n"
 msgstr "Fehler beim Empfang der Nachrichtenhülle.\n"
 
-#: libsylph/imap.c:2771
+#: libsylph/imap.c:2786
 #, c-format
 msgid "can't parse envelope: %s\n"
 msgstr "kann Nachrichtenhülle nicht analysieren: %s\n"
 
-#: libsylph/imap.c:2828
+#: libsylph/imap.c:2843
 msgid "can't get envelope\n"
 msgstr "kann Nachrichtenhülle nicht laden\n"
 
-#: libsylph/imap.c:2947 libsylph/imap.c:2953
+#: libsylph/imap.c:2963 libsylph/imap.c:2969
 #, c-format
 msgid "Can't connect to IMAP4 server: %s:%d\n"
 msgstr "Keine Verbindung mit IMAP4-Server: %s:%d\n"
 
-#: libsylph/imap.c:2970
+#: libsylph/imap.c:2986
 #, c-format
 msgid "Can't establish IMAP4 session with: %s:%d\n"
 msgstr "Kann IMAP4-Sitzung mit %s:%d nicht aufbauen\n"
 
-#: libsylph/imap.c:3045
+#: libsylph/imap.c:3061
 msgid "can't get namespace\n"
 msgstr "kann Namensraum nicht bekommen\n"
 
-#: libsylph/imap.c:3669
+#: libsylph/imap.c:3685
 #, c-format
 msgid "can't select folder: %s\n"
 msgstr "kann Ordner %s nicht auswählen\n"
 
-#: libsylph/imap.c:3707
+#: libsylph/imap.c:3723
 msgid "error on imap command: STATUS\n"
 msgstr "Fehler beim IMAP-Befehl: STATUS\n"
 
-#: libsylph/imap.c:3831 libsylph/imap.c:3866
+#: libsylph/imap.c:3847 libsylph/imap.c:3882
 msgid "IMAP4 authentication failed.\n"
 msgstr "Fehler bei IMAP4-Authentisierung.\n"
 
-#: libsylph/imap.c:3919
+#: libsylph/imap.c:3935
 msgid "IMAP4 login failed.\n"
 msgstr "Fehler beim IMAP4-Login.\n"
 
-#: libsylph/imap.c:4327 libsylph/imap.c:4334
+#: libsylph/imap.c:4343 libsylph/imap.c:4350
 #, c-format
 msgid "can't append %s to %s\n"
 msgstr "kann %s nicht an %s anhängen\n"
 
-#: libsylph/imap.c:4341
+#: libsylph/imap.c:4357
 msgid "(sending file...)"
 msgstr "(versende Datei...)"
 
-#: libsylph/imap.c:4370
+#: libsylph/imap.c:4386
 #, c-format
 msgid "can't append message to %s\n"
 msgstr "kann Nachricht nicht anhängen an %s\n"
 
-#: libsylph/imap.c:4402
+#: libsylph/imap.c:4418
 #, c-format
 msgid "can't copy %s to %s\n"
 msgstr "kann %s nicht nach %s kopieren\n"
 
-#: libsylph/imap.c:4425
+#: libsylph/imap.c:4441
 #, c-format
 msgid "error while imap command: STORE %s %s\n"
 msgstr "Fehler beim IMAP-Befehl: STORE %s %s\n"
 
-#: libsylph/imap.c:4441
+#: libsylph/imap.c:4457
 msgid "error while imap command: EXPUNGE\n"
 msgstr "Fehler beim IMAP-Befehl: EXPUNGE\n"
 
-#: libsylph/imap.c:4456
+#: libsylph/imap.c:4472
 msgid "error while imap command: CLOSE\n"
 msgstr "Fehler beim IMAP-Befehl: CLOSE\n"
 
-#: libsylph/imap.c:4777
+#: libsylph/imap.c:4793
 #, c-format
 msgid "iconv cannot convert UTF-7 to %s\n"
 msgstr "iconv kann UTF-7 nicht nach %s konvertieren\n"
 
-#: libsylph/imap.c:4809
+#: libsylph/imap.c:4825
 #, c-format
 msgid "iconv cannot convert %s to UTF-7\n"
 msgstr "iconv kann %s nicht nach UTF-7  konvertieren\n"
@@ -348,77 +348,77 @@ msgstr ""
 "\n"
 "\tG_FILENAME_ENCODING=@locale\n"
 
-#: libsylph/news.c:223
+#: libsylph/news.c:226
 #, c-format
 msgid "creating NNTP connection to %s:%d ...\n"
 msgstr "erstelle NNTP-Verbindung zu %s:%d ...\n"
 
-#: libsylph/news.c:301
+#: libsylph/news.c:304
 #, c-format
 msgid "NNTP connection to %s:%d has been disconnected. Reconnecting...\n"
 msgstr "NNTP-Verbindung mit %s:%d wurde getrennt. Verbinde neu...\n"
 
-#: libsylph/news.c:404
+#: libsylph/news.c:407
 #, c-format
 msgid "article %d has been already cached.\n"
 msgstr "Artikel %d ist schon zwischengespeichert.\n"
 
-#: libsylph/news.c:424
+#: libsylph/news.c:427
 #, c-format
 msgid "getting article %d...\n"
 msgstr "empfange Artikel %d...\n"
 
-#: libsylph/news.c:428
+#: libsylph/news.c:431
 #, c-format
 msgid "can't read article %d\n"
 msgstr "kann Artikel %d nicht lesen\n"
 
-#: libsylph/news.c:703
+#: libsylph/news.c:706
 msgid "can't post article.\n"
 msgstr "kann Artikel nicht senden.\n"
 
-#: libsylph/news.c:729
+#: libsylph/news.c:732
 #, c-format
 msgid "can't retrieve article %d\n"
 msgstr "kann Artikel %d nicht empfangen\n"
 
-#: libsylph/news.c:786
+#: libsylph/news.c:789
 #, c-format
 msgid "can't select group: %s\n"
 msgstr "kann die Gruppe: %s nicht wählen\n"
 
-#: libsylph/news.c:823
+#: libsylph/news.c:826
 #, c-format
 msgid "invalid article range: %d - %d\n"
 msgstr "ungültiger Artikelbereich: %d - %d\n"
 
-#: libsylph/news.c:836
+#: libsylph/news.c:839
 msgid "no new articles.\n"
 msgstr "keine neuen Artikel.\n"
 
-#: libsylph/news.c:846
+#: libsylph/news.c:849
 #, c-format
 msgid "getting xover %d - %d in %s...\n"
 msgstr "bekomme Artikelauszug %d - %d in %s...\n"
 
-#: libsylph/news.c:850
+#: libsylph/news.c:853
 msgid "can't get xover\n"
 msgstr "kann Artikelauszug nicht bekommen\n"
 
-#: libsylph/news.c:860
+#: libsylph/news.c:863
 msgid "error occurred while getting xover.\n"
 msgstr "Fehler beim Empfang des Artikelauszugs.\n"
 
-#: libsylph/news.c:870
+#: libsylph/news.c:873
 #, c-format
 msgid "invalid xover line: %s\n"
 msgstr "ungültiger Artikelauszug: %s\n"
 
-#: libsylph/news.c:889 libsylph/news.c:921
+#: libsylph/news.c:892 libsylph/news.c:924
 msgid "can't get xhdr\n"
 msgstr "kann XHDR nicht bekommen\n"
 
-#: libsylph/news.c:901 libsylph/news.c:933
+#: libsylph/news.c:904 libsylph/news.c:936
 msgid "error occurred while getting xhdr.\n"
 msgstr "Fehler beim Empfang von XHDR.\n"
 
@@ -514,7 +514,7 @@ msgstr "%s gefunden\n"
 msgid "Configuration is saved.\n"
 msgstr "Konfiguration ist gespeichert.\n"
 
-#: libsylph/procmime.c:1307
+#: libsylph/procmime.c:1308
 msgid "procmime_get_text_content(): Code conversion failed.\n"
 msgstr ""
 "procmime_get_text_content(): Fehler beim Umsetzen der Zeichenkodierung.\n"
@@ -569,34 +569,34 @@ msgstr "TLSv1 nicht verfügbar\n"
 msgid "TLSv1 available\n"
 msgstr "TLSv1 verfügbar\n"
 
-#: libsylph/ssl.c:231 libsylph/ssl.c:238
+#: libsylph/ssl.c:232 libsylph/ssl.c:239
 msgid "SSL method not available\n"
 msgstr "SSL-Methode nicht verfügbar\n"
 
-#: libsylph/ssl.c:244
+#: libsylph/ssl.c:245
 msgid "Unknown SSL method *PROGRAM BUG*\n"
 msgstr "Unbekannte SSL-Methode *PROGRAMM FEHLER*\n"
 
-#: libsylph/ssl.c:250
+#: libsylph/ssl.c:251
 msgid "Error creating ssl context\n"
 msgstr "Fehler beim Erstellen des SSL-Kontextes\n"
 
 #. Get the cipher
-#: libsylph/ssl.c:269
+#: libsylph/ssl.c:270
 #, c-format
 msgid "SSL connection using %s\n"
 msgstr "SSL-Verbindung benutzt %s\n"
 
-#: libsylph/ssl.c:285
+#: libsylph/ssl.c:286
 msgid "Server certificate:\n"
 msgstr "Server-Zertifikat:\n"
 
-#: libsylph/ssl.c:288
+#: libsylph/ssl.c:289
 #, c-format
 msgid "  Subject: %s\n"
 msgstr "  Betreff: %s\n"
 
-#: libsylph/ssl.c:293
+#: libsylph/ssl.c:294
 #, c-format
 msgid "  Issuer: %s\n"
 msgstr "  Aussteller(in): %s\n"
@@ -1266,7 +1266,7 @@ msgid "Warning"
 msgstr "Warnung"
 
 #: src/alertpanel.c:168 src/inc.c:894
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "Error"
 msgstr "Fehler"
 
@@ -1309,7 +1309,7 @@ msgstr "Braun"
 #. create sub items. for the menu item activation callback we pass the
 #. * color flag value as data parameter. Also we attach a data pointer
 #. * so we can always get back the SummaryView pointer.
-#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5326
+#: src/colorlabel.c:300 src/prefs_folder_item.c:317 src/summaryview.c:5328
 msgid "None"
 msgstr "ohne"
 
@@ -1844,7 +1844,7 @@ msgstr "Datentyp"
 #. S_COL_DATE
 #: src/compose.c:5401 src/mimeview.c:217 src/prefs_filter_edit.c:512
 #: src/prefs_summary_column.c:72 src/rpop3.c:437 src/select-keys.c:309
-#: src/summaryview.c:5475
+#: src/summaryview.c:5477
 msgid "Size"
 msgstr "Größe"
 
@@ -2984,7 +2984,7 @@ msgstr "Verbinde mit POP3-Server: %s..."
 msgid "Can't connect to POP3 server: %s:%d\n"
 msgstr "Keine Verbindung mit POP3-Server: %s:%d\n"
 
-#: src/inc.c:1111 src/rpop3.c:862 src/send_message.c:846
+#: src/inc.c:1111 src/rpop3.c:867 src/send_message.c:846
 #, c-format
 msgid "Authenticating..."
 msgstr "Authentisierung erfolgt..."
@@ -3024,8 +3024,8 @@ msgstr "Beenden"
 msgid "Retrieving message (%d / %d) (%s / %s)"
 msgstr "Empfange Nachricht (%d / %d) (%s / %s)"
 
-#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4811 src/summaryview.c:5001
-#: src/summaryview.c:5052
+#: src/inc.c:1448 src/inc.c:1475 src/summaryview.c:4813 src/summaryview.c:5003
+#: src/summaryview.c:5054
 msgid ""
 "Execution of the junk filter command failed.\n"
 "Please check the junk mail control setting."
@@ -3270,20 +3270,20 @@ msgstr ""
 "GnuPG is nicht richtig installiert, oder die Version ist zu alt.\n"
 "OpenPGP-Unterstützung ausgeschaltet"
 
-#: src/main.c:1245
+#: src/main.c:1269
 msgid "Loading plug-ins..."
 msgstr "PlugIns werden geladen ..."
 
 #. remote command mode
-#: src/main.c:1441
+#: src/main.c:1465
 msgid "another Sylpheed is already running.\n"
 msgstr "Ein Sylpheed wird bereits ausgeführt.\n"
 
-#: src/main.c:1729
+#: src/main.c:1759
 msgid "Migration of configuration"
 msgstr "Konfigurationsumstellung"
 
-#: src/main.c:1730
+#: src/main.c:1760
 msgid ""
 "The previous version of configuration found.\n"
 "Do you want to migrate it?"
@@ -3935,7 +3935,7 @@ msgid "MainWindow: color allocation %d failed\n"
 msgstr "Haupt-Fenster: Farbzuweisung %d fehlgeschlagen\n"
 
 #: src/mainwindow.c:1224 src/summaryview.c:2668 src/summaryview.c:2755
-#: src/summaryview.c:4375 src/summaryview.c:4504 src/summaryview.c:4893
+#: src/summaryview.c:4375 src/summaryview.c:4506 src/summaryview.c:4895
 msgid "done.\n"
 msgstr "fertig.\n"
 
@@ -4274,7 +4274,7 @@ msgstr "Wähle \"Digitale Unterschrift prüfen\" zum Überprüfen"
 msgid "Select an action for the attached file:\n"
 msgstr "Wähle eine Aktion aus für die angehängte Datei:\n"
 
-#: src/mimeview.c:670 src/textview.c:842
+#: src/mimeview.c:670 src/textview.c:849
 msgid "Open _with..."
 msgstr "Öffnen _mit..."
 
@@ -4282,7 +4282,7 @@ msgstr "Öffnen _mit..."
 msgid "_Display as text"
 msgstr "Als _Text darstellen"
 
-#: src/mimeview.c:678 src/textview.c:845
+#: src/mimeview.c:678 src/textview.c:852
 msgid "_Save as..."
 msgstr "_Speichern als..."
 
@@ -6383,19 +6383,19 @@ msgstr "Markiert"
 
 #. S_COL_MIME
 #: src/prefs_summary_column.c:69 src/query_search.c:402 src/rpop3.c:434
-#: src/summaryview.c:5468
+#: src/summaryview.c:5470
 msgid "Subject"
 msgstr "Betreff"
 
 #. S_COL_SUBJECT
 #: src/prefs_summary_column.c:70 src/query_search.c:403 src/rpop3.c:435
-#: src/summaryview.c:5471
+#: src/summaryview.c:5473
 msgid "From"
 msgstr "Von"
 
 #. S_COL_FROM
 #: src/prefs_summary_column.c:71 src/query_search.c:404 src/rpop3.c:436
-#: src/summaryview.c:5473
+#: src/summaryview.c:5475
 msgid "Date"
 msgstr "Datum"
 
@@ -6405,7 +6405,7 @@ msgid "Number"
 msgstr "Nummer"
 
 #. S_COL_NUMBER
-#: src/prefs_summary_column.c:74 src/summaryview.c:5479
+#: src/prefs_summary_column.c:74 src/summaryview.c:5481
 msgid "To"
 msgstr "An"
 
@@ -6809,7 +6809,7 @@ msgstr "_Über"
 msgid "%s - POP3 Remote mailbox"
 msgstr "%s - POP3 Server-Postfach"
 
-#: src/rpop3.c:433 src/summaryview.c:5477
+#: src/rpop3.c:433 src/summaryview.c:5479
 msgid "No."
 msgstr "Nr."
 
@@ -6841,55 +6841,55 @@ msgstr ""
 msgid "Retrieving message headers (%d / %d) ..."
 msgstr "Lade Nachrichtenkopfzeilen (%d / %d) ..."
 
-#: src/rpop3.c:888
+#: src/rpop3.c:893
 msgid "Getting the number of messages..."
 msgstr "Ermittle Anzahl neuer Nachrichten..."
 
-#: src/rpop3.c:897 src/rpop3.c:910
+#: src/rpop3.c:902 src/rpop3.c:915
 msgid "No message"
 msgstr "Keine Nachricht"
 
-#: src/rpop3.c:943
+#: src/rpop3.c:948
 #, c-format
 msgid "Deleted %d messages"
 msgstr "%d Nachrichten gelöscht"
 
-#: src/rpop3.c:986 src/rpop3.c:998 src/rpop3.c:1059 src/rpop3.c:1298
+#: src/rpop3.c:991 src/rpop3.c:1003 src/rpop3.c:1064 src/rpop3.c:1303
 #: src/send_message.c:863
 #, c-format
 msgid "Quitting..."
 msgstr "Beende..."
 
-#: src/rpop3.c:1044
+#: src/rpop3.c:1049
 #, c-format
 msgid "Retrieved %d messages"
 msgstr "%d Nachrichten geladen"
 
-#: src/rpop3.c:1051
+#: src/rpop3.c:1056
 #, c-format
 msgid "Opened message %d"
 msgstr "Nachricht %d geöffnet"
 
-#: src/rpop3.c:1068
+#: src/rpop3.c:1073
 #, fuzzy, c-format
 msgid "Retrieved %d (of %d) message headers"
 msgstr "%d Nachrichtenkopfzeilen geladen"
 
-#: src/rpop3.c:1072
+#: src/rpop3.c:1077
 #, c-format
 msgid "Retrieved %d message headers"
 msgstr "%d Nachrichtenkopfzeilen geladen"
 
-#: src/rpop3.c:1193
+#: src/rpop3.c:1198
 #, c-format
 msgid "Retrieving message %d ..."
 msgstr "Nachricht %d wird abgerufen ..."
 
-#: src/rpop3.c:1219
+#: src/rpop3.c:1224
 msgid "Delete messages"
 msgstr "Nachrichten löschen"
 
-#: src/rpop3.c:1220
+#: src/rpop3.c:1225
 msgid ""
 "Really delete selected messages from server?\n"
 "This operation cannot be reverted."
@@ -7248,7 +7248,7 @@ msgstr "Keine digitale Unterschrift gefunden"
 msgid "Good signature from \"%s\""
 msgstr "Gute digitale Unterschrift von \"%s\""
 
-#: src/sigstatus.c:244 src/textview.c:1105
+#: src/sigstatus.c:244 src/textview.c:1116
 msgid "Good signature"
 msgstr "Gute digitale Unterschrift"
 
@@ -7259,7 +7259,7 @@ msgstr ""
 "Gültige digitale Unterschrift, aber dem Schlüssel für  \"%s\" wird nicht "
 "vertraut."
 
-#: src/sigstatus.c:249 src/textview.c:1107
+#: src/sigstatus.c:249 src/textview.c:1118
 msgid "Valid signature (untrusted key)"
 msgstr "Gültige digitale Unterschrift (Schlüssel wird nicht vertraut)"
 
@@ -7301,7 +7301,7 @@ msgstr ""
 msgid "BAD signature from \"%s\""
 msgstr "FALSCHE digitale Unterschrift von \"%s\""
 
-#: src/sigstatus.c:267 src/textview.c:1109
+#: src/sigstatus.c:267 src/textview.c:1120
 msgid "BAD signature"
 msgstr "FALSCHE digitale Unterschrift"
 
@@ -7763,52 +7763,52 @@ msgstr "Fehler beim Verarbeiten von Nachrichten."
 msgid "Building threads..."
 msgstr "Threads erstellen..."
 
-#: src/summaryview.c:4433 src/summaryview.c:4434
+#: src/summaryview.c:4436 src/summaryview.c:4437
 msgid "Unthreading..."
 msgstr "Threads aufheben..."
 
-#: src/summaryview.c:4727 src/summaryview.c:4788
+#: src/summaryview.c:4729 src/summaryview.c:4790
 #, c-format
 msgid "Filtering (%d / %d)..."
 msgstr "Filtern (%d / %d)..."
 
-#: src/summaryview.c:4854
+#: src/summaryview.c:4856
 msgid "filtering..."
 msgstr "filtern..."
 
-#: src/summaryview.c:4855
+#: src/summaryview.c:4857
 msgid "Filtering..."
 msgstr "Filtern..."
 
-#: src/summaryview.c:4900
+#: src/summaryview.c:4902
 #, c-format
 msgid "%d message(s) have been filtered."
 msgstr "%d Nachricht(en) sind gefiltert."
 
-#: src/template.c:171
+#: src/template.c:173
 #, c-format
 msgid "file %s already exists\n"
 msgstr "Datei %s existiert bereits\n"
 
-#: src/textview.c:263
+#: src/textview.c:266
 msgid "Creating text view...\n"
 msgstr "Textansicht wird erstellt...\n"
 
-#: src/textview.c:525
+#: src/textview.c:530
 msgid "This message is encrypted, but its decryption failed.\n"
 msgstr ""
 "Diese Nachricht ist verschlüsselt, konnte aber nicht entschlüsselt werden.\n"
 
-#: src/textview.c:854
+#: src/textview.c:861
 #, fuzzy
 msgid "_Copy file name"
 msgstr "Dateiname"
 
-#: src/textview.c:1161
+#: src/textview.c:1172
 msgid "This message can't be displayed.\n"
 msgstr "Diese Nachricht ist nicht darstellbar.\n"
 
-#: src/textview.c:1185
+#: src/textview.c:1196
 msgid ""
 "The body text couldn't be displayed because writing to temporary file "
 "failed.\n"
@@ -7816,35 +7816,35 @@ msgstr ""
 "Nachrichtentext nicht darstellbar, da kein Schreiben in temporäre Datei "
 "möglich. \n"
 
-#: src/textview.c:2431
+#: src/textview.c:2445
 msgid "Sa_ve this image as..."
 msgstr "Dieses Bild speichern _als..."
 
-#: src/textview.c:2451 src/trayicon.c:160
+#: src/textview.c:2465 src/trayicon.c:160
 msgid "Compose _new message"
 msgstr "Neue Nachricht verfassen"
 
-#: src/textview.c:2453
+#: src/textview.c:2467
 msgid "R_eply to this address"
 msgstr "An diese Ad_resse antworten"
 
-#: src/textview.c:2456
+#: src/textview.c:2470
 msgid "Add to address _book..."
 msgstr "Ins Adress_buch übernehmen"
 
-#: src/textview.c:2458
+#: src/textview.c:2472
 msgid "Copy this add_ress"
 msgstr "Diese Ad_resse kopieren"
 
-#: src/textview.c:2461
+#: src/textview.c:2475
 msgid "_Open with Web browser"
 msgstr "_Im Internet-Browser öffnen"
 
-#: src/textview.c:2463
+#: src/textview.c:2477
 msgid "Copy this _link"
 msgstr "Diese _Verknüpfung kopieren"
 
-#: src/textview.c:2669
+#: src/textview.c:2684
 #, c-format
 msgid ""
 "The real URL (%s) is different from\n"
@@ -7857,7 +7857,7 @@ msgstr ""
 "\n"
 "Trotzdem öffnen?"
 
-#: src/textview.c:2674
+#: src/textview.c:2689
 msgid "Fake URL warning"
 msgstr "Falsche URL Warnung"
 
@@ -7926,15 +7926,15 @@ msgid "Couldn't get the version information of plug-ins."
 msgstr "Keine Versionsinformation von PlugIns verfügbar."
 
 #: plugin/attachment_tool/attachment_tool.c:50
-#: plugin/attachment_tool/attachment_tool.c:271
+#: plugin/attachment_tool/attachment_tool.c:272
 msgid "Remove attachments"
 msgstr "Anhänge entfernen"
 
-#: plugin/attachment_tool/attachment_tool.c:263
+#: plugin/attachment_tool/attachment_tool.c:264
 msgid "This tool is available on local folders only."
 msgstr "Dies ist nur für lokale Ordner verfügbar."
 
-#: plugin/attachment_tool/attachment_tool.c:272
+#: plugin/attachment_tool/attachment_tool.c:273
 msgid "Do you really remove attached files from the selected messages?"
 msgstr ""
 "Möchten Sie die Dateianhänge der markierten Nachrichten wirklich löschen?"
