@@ -1,3 +1,7 @@
+2014-06-10
+
+	* src/rpop3.c: additional fix for Bug #193.
+
 2014-04-09
 
 	* macosx/bundle/launcher.sh
