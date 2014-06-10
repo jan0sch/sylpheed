@@ -1,5 +1,10 @@
 Changes of Sylpheed
 
+* 3.4.2 (stable)
+
+    * Remote mailbox: additional fix for Bug #193 was made.
+    * Win32: OpenSSL was updated to 0.9.8za (security fix for CVE-2014-0224).
+
 * 3.4.1 (stable)
 
     * Fixed Bug #193: Lose mails when mailbox is inaccessible.
