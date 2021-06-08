@@ -1954,6 +1954,13 @@ static gint imap_scan_tree(Folder *folder)
 	}
 
 	item_list = imap_get_folder_list(session, item);
+	if(g_slist_length(item_list)<1){
+		log_warning(_("receive empty item list\n"));
+        for (cur = item_list; cur != NULL; cur = cur->next)
+            folder_item_destroy(FOLDER_ITEM(cur->data));
+        g_slist_free(item_list);
+        return -1;
+    }
 	imap_scan_tree_recursive(session, item, item_list);
 	imap_create_missing_folders(folder);
 
